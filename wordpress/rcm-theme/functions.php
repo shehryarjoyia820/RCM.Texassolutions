@@ -119,3 +119,21 @@ add_filter('rcm_visible_faqs', static function (array $faqs): array {
     }
     return $faqs;
 });
+
+/**
+ * Homepage weight (dental brief: HTML under 150 KB). The homepage is built entirely from theme
+ * templates, so WordPress's block-editor styles are not needed there, and the template
+ * indentation is stripped (whitespace between lines carries no meaning on this page).
+ */
+add_action('wp_enqueue_scripts', static function (): void {
+    if (is_front_page()) {
+        foreach (['wp-block-library', 'wp-block-library-theme', 'classic-theme-styles', 'global-styles'] as $h) {
+            wp_dequeue_style($h);
+        }
+    }
+}, 100);
+add_action('template_redirect', static function (): void {
+    if (is_front_page() && !is_admin() && !is_feed() && !wp_doing_ajax()) {
+        ob_start(static fn(string $html): string => (string) preg_replace('/\n[ \t]+/', "\n", $html));
+    }
+}, 1);
