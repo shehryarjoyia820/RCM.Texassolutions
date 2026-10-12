@@ -50,7 +50,7 @@ add_action('wp_head', static function (): void {
     if (has_site_icon()) {
         return;
     }
-    printf('<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url(get_template_directory_uri() . '/assets/img/icon.svg'));
+    printf('<link rel="icon" href="%s" sizes="32x32" type="image/png">' . "\n", esc_url(get_template_directory_uri() . '/assets/img/favicon-32.png'));
     printf('<link rel="apple-touch-icon" href="%s">' . "\n", esc_url(get_template_directory_uri() . '/assets/img/apple-touch-icon.png'));
 }, 3);
 

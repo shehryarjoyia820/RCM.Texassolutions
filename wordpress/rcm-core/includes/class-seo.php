@@ -643,8 +643,8 @@ final class SEO
             'name' => self::site_name(),
             'url' => home_url('/'),
         ];
-        if (file_exists(get_theme_file_path('assets/img/icon.svg'))) {
-            $node['logo'] = ['@type' => 'ImageObject', 'url' => get_theme_file_uri('assets/img/icon.svg')];
+        if (file_exists(get_theme_file_path('assets/img/ts-logo.png'))) {
+            $node['logo'] = ['@type' => 'ImageObject', 'url' => get_theme_file_uri('assets/img/ts-logo.png')];
         }
         $email = self::str($ct['email'] ?? '');
         $phone = (string) preg_replace('/[^\d+]/', '', self::str($ct['phone'] ?? ''));

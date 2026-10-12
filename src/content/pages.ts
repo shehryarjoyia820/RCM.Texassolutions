@@ -1017,7 +1017,7 @@ const privacyPolicy: PageContent = {
     ),
     h2('How we protect information'),
     p(
-      `Access to the site dashboard is limited by role, administrator accounts use multi-factor authentication, admin actions are logged and the site is backed up regularly. No website is perfectly secure, so please send only the information needed for your enquiry. See ${a('/data-handling-and-security/', 'Data Handling and Security')} for more.`
+      `Access to the site dashboard is limited by role, two-factor authentication is available for administrator accounts, admin actions are logged and the site is backed up regularly. No website is perfectly secure, so please send only the information needed for your enquiry. See ${a('/data-handling-and-security/', 'Data Handling and Security')} for more.`
     ),
     h2('Your choices and rights'),
     ul([
@@ -1284,7 +1284,7 @@ const dataHandling: PageContent = {
   title: 'Data Handling and Security',
   seoTitle: 'Data Handling and Security | Texas Solutions RCM',
   metaDescription:
-    'How we handle data on this website and in client engagements: a BAA before PHI, access controls, MFA for admins, audit logs, backups and incident response.',
+    'How we handle data on this website and in client engagements: a BAA before PHI, role-based access, login protection, audit logs, backups and incident response.',
   template: 'legal',
   lastUpdated: LEGAL_DATE,
   intro:
@@ -1308,7 +1308,7 @@ const dataHandling: PageContent = {
     h3('Access controls'),
     ul([
       'The site dashboard uses role-based access. Staff see only the areas their role needs, such as leads, chats, analytics or content.',
-      'Administrator accounts use multi-factor authentication.',
+      'Two-factor authentication is available for every administrator account, and failed logins are throttled.',
       'Login attempts are throttled to slow down password guessing.',
       'Accounts are removed or downgraded when staff change roles or leave.',
     ]),
