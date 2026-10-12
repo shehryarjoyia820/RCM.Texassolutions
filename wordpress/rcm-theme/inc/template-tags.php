@@ -196,6 +196,7 @@ function rcm_t_nav(): array
             [__('Denial reasons guide', 'rcm-theme'), home_url('/tools/denial-reasons-guide/')],
             [__('Outsourcing vs in-house billing', 'rcm-theme'), rcm_t_url('outsourcing-vs-in-house-billing')],
         ]]]],
+        ['label' => __('Blog', 'rcm-theme'), 'url' => $blog],
         ['label' => __('Contact', 'rcm-theme'), 'url' => rcm_t_url('contact')],
     ];
 }

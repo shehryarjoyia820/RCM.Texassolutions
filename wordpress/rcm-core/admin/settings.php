@@ -37,6 +37,8 @@ $field = static function (string $name, string $label, string $value, string $ty
             $field('rcm[contact][region]', __('State', 'rcm'), $c['region']);
             $field('rcm[contact][postal_code]', __('ZIP code', 'rcm'), $c['postal_code']);
             $field('rcm[contact][country]', __('Country code', 'rcm'), $c['country']);
+            $field('rcm[contact][whatsapp]', __('WhatsApp number', 'rcm'), (string) ($c['whatsapp'] ?? ''), 'text', __('With country code, e.g. +1 (838) 910-3147. Leave blank to hide the WhatsApp buttons.', 'rcm'));
+            $field('rcm[contact][whatsapp_message]', __('WhatsApp starting message', 'rcm'), (string) ($c['whatsapp_message'] ?? ''), 'text', __('Pre-filled text when a visitor opens WhatsApp. Do not ask for patient information.', 'rcm'));
             $field('rcm[contact][hours]', __('Business hours (optional)', 'rcm'), $c['hours'], 'text', __('Leave blank unless the hours are confirmed. Shown on the contact page.', 'rcm'));
             $field('rcm[notify_email]', __('Lead notification email', 'rcm'), $s['notify_email'], 'email', __('Form submissions and AI chat notifications are sent here.', 'rcm'));
             ?>

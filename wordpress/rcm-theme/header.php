@@ -119,6 +119,7 @@ $is_active = static function (string $url) use ($req): bool {
             <div class="mt-6 grid gap-3">
                 <a href="<?php echo esc_url($consult); ?>" class="btn-primary"><?php esc_html_e('Get a Free Consultation', 'rcm-theme'); ?></a>
                 <a href="<?php echo esc_url($contact['phone_href']); ?>" class="btn-outline"><?php rcm_t_icon('Phone', 'h-4 w-4'); ?> <?php echo esc_html($contact['phone']); ?></a>
+                <?php rcm_t_part('whatsapp', ['variant' => 'button']); ?>
             </div>
         </nav>
     </div>

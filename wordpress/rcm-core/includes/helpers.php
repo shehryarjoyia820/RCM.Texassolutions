@@ -211,3 +211,14 @@ function rcm_page_url(string $key): string
     }
     return home_url('/' . trim($key, '/') . '/');
 }
+
+/** wa.me link for the configured WhatsApp number, or '' when none is set. */
+function rcm_whatsapp_url(string $text = ''): string
+{
+    $digits = preg_replace('/\D/', '', (string) rcm_setting('contact.whatsapp', ''));
+    if (strlen((string) $digits) < 8) {
+        return '';
+    }
+    $text = $text !== '' ? $text : (string) rcm_setting('contact.whatsapp_message', '');
+    return 'https://wa.me/' . $digits . ($text !== '' ? '?text=' . rawurlencode($text) : '');
+}

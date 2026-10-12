@@ -1,0 +1,10 @@
+# rcm.texassolutions.co
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/rcm/
+Disallow: /?s=
+Disallow: /*?s=
+Disallow: /search/
+
+Sitemap: https://rcm.texassolutions.co/wp-sitemap.xml

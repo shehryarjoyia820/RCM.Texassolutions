@@ -31,6 +31,7 @@ final class Redirects
     public static function init(): void
     {
         add_action('template_redirect', [self::class, 'maybe_redirect'], 0);
+        add_action('template_redirect', [self::class, 'legacy_blog_paths'], 1);
         add_action('template_redirect', [self::class, 'log_404'], 99);
         add_action('post_updated', [self::class, 'slug_changed'], 10, 3);
 
@@ -40,6 +41,36 @@ final class Redirects
         add_action('admin_post_rcm_redirect_export', [self::class, 'export']);
         add_action('admin_post_rcm_404_delete', [self::class, 'delete_404']);
         add_action('admin_post_rcm_404_clear', [self::class, 'clear_404']);
+    }
+
+    /**
+     * Blog posts moved from /<slug>/ to /blog/<slug>/ (and /category/, /tag/ to /blog/...)
+     * when the permalink structure gained the /blog/ prefix. 301 the old URLs.
+     */
+    public static function legacy_blog_paths(): void
+    {
+        if (!is_404()) {
+            return;
+        }
+        $path = trim((string) wp_parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH), '/');
+        if ($path === '' || str_starts_with($path, 'blog/')) {
+            return;
+        }
+        $front = trim((string) $GLOBALS['wp_rewrite']->front, '/');
+        if ($front === '') {
+            return;
+        }
+        if (preg_match('#^(category|tag)/(.+)$#', $path, $m)) {
+            wp_safe_redirect(home_url('/' . $front . '/' . $m[1] . '/' . $m[2] . '/'), 301);
+            exit;
+        }
+        if (preg_match('#^[a-z0-9\-]+$#', $path)) {
+            $post = get_page_by_path($path, OBJECT, 'post');
+            if ($post && $post->post_status === 'publish') {
+                wp_safe_redirect(get_permalink($post), 301);
+                exit;
+            }
+        }
     }
 
     /* ------------------------------------------------------------------ */

@@ -59,6 +59,7 @@ $legal = [
                 <ul class="mt-6 space-y-3 text-[15px]">
                     <li class="flex gap-3"><?php rcm_t_icon('Mail', 'mt-0.5 h-4 w-4 shrink-0 text-teal-300'); ?><a href="mailto:<?php echo esc_attr($c['email']); ?>" class="hover:text-white"><?php echo esc_html($c['email']); ?></a></li>
                     <li class="flex gap-3"><?php rcm_t_icon('Phone', 'mt-0.5 h-4 w-4 shrink-0 text-teal-300'); ?><a href="<?php echo esc_url($c['phone_href'], ['tel']); ?>" class="hover:text-white"><?php echo esc_html($c['phone']); ?></a></li>
+                    <li><?php rcm_t_part('whatsapp', ['variant' => 'link', 'class' => 'hover:text-white']); ?></li>
                     <li class="flex gap-3"><?php rcm_t_icon('MapPin', 'mt-0.5 h-4 w-4 shrink-0 text-teal-300'); ?><span><?php echo esc_html(sprintf('%s, %s, %s %s', $c['street'], $c['city'], $c['region'], $c['postal_code'])); ?></span></li>
                 </ul>
             </div>
@@ -98,6 +99,7 @@ $legal = [
         </p>
     </div>
 </footer>
+<?php rcm_t_part('whatsapp', ['variant' => 'float']); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

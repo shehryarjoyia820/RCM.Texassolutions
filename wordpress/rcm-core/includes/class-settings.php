@@ -23,6 +23,8 @@ final class Settings
                 'email' => 'info@texassolutions.co',
                 'phone' => '+1 (838) 910-3147',
                 'phone_href' => 'tel:+18389103147',
+                'whatsapp' => '+1 (838) 910-3147',
+                'whatsapp_message' => 'Hi, I would like to know more about your revenue cycle management services.',
                 'street' => '401 W Kentucky Ave',
                 'city' => 'Midland',
                 'region' => 'TX',
@@ -128,6 +130,8 @@ final class Settings
             $s['contact'][$k] = $k === 'email' ? sanitize_email((string) ($c[$k] ?? '')) : rcm_clean($c[$k] ?? '', 120);
         }
         $s['contact']['phone_href'] = 'tel:' . preg_replace('/[^\d+]/', '', $s['contact']['phone']);
+        $s['contact']['whatsapp'] = rcm_clean($c['whatsapp'] ?? '', 40);
+        $s['contact']['whatsapp_message'] = rcm_clean($c['whatsapp_message'] ?? '', 300);
         $s['notify_email'] = sanitize_email((string) ($in['notify_email'] ?? '')) ?: $s['contact']['email'];
 
         $a = (array) ($in['analytics'] ?? []);
