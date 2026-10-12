@@ -1,0 +1,158 @@
+/**
+ * Canonical slugs. Every cross-reference in content files must use one of
+ * these; tests/content.test.ts fails on unknown slugs.
+ */
+
+export const SERVICE_SLUGS = [
+  'revenue-cycle-management',
+  'medical-billing',
+  'medical-coding',
+  'dental-billing',
+  'insurance-eligibility-verification',
+  'benefits-verification',
+  'prior-authorization',
+  'patient-registration',
+  'charge-entry',
+  'claims-submission',
+  'claims-scrubbing',
+  'electronic-claims-processing',
+  'payment-posting',
+  'era-processing',
+  'denial-management',
+  'denial-appeals',
+  'accounts-receivable-management',
+  'aging-ar-follow-up',
+  'revenue-recovery',
+  'underpayment-identification',
+  'patient-billing',
+  'patient-collections',
+  'medical-credentialing',
+  'provider-enrollment',
+  'payer-contracting',
+  'fee-schedule-analysis',
+  'revenue-cycle-audit',
+  'coding-audit',
+  'rcm-analytics-reporting',
+  'practice-management-support',
+  'virtual-medical-assistant',
+  'healthcare-data-entry',
+  'appointment-scheduling',
+  'payment-reconciliation',
+  'clearinghouse-coordination',
+  'ehr-workflow-support',
+  'billing-software-migration',
+  'rcm-workflow-optimization',
+  'patient-financial-communication',
+  'out-of-network-billing',
+] as const;
+
+export const MEDICAL_SPECIALTY_SLUGS = [
+  'family-medicine',
+  'internal-medicine',
+  'cardiology',
+  'dermatology',
+  'orthopedics',
+  'neurology',
+  'gastroenterology',
+  'pediatrics',
+  'behavioral-health',
+  'physical-therapy',
+  'occupational-therapy',
+  'chiropractic',
+  'pain-management',
+  'radiology',
+  'urgent-care',
+  'primary-care',
+  'oncology',
+  'pulmonology',
+  'urology',
+  'nephrology',
+  'endocrinology',
+  'obgyn',
+  'ophthalmology',
+  'podiatry',
+  'ent',
+  'ambulatory-surgery-centers',
+  'home-health',
+  'mental-health-clinics',
+  'multi-specialty',
+] as const;
+
+export const DENTAL_SPECIALTY_SLUGS = [
+  'general-dentistry',
+  'orthodontics',
+  'endodontics',
+  'periodontics',
+  'oral-surgery',
+  'pediatric-dentistry',
+  'prosthodontics',
+  'dental-group-practices',
+] as const;
+
+export const SPECIALTY_SLUGS = [...MEDICAL_SPECIALTY_SLUGS, ...DENTAL_SPECIALTY_SLUGS] as const;
+
+export const CALCULATOR_SLUGS = [
+  // revenue and cost
+  'practice-revenue-calculator',
+  'rcm-roi-calculator',
+  'medical-billing-cost-calculator',
+  'outsourcing-vs-in-house-billing-calculator',
+  'revenue-leakage-estimator',
+  'revenue-recovery-calculator',
+  'cost-per-claim-calculator',
+  'payment-variance-calculator',
+  'underpayment-estimator',
+  'provider-productivity-calculator',
+  'practice-profit-margin-calculator',
+  'revenue-per-provider-calculator',
+  'patient-balance-calculator',
+  'fee-schedule-comparison-calculator',
+  'payer-mix-calculator',
+  'break-even-calculator',
+  'billing-staffing-cost-calculator',
+  'billing-outsourcing-savings-calculator',
+  'monthly-revenue-forecast-calculator',
+  'annual-revenue-projection-calculator',
+  // KPIs
+  'net-collection-rate-calculator',
+  'gross-collection-rate-calculator',
+  'days-in-ar-calculator',
+  'ar-aging-calculator',
+  'denial-rate-calculator',
+  'clean-claim-rate-calculator',
+  'first-pass-acceptance-rate-calculator',
+  'claim-rejection-rate-calculator',
+  'collection-efficiency-calculator',
+  'claim-turnaround-time-calculator',
+  // dental
+  'dental-practice-revenue-calculator',
+  'dental-billing-cost-calculator',
+  'dental-denial-rate-calculator',
+  'dental-insurance-collection-calculator',
+  'dental-ar-aging-calculator',
+  'dental-practice-roi-calculator',
+] as const;
+
+export const REFERENCE_TOOL_SLUGS = [
+  'icd-10-code-search',
+  'hcpcs-code-lookup',
+  'npi-lookup',
+  'medical-billing-glossary',
+  'medical-billing-acronyms',
+  'denial-reasons-guide',
+  'claim-status-categories',
+  'eob-explained',
+  'era-explained',
+  'prior-authorization-checklist',
+  'claim-submission-checklist',
+  'credentialing-checklist',
+  'denial-appeal-checklist',
+  'dental-insurance-verification-checklist',
+  'rcm-performance-scorecard',
+] as const;
+
+export const TOOL_SLUGS = [...CALCULATOR_SLUGS, ...REFERENCE_TOOL_SLUGS] as const;
+
+export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
+export type SpecialtySlug = (typeof SPECIALTY_SLUGS)[number];
+export type ToolSlug = (typeof TOOL_SLUGS)[number];

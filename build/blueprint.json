@@ -1,0 +1,10 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/admin.php?page=rcm",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "steps": [
+    { "step": "setSiteOptions", "options": { "permalink_structure": "/%postname%/", "blogname": "Just Another WordPress Site", "timezone_string": "America/Chicago" } },
+    { "step": "activatePlugin", "pluginPath": "rcm-core/rcm-core.php" },
+    { "step": "activateTheme", "themeFolderName": "rcm-theme" }
+  ]
+}
