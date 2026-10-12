@@ -274,10 +274,11 @@ export const medicalPart1: Specialty[] = [
       },
     ],
     relatedTools: ['prior-authorization-checklist', 'denial-reasons-guide', 'underpayment-estimator', 'denial-rate-calculator'],
-    seoTitle: 'Cardiology Billing and Coding Services | Texas Solutions',
+    seoTitle: 'Cardiology Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Cardiology billing support for echo and nuclear prior authorizations, 26/TC splits, device monitoring periods and catheterization coding and global periods.',
+      'Cardiology billing services for echo and nuclear prior authorizations, 26/TC splits, device monitoring periods, catheterization coding and global periods.',
     keywords: [
+      'cardiology billing services',
       'cardiology billing',
       'cardiology coding services',
       'echocardiogram prior authorization',
@@ -370,10 +371,11 @@ export const medicalPart1: Specialty[] = [
       },
     ],
     relatedTools: ['clean-claim-rate-calculator', 'denial-reasons-guide','prior-authorization-checklist', 'patient-balance-calculator'],
-    seoTitle: 'Dermatology Billing and Coding Services | Texas Solutions',
+    seoTitle: 'Dermatology Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Dermatology billing support for biopsies, excisions, Mohs surgery, pathology holds, modifier 25 and separating covered medical care from cosmetic services.',
+      'Dermatology billing services for biopsies, excisions, Mohs surgery, pathology holds, modifier 25 and separating covered medical care from cosmetic work.',
     keywords: [
+      'dermatology billing services',
       'dermatology billing',
       'dermatology coding',
       'skin biopsy coding',
@@ -467,10 +469,11 @@ export const medicalPart1: Specialty[] = [
       },
     ],
     relatedTools: ['prior-authorization-checklist', 'denial-appeal-checklist', 'ar-aging-calculator', 'underpayment-estimator'],
-    seoTitle: 'Orthopedic Billing and Coding Services | Texas Solutions',
+    seoTitle: 'Orthopedic Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Orthopedic billing support for global surgical periods, modifiers 24 through 79, laterality, DME, imaging authorizations and workers compensation claims.',
+      'Orthopedic billing services for global surgical periods, modifiers 24 through 79, laterality, DME, imaging authorizations and workers compensation claims.',
     keywords: [
+      'orthopedic billing services',
       'orthopedic billing',
       'orthopedic coding services',
       'global surgical period billing',
@@ -741,9 +744,10 @@ export const medicalPart1: Specialty[] = [
     relatedTools: ['payer-mix-calculator', 'clean-claim-rate-calculator', 'claim-submission-checklist', 'medical-billing-glossary'],
     seoTitle: 'Pediatric Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Pediatric billing support for well-child visits, VFC vaccine administration, counseling codes, Medicaid and CHIP managed care, EPSDT and screenings.',
+      'Pediatric billing services for well-child visits, VFC vaccine administration, counseling codes, Medicaid and CHIP managed care, EPSDT and screenings.',
     keywords: [
       'pediatric billing',
+      'pediatric billing services',
       'pediatric medical billing services',
       'VFC vaccine billing',
       'EPSDT billing',
@@ -840,13 +844,14 @@ export const medicalPart1: Specialty[] = [
       },
     ],
     relatedTools: ['credentialing-checklist', 'prior-authorization-checklist', 'denial-rate-calculator', 'payer-mix-calculator'],
-    seoTitle: 'Psychiatry and Behavioral Health Billing | Texas Solutions',
+    seoTitle: 'Behavioral Health Billing Company for Psychiatry',
     metaDescription:
-      'Behavioral health billing support for time-based psychotherapy codes, psychiatric E/M add-ons, telehealth rules, carve-out plans and clinician credentialing.',
+      'Behavioral health billing company for psychiatry practices: time-based psychotherapy codes, E/M add-ons, telehealth rules, carve-out plans and credentialing.',
     keywords: [
+      'behavioral health billing company',
+      'behavioral health billing services',
       'behavioral health billing',
       'psychiatry billing services',
-      'mental health billing',
       'psychotherapy CPT time rules',
       'telehealth therapy billing',
     ],
@@ -938,8 +943,9 @@ export const medicalPart1: Specialty[] = [
     relatedTools: ['denial-rate-calculator', 'revenue-per-provider-calculator', 'prior-authorization-checklist', 'clean-claim-rate-calculator'],
     seoTitle: 'Physical Therapy Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Physical therapy billing support for the 8-minute rule, KX modifier thresholds, CQ assistant services, plans of care and commercial visit authorizations.',
+      'Physical therapy billing services for the 8-minute rule, KX modifier thresholds, CQ assistant services, plans of care and commercial visit authorizations.',
     keywords: [
+      'physical therapy billing services',
       'physical therapy billing',
       'PT billing services',
       '8-minute rule billing',
@@ -1125,10 +1131,10 @@ export const medicalPart1: Specialty[] = [
     relatedTools: ['patient-balance-calculator', 'denial-reasons-guide', 'collection-efficiency-calculator', 'medical-billing-acronyms'],
     seoTitle: 'Chiropractic Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Chiropractic billing support for the Medicare AT modifier, active versus maintenance care, ABNs with GA and GZ, PART notes, visit caps and injury claims.',
+      'Chiropractic billing services for the Medicare AT modifier, active versus maintenance care, ABNs with GA and GZ, PART notes, visit caps and injury claims.',
     keywords: [
-      'chiropractic billing',
       'chiropractic billing services',
+      'chiropractic billing',
       'AT modifier chiropractic',
       'Medicare maintenance care ABN',
       'chiropractic personal injury billing',
@@ -1408,10 +1414,10 @@ export const medicalPart1: Specialty[] = [
     relatedTools: ['payer-mix-calculator', 'fee-schedule-comparison-calculator', 'claim-rejection-rate-calculator', 'cost-per-claim-calculator'],
     seoTitle: 'Urgent Care Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Urgent care billing support for S-code case rate contracts, place of service rules, eligibility checks, CLIA lab claims, occupational health and self-pay.',
+      'Urgent care billing services for S-code case rate contracts, place of service rules, eligibility checks, CLIA lab claims, occupational health and self-pay.',
     keywords: [
-      'urgent care billing',
       'urgent care billing services',
+      'urgent care billing',
       'S9083 S9088 billing',
       'urgent care place of service 20',
       'occupational medicine billing',

@@ -113,7 +113,7 @@ final class Importer
                 $stored = (string) get_post_meta($existing->ID, '_rcm_import_hash', true);
                 $current = md5((string) get_post_meta($existing->ID, '_rcm_data', true));
                 $edited = $stored && $stored !== $current;
-                if ($stored === $hash || ($edited && !$force)) {
+                if (!$force && ($stored === $hash || $edited)) {
                     $n['skipped']++;
                     continue;
                 }
@@ -129,6 +129,14 @@ final class Importer
                 'ping_status' => 'closed',
             ];
             if ($existing) {
+                // SEO fields that still match the previous bundle were never customized in WordPress,
+                // so they follow the new bundle; hand-edited SEO fields are kept.
+                $old = Content_Types::data($existing);
+                foreach (['_rcm_seo_title' => 'seoTitle', '_rcm_meta_description' => 'metaDescription'] as $meta => $field) {
+                    if ((string) get_post_meta($existing->ID, $meta, true) === (string) ($old[$field] ?? '')) {
+                        delete_post_meta($existing->ID, $meta);
+                    }
+                }
                 $postarr['ID'] = $existing->ID;
                 $id = wp_update_post(wp_slash($postarr), true);
                 $n['updated']++;
@@ -211,7 +219,7 @@ final class Importer
             $key = (string) $p['key'];
             $existing = !empty($map[$key]) ? get_post((int) $map[$key]) : null;
             if (!$existing) {
-                $existing = self::find_by_key('page', $key) ?: get_page_by_path($key);
+                $existing = self::find_by_key('page', $key) ?: get_page_by_path(!empty($p['parent']) ? $p['parent'] . '/' . $key : $key);
             }
             $body = (string) ($p['body'] ?? '');
             $hash = md5($body . ($p['title'] ?? '') . ($p['intro'] ?? ''));
@@ -236,6 +244,7 @@ final class Importer
                 'post_status' => 'publish',
                 'post_title' => (string) $p['title'],
                 'post_content' => $body,
+                'post_parent' => !empty($p['parent']) && !empty($map[$p['parent']]) ? (int) $map[$p['parent']] : 0,
                 'menu_order' => (int) $i,
                 'comment_status' => 'closed',
                 'ping_status' => 'closed',

@@ -78,8 +78,16 @@ export const servicesPart2: Service[] = [
     relatedServices: ["denial-appeals", "claims-scrubbing", "insurance-eligibility-verification", "prior-authorization", "aging-ar-follow-up"],
     seoTitle: "Denial Management Services for Medical Practices",
     metaDescription:
-      "Denial management that works each denied claim before deadlines pass, reads CARC and RARC codes, and traces denials back to the step that caused them.",
-    keywords: ["denial management", "claim denial management", "medical billing denials", "CARC RARC codes", "denial root cause analysis", "denied claims follow-up"],
+      "Denial management services that work each denied claim before deadlines pass, read CARC and RARC codes, and trace denials back to the step behind them.",
+    keywords: [
+      "denial management services",
+      "denial management",
+      "claim denial management",
+      "medical billing denials",
+      "CARC RARC codes",
+      "denial root cause analysis",
+      "denied claims follow-up",
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -93,7 +101,7 @@ export const servicesPart2: Service[] = [
     icon: "Gavel",
     summary: "Written appeals built on payer policy, medical records and contract terms, tracked through each appeal level until a final decision.",
     definition:
-      "Denial appeals are formal written requests asking a payer to reverse a claim decision. An appeal packet usually includes a letter citing the payer's own policy or contract, the relevant medical records and the original claim. Follow-up means tracking each appeal through the payer's review levels until it is paid, upheld or escalated.",
+      "Medical claim denial appeals are formal written requests asking a payer to reverse a claim decision. An appeal packet usually includes a letter citing the payer's own policy or contract, the relevant medical records and the original claim. Follow-up means tracking each appeal through the payer's review levels until it is paid, upheld or escalated.",
     intro: [
       "Some denials cannot be fixed with a corrected claim. When a payer decides a service was not medically necessary, was not authorized, was bundled into another service or was filed too late, the practice has to make its case in writing. A strong appeal answers the specific denial reason with evidence, not a generic form letter.",
       "Every payer has its own appeal process, forms and deadlines. Commercial plans often have one or two internal levels before external review. Medicare has five levels of appeal, starting with a redetermination by the Medicare Administrative Contractor and moving through reconsideration, an administrative law judge hearing, the Medicare Appeals Council and federal court. Medicaid programs and managed care plans add their own rules.",
@@ -148,10 +156,18 @@ export const servicesPart2: Service[] = [
     ],
     relatedTools: ["denial-appeal-checklist", "denial-reasons-guide", "eob-explained"],
     relatedServices: ["denial-management", "prior-authorization", "medical-coding", "revenue-recovery"],
-    seoTitle: "Denial Appeals and Follow-up for Medical Practices",
+    seoTitle: "Medical Claim Denial Appeal Services and Follow-up",
     metaDescription:
-      "Denial appeals backed by payer policy and medical records, tracked through every level, including the five levels of Medicare appeal, until a decision.",
-    keywords: ["denial appeals", "medical claim appeals", "Medicare redetermination", "insurance appeal letter", "appeal follow-up", "peer-to-peer review"],
+      "Medical claim denial appeal services backed by payer policy and records, tracked through every level, including the five Medicare appeal levels.",
+    keywords: [
+      "medical claim denial appeal services",
+      "denial appeals",
+      "medical claim appeals",
+      "Medicare redetermination",
+      "insurance appeal letter",
+      "appeal follow-up",
+      "peer-to-peer review",
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -309,7 +325,7 @@ export const servicesPart2: Service[] = [
     icon: "TrendingUp",
     summary: "A structured project to find and pursue revenue your practice missed: unbilled visits, unworked denials, underpaid claims and stalled AR.",
     definition:
-      "Revenue recovery is a time-bound project that looks back over a practice's past claims and encounters to find money that was earned but never collected. It reviews unbilled services, unworked denials, underpayments, missed secondary claims and stalled AR, then pursues the items that are still within payer filing and appeal limits.",
+      "Revenue recovery, also called accounts receivable recovery for medical practices, is a time-bound project that looks back over a practice's past claims and encounters to find money that was earned but never collected. It reviews unbilled services, unworked denials, underpayments, missed secondary claims and stalled AR, then pursues the items that are still within payer filing and appeal limits.",
     intro: [
       "Revenue can slip away in several places at once: a visit documented but never billed, a secondary claim never sent, a denial no one appealed, a payment that came in below the contracted rate. Individually these are small. Together, over months, they can add up to meaningful lost revenue.",
       "Revenue recovery is different from routine billing work. It is a defined look-back, often prompted by staff turnover, a software change, a billing vendor transition or a sense that collections do not match the work being done. It starts with data, sizes each source of leakage, and then works the recoverable items in order of deadline and value.",
@@ -360,10 +376,18 @@ export const servicesPart2: Service[] = [
     ],
     relatedTools: ["revenue-recovery-calculator", "revenue-leakage-estimator", "underpayment-estimator", "ar-aging-calculator"],
     relatedServices: ["underpayment-identification", "aging-ar-follow-up", "denial-appeals", "charge-entry", "revenue-cycle-audit"],
-    seoTitle: "Revenue Recovery Services for Medical Practices",
+    seoTitle: "Accounts Receivable Recovery for Medical Practices",
     metaDescription:
-      "Revenue recovery projects that look back for unbilled visits, missed secondary claims, unworked denials and underpayments still within payer deadlines.",
-    keywords: ["revenue recovery", "medical revenue recovery", "revenue leakage", "missed charges", "secondary claims", "lost revenue look-back"],
+      "Accounts receivable recovery for medical practices: look-back projects for unbilled visits, missed secondary claims, unworked denials and underpayments.",
+    keywords: [
+      "accounts receivable recovery for medical practices",
+      "revenue recovery",
+      "medical AR recovery",
+      "medical revenue recovery",
+      "revenue leakage",
+      "missed charges",
+      "lost revenue look-back",
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -647,10 +671,18 @@ export const servicesPart2: Service[] = [
     ],
     relatedTools: ["credentialing-checklist", "npi-lookup"],
     relatedServices: ["provider-enrollment", "payer-contracting", "practice-management-support", "insurance-eligibility-verification"],
-    seoTitle: "Medical Credentialing Services for Providers",
+    seoTitle: "Credentialing Services for Medical Providers",
     metaDescription:
-      "Medical credentialing support covering CAQH ProView upkeep, payer applications, status follow-up and re-credentialing tracking for your providers.",
-    keywords: ["medical credentialing", "provider credentialing", "CAQH ProView", "insurance credentialing", "re-credentialing", "payer network participation"],
+      "Credentialing services for medical providers: CAQH ProView upkeep, payer applications, status follow-up and re-credentialing tracking for your practice.",
+    keywords: [
+      "credentialing services",
+      "medical credentialing",
+      "provider credentialing",
+      "CAQH ProView",
+      "insurance credentialing",
+      "re-credentialing",
+      "payer network participation",
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -719,10 +751,19 @@ export const servicesPart2: Service[] = [
     ],
     relatedTools: ["npi-lookup", "credentialing-checklist"],
     relatedServices: ["medical-credentialing", "payer-contracting", "clearinghouse-coordination", "practice-management-support"],
-    seoTitle: "Provider Enrollment for Medicare, Medicaid and Payers",
+    seoTitle: "Provider Enrollment Services: Medicare, Medicaid, Payers",
     metaDescription:
-      "Provider enrollment support for NPPES, PECOS and CMS-855 filings, state Medicaid and commercial payers, EFT and ERA setup and revalidation tracking.",
-    keywords: ["provider enrollment", "Medicare enrollment", "PECOS", "CMS-855", "Medicaid provider enrollment", "NPI registration", "revalidation"],
+      "Provider enrollment services for NPPES, PECOS and CMS-855 filings, state Medicaid and commercial payers, EFT and ERA setup and revalidation tracking.",
+    keywords: [
+      "provider enrollment services",
+      "provider enrollment",
+      "Medicare enrollment",
+      "PECOS",
+      "CMS-855",
+      "Medicaid provider enrollment",
+      "NPI registration",
+      "revalidation",
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -872,7 +913,7 @@ export const servicesPart2: Service[] = [
     icon: "FileSearch",
     summary: "An independent review of your revenue cycle, from scheduling to final payment, with findings ranked by financial and compliance impact.",
     definition:
-      "A revenue cycle audit is a structured review of how a practice moves from scheduling and registration through charge capture, claims, payments, denials and patient collections. It combines key performance indicators, sample claim testing and process walkthroughs to find where revenue is lost, delayed or put at compliance risk, then ranks the findings for action.",
+      "A revenue cycle audit, or medical billing audit, is a structured review of how a practice moves from scheduling and registration through charge capture, claims, payments, denials and patient collections. It combines key performance indicators, sample claim testing and process walkthroughs to find where revenue is lost, delayed or put at compliance risk, then ranks the findings for action.",
     intro: [
       "Revenue problems rarely have a single cause. A rising denial rate might start with eligibility checks at the front desk, a coding change or a payer policy update. An audit looks across the whole cycle so the fix targets the actual cause rather than the symptom.",
       "A revenue cycle audit uses three lenses. Metrics such as days in AR, denial rate, clean claim rate and net collection rate show where performance is weak. Sample testing follows individual encounters from appointment to final payment to see what actually happened. Process walkthroughs show how staff, systems and policies work in practice.",
@@ -927,9 +968,16 @@ export const servicesPart2: Service[] = [
     ],
     relatedTools: ["rcm-performance-scorecard", "net-collection-rate-calculator", "clean-claim-rate-calculator", "revenue-leakage-estimator"],
     relatedServices: ["coding-audit", "rcm-analytics-reporting", "rcm-workflow-optimization", "revenue-recovery", "denial-management"],
-    seoTitle: "Revenue Cycle Audit for Medical and Dental Practices",
+    seoTitle: "Medical Billing Audit Services: Revenue Cycle Audit",
     metaDescription:
-      "Revenue cycle auditing that tests sample encounters, reviews key metrics and ranks findings by financial and compliance impact across your revenue cycle.",
-    keywords: ["revenue cycle audit", "RCM audit", "medical billing audit", "revenue cycle assessment", "net collection rate", "billing process review"],
+      "Medical billing audit services that test sample encounters, review key metrics and rank findings by financial and compliance impact across your revenue cycle.",
+    keywords: [
+      "medical billing audit services",
+      "revenue cycle audit",
+      "RCM audit",
+      "medical billing audit",
+      "revenue cycle assessment",
+      "billing process review",
+    ],
   },
 ];

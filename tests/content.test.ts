@@ -2,6 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { servicesPart1 } from '../src/content/services/part1';
 import { servicesPart2 } from '../src/content/services/part2';
 import { servicesPart3 } from '../src/content/services/part3';
+import { servicesPart4 } from '../src/content/services/part4';
+import { servicesPart5 } from '../src/content/services/part5';
+import { moreSpecialties } from '../src/content/specialties/more';
+import { seedPosts2 } from '../src/content/blog/seed2';
+import { seedPosts3 } from '../src/content/blog/seed3';
 import { medicalPart1 } from '../src/content/specialties/medical1';
 import { medicalPart2 } from '../src/content/specialties/medical2';
 import { dentalSpecialties } from '../src/content/specialties/dental';
@@ -9,8 +14,9 @@ import { pages } from '../src/content/pages';
 import { seedPosts } from '../src/content/blog/seed';
 import { SERVICE_SLUGS, SPECIALTY_SLUGS, TOOL_SLUGS } from '../src/content/slugs';
 
-const services = [...servicesPart1, ...servicesPart2, ...servicesPart3];
-const specialties = [...medicalPart1, ...medicalPart2, ...dentalSpecialties];
+const services = [...servicesPart1, ...servicesPart2, ...servicesPart3, ...servicesPart4, ...servicesPart5];
+const specialties = [...medicalPart1, ...medicalPart2, ...moreSpecialties, ...dentalSpecialties];
+const allPosts = [...seedPosts, ...seedPosts2, ...seedPosts3];
 
 /** Claims the owner has not approved (docs/CONTENT-GUIDE.md). */
 const BANNED = [/hipaa[- ]compliant/i, /hipaa[- ]certified/i, /\bwe guarantee\b|guaranteed (results|increase|savings|approval)/i, /\b\d{2,3}% (increase|reduction|faster)/i, /world-class|cutting-edge|game-changer|revolutionary/i, /—/];
@@ -47,7 +53,7 @@ describe('claims rules', () => {
     ['services', services],
     ['specialties', specialties],
     ['pages', pages.filter((p) => p.template !== 'legal')],
-    ['blog', seedPosts],
+    ['blog', allPosts],
   ];
   it.each(corpora)('%s contain no unapproved claims or em dashes', (_, data) => {
     const text = allText(data);
@@ -60,7 +66,8 @@ describe('internal links', () => {
     ...SERVICE_SLUGS.map((s) => `/services/${s}/`),
     ...SPECIALTY_SLUGS.map((s) => `/specialties/${s}/`),
     ...TOOL_SLUGS.map((s) => `/tools/${s}/`),
-    ...pages.map((p) => `/${p.key}/`),
+    ...pages.map((p) => (p.parent ? `/${p.parent}/${p.key}/` : `/${p.key}/`)),
+    ...allPosts.map((p) => `/blog/${p.slug}/`),
     '/services/', '/specialties/', '/tools/', '/blog/', '/contact/', '/',
   ]);
   it('pages only link to pages that exist', () => {
@@ -69,7 +76,7 @@ describe('internal links', () => {
     }
   });
   it('blog posts only link to pages that exist', () => {
-    for (const p of seedPosts) {
+    for (const p of allPosts) {
       for (const m of p.html.matchAll(/href="(\/[^"#?]*)"/g)) expect(known, `${p.slug} -> ${m[1]}`).toContain(m[1].endsWith('/') ? m[1] : `${m[1]}/`);
     }
   });

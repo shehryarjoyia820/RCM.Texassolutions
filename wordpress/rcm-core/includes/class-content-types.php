@@ -31,6 +31,9 @@ final class Content_Types
         'enrollment' => ['Credentialing and payer relations', 'Getting providers enrolled, keeping them active and understanding what payers owe you.'],
         'analytics' => ['Audits, analytics and optimization', 'Measuring revenue cycle performance and fixing what the numbers show.'],
         'practice-support' => ['Practice and administrative support', 'Remote administrative help that works inside your systems.'],
+        'dental' => ['Dental revenue cycle', 'Insurance verification, claims, credentialing, AR and fee negotiation support built for dental offices.'],
+        'programs' => ['Virtual care and care management billing', 'Billing for remote patient monitoring, chronic care management and other recurring care programs.'],
+        'software' => ['Billing in your software', 'Our team works inside the practice management system you already use.'],
     ];
 
     public const TOOL_CATEGORIES = [

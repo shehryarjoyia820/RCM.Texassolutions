@@ -130,11 +130,12 @@ export const servicesPart1: Service[] = [
       'rcm-analytics-reporting',
       'insurance-eligibility-verification',
     ],
-    seoTitle: 'End-to-End Revenue Cycle Management Services',
+    seoTitle: 'Revenue Cycle Management Services for US Practices',
     metaDescription:
-      'End-to-end revenue cycle management for US practices: eligibility, coding, claims, payment posting, denials and A/R handled inside your own systems.',
+      'Revenue cycle management services for US practices: eligibility, coding, claims, payment posting, denials and A/R handled inside your own systems.',
     keywords: [
       'revenue cycle management',
+      'revenue cycle management services',
       'end-to-end RCM',
       'RCM services',
       'healthcare revenue cycle',
@@ -155,7 +156,7 @@ export const servicesPart1: Service[] = [
     summary:
       'Claim preparation, submission, payment posting and follow-up for physician and outpatient practices billing commercial and government plans.',
     definition:
-      'Medical billing is the process of turning coded patient encounters into claims, sending them to insurance payers, posting what comes back and following up until each claim is paid or correctly closed. It covers professional claims on the CMS-1500 or 837P, institutional claims on the UB-04 or 837I, and the patient balances that remain.',
+      'Medical billing services handle the process of turning coded patient encounters into claims, sending them to insurance payers, posting what comes back and following up until each claim is paid or correctly closed. It covers professional claims on the CMS-1500 or 837P, institutional claims on the UB-04 or 837I, and the patient balances that remain.',
     intro: [
       'Medical billing sits between clinical documentation and the bank deposit. Once a provider finishes a note and codes are assigned, someone has to build a claim with the right patient, payer, provider and service details, send it to the correct payer within its timely filing limit, and then make sure the payer actually pays the contracted amount. Every payer has its own rules for modifiers, place of service, referring provider and attachments.',
       'Our billing team works inside your practice management system and clearinghouse. We submit claims, resolve clearinghouse and payer rejections, post remittances, identify underpayments against your fee schedules and follow up on anything that has not paid. Medicare, Medicaid, Medicare Advantage and commercial plans each get worked according to their own filing limits and appeal paths.',
@@ -271,13 +272,13 @@ export const servicesPart1: Service[] = [
       'denial-management',
       'revenue-cycle-management',
     ],
-    seoTitle: 'Medical Billing Services for US Practices',
+    seoTitle: 'Medical Billing Services and Company for US Practices',
     metaDescription:
-      'Medical billing services covering claim submission, rejections, payment posting and follow-up for commercial, Medicare and Medicaid claims in your systems.',
+      'Medical billing services from a remote medical billing company: claim submission, rejections, payment posting and denial follow-up inside your systems.',
     keywords: [
       'medical billing services',
-      'outsourced medical billing',
       'medical billing company',
+      'outsourced medical billing',
       'physician billing',
       'CMS-1500 billing',
       'claims follow-up',
@@ -402,9 +403,10 @@ export const servicesPart1: Service[] = [
     ],
     seoTitle: 'Medical Coding Services: ICD-10, CPT and HCPCS',
     metaDescription:
-      'Medical coding services for US practices: ICD-10-CM, CPT and HCPCS coding, E/M leveling, modifier review and NCCI edit checks before claims are released.',
+      'Medical coding services and medical billing and coding support: ICD-10-CM, CPT and HCPCS coding, E/M leveling, modifier review and NCCI edit checks.',
     keywords: [
       'medical coding services',
+      'medical billing and coding services',
       'outsourced medical coding',
       'ICD-10 coding',
       'CPT coding',
@@ -425,7 +427,7 @@ export const servicesPart1: Service[] = [
     summary:
       'Dental insurance verification, CDT-coded claims, attachments, payment posting and follow-up for general and specialty dental offices.',
     definition:
-      'Dental billing is the process of verifying dental benefits, submitting CDT-coded claims on the ADA Dental Claim Form or 837D, attaching supporting radiographs and narratives, posting payments and following up on unpaid or denied claims. It also covers predeterminations and, when appropriate, billing medical insurance for oral surgery or sleep appliance services.',
+      'Dental billing services cover the process of verifying dental benefits, submitting CDT-coded claims on the ADA Dental Claim Form or 837D, attaching supporting radiographs and narratives, posting payments and following up on unpaid or denied claims. It also covers predeterminations and, when appropriate, billing medical insurance for oral surgery or sleep appliance services.',
     intro: [
       'Dental insurance works differently from medical insurance. Plans usually carry annual maximums, frequency limits on cleanings and radiographs, waiting periods, missing tooth clauses and downgrades to less costly alternatives. A claim that ignores those rules is often paid at a lower rate or denied, and the patient ends up with a balance they did not expect.',
       'Our dental billing team works in your practice management software to verify benefits before appointments, submit claims with the attachments payers request, such as periodontal charting, x-rays and narratives, and post explanation of benefits details accurately. We track predeterminations for major work so treatment plans reflect what the plan is likely to cover.',
@@ -532,12 +534,13 @@ export const servicesPart1: Service[] = [
       'denial-management',
       'patient-billing',
     ],
-    seoTitle: 'Dental Billing Services for Dental Practices',
+    seoTitle: 'Outsourced Dental Billing Services and Company',
     metaDescription:
-      'Dental billing services: benefits verification, CDT-coded claims with attachments, predeterminations, EOB posting and carrier follow-up for your office.',
+      'Outsourced dental billing services from a remote dental billing company: benefits checks, CDT claims with attachments, EOB posting and carrier follow-up.',
     keywords: [
       'dental billing services',
-      'dental insurance billing',
+      'dental billing company',
+      'outsourced dental billing services',
       'outsourced dental billing',
       'dental claims',
       'CDT coding',
@@ -657,8 +660,9 @@ export const servicesPart1: Service[] = [
     ],
     seoTitle: 'Insurance Eligibility Verification Services',
     metaDescription:
-      'Insurance eligibility verification before each visit using 270/271 checks, payer portals and calls, so claims are billed to the correct, active payer.',
+      'Insurance eligibility verification services before each visit using 270/271 checks, payer portals and calls, so claims go to the correct, active payer.',
     keywords: [
+      'insurance eligibility verification services',
       'insurance eligibility verification',
       'eligibility verification services',
       '270/271 eligibility',
@@ -906,11 +910,12 @@ export const servicesPart1: Service[] = [
       'denial-appeals',
       'appointment-scheduling',
     ],
-    seoTitle: 'Prior Authorization Services for Medical Practices',
+    seoTitle: 'Prior Authorization Services and Outsourcing for Practices',
     metaDescription:
-      'Prior authorization services: requirement checks, clinical documentation, portal and 278 submissions, and tracking every request through to a payer decision.',
+      'Prior authorization services and outsourcing: requirement checks, clinical documentation, portal and 278 submissions, and tracking each request to a decision.',
     keywords: [
       'prior authorization services',
+      'prior authorization outsourcing',
       'prior auth outsourcing',
       'insurance preauthorization',
       'authorization management',

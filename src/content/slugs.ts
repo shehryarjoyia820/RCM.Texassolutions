@@ -44,6 +44,26 @@ export const SERVICE_SLUGS = [
   'rcm-workflow-optimization',
   'patient-financial-communication',
   'out-of-network-billing',
+  // added 2026-10-13 (keyword plan)
+  'dental-credentialing',
+  'dental-insurance-verification',
+  'dental-claims-processing',
+  'dental-accounts-receivable',
+  'dental-billing-small-practices',
+  'dental-virtual-assistant',
+  'dental-medical-cross-coding',
+  'dental-ppo-negotiation',
+  'medical-billing-small-practices',
+  'remote-patient-monitoring-billing',
+  'chronic-care-management-billing',
+  'dentrix-billing-services',
+  'open-dental-billing-services',
+  'eaglesoft-billing-services',
+  'curve-dental-billing-services',
+  'kareo-tebra-billing-services',
+  'athenahealth-billing-services',
+  'eclinicalworks-billing-services',
+  'advancedmd-billing-services',
 ] as const;
 
 export const MEDICAL_SPECIALTY_SLUGS = [
@@ -76,6 +96,12 @@ export const MEDICAL_SPECIALTY_SLUGS = [
   'home-health',
   'mental-health-clinics',
   'multi-specialty',
+  // added 2026-10-13 (keyword plan)
+  'aba-therapy',
+  'optometry',
+  'laboratory',
+  'dme-suppliers',
+  'telehealth',
 ] as const;
 
 export const DENTAL_SPECIALTY_SLUGS = [

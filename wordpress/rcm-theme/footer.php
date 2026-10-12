@@ -31,6 +31,7 @@ $cols = [
         [__('Blog', 'rcm-theme'), $blog],
         [__('Knowledge center', 'rcm-theme'), rcm_t_url('resources')],
         [__('Specialties', 'rcm-theme'), rcm_t_archive('rcm_specialty')],
+        [__('Service areas', 'rcm-theme'), rcm_t_url('service-areas')],
         [__('Billing glossary', 'rcm-theme'), home_url('/tools/medical-billing-glossary/')],
         [__('Outsourcing vs in-house', 'rcm-theme'), rcm_t_url('outsourcing-vs-in-house-billing')],
         [__('FAQs', 'rcm-theme'), rcm_t_url('faq')],

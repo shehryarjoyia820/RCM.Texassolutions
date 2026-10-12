@@ -22,7 +22,8 @@ export interface PageContent {
     | 'faq'
     | 'resources'
     | 'legal'
-    | 'comparison';
+    | 'comparison'
+    | 'location';
   intro: string;
   body: string;
   parent?: string;
@@ -762,16 +763,16 @@ const resources: PageContent = {
 const outsourcingVsInHouse: PageContent = {
   key: 'outsourcing-vs-in-house-billing',
   title: 'Outsourcing vs In-House Medical Billing',
-  seoTitle: 'Outsourcing vs In-House Medical Billing: Honest Comparison',
+  seoTitle: 'In-House vs Outsourced Medical Billing: Honest Comparison',
   metaDescription:
-    'In-house, outsourced or hybrid medical billing? Compare pros and cons, the real cost components and the questions to ask before you decide.',
+    'In-house vs outsourced medical billing: compare pros, cons and real costs, plus the questions to ask before choosing medical billing outsourcing or a hybrid.',
   template: 'comparison',
   intro:
     'There is no single right answer. In-house, outsourced and hybrid billing each suit different practices. This guide compares them honestly, lists the costs to include and gives you the questions to ask.',
   body: blocks(
     h2('The three models'),
     p(
-      '<strong>In-house billing</strong> means your own employees handle the revenue cycle, using software your practice licenses. <strong>Outsourced billing</strong> means a billing company handles most or all of the work, either in your systems or in theirs. <strong>Hybrid billing</strong> splits the work: your staff keep some tasks, such as front desk eligibility checks and patient payments, while an outside team handles others, such as coding, denials or aging AR.'
+      '<strong>In-house billing</strong> means your own employees handle the revenue cycle, using software your practice licenses. <strong>Outsourced billing</strong>, often called medical billing outsourcing, means a billing company handles most or all of the work, either in your systems or in theirs. <strong>Hybrid billing</strong> splits the work: your staff keep some tasks, such as front desk eligibility checks and patient payments, while an outside team handles others, such as coding, denials or aging AR.'
     ),
     p(
       'Most practices are already somewhere on this spectrum. The real question is which tasks are best done by whom.'
@@ -905,6 +906,381 @@ const outsourcingVsInHouse: PageContent = {
     h2('How we fit in'),
     p(
       `Texas Solutions RCM supports all three models. We can run your full ${a('/services/revenue-cycle-management/', 'revenue cycle')}, take on specific tasks in a hybrid setup, or help your in-house team clear a backlog. We work inside your systems, so moving between models later does not require a migration. ${a('/consultation/', 'Book a free consultation')} to talk through the options for your practice.`
+    )
+  ),
+};
+
+/* ---------- service areas (location pages) ---------- */
+
+const serviceAreas: PageContent = {
+  key: 'service-areas',
+  title: 'Medical and Dental Billing Services Across the US',
+  seoTitle: 'Medical Billing Services Near Me | Serving All 50 States',
+  metaDescription:
+    'Looking for medical billing services near me or dental billing services near me? Our remote team works in your systems for practices across the United States.',
+  template: 'location',
+  intro:
+    'If you are searching for medical billing services near me or dental billing services near me, distance matters less than you might think. Our remote team works inside your own systems and supports medical and dental practices across the United States from our office in Midland, Texas.',
+  body: blocks(
+    h2('Why "near me" works differently for billing'),
+    p(
+      'Billing work happens in software, payer portals and phone queues, not at your front desk. What makes a billing partner useful is knowing your payers, your state rules and your systems, and being available during your working hours. A team down the street that does not know your Medicaid program is less helpful than a remote team that does.'
+    ),
+    p(
+      'Texas Solutions RCM has an office at 401 W Kentucky Ave in Midland, Texas. Our team works remotely for practices in every state. We do not have local offices in other states, and we will not pretend otherwise. What we offer instead is a consistent way of working that adapts to your location, your payer mix and your specialty.'
+    ),
+    h2('How a remote billing team works in your systems'),
+    p(
+      'You create named user accounts for our team in your practice management system, EHR, clearinghouse and payer portals. All charge entry, claim edits, notes, payment posting and follow-up happen there, so your records stay complete and your staff can see every step. Your administrators control the access and can disable it at any time.'
+    ),
+    ul([
+      'A Business Associate Agreement is signed before we access any patient data.',
+      'Work is organized into daily queues: new charges, rejections, denials, unapplied payments and aging follow-up.',
+      'Questions that need your staff, such as missing documentation or a patient demographic issue, are routed back to you through a channel we agree on.',
+      'Reporting is built from your own system data on a schedule set out in your proposal.',
+    ]),
+    p(
+      `Read more about ${a('/how-we-work/', 'how we work')} and how we handle ${a('/security/', 'security and privacy')}.`
+    ),
+    h2('Time zones'),
+    p(
+      'The continental US spans four time zones, and Alaska and Hawaii add more. Payer phone lines, portal maintenance windows and clearinghouse batch times follow the payer, not the practice. When we set up an engagement, we agree working hours that overlap with your office day so your staff can reach us, and we plan payer calls around the hours each payer is open. A practice in California and a practice in New York can both get same-day answers from their billing team.'
+    ),
+    h2('Payers differ from state to state'),
+    p(
+      'Much of US healthcare billing is national: CMS sets Medicare rules, X12 defines the electronic transactions, and the AMA and ADA maintain CPT and CDT codes. But the payers that actually process your claims are often regional, and that is where local knowledge matters.'
+    ),
+    h3('Medicare Administrative Contractors'),
+    p(
+      'CMS contracts with Medicare Administrative Contractors (MACs) to process Part A and Part B claims in defined geographic jurisdictions. Your MAC runs the portal you use, publishes the local coverage determinations (LCDs) that apply to you, handles provider enrollment and processes your first-level appeals. Two practices billing the same service in different jurisdictions can face different documentation expectations because their MACs have different LCDs. Durable medical equipment claims go to separate DME MAC jurisdictions.'
+    ),
+    h3('State Medicaid programs and managed care plans'),
+    p(
+      'Every state runs its own Medicaid program within federal rules. Each state decides how much of its program is delivered through managed care organizations, which plans hold contracts, how dental benefits are delivered and which fiscal agent processes fee-for-service claims. Most states now deliver a large share of Medicaid through managed care, which means a practice may bill several Medicaid plans, each with its own portal, prior authorization rules and timely filing limits.'
+    ),
+    h3('Blue Cross Blue Shield plans'),
+    p(
+      'Blue Cross Blue Shield is not one insurer. It is a group of independent companies, each licensed for a state or region. The Blue plan in one state has its own provider manual, fee schedule, portal and medical policies. When a patient carries a Blue card from another state, the claim usually goes to your local Blue plan and is routed to the patient\'s home plan, so you need to understand both sides.'
+    ),
+    h2('State-specific rules we watch'),
+    ul([
+      '<strong>Prompt pay laws.</strong> Most states have laws that set how quickly state-regulated health plans must pay or deny clean claims and when interest applies. Deadlines, definitions of a clean claim and penalties vary by state, and self-funded employer plans governed by ERISA are generally outside these state laws.',
+      '<strong>Medicaid enrollment per state.</strong> A provider enrolled in one state Medicaid program is not automatically enrolled in another. Practices near a state line, or providers who see patients covered by a neighboring state, may need to enroll in more than one program.',
+      `<strong>State licensure and credentialing.</strong> Payers credential providers based on a license in the state where care is delivered. Telehealth across state lines usually requires a license in the patient's state. Our ${a('/services/medical-credentialing/', 'credentialing')} and ${a('/services/provider-enrollment/', 'provider enrollment')} work starts with confirming the right licenses are in place.`,
+      '<strong>State surprise billing and balance billing rules.</strong> The federal No Surprises Act applies nationally, and many states have their own protections that apply to state-regulated plans.',
+    ]),
+    h2('State pages'),
+    p('We have written guides for four of the largest state markets. Each one covers the state Medicaid program, the Medicare contractor and the state rules that affect billing there.'),
+    ul([
+      `${a('/service-areas/texas/', 'Medical and dental billing services in Texas')}`,
+      `${a('/service-areas/florida/', 'Medical and dental billing services in Florida')}`,
+      `${a('/service-areas/california/', 'Medical and dental billing services in California')}`,
+      `${a('/service-areas/new-york/', 'Medical and dental billing services in New York')}`,
+    ]),
+    p(
+      'Your state is not listed? We still support practices there. The same approach applies: we confirm your MAC, your Medicaid program and plans, your commercial payers and your state rules during onboarding.'
+    ),
+    h2('What we can help with'),
+    p(
+      `Our ${a('/services/', 'services')} cover the full revenue cycle, from ${a('/services/insurance-eligibility-verification/', 'eligibility verification')} and ${a('/services/medical-billing/', 'medical billing')} to ${a('/services/dental-billing/', 'dental billing')}, ${a('/services/denial-management/', 'denial management')} and ${a('/services/accounts-receivable-management/', 'AR follow-up')}. Each ${a('/specialties/', 'specialty')} has its own payer rules and codes, and we set up workflows around those details.`
+    ),
+    p(
+      `${a('/consultation/', 'Book a free consultation')} to talk through your state, your payers and the work you want help with.`
+    )
+  ),
+};
+
+const texas: PageContent = {
+  key: 'texas',
+  parent: 'service-areas',
+  title: 'Medical and Dental Billing Services in Texas',
+  seoTitle: 'Medical Billing Services in Texas | Texas Solutions RCM',
+  metaDescription:
+    'Medical billing services in Texas from a team based in Midland. Dental billing company in Texas for Medicaid, CHIP, STAR plans, Novitas and commercial payers.',
+  template: 'location',
+  intro:
+    'Texas Solutions RCM provides medical billing services in Texas and works as a dental billing company in Texas for practices of every size. Our office is in Midland, and our remote team supports practices from El Paso to Beaumont inside their own systems.',
+  body: blocks(
+    h2('A Texas company billing for Texas practices'),
+    p(
+      'Our office is at 401 W Kentucky Ave in Midland, Texas. The team works remotely, inside your practice management system, EHR, clearinghouse and payer portals, so it does not matter whether your practice is in the Permian Basin, the Rio Grande Valley or the Dallas-Fort Worth area. Texas spans two time zones, Central and Mountain, and we set working hours that match your office day.'
+    ),
+    p(
+      'Revenue cycle management in Texas has its own vocabulary: TMHP, TPI numbers, STAR plans, DMOs and Texas Department of Insurance prompt pay rules. Below is how those pieces fit together and where our team can help.'
+    ),
+    h2('Texas Medicaid and CHIP'),
+    p(
+      'Texas Medicaid and the Children\'s Health Insurance Program (CHIP) are overseen by the Texas Health and Human Services Commission (HHSC). The Texas Medicaid &amp; Healthcare Partnership (TMHP) acts as the state\'s Medicaid claims administrator. TMHP handles provider enrollment through the Provider Enrollment and Management System (PEMS), processes fee-for-service claims and publishes the Texas Medicaid Provider Procedures Manual, which most Texas billers keep close at hand.'
+    ),
+    p(
+      'Enrollment with TMHP comes first. A provider who is not enrolled in Texas Medicaid cannot be credentialed by a Texas Medicaid managed care plan, so new providers and new locations need TMHP enrollment before plan contracting can finish. HHSC has also warned providers about outside firms using names that sound like TMHP, which is a good reminder to work only through official TMHP channels.'
+    ),
+    h3('STAR managed care programs'),
+    p(
+      'Most Texas Medicaid and CHIP members receive services through managed care organizations (MCOs) contracted with HHSC. The main programs are:'
+    ),
+    ul([
+      '<strong>STAR</strong>, the largest program, covering many children, pregnant women and families.',
+      '<strong>STAR+PLUS</strong>, for adults who have disabilities or are 65 or older, including long-term services and supports.',
+      '<strong>STAR Kids</strong>, for children and young adults 20 and younger who have disabilities.',
+      '<strong>STAR Health</strong>, for children in foster care and some young adults who were formerly in foster care.',
+    ]),
+    p(
+      'Each MCO has its own portal, prior authorization list, claims address and appeal process, even though all of them follow HHSC contract rules. A family medicine or pediatric practice may bill several STAR plans in a single week. Our team tracks which plan each patient belongs to, checks eligibility before the visit and follows each plan\'s process when a claim is denied.'
+    ),
+    h2('Dental Medicaid and CHIP in Texas'),
+    p(
+      'For dental practices, Texas children\'s Medicaid and CHIP dental benefits are delivered through dental maintenance organizations (DMOs) contracted with HHSC, separate from the medical MCOs. Each DMO has its own enrollment, prior authorization and claims rules. CHIP dental benefits carry an annual benefit limit set by the state, so checking remaining benefits before treatment planning matters. Adult dental coverage under Texas Medicaid is much more limited, and some adult members receive dental services through their managed care plan as a value-added benefit.'
+    ),
+    p(
+      `As a dental billing company in Texas, we help with ${a('/services/dental-insurance-verification/', 'dental insurance verification')}, ${a('/services/dental-claims-processing/', 'dental claims processing')}, ${a('/services/dental-credentialing/', 'DMO and PPO credentialing')} and ${a('/services/dental-accounts-receivable/', 'dental AR follow-up')}. Practices that treat many children, such as ${a('/specialties/pediatric-dentistry/', 'pediatric dentistry')} and ${a('/specialties/orthodontics/', 'orthodontic')} offices, often carry a large share of DMO claims.`
+    ),
+    h2('Medicare in Texas: Novitas, Jurisdiction H'),
+    p(
+      'Texas is in Medicare Part A/B Jurisdiction H (JH), administered by Novitas Solutions. JH also includes Arkansas, Colorado, Louisiana, Mississippi, New Mexico and Oklahoma. Novitas processes Part A and Part B claims for Texas providers, runs the Novitasphere portal, handles Medicare provider enrollment through PECOS and publishes the local coverage determinations that apply in Texas. Durable medical equipment claims go to a separate DME MAC.'
+    ),
+    p(
+      'Many Texas Medicare patients are also in Medicare Advantage plans, which follow their own prior authorization and claims rules. We check which plan actually covers the patient on the date of service, because sending a Medicare Advantage claim to Novitas is one of the most common avoidable rejections.'
+    ),
+    h2('Commercial payers and Texas prompt pay rules'),
+    p(
+      'Blue Cross and Blue Shield of Texas is the Blue plan for the state, alongside national carriers and regional plans. Fully insured HMO and PPO plans regulated by the Texas Department of Insurance (TDI) must follow the Texas prompt pay statutes in the Texas Insurance Code, which set deadlines for paying or denying clean claims and penalties for late payment. TDI guidance describes a 30-day window for electronic clean claims and 45 days for paper claims. These rules do not apply to self-funded employer plans, Medicare or Medicaid, so knowing which kind of plan covers the patient tells you whether a late payment is worth a prompt pay complaint.'
+    ),
+    p(
+      'Texas also has its own surprise billing protections for state-regulated plans, which sit alongside the federal No Surprises Act. Our team keeps both in mind when reviewing out-of-network claims.'
+    ),
+    h2('Credentialing and licensure in Texas'),
+    p(
+      `Texas physicians are licensed by the Texas Medical Board and dentists by the State Board of Dental Examiners. Payers verify these licenses during credentialing, and most commercial plans use your CAQH profile. Our ${a('/services/medical-credentialing/', 'credentialing')} and ${a('/services/provider-enrollment/', 'provider enrollment')} work covers TMHP, Novitas, the STAR plans and commercial payers, so new providers can start billing as soon as their enrollments are effective.`
+    ),
+    h2('What we help Texas practices with'),
+    ul([
+      `${a('/services/revenue-cycle-management/', 'Revenue cycle management')} in Texas, from eligibility through the last open balance.`,
+      `${a('/services/medical-billing/', 'Medical billing')} and ${a('/services/dental-billing/', 'dental billing')} for independent practices and groups.`,
+      `${a('/services/insurance-eligibility-verification/', 'Eligibility checks')} that confirm the correct STAR plan, DMO or Medicare Advantage plan before the visit.`,
+      `${a('/services/prior-authorization/', 'Prior authorization support')} for each plan's requirements.`,
+      `${a('/services/denial-management/', 'Denial management')} and ${a('/services/accounts-receivable-management/', 'AR follow-up')} across Medicaid, Medicare and commercial payers.`,
+    ]),
+    p(
+      `We support many specialties, including ${a('/specialties/family-medicine/', 'family medicine')}, ${a('/specialties/pediatrics/', 'pediatrics')}, ${a('/specialties/behavioral-health/', 'behavioral health')} and ${a('/specialties/general-dentistry/', 'general dentistry')}. See all ${a('/specialties/', 'specialties')} or our other ${a('/service-areas/', 'service areas')}.`
+    ),
+    p(
+      `${a('/consultation/', 'Book a free consultation')} to talk through your payer mix and the work you want help with.`
+    )
+  ),
+};
+
+const florida: PageContent = {
+  key: 'florida',
+  parent: 'service-areas',
+  title: 'Medical and Dental Billing Services in Florida',
+  seoTitle: 'Medical Billing Services in Florida | Texas Solutions RCM',
+  metaDescription:
+    'Medical billing services in Florida and a remote dental billing company in Florida for SMMC Medicaid plans, First Coast Medicare and commercial payers.',
+  template: 'location',
+  intro:
+    'Texas Solutions RCM provides medical billing services in Florida and works as a remote dental billing company in Florida. Our team works inside your systems and understands how Florida Medicaid managed care, First Coast and Florida payers handle claims.',
+  body: blocks(
+    h2('Remote support for Florida practices'),
+    p(
+      'We do not have an office in Florida. Our team works remotely from the United States, with our office in Midland, Texas, and logs in to your practice management system, EHR, clearinghouse and payer portals. Most of Florida is in the Eastern time zone and the western Panhandle is in Central time, and we agree working hours that overlap with your office day.'
+    ),
+    p(
+      'Florida has a large Medicare population, a Medicaid program delivered almost entirely through managed care and a separate statewide dental plan structure. Each of these affects how claims should be prepared and followed up.'
+    ),
+    h2('Florida Medicaid and Statewide Medicaid Managed Care'),
+    p(
+      'Florida Medicaid is administered by the Agency for Health Care Administration (AHCA). Most Florida Medicaid recipients receive their care through the Statewide Medicaid Managed Care (SMMC) program, which AHCA describes as having three parts:'
+    ),
+    ul([
+      '<strong>Managed Medical Assistance (MMA)</strong>, covering medical services such as doctor visits, hospital care and behavioral health.',
+      '<strong>Long-Term Care (LTC)</strong>, covering long-term services for eligible older adults and people with disabilities.',
+      '<strong>Dental</strong>, a separate program through which Medicaid dental services are delivered by contracted dental plans.',
+    ]),
+    p(
+      'AHCA launched the current generation of SMMC contracts, often called SMMC 3.0, in 2025. When plan contracts change, practices can see patients move between plans, new prior authorization rules and new claims addresses. Checking eligibility at every visit, not just the first one, is the simplest protection against billing the wrong plan.'
+    ),
+    p(
+      'Providers generally need to be enrolled or registered with Florida Medicaid before an SMMC plan can contract with them and pay their claims. Each plan then runs its own credentialing process, provider portal and appeal steps. Fee-for-service claims for the services and populations that remain outside managed care go through the Florida Medicaid web portal.'
+    ),
+    h2('Dental Medicaid in Florida'),
+    p(
+      'Florida carved dental services out of its medical managed care plans, so Medicaid dental benefits for children and adults are delivered through the SMMC Dental program rather than through MMA plans. AHCA states that Medicaid enrollees must enroll in a dental plan. For a dental office, that means verifying which dental plan the patient is assigned to, following that plan\'s prior authorization rules and credentialing separately with each plan you want to accept.'
+    ),
+    p(
+      `As a dental billing company in Florida, we help with ${a('/services/dental-insurance-verification/', 'dental insurance verification')}, ${a('/services/dental-claims-processing/', 'dental claims processing')}, ${a('/services/dental-credentialing/', 'dental plan credentialing')} and ${a('/services/dental-accounts-receivable/', 'dental AR follow-up')}. Practices that also bill medical plans for procedures such as oral surgery can use our ${a('/services/dental-medical-cross-coding/', 'dental-medical cross coding')} support.`
+    ),
+    h2('Medicare in Florida: First Coast, Jurisdiction N'),
+    p(
+      'Florida is in Medicare Part A/B Jurisdiction N (JN), administered by First Coast Service Options, which also serves Puerto Rico and the US Virgin Islands. First Coast processes Part A and Part B claims, runs the SPOT provider portal, handles Medicare enrollment through PECOS and publishes the local coverage determinations that apply in Florida. Durable medical equipment claims go to a separate DME MAC.'
+    ),
+    p(
+      'Florida has one of the highest rates of Medicare Advantage enrollment in the country, so many patients who say they have Medicare are actually covered by a private plan. Those plans set their own prior authorization lists and appeal deadlines. Our team confirms coverage before the visit and routes each claim to the correct payer.'
+    ),
+    h2('Commercial payers and Florida prompt pay rules'),
+    p(
+      'Florida Blue is the Blue Cross Blue Shield plan for the state, and national carriers and Florida-based HMOs hold large shares of the market. Florida\'s prompt pay statutes, including section 627.6131 of the Florida Statutes for health insurers and section 641.3155 for HMOs, set timelines for paying, denying or contesting claims and require interest on overdue payments. These state rules apply to state-regulated plans and do not cover self-funded employer plans, Medicare or Medicaid. We track claim ages by plan type so late payments from state-regulated plans can be escalated with the right reference.'
+    ),
+    h2('Credentialing and licensure in Florida'),
+    p(
+      `Physicians in Florida are licensed by the Florida Board of Medicine and dentists by the Florida Board of Dentistry, both under the Florida Department of Health. Our ${a('/services/medical-credentialing/', 'credentialing')} and ${a('/services/provider-enrollment/', 'provider enrollment')} work covers Florida Medicaid, SMMC plans, First Coast and commercial payers. For practices with providers who see Florida patients by telehealth, we confirm licensure and payer telehealth policies before claims go out.`
+    ),
+    h2('What we help Florida practices with'),
+    ul([
+      `${a('/services/revenue-cycle-management/', 'Revenue cycle management')} in Florida for independent practices and groups.`,
+      `${a('/services/medical-billing/', 'Medical billing')} and ${a('/services/dental-billing/', 'dental billing')} built around your payer mix.`,
+      `${a('/services/insurance-eligibility-verification/', 'Eligibility verification')} that identifies the correct SMMC plan, dental plan or Medicare Advantage plan.`,
+      `${a('/services/denial-management/', 'Denial management')} and ${a('/services/denial-appeals/', 'appeals')} with each plan's process.`,
+      `${a('/services/aging-ar-follow-up/', 'Aging AR follow-up')} for claims stuck after plan transitions.`,
+    ]),
+    p(
+      `Specialties with large Medicare and Medicaid volumes, such as ${a('/specialties/cardiology/', 'cardiology')}, ${a('/specialties/internal-medicine/', 'internal medicine')}, ${a('/specialties/dermatology/', 'dermatology')} and ${a('/specialties/general-dentistry/', 'general dentistry')}, each have their own billing patterns. See all ${a('/specialties/', 'specialties')} or our other ${a('/service-areas/', 'service areas')}.`
+    ),
+    p(
+      `${a('/consultation/', 'Book a free consultation')} to review your Florida payer mix and decide which work to hand over.`
+    )
+  ),
+};
+
+const california: PageContent = {
+  key: 'california',
+  parent: 'service-areas',
+  title: 'Medical and Dental Billing Services in California',
+  seoTitle: 'Medical Billing Services in California | Medi-Cal and More',
+  metaDescription:
+    'Medical billing services in California for Medi-Cal plans, Medi-Cal Dental, Noridian JE Medicare and commercial payers. Remote revenue cycle management team.',
+  template: 'location',
+  intro:
+    'Texas Solutions RCM provides medical billing services in California and revenue cycle management in California for medical and dental practices. Our remote team works inside your systems and follows the rules of Medi-Cal, its managed care plans, Noridian and California payers.',
+  body: blocks(
+    h2('Remote support on Pacific time'),
+    p(
+      'We do not have an office in California. Our team works remotely, with our company office in Midland, Texas, and logs in to your practice management system, EHR, clearinghouse and payer portals. California runs on Pacific time, two hours behind our home office, so we agree working hours that keep us available through the end of your clinic day.'
+    ),
+    p(
+      'California billing has a few features that set it apart: a Medicaid program whose managed care model changes from county to county, a dental program with its own fiscal intermediary and claims rules, and two separate state regulators for commercial health plans.'
+    ),
+    h2('Medi-Cal and its managed care plans'),
+    p(
+      'Medi-Cal is California\'s Medicaid program, administered by the Department of Health Care Services (DHCS). Most Medi-Cal members are enrolled in a Medi-Cal managed care plan, and the plans available depend on the county. DHCS organizes counties into several models, including County Organized Health Systems with a single county-run plan, Two-Plan counties with a local initiative plan and a commercial plan, counties with multiple commercial plans, and Single Plan counties. Several counties changed models in 2024.'
+    ),
+    p(
+      'For a practice, this means the payer for a Medi-Cal patient is usually a specific plan, and in many cases a delegated medical group or IPA under that plan. Claims, authorizations and appeals may go to the plan or to the delegated group, depending on the contract. Our team maps each patient\'s plan and any delegation before the claim goes out, because sending a claim to the wrong entity is one of the most common reasons California claims stall.'
+    ),
+    p(
+      'Providers enroll in Medi-Cal through DHCS\'s Provider Application and Validation for Enrollment (PAVE) portal. Fee-for-service Medi-Cal claims are processed by the state\'s fiscal intermediary. Outpatient pharmacy benefits are handled separately through Medi-Cal Rx.'
+    ),
+    h2('Medi-Cal Dental (Denti-Cal)'),
+    p(
+      'Dental benefits for Medi-Cal members are overseen by the DHCS Medi-Cal Dental Services Division. Many dentists still call the program Denti-Cal. In most of the state, Medi-Cal dental care is delivered on a fee-for-service basis, with claims and treatment authorizations handled by the Medi-Cal Dental fiscal intermediary and payment based on the Schedule of Maximum Allowances. Dental managed care plans operate in Sacramento County, where enrollment is generally required, and in Los Angeles County, where members can choose to join.'
+    ),
+    p(
+      `Medi-Cal Dental has its own provider handbook, enrollment process, radiograph and documentation requirements and treatment authorization rules. Our ${a('/services/dental-billing/', 'dental billing')}, ${a('/services/dental-insurance-verification/', 'dental insurance verification')} and ${a('/services/dental-claims-processing/', 'dental claims processing')} services follow those requirements, and our ${a('/services/dental-credentialing/', 'dental credentialing')} support covers Medi-Cal Dental enrollment and PPO networks.`
+    ),
+    h2('Medicare in California: Noridian, Jurisdiction E'),
+    p(
+      'California is in Medicare Part A/B Jurisdiction E (JE), administered by Noridian Healthcare Solutions. JE also covers Hawaii, Nevada and the Pacific territories. Noridian processes Part A and Part B claims, runs its provider portal, handles Medicare enrollment through PECOS and publishes the local coverage determinations that apply in California. Durable medical equipment claims go to a separate DME MAC.'
+    ),
+    p(
+      'Many California Medicare beneficiaries are in Medicare Advantage plans, and some are dually eligible for Medi-Cal. Dual-eligible patients may be in plans that coordinate both benefits, which changes where the claim goes and how secondary billing works.'
+    ),
+    h2('Commercial payers and California regulators'),
+    p(
+      'California splits oversight of commercial health coverage between two agencies. The Department of Managed Health Care (DMHC) regulates HMOs and many PPO products under the Knox-Keene Act, and the California Department of Insurance (CDI) regulates other health insurance policies. Both have claims payment rules and dispute processes for providers, and knowing which regulator oversees a plan tells you where to escalate a slow-paying claim. California also updated its prompt payment rules for health plans and insurers in recent legislation, so we check current requirements before citing them in a dispute.'
+    ),
+    p(
+      'California has two separate Blue plans, Anthem Blue Cross and Blue Shield of California, each with its own provider manuals, portals and medical policies. Self-funded employer plans fall under federal ERISA rules instead of state oversight. California also has its own surprise billing protections for state-regulated plans, which apply alongside the federal No Surprises Act when a patient sees an out-of-network provider at an in-network facility.'
+    ),
+    h2('Credentialing and licensure in California'),
+    p(
+      `Physicians in California are licensed by the Medical Board of California and dentists by the Dental Board of California. Our ${a('/services/medical-credentialing/', 'credentialing')} and ${a('/services/provider-enrollment/', 'provider enrollment')} work covers PAVE, Noridian, Medi-Cal managed care plans, delegated groups and commercial payers.`
+    ),
+    h2('What we help California practices with'),
+    ul([
+      `${a('/services/revenue-cycle-management/', 'Revenue cycle management')} in California, from eligibility through payment posting and AR.`,
+      `${a('/services/medical-billing/', 'Medical billing')} that routes each claim to the correct plan or delegated group.`,
+      `${a('/services/prior-authorization/', 'Prior authorization support')} for Medi-Cal plans, Medicare Advantage and commercial payers.`,
+      `${a('/services/denial-management/', 'Denial management')} and ${a('/services/underpayment-identification/', 'underpayment identification')} against your contracts.`,
+    ]),
+    p(
+      `We support specialties such as ${a('/specialties/primary-care/', 'primary care')}, ${a('/specialties/behavioral-health/', 'behavioral health')}, ${a('/specialties/physical-therapy/', 'physical therapy')} and ${a('/specialties/pediatric-dentistry/', 'pediatric dentistry')}. See all ${a('/specialties/', 'specialties')} or our other ${a('/service-areas/', 'service areas')}.`
+    ),
+    p(
+      `${a('/consultation/', 'Book a free consultation')} to talk through your California payers and plans.`
+    )
+  ),
+};
+
+const newYork: PageContent = {
+  key: 'new-york',
+  parent: 'service-areas',
+  title: 'Medical and Dental Billing Services in New York',
+  seoTitle: 'Medical Billing Services in New York | Texas Solutions RCM',
+  metaDescription:
+    'Medical billing services in New York for eMedNY, Medicaid managed care, NGS Medicare and commercial payers. Remote team for medical and dental practices.',
+  template: 'location',
+  intro:
+    'Texas Solutions RCM provides medical billing services in New York and revenue cycle management in New York for medical and dental practices. Our remote team works inside your systems and follows the rules of eMedNY, Medicaid managed care plans, NGS and New York payers.',
+  body: blocks(
+    h2('Remote support on Eastern time'),
+    p(
+      'We do not have an office in New York. Our team works remotely, with our company office in Midland, Texas, and logs in to your practice management system, EHR, clearinghouse and payer portals. We agree working hours that overlap with your Eastern time clinic day, so your staff can reach us when they need an answer.'
+    ),
+    p(
+      'New York practices deal with a Medicaid system that has its own claims platform, a large managed care market, several regional Blue plans and some of the more detailed insurance rules in the country.'
+    ),
+    h2('New York Medicaid and eMedNY'),
+    p(
+      'New York State Medicaid is administered by the New York State Department of Health. eMedNY is the state\'s Medicaid Management Information System, the platform that handles provider enrollment records, fee-for-service claims, remittances and eligibility checks. Providers can submit standard X12 claims directly or through a service bureau, and many smaller offices use ePACES, the web-based claim entry tool that eMedNY provides. eMedNY also publishes the provider manuals and fee schedules for each provider type.'
+    ),
+    p(
+      'Before you can bill New York Medicaid, the provider and the practice need to be enrolled, and any electronic submitter needs to be set up with eMedNY. New providers often see their first claims reject because one of these steps is incomplete, so we check enrollment status before the first claim goes out.'
+    ),
+    h3('Medicaid managed care'),
+    p(
+      'Most New York Medicaid members are enrolled in Medicaid managed care. Mainstream Medicaid managed care plans, Health and Recovery Plans (HARPs) for adults with significant behavioral health needs, HIV Special Needs Plans and Managed Long Term Care plans each have their own benefit rules. Each plan runs its own credentialing, prior authorization and appeal process.'
+    ),
+    p(
+      'Since April 2023, outpatient pharmacy benefits for mainstream Medicaid managed care, HARP and HIV-SNP members have been carved out to NYRx, the Medicaid fee-for-service pharmacy program. That change does not affect medical or dental claims directly, but it shows how often New York moves benefits between managed care and fee-for-service. Our team checks the current rules for each benefit rather than assuming last year\'s setup still applies.'
+    ),
+    p(
+      'Child Health Plus, New York\'s CHIP program, and the Essential Plan are separate programs delivered through participating health plans, with their own eligibility and billing rules.'
+    ),
+    h2('Dental Medicaid in New York'),
+    p(
+      'New York Medicaid covers dental services for children and adults. Depending on the member, dental care is billed either through fee-for-service on eMedNY or through the member\'s Medicaid managed care plan, which may use a dental benefit administrator. The Department of Health expanded adult coverage for crowns and root canals in certain circumstances in 2024, and the dental program manual and fee schedule on eMedNY are updated periodically.'
+    ),
+    p(
+      `For dental offices, the key steps are confirming whether the patient is fee-for-service or managed care, checking which administrator handles that plan's dental benefit and following its prior approval rules. Our ${a('/services/dental-billing/', 'dental billing')}, ${a('/services/dental-insurance-verification/', 'dental insurance verification')} and ${a('/services/dental-credentialing/', 'dental credentialing')} services cover those steps.`
+    ),
+    h2('Medicare in New York: NGS, Jurisdiction K'),
+    p(
+      'New York is in Medicare Part A/B Jurisdiction K (JK), administered by National Government Services (NGS). JK also covers Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island and Vermont. NGS processes Part A and Part B claims, runs the NGSConnex portal, handles Medicare enrollment through PECOS and publishes the local coverage determinations that apply in New York. Durable medical equipment claims go to a separate DME MAC.'
+    ),
+    h2('Commercial payers and New York prompt pay rules'),
+    p(
+      'New York has several Blue Cross Blue Shield plans that each cover a different region of the state, so the right Blue plan depends on where the patient lives and where the policy was issued. National carriers and New York-based plans also hold large shares of the market.'
+    ),
+    p(
+      'New York\'s prompt pay law, section 3224-a of the Insurance Law, requires insurers and HMOs regulated by the Department of Financial Services (DFS) to pay undisputed claims within 30 days of receipt for electronic claims and 45 days for paper claims, or to explain why a claim is being denied or what information is needed. New York also has its own surprise billing law and an independent dispute resolution process run through DFS, which works alongside the federal No Surprises Act for state-regulated plans. Self-funded employer plans fall outside these state rules.'
+    ),
+    h2('Credentialing and licensure in New York'),
+    p(
+      `Physicians and dentists in New York are licensed through the New York State Education Department\'s Office of the Professions, and New York physicians must keep their state physician profile current. Our ${a('/services/medical-credentialing/', 'credentialing')} and ${a('/services/provider-enrollment/', 'provider enrollment')} work covers eMedNY enrollment, NGS, Medicaid managed care plans and commercial payers.`
+    ),
+    h2('What we help New York practices with'),
+    ul([
+      `${a('/services/revenue-cycle-management/', 'Revenue cycle management')} in New York for independent practices and groups.`,
+      `${a('/services/medical-billing/', 'Medical billing')} across eMedNY, managed care plans, NGS and commercial payers.`,
+      `${a('/services/insurance-eligibility-verification/', 'Eligibility verification')} that identifies fee-for-service versus managed care Medicaid.`,
+      `${a('/services/denial-management/', 'Denial management')} and ${a('/services/accounts-receivable-management/', 'AR follow-up')}, including prompt pay escalation where it applies.`,
+      `${a('/services/out-of-network-billing/', 'Out-of-network billing')} support that keeps state and federal surprise billing rules in view.`,
+    ]),
+    p(
+      `We support specialties such as ${a('/specialties/mental-health-clinics/', 'mental health clinics')}, ${a('/specialties/multi-specialty/', 'multi-specialty groups')}, ${a('/specialties/orthopedics/', 'orthopedics')} and ${a('/specialties/oral-surgery/', 'oral surgery')}. See all ${a('/specialties/', 'specialties')} or our other ${a('/service-areas/', 'service areas')}.`
+    ),
+    p(
+      `${a('/consultation/', 'Book a free consultation')} to review your New York payer mix and plans.`
     )
   ),
 };
@@ -1376,4 +1752,9 @@ export const pages: PageContent[] = [
   accessibilityStatement,
   disclaimer,
   dataHandling,
+  serviceAreas,
+  texas,
+  florida,
+  california,
+  newYork,
 ];

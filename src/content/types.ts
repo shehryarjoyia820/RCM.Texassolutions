@@ -34,7 +34,10 @@ export type ServiceCategory =
   | 'back-end'
   | 'enrollment'
   | 'analytics'
-  | 'practice-support';
+  | 'practice-support'
+  | 'dental'
+  | 'programs'
+  | 'software';
 
 export interface Service {
   slug: string;

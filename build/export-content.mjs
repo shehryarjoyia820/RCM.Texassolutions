@@ -15,6 +15,7 @@ const calcDir = join(root, 'src/content/tools/calculators');
 const refDir = join(root, 'src/content/tools/reference');
 const list = (d) => readdirSync(d).filter((f) => f.endsWith('.ts')).map((f) => f.slice(0, -3)).sort();
 const hasPages = existsSync(join(root, 'src/content/pages.ts'));
+const has = (f) => existsSync(join(root, f));
 const entry = `
 import { servicesPart1 } from './src/content/services/part1';
 import { servicesPart2 } from './src/content/services/part2';
@@ -23,16 +24,21 @@ import { medicalPart1 } from './src/content/specialties/medical1';
 import { medicalPart2 } from './src/content/specialties/medical2';
 import { dentalSpecialties } from './src/content/specialties/dental';
 import { seedPosts } from './src/content/blog/seed';
+${has('src/content/services/part4.ts') ? "import { servicesPart4 } from './src/content/services/part4';" : 'const servicesPart4 = [];'}
+${has('src/content/services/part5.ts') ? "import { servicesPart5 } from './src/content/services/part5';" : 'const servicesPart5 = [];'}
+${has('src/content/specialties/more.ts') ? "import { moreSpecialties } from './src/content/specialties/more';" : 'const moreSpecialties = [];'}
+${has('src/content/blog/seed2.ts') ? "import { seedPosts2 } from './src/content/blog/seed2';" : 'const seedPosts2 = [];'}
+${has('src/content/blog/seed3.ts') ? "import { seedPosts3 } from './src/content/blog/seed3';" : 'const seedPosts3 = [];'}
 import * as company from './src/content/company';
 ${hasPages ? "import { pages } from './src/content/pages';" : 'const pages = [];'}
 ${list(calcDir).map((s, i) => `import c${i} from './src/content/tools/calculators/${s}';`).join('\n')}
 ${list(refDir).map((s, i) => `import r${i} from './src/content/tools/reference/${s}';`).join('\n')}
 export const data = {
-  services: [...servicesPart1, ...servicesPart2, ...servicesPart3],
-  specialties: [...medicalPart1, ...medicalPart2, ...dentalSpecialties],
+  services: [...servicesPart1, ...servicesPart2, ...servicesPart3, ...servicesPart4, ...servicesPart5],
+  specialties: [...medicalPart1, ...medicalPart2, ...moreSpecialties, ...dentalSpecialties],
   calculators: [${list(calcDir).map((_, i) => `c${i}`).join(', ')}],
   references: [${list(refDir).map((_, i) => `r${i}`).join(', ')}],
-  blog: seedPosts,
+  blog: [...seedPosts, ...seedPosts2, ...seedPosts3],
   pages,
   company: { CYCLE: company.CYCLE, HOME_FAQS: company.HOME_FAQS, GENERAL_FAQS: company.GENERAL_FAQS, COMPANY_FACTS: company.COMPANY_FACTS },
 };

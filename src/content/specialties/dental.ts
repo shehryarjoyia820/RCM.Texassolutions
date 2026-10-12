@@ -199,13 +199,13 @@ export const dentalSpecialties: Specialty[] = [
     ],
     seoTitle: 'Orthodontic Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Orthodontic billing support for lifetime maximums, initial and periodic insurance claims, payment contracts, COB, transfers and eligibility rechecks.',
+      'Orthodontic billing services for lifetime maximums, initial and periodic insurance claims, payment contracts, COB, transfers and eligibility rechecks.',
     keywords: [
       'orthodontic billing',
+      'orthodontic billing services',
       'orthodontic insurance billing',
       'orthodontic lifetime maximum',
       'ortho periodic payments',
-      'orthodontic billing services',
       'braces insurance claims',
     ],
   },
@@ -393,13 +393,13 @@ export const dentalSpecialties: Specialty[] = [
     ],
     seoTitle: 'Periodontal Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Periodontal billing support for SRP documentation, perio charting attachments, maintenance frequency rules, surgical claims and denial follow-up.',
+      'Periodontal billing services for SRP documentation, perio charting attachments, maintenance frequency rules, surgical claims and denial follow-up.',
     keywords: [
       'periodontal billing',
+      'periodontal billing services',
+      'periodontist billing services',
       'scaling and root planing billing',
       'perio maintenance billing',
-      'periodontist billing services',
-      'perio charting attachments',
       'periodontal surgery insurance',
     ],
   },
@@ -415,7 +415,7 @@ export const dentalSpecialties: Specialty[] = [
     summary:
       'Oral surgery billing across dental and medical plans: cross-coding, anesthesia time, authorizations, trauma claims and implant estimates.',
     definition:
-      'Oral and maxillofacial surgery billing involves deciding whether each service belongs on a dental claim, a medical claim or both, cross-coding to CPT and ICD-10-CM when medical coverage applies, billing anesthesia by time, securing prior authorizations, and handling coordination of benefits for extractions, biopsies, trauma, pathology, TMJ, orthognathic and implant procedures.',
+      'Oral surgery billing, for oral and maxillofacial surgery practices, involves deciding whether each service belongs on a dental claim, a medical claim or both, cross-coding to CPT and ICD-10-CM when medical coverage applies, billing anesthesia by time, securing prior authorizations, and handling coordination of benefits for extractions, biopsies, trauma, pathology, TMJ, orthognathic and implant procedures.',
     intro: [
       "Oral surgery sits on the line between dentistry and medicine, and so does its billing. Many procedures can be covered by a patient's dental plan, a medical plan or both, depending on the diagnosis, the plan language and where the care was delivered. Impacted third molars, biopsies, jaw fractures, cysts, infections and orthognathic surgery may all be candidates for medical coverage, while routine extractions and implants usually stay on the dental side.",
       "Billing medical plans means a different form, a different code set and a different set of rules: the CMS-1500 or 837P, CPT and ICD-10-CM codes, medical necessity, prior authorization and often a separate credentialing relationship with each medical payer. The dental plan then becomes secondary, or the reverse, and coordination of benefits has to be handled carefully so the patient is not billed for what a second plan should pay.",
@@ -500,11 +500,11 @@ export const dentalSpecialties: Specialty[] = [
     ],
     seoTitle: 'Oral Surgery Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Oral and maxillofacial surgery billing support for medical-dental cross-coding, anesthesia time, prior authorizations, trauma claims and implant estimates.',
+      'Oral surgery billing services for medical-dental cross-coding, anesthesia time, prior authorizations, trauma claims and dental implant estimates.',
     keywords: [
       'oral surgery billing',
+      'oral surgery billing services',
       'oral and maxillofacial surgery billing',
-      'medical dental cross coding',
       'oral surgery medical insurance',
       'IV sedation dental billing',
       'dental implant insurance billing',
@@ -601,12 +601,12 @@ export const dentalSpecialties: Specialty[] = [
     ],
     seoTitle: 'Pediatric Dental Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Pediatric dental billing support for Medicaid and CHIP dental plans, eligibility checks, sealant and fluoride rules, sedation authorizations and COB.',
+      'Pediatric dental billing services for Medicaid and CHIP dental plans, eligibility checks, sealant and fluoride rules, sedation authorizations and COB.',
     keywords: [
       'pediatric dental billing',
-      'Medicaid dental billing',
-      'CHIP dental billing',
+      'pediatric dental billing services',
       'pediatric dentist billing services',
+      'CHIP dental billing',
       'dental general anesthesia authorization',
       'sealant frequency limits',
     ],

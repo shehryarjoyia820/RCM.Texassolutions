@@ -869,10 +869,11 @@ export const medicalPart2: Specialty[] = [
       'icd-10-code-search',
       'claim-submission-checklist',
     ],
-    seoTitle: 'Podiatry Billing: Routine Foot Care and Q Modifiers',
+    seoTitle: 'Podiatry Billing Services: Routine Foot Care, Q Modifiers',
     metaDescription:
-      'Podiatry billing support for Medicare routine foot care rules, class findings and Q modifiers, debridement frequency, diabetic shoes and foot surgery.',
+      'Podiatry billing services for Medicare routine foot care rules, class findings and Q modifiers, debridement frequency, diabetic shoes and foot surgery.',
     keywords: [
+      'podiatry billing services',
       'podiatry billing',
       'routine foot care Medicare',
       'Q7 Q8 Q9 modifiers',
@@ -1065,16 +1066,16 @@ export const medicalPart2: Specialty[] = [
       'prior-authorization-checklist',
       'payment-variance-calculator',
     ],
-    seoTitle: 'Surgery Center Billing: ASC Facility Claims Support',
+    seoTitle: 'Ambulatory Surgery Center Billing Services | ASC',
     metaDescription:
-      'Ambulatory surgery center billing support for facility claims, ASC payment indicators, multiple procedure discounting, implant carve-outs and prior auth.',
+      'Ambulatory surgery center billing services for facility claims, ASC payment indicators, multiple procedure discounting, implant carve-outs and prior auth.',
     keywords: [
+      'ambulatory surgery center billing services',
       'ambulatory surgery center billing',
       'ASC billing',
       'ASC payment indicators',
       'multiple procedure discounting ASC',
       'implant carve-out billing',
-      'surgery center revenue cycle',
     ],
   },
 
@@ -1166,10 +1167,11 @@ export const medicalPart2: Specialty[] = [
       'claim-turnaround-time-calculator',
       'days-in-ar-calculator',
     ],
-    seoTitle: 'Home Health Billing: PDGM, NOA and OASIS Support',
+    seoTitle: 'Home Health Billing Services: PDGM, NOA and OASIS',
     metaDescription:
-      'Home health billing support for PDGM 30-day periods, Notice of Admission timing, OASIS coordination, face-to-face rules and signed plans of care.',
+      'Home health billing services for PDGM 30-day periods, Notice of Admission timing, OASIS coordination, face-to-face rules and signed plans of care.',
     keywords: [
+      'home health billing services',
       'home health billing',
       'PDGM billing',
       'home health notice of admission',
@@ -1190,7 +1192,7 @@ export const medicalPart2: Specialty[] = [
     summary:
       'Revenue cycle support for mental health clinics and group practices with many license types, payer panels and supervision rules.',
     definition:
-      'Mental health clinic billing involves credentialing clinicians across many license types, getting onto payer panels, billing each payer under the correct rendering provider and supervision rules, managing group versus individual enrollment, and coordinating scheduling, telehealth and authorization workflows across a multi-clinician organization.',
+      'Mental health billing services for clinics involve credentialing clinicians across many license types, getting onto payer panels, billing each payer under the correct rendering provider and supervision rules, managing group versus individual enrollment, and coordinating scheduling, telehealth and authorization workflows across a multi-clinician organization.',
     intro: [
       'A mental health clinic or group practice usually employs a mix of clinicians: psychiatrists, psychiatric nurse practitioners, psychologists, licensed clinical social workers, licensed professional counselors, marriage and family therapists and sometimes pre-licensed associates working under supervision. Each license type is recognized differently by Medicare, Medicaid and commercial plans, and each must be credentialed individually with every payer the clinic accepts.',
       'The operational challenge is keeping billing aligned with those differences. A session billed under the wrong rendering provider, for a clinician not yet enrolled with the payer, or for an associate whose services the payer does not recognize, will deny regardless of how well it was documented. Panel closures, recredentialing and clinician turnover make this a continuous process.',
@@ -1267,14 +1269,15 @@ export const medicalPart2: Specialty[] = [
       'denial-rate-calculator',
       'provider-productivity-calculator',
     ],
-    seoTitle: 'Mental Health Clinic Billing and Credentialing',
+    seoTitle: 'Mental Health Billing Services for Clinics',
     metaDescription:
-      'Billing and credentialing support for mental health clinics with many license types, payer panels, supervision rules and group enrollment needs.',
+      'Mental health billing services for clinics with many license types: payer panels, credentialing, supervision rules, group enrollment and claim follow-up.',
     keywords: [
+      'mental health billing services',
       'mental health clinic billing',
+      'mental health payer panels',
       'group therapy practice credentialing',
       'LPC LMFT Medicare enrollment',
-      'mental health payer panels',
       'supervised associate billing',
       'mental health group practice RCM',
     ],

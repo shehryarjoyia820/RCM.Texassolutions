@@ -132,6 +132,7 @@ function rcm_t_nav(): array
         ['How we work', rcm_t_url('how-we-work')],
         ['Why choose us', rcm_t_url('why-choose-us')],
         ['Technology and integrations', rcm_t_url('technology')],
+        ['Service areas (US)', rcm_t_url('service-areas')],
         ['Security and privacy', rcm_t_url('security')],
         ['Careers', rcm_t_url('careers')],
         ['FAQs', rcm_t_url('faq')],

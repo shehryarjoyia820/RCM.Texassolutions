@@ -13,7 +13,7 @@ export const servicesPart3: Service[] = [
     summary:
       "Sample-based reviews that compare clinical documentation to the codes and modifiers billed, with findings your team can act on.",
     definition:
-      "A coding audit is a structured review of a sample of encounters that checks whether the documented clinical record supports the diagnosis codes, procedure codes, modifiers and units that were billed. It identifies undercoding, overcoding, missing documentation elements and payer edit conflicts so providers and coders can correct patterns before they become denials or refund requests.",
+      "A medical coding audit is a structured review of a sample of encounters that checks whether the documented clinical record supports the diagnosis codes, procedure codes, modifiers and units that were billed. It identifies undercoding, overcoding, missing documentation elements and payer edit conflicts so providers and coders can correct patterns before they become denials or refund requests.",
     intro: [
       "Coding drifts over time. New providers bring habits from previous practices, payer policies change every quarter, and annual code set updates add or retire codes that templates may still reference. Without a periodic review, small mismatches between what a note says and what a claim reports can repeat across hundreds of encounters.",
       "Our coding audit service looks at a defined sample of your claims alongside the supporting documentation. We check code selection, diagnosis specificity, modifier use, units and medical necessity support against current CMS guidance, NCCI edits and the payer policies that apply to your practice. Findings are reported by provider and by pattern, not as a list of isolated errors.",
@@ -118,10 +118,11 @@ export const servicesPart3: Service[] = [
     ],
     relatedTools: ["icd-10-code-search", "hcpcs-code-lookup", "denial-rate-calculator", "denial-reasons-guide"],
     relatedServices: ["medical-coding", "revenue-cycle-audit", "denial-management", "charge-entry"],
-    seoTitle: "Medical Coding Audits and Documentation Review",
+    seoTitle: "Medical Coding Audit Services and Documentation Review",
     metaDescription:
-      "Coding audits that compare documentation to billed codes, modifiers and units, with provider-level findings and education designed to reduce repeat denials.",
+      "Medical coding audit services that compare documentation to billed codes, modifiers and units, with provider-level findings and education for coders.",
     keywords: [
+      "medical coding audit services",
       "medical coding audit",
       "coding compliance review",
       "documentation review",
@@ -394,7 +395,7 @@ export const servicesPart3: Service[] = [
     summary:
       "Remote administrative staff who handle inboxes, callbacks, faxes and paperwork inside your systems under your access controls.",
     definition:
-      "Virtual medical administrative assistance is remote, non-clinical support for a practice's day-to-day office tasks, such as processing faxes and referrals, returning routine calls, managing shared inboxes and preparing paperwork. Assistants work inside the practice's own phone, PM and EHR systems using accounts and permissions the practice controls, and they follow the practice's written procedures.",
+      "Virtual medical administrative assistance, including a virtual medical billing assistant role, is remote, non-clinical support for a practice's office tasks, such as processing faxes and referrals, returning routine calls, managing shared inboxes and preparing paperwork. Assistants work inside the practice's own phone, PM and EHR systems using accounts and permissions the practice controls, and they follow the practice's written procedures.",
     intro: [
       "Administrative work in a medical or dental office arrives all day from every direction: faxed referrals, records requests, voicemails, portal messages and forms that need to be scanned and indexed. When the front desk is also checking patients in, these tasks pile up and response times slip.",
       "A virtual administrative assistant takes on a defined set of these non-clinical tasks remotely. All work happens inside your systems, using user accounts you create, the permissions you set and the procedures you approve. Assistants do not give medical advice, triage symptoms or make clinical decisions; anything clinical is routed to your staff according to your rules.",
@@ -409,6 +410,8 @@ export const servicesPart3: Service[] = [
       "Prepare new patient packets and send intake forms",
       "Update demographic and contact information when patients report changes",
       "Track and follow up on outstanding forms, signatures and referral responses",
+      "As a virtual medical billing assistant, run billing support tasks under your billing lead: charge entry checks, claim status follow-up and posting of patient payments",
+      "Check insurance eligibility for upcoming visits and flag coverage problems to the front desk before the appointment",
     ],
     workflow: [
       {
@@ -498,14 +501,15 @@ export const servicesPart3: Service[] = [
       "patient-registration",
       "practice-management-support",
     ],
-    seoTitle: "Virtual Medical Administrative Assistant",
+    seoTitle: "Virtual Medical Billing Assistant and Admin Support",
     metaDescription:
-      "Remote, non-clinical admin support for faxes, referrals, callbacks and portal messages, done inside your own systems with accounts and access you control.",
+      "Virtual medical billing assistant and admin support: remote help with faxes, referrals, callbacks, demographics and paperwork inside systems you control.",
     keywords: [
+      "virtual medical billing assistant",
+      "medical virtual assistant for billing",
       "virtual medical assistant",
       "remote medical administrative assistant",
       "virtual medical office assistant",
-      "medical office support",
       "referral processing",
     ],
   },
