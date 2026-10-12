@@ -48,8 +48,10 @@ const calc: Calculator = {
     notes.push(`If collections grow ${Math.round(g * 10000) / 100}% every month, the next ${months} months would bring in about ${usd(projectedTotal)}, ending at about ${usd(finalMonth)} a month.`);
     notes.push('This is an estimate. Seasonality is not modeled: real collections often dip around holidays and early in the year when patient deductibles reset.');
     if (g > 0) notes.push('Growth in collections usually depends on added capacity, such as providers, hours or services, or on collecting more of what you bill. Check that the rate is supported by a specific plan.');
+    const fin = (x: number | null) => (x !== null && Number.isFinite(x) ? x : null);
+    if (![projectedTotal, finalMonth].every(Number.isFinite)) warnings.push('These inputs produce a number too large to show. Check the growth rate and number of months.');
     return {
-      values: { projectedTotal, finalMonth, runRate, totalGrowthPct, gainOverFlat },
+      values: { projectedTotal: fin(projectedTotal), finalMonth: fin(finalMonth), runRate: fin(runRate), totalGrowthPct: fin(totalGrowthPct), gainOverFlat: fin(gainOverFlat) },
       notes,
       warnings,
     };

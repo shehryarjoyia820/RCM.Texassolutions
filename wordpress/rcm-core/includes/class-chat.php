@@ -579,6 +579,38 @@ TXT;
             self::now(),
             $lead_id
         ));
+        self::rescore_lead($lead_id, $p, $needs_human);
+    }
+
+    /** Re-applies the documented scoring rules as the chat learns more about the practice. */
+    private static function rescore_lead(string $lead_id, array $p, bool $needs_human): void
+    {
+        global $wpdb;
+        $t = rcm_table('leads');
+        $row = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$t} WHERE id = %s", $lead_id), ARRAY_A);
+        if (!$row || !method_exists(Leads::class, 'score')) {
+            return;
+        }
+        // The assistant records provider counts as text ("4"); scoring uses the form buckets.
+        $prov = (string) $row['providers'];
+        if (preg_match('/^\d+$/', $prov)) {
+            $n = (int) $prov;
+            $prov = $n <= 1 ? '1' : ($n <= 5 ? '2-5' : ($n <= 10 ? '6-10' : ($n <= 25 ? '11-25' : ($n <= 50 ? '26-50' : '51+'))));
+        }
+        $services = json_decode((string) ($row['services'] ?? '[]'), true) ?: [];
+        $services = array_merge($services, array_map('strval', (array) ($p['services'] ?? [])));
+        $scored = Leads::score(['providers' => $prov, 'services' => array_values(array_unique($services))] + $row);
+        $score = (int) $scored['score'];
+        $reasons = (array) $scored['reasons'];
+        if (!empty($p['wantsConsultation'])) {
+            $score += 15;
+            $reasons[] = '+15 accepted a consultation in chat';
+        }
+        if ($needs_human) {
+            $score += 10;
+            $reasons[] = '+10 asked for a person, quote or call';
+        }
+        $wpdb->update($t, ['score' => min(100, $score), 'score_reasons' => wp_json_encode($reasons)], ['id' => $lead_id]);
     }
 
     public static function profile_summary(array $p, bool $needs_human): string

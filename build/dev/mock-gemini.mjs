@@ -3,7 +3,7 @@
 // Start WordPress with RCM_GEMINI_API_BASE=http://127.0.0.1:3999 (dev-wp.cmd does this).
 import { createServer } from 'node:http';
 
-const port = Number(process.env.PORT || 3999);
+const port = Number(process.env.MOCK_GEMINI_PORT || 3999);
 const log = [];
 
 createServer((req, res) => {
