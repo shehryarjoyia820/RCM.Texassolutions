@@ -18,7 +18,7 @@ This creates `dist/rcm-core-<version>.zip` and `dist/rcm-theme-<version>.zip`. K
 2. WordPress admin > **Plugins > Add New > Upload Plugin** > `rcm-core-<v>.zip` > Install > **Activate**.
 3. **Appearance > Themes > Add New > Upload Theme** > `rcm-theme-<v>.zip` > Install > **Activate**.
 4. Open **RCM** in the admin menu. The first visit imports all bundled content (about a minute): 40 services, 37 specialties, 51 tools, FAQs, 20 company and legal pages, blog categories and 8 articles, and sets the home page and blog page.
-5. You will be asked to set up **two-factor authentication** on your profile (authenticator app). Save the recovery codes somewhere safe.
+5. Two-factor authentication is optional (owner decision). Each admin can turn it on under Users > Profile; enforce it per role in RCM > Settings > Security.
 6. **RCM > Settings**:
    - Contact details and the lead notification email (default info@texassolutions.co).
    - AI assistant: paste the Google Gemini API key, or better, add to `wp-config.php` (via SFTP):

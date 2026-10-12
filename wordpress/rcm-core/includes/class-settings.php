@@ -50,7 +50,7 @@ final class Settings
                 'duplicate_window_days' => 180,
             ],
             'security' => [
-                'mfa_required_roles' => ['administrator'],
+                'mfa_required_roles' => [], // owner chose optional MFA (2026-10-12); turn on in RCM > Settings > Security
                 'login_max_attempts' => 5,
                 'login_lockout_minutes' => 15,
                 'disable_xmlrpc' => true,

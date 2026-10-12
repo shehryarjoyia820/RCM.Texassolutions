@@ -15,7 +15,7 @@ PHI controls on the site:
 | Area | Control |
 |---|---|
 | Transport | HTTPS (DreamHost certificate); HSTS header |
-| Authentication | WordPress passwords + TOTP two-factor (RFC 6238) with 10 single-use recovery codes; enforced per role with a grace redirect so nobody is locked out; TOTP secrets encrypted at rest (libsodium secretbox, key derived from WordPress salts) |
+| Authentication | WordPress passwords + optional TOTP two-factor (RFC 6238) with 10 single-use recovery codes; can be enforced per role in RCM > Settings > Security (off by owner decision, 2026-10-12); TOTP secrets encrypted at rest (libsodium secretbox, key derived from WordPress salts) |
 | Brute force | Per-account and per-IP lockout after configurable failed attempts; generic login errors; lockouts audited |
 | Authorization | Role-based capabilities (Administrator, Sales Manager, Support Agent, Content Editor); support agents limited to assigned leads; every admin action checks capability + nonce |
 | Input | Server-side validation and sanitization on every field; prepared SQL statements; output escaping; honeypot + minimum fill time on forms; rate limits on forms (8/10 min), chat start (5/30 min), chat messages, lookups (60/min) and analytics events |

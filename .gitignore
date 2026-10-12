@@ -18,3 +18,5 @@ wordpress/rcm-core/data/*.json
 dist/
 .sftp-password
 *.zip
+backups/
+.gemini-key
