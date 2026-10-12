@@ -35,3 +35,19 @@ Date: 2026-10-12. Environment: WordPress 7.1.3 on PHP 8.3 (WordPress Playground,
 - Cross-browser check (Safari iOS, Firefox, Edge) on the live URL.
 
 Run these after deployment using DEPLOYMENT.md step 7 and record results here.
+
+## QA audit follow-up (2026-10-12, live site)
+
+Fixes for `RCM-QA-Audit-2026-10-12.md`, verified on https://rcm.texassolutions.co after deploy and cache purge:
+
+| Finding | Fix | Live result |
+|---|---|---|
+| QA-01 calculator served unstyled (cached partial page during deployment) | Cache purge after every deploy; new `node build/smoke.mjs` checks every sitemap URL for title, theme CSS, meta description, canonical, single H1, no PHP errors, no placeholder text, calculator script present | 166 URLs, 0 problems; NCR defaults 95% / $300,000 / $15,000 |
+| QA-02 homepage placeholder description | Home and Blog pages get real SEO title/description from the importer | Meta, OG, Twitter and schema use the approved copy |
+| QA-03 GA4 blank | Owner to add GA4 ID in RCM > Settings (first-party analytics already records events) | Pending owner |
+| QA-04 dead "Cookie settings" | Button only rendered when GA4 (optional cookies) is configured | Hidden while GA4 is blank |
+| QA-05 honeypot in accessibility tree / first focus | Honeypot wrapper is `inert` + `aria-hidden`; Discuss panel focuses Full name | Verified |
+| QA-06 ROI "3%" ambiguous | New unit "percentage points" (input suffix "pts") | Example shows "3 percentage points" |
+| Form length (improvement) | 40 service checkboxes moved into a collapsed, filterable "Choose services" section (opens when a service is preselected) | Verified |
+
+Originality check: 40 distinctive sentences searched on the web, 0 matches; X12 code entries rewritten where they were close paraphrases (CARC 24, 59, 119, 181, 204; status F0, E2); FAQ page given its own questions; blog closings made unique.

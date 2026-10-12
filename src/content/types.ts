@@ -96,7 +96,7 @@ export interface Specialty {
 /*  Calculators                                                        */
 /* ------------------------------------------------------------------ */
 
-export type Unit = 'usd' | 'pct' | 'days' | 'count' | 'hours' | 'months' | 'ratio' | 'years';
+export type Unit = 'usd' | 'pct' | 'pp' | 'days' | 'count' | 'hours' | 'months' | 'ratio' | 'years';
 
 export interface CalcInput {
   id: string;

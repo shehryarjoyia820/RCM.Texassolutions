@@ -47,10 +47,6 @@ const SRC = {
   adaInsurance: { label: 'ADA: Dental Insurance resources', url: 'https://www.ada.org/resources/practice/dental-insurance' },
 };
 
-const CONSULT =
-  '<h2>Want a second set of eyes on your revenue cycle?</h2>' +
-  '<p>If you would like to talk through how this applies to your practice, you can <a href="/contact">request a free consultation</a>. We will listen to how your workflow runs today, look at where claims and balances tend to stall, and explain how our remote team works inside your own practice management, EHR and clearinghouse systems.</p>';
-
 export const seedPosts: SeedPost[] = [
   // 1 ------------------------------------------------------------------
   {
@@ -147,7 +143,7 @@ export const seedPosts: SeedPost[] = [
 <li>Work aged claims on a fixed schedule, oldest and largest first.</li>
 <li>Give patients clear cost estimates and easy ways to pay.</li>
 </ul>
-` + CONSULT,
+` + '<h2>Need help mapping your own revenue cycle?</h2><p>If you want to see where your own cycle loses time or money, <a href="/consultation">book a free consultation</a>. We will walk through each stage with you, from scheduling to the last patient balance, and point out the steps that most need attention.</p>',
     faqs: [
       {
         q: 'What is the difference between RCM and medical billing?',
@@ -248,7 +244,7 @@ export const seedPosts: SeedPost[] = [
 <p>What the practice controls is the time on its own side of the process: how quickly notes are signed, how quickly charges are entered, how fast rejections are corrected, and how soon unpaid claims are followed up. Shortening those internal delays is usually the most reliable way to speed up payment.</p>
 
 <p>Most of these are process problems, not individual mistakes. A clear workflow with checks at each step is what keeps a practice's <a href="/services/medical-billing">medical billing</a> moving.</p>
-` + CONSULT,
+` + '<h2>Want someone to check your billing workflow?</h2><p>If your claims seem to take longer than they should, <a href="/consultation">ask for a free consultation</a>. We will review how a typical claim moves through your office and where it tends to wait, using your own system data.</p>',
     faqs: [
       {
         q: 'How long does it take to get paid on a medical claim?',
@@ -379,7 +375,7 @@ export const seedPosts: SeedPost[] = [
 <li>Calculate monthly using the same method and watch the trend.</li>
 <li>When the rate drops, drill into denials, underpayments and write-offs by payer.</li>
 </ol>
-` + CONSULT,
+` + '<h2>Not sure your collection rate is accurate?</h2><p>Getting the inputs right matters more than the formula. If you would like a second opinion on how your practice calculates and reads this number, <a href="/consultation">request a free consultation</a> and bring a recent month of figures.</p>',
     faqs: [
       {
         q: 'What is the formula for net collection rate?',
@@ -494,7 +490,7 @@ export const seedPosts: SeedPost[] = [
 <li>Re-measure after each change to confirm it worked.</li>
 <li>Watch payer bulletins and policy updates for new rules.</li>
 </ol>
-` + CONSULT,
+` + '<h2>Want to find the source of your denials?</h2><p>Denials usually trace back to a few repeat causes. If you would like help finding yours, <a href="/consultation">book a free consultation</a>. We will look at your recent denial reasons and talk through fixes your team can make at the front end.</p>',
     faqs: [
       {
         q: 'What is the most common cause of claim denials?',
@@ -616,7 +612,7 @@ export const seedPosts: SeedPost[] = [
 <li>Open denials and their appeal deadlines</li>
 <li>Patient AR aging, separate from insurance AR</li>
 </ul>
-` + CONSULT,
+` + '<h2>Is your AR older than it should be?</h2><p>If too much of your receivable balance sits past 90 days, <a href="/consultation">talk to us in a free consultation</a>. We can look at your aging report together and discuss a follow-up plan for the oldest claims first.</p>',
     faqs: [
       {
         q: 'What does AR stand for in medical billing?',
@@ -740,7 +736,7 @@ export const seedPosts: SeedPost[] = [
 <li>How do you handle denial root cause analysis, not just resubmissions?</li>
 <li>Will you sign a Business Associate Agreement before accessing patient data?</li>
 </ol>
-` + CONSULT,
+` + '<h2>Deciding between billing help and full RCM?</h2><p>Every practice draws the line in a different place. If you want to talk through which tasks to keep in-house and which to hand over, <a href="/consultation">request a free consultation</a> and we will give you a straight answer.</p>',
     faqs: [
       {
         q: 'Is medical billing the same as revenue cycle management?',
@@ -851,7 +847,7 @@ export const seedPosts: SeedPost[] = [
 <li><strong>Assign one action</strong> for the biggest problem each month and check the result next month.</li>
 </ol>
 <p>Be careful with benchmarks you find online. Many published targets come without a stated source, date or definition, and results vary widely by specialty, payer mix and region. Your own trend line is usually the most reliable guide. If you want an outside benchmark, use one from a source that publishes its methodology, such as MGMA or HFMA.</p>
-` + CONSULT,
+` + '<h2>Want help setting up a KPI report?</h2><p>A short monthly report built from your own system exports is enough to start. If you would like help choosing the right measures for your practice, <a href="/consultation">book a free consultation</a>.</p>',
     faqs: [
       {
         q: 'What is the most important medical billing KPI?',
@@ -966,7 +962,7 @@ export const seedPosts: SeedPost[] = [
 <li>Letting small unpaid balances accumulate without follow-up</li>
 </ul>
 <p>Whether you run a single <a href="/specialties/general-dentistry">general dentistry</a> office or several locations, a repeatable process for each of these steps keeps claims moving. Learn more about how our <a href="/services/dental-billing">dental billing</a> support works inside your existing practice software.</p>
-` + CONSULT,
+` + '<h2>Have questions about your dental claims?</h2><p>If insurance claims at your dental office keep coming back for frequency limits, missing attachments or downgrades, <a href="/consultation">request a free consultation</a>. We will review a few recent examples with you and explain where the process can be tightened.</p>',
     faqs: [
       {
         q: 'What codes are used for dental insurance billing?',

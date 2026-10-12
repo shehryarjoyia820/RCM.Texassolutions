@@ -24,7 +24,7 @@ defined('ABSPATH') || exit;
 final class Tools
 {
     /** Unit suffixes shown inside inputs (mirrors UNIT_SUFFIX in src/js/format.ts). */
-    public const UNIT_SUFFIX = ['usd' => '$', 'pct' => '%', 'days' => 'days', 'count' => '', 'hours' => 'hrs', 'months' => 'mo', 'ratio' => '', 'years' => 'yrs'];
+    public const UNIT_SUFFIX = ['usd' => '$', 'pct' => '%', 'pp' => 'pts', 'days' => 'days', 'count' => '', 'hours' => 'hrs', 'months' => 'mo', 'ratio' => '', 'years' => 'yrs'];
 
     public const SCORECARD_KEY = 'rcm-performance-scorecard';
 

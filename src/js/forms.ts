@@ -326,3 +326,28 @@ export function initForms(): void {
   captureAttribution();
   document.querySelectorAll<HTMLFormElement>('form[data-rcm-form]').forEach(bind);
 }
+
+/** Collapsible service picker: live filter and selected count. */
+export function initServicePickers(): void {
+  for (const box of Array.from(document.querySelectorAll<HTMLDetailsElement>('[data-rcm-services]'))) {
+    const filter = box.querySelector<HTMLInputElement>('[data-rcm-services-filter]');
+    const count = box.querySelector<HTMLElement>('[data-rcm-services-count]');
+    const boxes = Array.from(box.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'));
+    const update = () => {
+      const n = boxes.filter((b) => b.checked).length;
+      if (count) count.textContent = n ? `${n} selected` : 'Choose';
+    };
+    filter?.addEventListener('input', () => {
+      const q = filter.value.trim().toLowerCase();
+      for (const b of boxes) {
+        const label = b.closest('label');
+        if (label) label.hidden = !!q && !b.checked && !(label.textContent || '').toLowerCase().includes(q);
+      }
+    });
+    filter?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') e.preventDefault();
+    });
+    for (const b of boxes) b.addEventListener('change', update);
+    update();
+  }
+}

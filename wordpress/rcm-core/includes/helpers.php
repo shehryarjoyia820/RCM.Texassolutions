@@ -169,6 +169,7 @@ function rcm_fmt(float|int|null $v, string $unit): string
     return match ($unit) {
         'usd' => (abs($v) >= 1000 ? '$' . number_format((float) $v) : '$' . number_format((float) $v, 2)),
         'pct' => $n($v) . '%',
+        'pp' => $n($v) . (abs($v) == 1 ? ' percentage point' : ' percentage points'),
         'days' => $n($v) . (abs($v) == 1 ? ' day' : ' days'),
         'hours' => $n($v) . (abs($v) == 1 ? ' hour' : ' hours'),
         'months' => $n($v) . (abs($v) == 1 ? ' month' : ' months'),

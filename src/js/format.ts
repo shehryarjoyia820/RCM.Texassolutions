@@ -9,6 +9,8 @@ export function fmtUnit(v: number | null | undefined, unit: string): string {
   switch (unit) {
     case 'usd':
       return Math.abs(v) >= 1000 ? usd0.format(v) : usd2.format(v);
+    case 'pp':
+      return `${num.format(v)} ${Math.abs(v) === 1 ? 'percentage point' : 'percentage points'}`;
     case 'pct':
       return `${num.format(v)}%`;
     case 'days':
@@ -24,4 +26,4 @@ export function fmtUnit(v: number | null | undefined, unit: string): string {
   }
 }
 
-export const UNIT_SUFFIX: Record<string, string> = { usd: '$', pct: '%', days: 'days', count: '', hours: 'hrs', months: 'mo', ratio: '', years: 'yrs' };
+export const UNIT_SUFFIX: Record<string, string> = { usd: '$', pct: '%', pp: 'pts', days: 'days', count: '', hours: 'hrs', months: 'mo', ratio: '', years: 'yrs' };

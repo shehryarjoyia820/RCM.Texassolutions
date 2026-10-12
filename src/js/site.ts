@@ -1,13 +1,14 @@
 /** Entry for every public page. */
 import { initNav, refreshNonce } from './nav';
 import { initAnalytics } from './analytics';
-import { initForms } from './forms';
+import { initForms, initServicePickers } from './forms';
 import { initChat } from './chat';
 
 function boot() {
   initNav();
   initAnalytics();
   initForms();
+  initServicePickers();
   initChat();
   // Refresh the REST nonce as soon as the visitor shows intent (cached pages carry an old one).
   const once = () => {

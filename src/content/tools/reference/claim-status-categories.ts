@@ -28,7 +28,7 @@ const tool: ReferenceTool = {
     { term: 'P4', meaning: 'The claim is waiting on information requested from the patient, often a coordination of benefits or accident questionnaire. Next step: ask the patient to contact the plan.', tag: 'Pending' },
     { term: 'P5', meaning: 'The claim is on an administrative or system hold at the payer. Next step: follow up if the hold lasts longer than the payer stated.', tag: 'Pending' },
     // Finalized
-    { term: 'F0', meaning: 'The claim finished the adjudication cycle and no further action will be taken by the payer. Next step: review the remittance for the outcome.', tag: 'Finalized' },
+    { term: 'F0', meaning: 'Processing is complete and the payer does not plan to do anything more with this claim. Next step: review the remittance for the outcome.', tag: 'Finalized' },
     { term: 'F1', meaning: 'The claim or line was finalized and paid. Next step: match the payment to the ERA and EFT and post it.', tag: 'Finalized' },
     { term: 'F2', meaning: 'The claim or line was finalized and denied. Next step: read the reason codes on the remittance and decide whether to correct, reconsider or appeal.', tag: 'Finalized' },
     { term: 'F3', meaning: 'The claim was finalized and its adjudication was later revised. Next step: look for a new remittance showing the change and any recoupment.', tag: 'Finalized' },
@@ -49,7 +49,7 @@ const tool: ReferenceTool = {
     { term: 'D0', meaning: 'The payer search for the claim was unsuccessful. Next step: check the search criteria in your status request, such as member ID, dates and charge amount.', tag: 'Error' },
     { term: 'E0', meaning: 'A status response could not be returned because of an error in the inquiry itself. Next step: correct the status request data and ask again.', tag: 'Error' },
     { term: 'E1', meaning: 'A status response could not be returned because of the payer system status. Next step: try again later.', tag: 'Error' },
-    { term: 'E2', meaning: 'The holder of the information is not responding. Next step: resubmit the status inquiry later or check the payer portal.', tag: 'Error' },
+    { term: 'E2', meaning: 'The payer system that holds the answer did not reply to the inquiry. Next step: resubmit the status inquiry later or check the payer portal.', tag: 'Error' },
     { term: 'E3', meaning: 'The inquiry needs correction because related fields in it conflict. Next step: review the related fields and resend.', tag: 'Error' },
     { term: 'E4', meaning: 'The inquiry did not meet a requirement of the trading partner agreement. Next step: check the payer companion guide or clearinghouse setup.', tag: 'Error' },
   ],

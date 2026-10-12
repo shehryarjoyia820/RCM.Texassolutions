@@ -332,7 +332,7 @@ function initCalculator(root: HTMLElement) {
           track('tool_cta', { tool: key });
           if (!sendPanel.hidden) {
             syncContext();
-            $<HTMLElement>(sendPanel, 'input:not([type="hidden"]), textarea')?.focus();
+            $<HTMLElement>(sendPanel, 'input[name="name"], input:not([type="hidden"]):not([name="website_url"]), textarea')?.focus();
           }
           break;
       }

@@ -66,7 +66,27 @@ export const HOME_FAQS: Faq[] = [
 ];
 
 export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
-  { topic: 'Working with us', faqs: HOME_FAQS.slice(0, 4) },
+  {
+    topic: 'Working with us',
+    faqs: [
+      {
+        q: 'Which parts of the revenue cycle can Texas Solutions RCM take over?',
+        a: 'Any part you choose, from front-desk tasks such as eligibility checks and prior authorizations through coding, claim submission, payment posting, denials, AR follow-up and patient statements. Some practices hand over the full cycle; others keep billing in-house and use us for one bottleneck. The split is written into the proposal so both teams know who owns each task.',
+      },
+      {
+        q: 'Will our staff still be able to see what is happening with claims?',
+        a: 'Yes. Our team works in your own practice management system and clearinghouse, so every note, status change and posting is visible to your staff in the same place they look today. Nothing moves to a separate system that only we can see, and you can review or pause the work at any time.',
+      },
+      {
+        q: 'Is there a minimum practice size?',
+        a: 'No fixed minimum. Solo providers, small groups and multi-location practices each need different staffing, so the scope and price are sized to your claim volume and the services you pick. During the free consultation we will also tell you if keeping a task in-house would make more sense for a practice your size.',
+      },
+      {
+        q: 'What does it cost, and how is the fee worked out?',
+        a: 'There is no standard price list. The fee depends on specialty, monthly claim volume and which tasks we handle, and it is proposed in writing after a short review of your current billing. You can compare the figure against your in-house costs with our outsourcing calculator before deciding.',
+      },
+    ],
+  },
   {
     topic: 'Onboarding',
     faqs: [
@@ -87,7 +107,10 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
   {
     topic: 'Data and security',
     faqs: [
-      HOME_FAQS[4],
+      {
+        q: 'Where is patient information kept when you work on our claims?',
+        a: 'It stays in your systems. We access your PM/EHR, clearinghouse and payer portals through named accounts after a Business Associate Agreement is signed, and we do not copy patient data into email, chat or personal files. The public website, its forms and the AI assistant are not used for patient information at all.',
+      },
       {
         q: 'Can we revoke your access?',
         a: 'Yes, at any time. Because our team works through accounts in your own systems, your administrators can disable them immediately. When an engagement ends we return or securely delete any working files, as set out in the Business Associate Agreement.',

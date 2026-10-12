@@ -74,3 +74,17 @@ describe('internal links', () => {
     }
   });
 });
+
+describe('every content module loads', () => {
+  it('reference tools and company content import without errors', async () => {
+    const { readdirSync } = await import('node:fs');
+    const { join } = await import('node:path');
+    const dir = join(__dirname, '../src/content/tools/reference');
+    for (const f of readdirSync(dir).filter((x) => x.endsWith('.ts'))) {
+      const m = await import(join(dir, f));
+      expect(m.default?.slug, f).toBe(f.slice(0, -3));
+    }
+    const company = await import('../src/content/company');
+    expect(company.GENERAL_FAQS.length).toBeGreaterThan(0);
+  });
+});

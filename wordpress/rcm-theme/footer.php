@@ -91,7 +91,9 @@ $legal = [
                 <?php foreach ($legal as [$label, $url]) : ?>
                     <li><a href="<?php echo esc_url($url); ?>" class="hover:text-white"><?php echo esc_html($label); ?></a></li>
                 <?php endforeach; ?>
-                <li><button type="button" class="hover:text-white" data-rcm-consent-open><?php esc_html_e('Cookie settings', 'rcm-theme'); ?></button></li>
+                <?php if (function_exists('rcm_setting') && rcm_setting('analytics.ga4_id')) : // only when there are optional cookies to choose ?>
+                    <li><button type="button" class="hover:text-white" data-rcm-consent-open><?php esc_html_e('Cookie settings', 'rcm-theme'); ?></button></li>
+                <?php endif; ?>
             </ul>
         </div>
         <p class="mt-6 max-w-4xl text-xs leading-relaxed text-navy-300">

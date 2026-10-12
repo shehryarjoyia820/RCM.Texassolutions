@@ -204,8 +204,8 @@ final class Importer
         // Home and blog pages are structural (content comes from templates).
         array_unshift(
             $pages,
-            ['key' => 'home', 'title' => __('Home', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => ''],
-            ['key' => 'blog', 'title' => __('Blog', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '']
+            ['key' => 'home', 'title' => __('Home', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Medical Billing and RCM Services | Texas Solutions RCM', 'metaDescription' => 'Medical and dental billing, coding, denial management, AR follow-up and credentialing for US practices. Book a free consultation with Texas Solutions RCM.'],
+            ['key' => 'blog', 'title' => __('Blog', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'RCM Blog: Medical Billing and Revenue Cycle Guides', 'metaDescription' => 'Practical guides on medical and dental billing, claim denials, AR, coding and credentialing for US practice owners and billing teams.']
         );
         foreach ($pages as $i => $p) {
             $key = (string) $p['key'];
@@ -223,6 +223,10 @@ final class Importer
                 $foreign_published = !$stored && $existing->post_status === 'publish';
                 if ($stored === $hash || (!$force && $stored && $stored !== $current) || (!$force && $foreign_published)) {
                     $map[$key] = $existing->ID;
+                    if (!empty($p['metaDescription']) && !get_post_meta($existing->ID, '_rcm_meta_description', true)) {
+                        update_post_meta($existing->ID, '_rcm_meta_description', (string) $p['metaDescription']);
+                        update_post_meta($existing->ID, '_rcm_seo_title', (string) ($p['seoTitle'] ?? ''));
+                    }
                     $n['skipped']++;
                     continue;
                 }

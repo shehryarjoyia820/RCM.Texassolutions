@@ -323,7 +323,7 @@ namespace RCM {
             $h .= '<form class="space-y-5" novalidate data-rcm-form="' . esc_attr($source) . '" data-layout="' . esc_attr($layout) . '" data-tools-url="' . esc_url(home_url('/tools/')) . '">';
 
             // Honeypot: hidden from people, filled by bots.
-            $h .= '<div aria-hidden="true" class="absolute left-[-9999px] h-px w-px overflow-hidden"><label>' . esc_html__('Company website', 'rcm')
+            $h .= '<div aria-hidden="true" inert class="absolute left-[-9999px] h-px w-px overflow-hidden"><label>' . esc_html__('Company website', 'rcm')
                 . ' <input type="text" name="website_url" tabindex="-1" autocomplete="off"></label></div>';
             if ($context !== '') {
                 $h .= '<input type="hidden" name="context" value="' . esc_attr($context) . '">';
@@ -366,8 +366,16 @@ namespace RCM {
             if ($practice) {
                 $services = Content_Types::all(Content_Types::SERVICE);
                 if ($services) {
-                    $h .= '<fieldset><legend class="field-label">' . esc_html__('Services you are interested in', 'rcm') . ' <span class="font-normal text-ink-subtle">' . esc_html__('(optional)', 'rcm') . '</span></legend>';
-                    $h .= '<div class="mt-1 grid max-h-64 gap-x-4 gap-y-1.5 overflow-y-auto rounded-xl border border-line p-3 sm:grid-cols-2">';
+                    $preselected = $default_service !== '' && isset($services[$default_service]);
+                    $h .= '<details class="group rounded-xl border border-line" data-rcm-services' . ($preselected ? ' open' : '') . '>';
+                    $h .= '<summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-navy-900 [&::-webkit-details-marker]:hidden">'
+                        . '<span>' . esc_html__('Services you are interested in', 'rcm') . ' <span class="font-normal text-ink-subtle">' . esc_html__('(optional)', 'rcm') . '</span></span>'
+                        . '<span class="flex items-center gap-2 text-xs text-teal-700"><span data-rcm-services-count>' . ($preselected ? esc_html__('1 selected', 'rcm') : esc_html__('Choose', 'rcm')) . '</span>'
+                        . '<span aria-hidden="true" class="transition group-open:rotate-180">&#9662;</span></span></summary>';
+                    $h .= '<fieldset class="border-t border-line p-3"><legend class="sr-only">' . esc_html__('Services you are interested in', 'rcm') . '</legend>';
+                    $h .= '<label for="' . esc_attr($uid . '-svc-filter') . '" class="sr-only">' . esc_html__('Filter services', 'rcm') . '</label>'
+                        . '<input id="' . esc_attr($uid . '-svc-filter') . '" type="search" data-rcm-services-filter class="field mb-2 py-2 text-sm" placeholder="' . esc_attr__('Type to filter, e.g. denial, coding, dental', 'rcm') . '" autocomplete="off">';
+                    $h .= '<div class="grid max-h-64 gap-x-4 gap-y-1.5 overflow-y-auto sm:grid-cols-2">';
                     $i = 0;
                     foreach ($services as $key => $post) {
                         $key = (string) $key;
@@ -376,7 +384,7 @@ namespace RCM {
                             . '<input id="' . esc_attr($id) . '" type="checkbox" name="services" value="' . esc_attr($key) . '" class="mt-0.5 h-4 w-4 rounded border-line text-teal-600 focus:ring-teal-500"' . ($key === $default_service ? ' checked' : '') . '>'
                             . esc_html((string) $post->post_title) . '</label>';
                     }
-                    $h .= '</div></fieldset>';
+                    $h .= '</div></fieldset></details>';
                 }
                 $h .= self::field($uid, 'challenges', __('Main challenges', 'rcm'), false, self::input($uid, 'challenges', 'text', false, ['maxlength' => '300', 'placeholder' => __('e.g. rising denials, aging AR, credentialing backlog', 'rcm')]));
             }
@@ -417,7 +425,7 @@ namespace RCM {
             $h .= '<label for="' . esc_attr($uid . '-email') . '" class="sr-only">' . esc_html__('Work email', 'rcm') . '</label>';
             $h .= '<input id="' . esc_attr($uid . '-email') . '" name="email" type="email" autocomplete="email" required aria-required="true" maxlength="160" placeholder="you@practice.com"'
                 . ' class="min-w-0 flex-1 rounded-full border border-white/15 bg-white/10 px-4 py-3 text-[15px] text-white placeholder:text-navy-300 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-400/30">';
-            $h .= '<input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">';
+            $h .= '<div aria-hidden="true" inert class="hidden"><input type="text" name="website_url" tabindex="-1" autocomplete="off"></div>';
             $h .= '<button type="submit" class="btn-primary shrink-0">' . self::spinner() . '<span>' . esc_html($submit) . '</span></button>';
             $h .= '</div>';
             $h .= '<p class="mt-2 text-xs text-navy-300">' . esc_html__('By subscribing you agree to receive emails from Texas Solutions. See our', 'rcm')
