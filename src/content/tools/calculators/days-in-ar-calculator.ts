@@ -7,17 +7,17 @@ const calc: Calculator = {
   name: 'Days in AR Calculator',
   category: 'kpi',
   icon: 'CalendarClock',
-  summary: 'Estimate how many days of charges are sitting in accounts receivable.',
+  summary: 'Estimate how many days of dental production are sitting in insurance and patient accounts receivable.',
   definition:
-    'Days in accounts receivable (days in AR) estimates how long it takes, on average, to turn charges into payments. It divides your total outstanding AR by your average daily charges over a recent period, usually 90 days. A lower number generally means claims are being paid and balances resolved faster.',
+    'Days in accounts receivable (days in A/R) estimates how long a dental practice takes, on average, to turn production into payments. It divides total outstanding A/R by average daily production over a recent period, usually 90 days. A lower number generally means dental carriers and patients are paying faster.',
   inputs: [
-    { id: 'totalAr', label: 'Total accounts receivable', unit: 'usd', default: 360000, min: 0, step: 100, help: 'All outstanding insurance and patient balances on the last day of the period.' },
-    { id: 'charges', label: 'Total charges for the period', unit: 'usd', default: 1080000, min: 0, step: 100, help: 'Charges posted during the look-back period. Use gross charges if your AR is at gross, net charges if your AR is net of contractual adjustments.' },
-    { id: 'periodDays', label: 'Days in the look-back period', unit: 'days', default: 90, min: 1, step: 1, help: 'Number of calendar days the charges cover. 90 days is the most common choice.' },
+    { id: 'totalAr', label: 'Total accounts receivable', unit: 'usd', default: 360000, min: 0, step: 100, help: 'All outstanding dental insurance and patient balances on the last day of the period, from your practice management aging report.' },
+    { id: 'charges', label: 'Total production for the period', unit: 'usd', default: 1080000, min: 0, step: 100, help: 'Completed procedures posted during the look-back period. Use gross production if your A/R carries full fees, or net production if PPO write-offs are posted when the procedure is completed.' },
+    { id: 'periodDays', label: 'Days in the look-back period', unit: 'days', default: 90, min: 1, step: 1, help: 'Number of calendar days the production covers. 90 days is the most common choice.' },
   ],
   outputs: [
     { id: 'daysInAr', label: 'Days in AR', unit: 'days', primary: true },
-    { id: 'adc', label: 'Average daily charges', unit: 'usd' },
+    { id: 'adc', label: 'Average daily production', unit: 'usd' },
   ],
   compute: (raw) => {
     const totalAr = num(raw.totalAr);
@@ -39,42 +39,42 @@ const calc: Calculator = {
     return { values: { daysInAr, adc }, notes, warnings };
   },
   formula: [
-    { expression: 'Average daily charges = Charges for the period / Days in the period', explanation: 'Gives your recent billing pace per calendar day.' },
-    { expression: 'Days in AR = Total AR / Average daily charges', explanation: 'How many days of charges are outstanding at that pace.' },
+    { expression: 'Average daily production = Production for the period / Days in the period', explanation: 'Gives your recent production pace per calendar day.' },
+    { expression: 'Days in A/R = Total A/R / Average daily production', explanation: 'How many days of production are outstanding at that pace.' },
   ],
   example: {
     inputs: { totalAr: 360000, charges: 1080000, periodDays: 90 },
     expected: { daysInAr: 30, adc: 12000 },
-    narrative: 'A practice posted $1,080,000 in charges over the last 90 days and has $360,000 in AR. Average daily charges are 1,080,000 / 90 = $12,000. Days in AR is 360,000 / 12,000 = 30 days.',
+    narrative: 'A dental group posted $1,080,000 in production over the last 90 days and has $360,000 in insurance and patient A/R. Average daily production is 1,080,000 / 90 = $12,000. Days in A/R is 360,000 / 12,000 = 30 days.',
   },
   assumptions: [
-    'AR and charges are measured on the same basis: both gross, or both net of contractual adjustments.',
-    'Credit balances are excluded from AR, since they can make days in AR look lower than it really is.',
-    'Charge volume during the look-back period is reasonably typical. A holiday month or a new provider can distort the figure.',
+    'A/R and production are measured on the same basis: both at full fees, or both net of PPO and other contractual write-offs.',
+    'Credit balances, such as patient prepayments and carrier overpayments awaiting refund, are excluded from A/R, since they can make days in A/R look lower than it really is.',
+    'Production during the look-back period is reasonably typical. A holiday month, a dentist on leave or a new associate can distort the figure.',
   ],
   faqs: [
     {
-      q: 'How do you calculate days in AR?',
-      a: 'Divide total accounts receivable by average daily charges. To get average daily charges, take total charges for a recent period, commonly the last 90 days, and divide by the number of days in that period. For example, $360,000 in AR with $12,000 in average daily charges equals 30 days in AR.',
+      q: 'How do you calculate days in A/R for a dental practice?',
+      a: 'Divide total accounts receivable by average daily production. To get average daily production, take completed production for a recent period, commonly the last 90 days, and divide by the number of days in that period. For example, $360,000 in A/R with $12,000 in average daily production equals 30 days in A/R.',
     },
     {
-      q: 'Should I use gross or net charges for days in AR?',
-      a: 'Use the same basis as your AR balance. If your practice management system carries AR at gross charges until payments post, use gross charges. If contractual adjustments are applied at charge entry, so AR is already net, use net charges. Mixing a net AR balance with gross charges makes days in AR look artificially low.',
+      q: 'Should I use gross or net production for days in A/R?',
+      a: 'Use the same basis as your A/R balance. If your practice management system carries A/R at full fees until the EOB posts, use gross production. If PPO write-offs are posted when the procedure is completed, so A/R is already net, use net production. Mixing a net A/R balance with gross production makes days in A/R look artificially low.',
     },
     {
       q: 'Why does the look-back period matter?',
-      a: 'The look-back period sets the billing pace used in the calculation, so it changes the result. A 30 day period reacts quickly to recent changes but swings with holidays and provider schedules. A 90 day period is smoother and is the most common choice. Whichever period you choose, use it consistently so month to month comparisons are fair.',
+      a: 'The look-back period sets the production pace used in the calculation, so it changes the result. A 30 day period reacts quickly but swings with holidays, hygiene schedules and dentist vacations. A 90 day period is smoother and is the most common choice. Whichever period you choose, use it consistently so month to month comparisons are fair.',
     },
     {
-      q: 'What usually drives days in AR up?',
-      a: 'Days in AR usually rises when claims go out late, denials and rejections are not worked quickly, follow-up on unpaid claims slips or patient balances are left to age. Payer processing delays and credentialing gaps can also add days. An AR aging report by payer helps show which of these is the main driver for your practice.',
+      q: 'What usually drives days in A/R up in a dental office?',
+      a: 'Days in A/R usually rises when claims go out late, claims are pended for missing x-rays or narratives, denials are not worked quickly, insurance follow-up slips or patient balances are left to age. Credentialing gaps for a new dentist can also add days. An insurance aging report by carrier shows which of these drives your number.',
     },
   ],
-  relatedServices: ['accounts-receivable-management', 'aging-ar-follow-up', 'rcm-analytics-reporting'],
-  relatedTools: ['ar-aging-calculator', 'net-collection-rate-calculator', 'claim-turnaround-time-calculator'],
-  seoTitle: 'Days in AR Calculator for Medical Practices',
-  metaDescription: 'Calculate days in accounts receivable from total AR and average daily charges over 90 days, with the formula, a worked example and tips for reading it.',
-  keywords: ['days in ar calculator', 'how to calculate days in ar', 'days in accounts receivable formula'],
+  relatedServices: ['dental-accounts-receivable', 'payment-posting', 'rcm-analytics-reporting'],
+  relatedTools: ['dental-ar-aging-calculator', 'net-collection-rate-calculator', 'dental-insurance-collection-calculator'],
+  seoTitle: 'Days in A/R Calculator for Dental Practices',
+  metaDescription: 'Calculate days in A/R for a dental practice from total insurance and patient A/R and average daily production, with the formula and a worked example.',
+  keywords: ['dental days in ar calculator', 'how to calculate days in ar dental', 'dental accounts receivable formula'],
 };
 
 export default calc;

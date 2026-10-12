@@ -21,6 +21,8 @@ $types = [
     'pages' => __('Company and legal pages', 'rcm'),
     'blog' => __('Blog categories and starter articles', 'rcm'),
     'settings' => __('Site title, tagline and permalinks (only if still WordPress defaults)', 'rcm'),
+    'redirects' => __('301 redirects for retired URLs (dental-only refocus)', 'rcm'),
+    'retire' => __('Unpublish (draft) items that are no longer in the bundle', 'rcm'),
 ];
 ?>
 <div class="wrap rcm-wrap">

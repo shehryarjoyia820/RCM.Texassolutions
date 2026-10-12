@@ -2,66 +2,65 @@ import type { Faq } from './types';
 
 /** Company-level content shared by the home page, company pages, FAQ page and the AI assistant's knowledge. */
 
+/** Dental revenue cycle phases. Every step slug must be one of CORE_SERVICES in ./dental.ts. */
 export const CYCLE = [
   {
-    eyebrow: 'Before the visit',
+    eyebrow: 'Before the appointment',
     title: 'Front end',
-    text: 'Get patient, coverage and authorization details right before care is delivered, because most denials start here.',
+    text: 'Confirm that each dentist is in network and that the patient\'s dental benefits, frequencies and remaining maximum are known before treatment is planned or delivered.',
     steps: [
-      { label: 'Patient registration', slug: 'patient-registration' },
-      { label: 'Eligibility verification', slug: 'insurance-eligibility-verification' },
-      { label: 'Benefits verification', slug: 'benefits-verification' },
-      { label: 'Prior authorization', slug: 'prior-authorization' },
+      { label: 'Network enrollment and credentialing', slug: 'dental-credentialing' },
+      { label: 'Dental eligibility verification', slug: 'dental-insurance-verification' },
+      { label: 'Benefits breakdown and patient estimates', slug: 'dental-insurance-verification' },
     ],
   },
   {
-    eyebrow: 'After the visit',
-    title: 'Mid cycle',
-    text: 'Turn clinical documentation into accurate codes and charges, then into claims that pass payer edits the first time.',
+    eyebrow: 'After treatment',
+    title: 'Claims and posting',
+    text: 'Turn completed procedures into clean dental claims with the right CDT codes and attachments, then post every EOB and ERA accurately when carriers pay.',
     steps: [
-      { label: 'Medical coding', slug: 'medical-coding' },
-      { label: 'Charge entry and capture', slug: 'charge-entry' },
-      { label: 'Claims scrubbing', slug: 'claims-scrubbing' },
-      { label: 'Claims submission', slug: 'claims-submission' },
+      { label: 'Claim creation and attachments', slug: 'dental-claims-processing' },
+      { label: 'Claim status tracking', slug: 'dental-claims-processing' },
+      { label: 'EOB and ERA payment posting', slug: 'payment-posting' },
     ],
   },
   {
     eyebrow: 'Getting paid',
     title: 'Back end',
-    text: 'Post every payment, work every denial and follow every open claim and patient balance until it is resolved.',
+    text: 'Work every denial, follow every open insurance claim and patient balance until it is resolved, and report the results from your own data.',
     steps: [
-      { label: 'Payment posting', slug: 'payment-posting' },
-      { label: 'Denial management', slug: 'denial-management' },
-      { label: 'AR follow-up', slug: 'accounts-receivable-management' },
-      { label: 'Patient billing', slug: 'patient-billing' },
+      { label: 'Denials and appeals', slug: 'denial-management' },
+      { label: 'Insurance A/R follow-up', slug: 'dental-accounts-receivable' },
+      { label: 'Patient statements and balances', slug: 'patient-billing' },
+      { label: 'Reporting and revenue analysis', slug: 'rcm-analytics-reporting' },
     ],
   },
 ];
 
 export const HOME_FAQS: Faq[] = [
   {
-    q: 'What does a revenue cycle management company do?',
-    a: 'A revenue cycle management company handles the administrative work of getting a practice paid: verifying insurance, coding visits, submitting claims, posting payments, appealing denials and following up on unpaid claims and patient balances. You keep control of clinical care and decisions; the RCM team runs the billing workflow in your systems and reports on results.',
+    q: 'What does a dental billing company do?',
+    a: 'A dental billing company handles the insurance and billing work that gets a dental office paid: verifying benefits, sending claims with the right attachments, posting EOBs and ERAs, appealing denials and following up on unpaid claims and patient balances. Your dentists keep every clinical decision, and our team works in your own software with notes your staff can read.',
   },
   {
-    q: 'Do we have to change our practice management or EHR software?',
-    a: 'No. We work inside the practice management system, EHR, clearinghouse and payer portals you already use, with user accounts you create and control. If you are planning to change software anyway, we can help with the billing side of the migration, but switching systems is never a requirement for working with us.',
+    q: 'Do we need to change Dentrix, Open Dental, Eaglesoft or Curve Dental?',
+    a: 'No. We work inside the dental software you already run, using named user accounts your administrator creates and can disable at any time. Your ledgers, claim history and notes stay in your system. We are not affiliated with any software vendor; we simply work in the product as a user, with the access you grant.',
   },
   {
-    q: 'Can we outsource only part of our billing?',
-    a: 'Yes. Many practices start with one area, such as old AR follow-up, denial management, credentialing or eligibility checks, while their staff keep the rest. Each service has its own page explaining the scope. We agree on clear handoffs so nothing falls between your team and ours.',
+    q: 'Can we outsource only insurance verification or A/R follow-up?',
+    a: 'Yes. Many offices start with one area, such as verifying benefits before appointments or clearing older insurance A/R, while their front desk keeps the rest. Each service can be scoped on its own, and the written proposal spells out which tasks are ours and which stay with your team.',
   },
   {
-    q: 'How is pricing set?',
-    a: 'Pricing depends on the services you choose, claim volume, specialty and how much of the cycle we manage, so we quote after a free consultation and a look at your current workflow. You get the price and scope in writing before any work starts. We do not publish a one-size price because practices differ too much for it to be accurate.',
+    q: 'How much does dental billing with you cost?',
+    a: 'We do not publish prices; we quote in writing after a free consultation and a look at your workflow. The fee depends on which services you choose, your claim volume, number of locations and how much of the cycle we manage. Nothing starts until you have accepted the scope and price.',
   },
   {
     q: 'How do you protect patient information?',
-    a: 'We sign a Business Associate Agreement before accessing any patient data, use named accounts with only the access each task needs, and keep patient information inside your systems rather than in email or spreadsheets. This website, its forms and its chat are for business enquiries only and must not be used to send patient information.',
+    a: 'We sign a Business Associate Agreement before accessing any patient data, and we work only inside your systems through named accounts with the least access each task needs. Patient details are not sent by ordinary email or chat. This website, its forms and its AI assistant are for business enquiries only.',
   },
   {
-    q: 'Do you work with dental practices?',
-    a: 'Yes. Dental billing has its own claim form, codes and insurance rules, such as frequency limits, annual maximums and pre-treatment estimates. We support general dentistry and dental specialties, including insurance verification, claims, attachments, payment posting and insurance AR follow-up.',
+    q: 'Do you work with PPO, DHMO and Medicaid dental plans in every state?',
+    a: 'Yes. Our team works remotely with dental offices in all 50 states and handles claims for PPO, DHMO, indemnity and state Medicaid or CHIP dental plans. Rules differ by carrier and state, so during onboarding we document the carriers and programs your office accepts and how each one handles claims and attachments.',
   },
 ];
 
@@ -70,75 +69,89 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
     topic: 'Working with us',
     faqs: [
       {
-        q: 'Which parts of the revenue cycle can Texas Solutions RCM take over?',
-        a: 'Any part you choose, from front-desk tasks such as eligibility checks and prior authorizations through coding, claim submission, payment posting, denials, AR follow-up and patient statements. Some practices hand over the full cycle; others keep billing in-house and use us for one bottleneck. The split is written into the proposal so both teams know who owns each task.',
+        q: 'Which dental billing tasks can Texas Solutions RCM take over?',
+        a: 'Any of our eight services, alone or together: insurance verification, dental claims, denials and appeals, payment posting, A/R follow-up, patient billing support, credentialing and reporting. Some offices hand us the whole cycle, while others keep billing in-house and use us for one bottleneck. The split is written into the proposal so both teams know who owns each task.',
       },
       {
-        q: 'Will our staff still be able to see what is happening with claims?',
-        a: 'Yes. Our team works in your own practice management system and clearinghouse, so every note, status change and posting is visible to your staff in the same place they look today. Nothing moves to a separate system that only we can see, and you can review or pause the work at any time.',
+        q: 'Will our front desk still see what is happening with claims?',
+        a: 'Yes. Every claim note, posting and adjustment we make is recorded in your practice management software, so your front desk and office manager see it in the same patient ledger they use today. Nothing moves to a separate platform, and you can review or pause our work whenever you like.',
       },
       {
-        q: 'Is there a minimum practice size?',
-        a: 'No fixed minimum. Solo providers, small groups and multi-location practices each need different staffing, so the scope and price are sized to your claim volume and the services you pick. During the free consultation we will also tell you if keeping a task in-house would make more sense for a practice your size.',
+        q: 'Do you work with single-dentist offices as well as DSOs?',
+        a: 'Yes, there is no minimum size. A solo general dentist, a specialty office and a multi-location group each need different staffing, so scope and price are sized to your claim volume and the services you pick. If keeping a task in-house would suit your office better, we will tell you during the consultation.',
       },
       {
-        q: 'What does it cost, and how is the fee worked out?',
-        a: 'There is no standard price list. The fee depends on specialty, monthly claim volume and which tasks we handle, and it is proposed in writing after a short review of your current billing. You can compare the figure against your in-house costs with our outsourcing calculator before deciding.',
-      },
-    ],
-  },
-  {
-    topic: 'Onboarding',
-    faqs: [
-      {
-        q: 'What happens after the free consultation?',
-        a: 'If it looks like a good fit, we ask for read-only access or a set of reports so we can review aging, denials and workflow. We then send a written proposal with scope, responsibilities and price. Nothing starts until you accept it and a Business Associate Agreement is signed.',
-      },
-      {
-        q: 'What do you need from our practice to start?',
-        a: 'Typically user accounts in your PM/EHR and clearinghouse, access to payer portals, your fee schedule and payer contracts if available, recent aging and denial reports, and a named contact on your team for questions. We provide a checklist during onboarding so nothing is missed.',
-      },
-      {
-        q: 'Who will we work with day to day?',
-        a: 'You get a named point of contact who coordinates the team working on your account and joins your review calls. Questions, approvals and escalations go through agreed channels, so you always know who is responsible for each part of the work.',
+        q: 'Do you support dental specialists such as orthodontists and oral surgeons?',
+        a: 'Yes. We support general dentistry and specialty offices, including orthodontics, endodontics, periodontics, oral surgery, pediatric dentistry and prosthodontics. Each has its own billing habits, such as orthodontic payment schedules or surgical narratives, and we note these during onboarding so our checklists match how your office bills.',
       },
     ],
   },
   {
-    topic: 'Data and security',
+    topic: 'Getting started',
     faqs: [
       {
-        q: 'Where is patient information kept when you work on our claims?',
-        a: 'It stays in your systems. We access your PM/EHR, clearinghouse and payer portals through named accounts after a Business Associate Agreement is signed, and we do not copy patient data into email, chat or personal files. The public website, its forms and the AI assistant are not used for patient information at all.',
+        q: 'What happens after our free consultation?',
+        a: 'If we seem like a good fit, we ask for read-only access or a few standard reports, such as insurance aging and outstanding claims, so we can understand the workload. Then you receive a written proposal with scope, responsibilities and price. Work begins only after you accept it and a Business Associate Agreement is signed.',
       },
       {
-        q: 'Can we revoke your access?',
-        a: 'Yes, at any time. Because our team works through accounts in your own systems, your administrators can disable them immediately. When an engagement ends we return or securely delete any working files, as set out in the Business Associate Agreement.',
+        q: 'What do you need from our office to start?',
+        a: 'Usually a named user account in your dental software and clearinghouse, access to the carrier portals you use, your fee schedules, any office billing policies and a contact person for questions. We send a checklist during onboarding so nothing is missed, and we confirm that each dentist is enrolled for electronic claims and ERAs.',
       },
       {
-        q: 'Can I send patient details through the website or chat?',
-        a: 'No. The website forms, email notifications and AI assistant are only for business enquiries. If you need to share patient information as part of our work, we will agree a secure method covered by a Business Associate Agreement first.',
+        q: 'Who will our office talk to day to day?',
+        a: 'You get a named point of contact who coordinates the team on your account, answers questions and joins your review calls. Approvals, such as write-offs or patient statement changes, and escalations go through channels agreed in the proposal, so your office manager always knows who is responsible.',
       },
     ],
   },
   {
-    topic: 'Tools and resources',
+    topic: 'Dental software and carriers',
     faqs: [
       {
-        q: 'Are the calculators free to use?',
-        a: 'Yes. All calculators, checklists and lookups on this site are free and need no account. Calculations run in your browser and are not sent to us unless you choose to send a result with a consultation request.',
+        q: 'Which dental practice management systems can your team use?',
+        a: 'We commonly work in Dentrix, Open Dental, Eaglesoft and Curve Dental, and we can review other systems during the consultation. We do not install anything or require a switch. Product names belong to their owners, and Texas Solutions is not a partner or reseller of any dental software company.',
       },
       {
-        q: 'How accurate are the calculator results?',
-        a: 'Each calculator uses the formula shown on its page and is tested against worked examples. Results are estimates based on the numbers you enter and the stated assumptions; they are not guarantees or professional advice. Use them to understand trends and to prepare questions for your billing team or advisor.',
+        q: 'How do you handle x-rays, perio charts and narratives for claims?',
+        a: 'We send attachments through your clearinghouse attachment service or the carrier portal, depending on how your office is set up and what each carrier accepts. Before go-live, we agree which images and notes your clinical team saves to the chart so we can attach them without asking for each claim.',
+      },
+      {
+        q: 'Can you work with carriers that do not send ERAs?',
+        a: 'Yes. When a carrier sends paper EOBs or posts remittances only on its portal, we post from the EOB or portal record and reconcile against your deposits. Where a carrier offers ERA and EFT, we can help with enrollment so payments arrive electronically and post more consistently over time.',
+      },
+    ],
+  },
+  {
+    topic: 'Patient data and security',
+    faqs: [
+      {
+        q: 'Where does patient information stay while you work on our account?',
+        a: 'It stays in your own systems. Our team signs in to your practice management software, clearinghouse and carrier portals through named accounts after a Business Associate Agreement is signed. We do not copy patient data into personal email, chat or files, and the public website is never used for it.',
+      },
+      {
+        q: 'Can we remove your team\'s access?',
+        a: 'Yes, whenever you choose. Because we use accounts inside your own software and portals, your administrator can disable them immediately. When an engagement ends we hand over open work with notes and return or securely delete any working files, as the Business Associate Agreement requires.',
+      },
+    ],
+  },
+  {
+    topic: 'Free tools',
+    faqs: [
+      {
+        q: 'Do the dental calculators cost anything?',
+        a: 'No. Every calculator and checklist on this site is free and needs no account. Calculations run in your browser and are not sent to us unless you choose to share a result when you request a consultation. Several tools are built around dental figures, such as insurance A/R aging and collection rates.',
+      },
+      {
+        q: 'Can we rely on the calculator results?',
+        a: 'Treat them as estimates. Each tool uses the formula shown on its page and is checked against worked examples, but results depend on the numbers you enter and the stated assumptions. They are not guarantees or professional advice, so use them to spot trends and to prepare questions for your billing team.',
       },
     ],
   },
 ];
 
 /** Text the AI assistant may use about the company. Keep in sync with the pages above. */
-export const COMPANY_FACTS = `Texas Solutions RCM (rcm.texassolutions.co) is the healthcare revenue cycle management division of Texas Solutions (texassolutions.co), a US company with an office at 401 W Kentucky Ave, Midland, TX 79701. Contact: info@texassolutions.co, +1 (838) 910-3147.
-It serves US medical and dental practices with medical billing, coding, eligibility and benefits verification, prior authorization support, claims, payment posting, denial management, AR follow-up, credentialing and provider enrollment, patient billing support, audits, reporting and remote administrative support.
-The team works remotely inside the client's own PM/EHR, clearinghouse and payer portals using accounts the client controls. A Business Associate Agreement is signed before any patient data is accessed.
-Consultations are free. Pricing is quoted in writing after a consultation because it depends on services, specialty and volume; there is no published price list.
+export const COMPANY_FACTS = `Texas Solutions RCM (rcm.texassolutions.co) is the dental billing and revenue cycle management division of Texas Solutions (texassolutions.co), a US company with an office at 401 W Kentucky Ave, Midland, TX 79701. Contact: info@texassolutions.co, +1 (838) 910-3147.
+It serves dental practices only (general dentistry, orthodontics, endodontics, periodontics, oral surgery, pediatric dentistry, prosthodontics, dental groups and DSOs) in all 50 US states. It does not offer billing for non-dental healthcare.
+Services: Insurance Verification & Eligibility; Dental Claims Management; Denial Management & Appeals; Payment Posting; Accounts Receivable (A/R) Management; Patient Billing & Collections Support; Dental Credentialing & Provider Enrollment; Dental RCM Reporting & Revenue Analysis. Claims for PPO, DHMO, indemnity and Medicaid/CHIP dental plans.
+The team works remotely inside the practice's own dental software (such as Dentrix, Open Dental, Eaglesoft and Curve Dental), clearinghouse and carrier portals using named accounts the practice controls. Texas Solutions is not affiliated with or a partner of any software vendor. A Business Associate Agreement is signed before any patient data is accessed.
+Consultations are free. Pricing is quoted in writing after a consultation because it depends on services, volume and locations; there is no published price list.
 Not yet published or approved: client results, case studies, testimonials, certifications, turnaround times or guarantees. Do not state any.`;

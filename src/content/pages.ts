@@ -1335,7 +1335,7 @@ const privacyPolicy: PageContent = {
       'Calculators run entirely in your browser. Your inputs are not sent to us unless you choose "Discuss these results" and submit the form.'
     ),
     p(
-      'Code and provider lookups, such as the ICD-10 code search and NPI lookup, send your search terms to this website, which queries public US government services (the National Library of Medicine Clinical Table Search Service and the CMS NPPES NPI Registry) and returns the results. Do not enter patient information into lookups.'
+      'The NPI lookup sends your search terms to this website, which queries a public US government service (the CMS NPPES NPI Registry) and returns the results. Do not enter patient information into lookups.'
     ),
     h3('Analytics'),
     p(

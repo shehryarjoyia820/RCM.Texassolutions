@@ -1,0 +1,10 @@
+# Writing rules for the dental-only refocus (2026-10-13)
+
+Site: Texas Solutions RCM (rcm.texassolutions.co) now serves DENTAL practices only, in all 50 US states. Office: 401 W Kentucky Ave, Midland, TX 79701; info@texassolutions.co; +1 (838) 910-3147. Remote team works inside the practice's own dental software (Dentrix, Open Dental, Eaglesoft, Curve Dental confirmed), clearinghouse and carrier portals. Consultations are free. A Business Associate Agreement is signed before any patient data is accessed.
+
+- Write for dentists, office managers and DSOs. Every example is dental: CDT codes in passing (no descriptors), ADA claim form / 837D, EOBs and ERAs from dental carriers, frequency limits, annual maximums, waiting periods, downgrades, pre-treatment estimates, x-rays/narratives/perio charts as attachments, PPO/DHMO/Medicaid dental, hygiene and doctor production.
+- Do NOT use the words medical billing, physician, ICD-10, CPT, HCPCS, 837P, CMS-1500, Kareo, athenahealth, eClinicalWorks, AdvancedMD, or any medical specialty name, unless a sentence explicitly compares dental billing with medical billing (keep those rare).
+- Never claim results, numbers about us, prices, certifications, "HIPAA compliant", guarantees, client names or reviews.
+- Only link to URLs that remain live (see src/content/dental.ts: KEPT_SERVICES under /services/<slug>/, KEPT_SPECIALTIES under /specialties/<slug>/, KEPT_TOOLS under /tools/<slug>/, KEPT_POSTS under /blog/<slug>/, pages /about/ /how-we-work/ /technology/ /security/ /faq/ /contact/ /consultation/ /service-areas/ /service-areas/<state>/ /carriers/ /carriers/<carrier>/). Trailing slashes. Never link to anything in REDIRECTS.
+- The 8 services (menu names, in order) and their sub-services are CORE_SERVICES in src/content/dental.ts. Use those exact service names when you name them.
+- Original wording only (no copying from any website). American English. No em dashes. No hype words (revolutionary, cutting-edge, seamless, unlock, supercharge, game-changer, world-class, leverage).

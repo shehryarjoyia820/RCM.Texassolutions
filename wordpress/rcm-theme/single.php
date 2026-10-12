@@ -70,7 +70,7 @@ rcm_t_part('page-hero', [
                 </ul>
             <?php endif; ?>
 
-            <p class="mt-10 border-t border-line pt-6 text-sm text-ink-subtle"><?php esc_html_e('This article is general information about US medical and dental billing. It is not legal, coding or financial advice. Payer rules change; confirm with the payer or your compliance advisor.', 'rcm-theme'); ?></p>
+            <p class="mt-10 border-t border-line pt-6 text-sm text-ink-subtle"><?php esc_html_e('This article is general information about US dental billing. It is not legal, coding or financial advice. Carrier rules change; confirm with the carrier or your compliance advisor.', 'rcm-theme'); ?></p>
         </article>
 
         <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
@@ -84,7 +84,7 @@ rcm_t_part('page-hero', [
                     </div>
                 <?php else : rcm_t_part('side-cta'); endif; ?>
             <?php endif; ?>
-            <?php rcm_t_part('related-tools', ['keys' => ['net-collection-rate-calculator', 'days-in-ar-calculator', 'denial-rate-calculator', 'rcm-roi-calculator']]); ?>
+            <?php rcm_t_part('related-tools', ['keys' => ['dental-insurance-collection-calculator', 'dental-ar-aging-calculator', 'dental-denial-rate-calculator', 'dental-practice-revenue-calculator']]); ?>
         </aside>
     </div>
 </div>

@@ -874,7 +874,7 @@ final class Tools
     {
         $categories = Content_Types::TOOL_CATEGORIES;
         // phpcs:disable WordPress.Security.NonceVerification.Recommended -- read-only filters
-        $cat = isset($_GET['category']) ? sanitize_key(wp_unslash((string) $_GET['category'])) : '';
+        $cat = ''; // Dental refocus: one grid, no category filters (old ?category= links redirect to /tools/).
         $q = isset($_GET['q']) ? rcm_clean(wp_unslash((string) $_GET['q']), 80) : '';
         // phpcs:enable
         if (!isset($categories[$cat])) {
@@ -912,23 +912,11 @@ final class Tools
             . '<form role="search" method="get" action="' . esc_url($archive) . '" class="relative max-w-xl" data-rcm-tool-form>'
             . '<span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-subtle">' . self::icon('Search', 'h-5 w-5') . '</span>'
             . '<label for="rcm-tool-q" class="sr-only">' . esc_html__('Search tools', 'rcm') . '</label>'
-            . '<input id="rcm-tool-q" type="search" name="q" value="' . esc_attr($q) . '" autocomplete="off" maxlength="80" class="field rounded-full py-3.5 pl-12 text-base" placeholder="' . esc_attr__('Search tools, e.g. denial, AR, ROI, dental', 'rcm') . '" data-rcm-tool-search>'
+            . '<input id="rcm-tool-q" type="search" name="q" value="' . esc_attr($q) . '" autocomplete="off" maxlength="80" class="field rounded-full py-3.5 pl-12 text-base" placeholder="' . esc_attr__('Search tools, e.g. denial, A/R, verification', 'rcm') . '" data-rcm-tool-search>'
             . ($cat !== '' ? '<input type="hidden" name="category" value="' . esc_attr($cat) . '" data-rcm-tool-cat-input>' : '')
             . '</form>'
-            . '<nav class="scrollbar-none -mx-4 flex gap-2 overflow-x-auto px-4" aria-label="' . esc_attr__('Tool categories', 'rcm') . '">';
-
-        $tabs = ['' => [__('All tools', 'rcm'), '']] + $categories;
-        foreach ($tabs as $id => $c) {
-            $active = $cat === (string) $id;
-            $count = $id === '' ? count($items) : ($counts[$id] ?? 0);
-            $href = $id === '' ? $archive : add_query_arg('category', $id, $archive);
-            $h .= '<a href="' . esc_url($href) . '" class="shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition ' . esc_attr($active ? $tab_on : $tab_off) . '"'
-                . ' data-rcm-cat="' . esc_attr((string) $id) . '" data-blurb="' . esc_attr((string) ($c[1] ?? '')) . '"' . ($active ? ' aria-current="true"' : '') . '>'
-                . esc_html((string) $c[0])
-                . '<span class="ml-1.5 text-xs ' . ($active ? 'text-navy-200' : 'text-ink-subtle') . '" data-rcm-cat-count>' . esc_html((string) $count) . '</span></a>';
-        }
-        $h .= '</nav>'
-            . '<p class="text-ink-muted" data-rcm-tool-blurb' . ($cat === '' ? ' hidden' : '') . '>' . esc_html($cat !== '' ? $categories[$cat][1] : '') . '</p>'
+            ;
+        $h .= ''
             . '</div>'
             . '<p class="mt-6 text-sm text-ink-subtle" aria-live="polite" data-rcm-tool-count>' . esc_html(sprintf(_n('%d tool', '%d tools', $shown, 'rcm'), $shown)) . '</p>'
             . '<ul class="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">';

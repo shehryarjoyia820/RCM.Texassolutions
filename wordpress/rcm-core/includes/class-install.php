@@ -76,6 +76,8 @@ final class Install
             specialty varchar(80) NOT NULL DEFAULT '',
             providers varchar(20) NOT NULL DEFAULT '',
             current_billing varchar(80) NOT NULL DEFAULT '',
+            software varchar(60) NOT NULL DEFAULT '',
+            locations varchar(20) NOT NULL DEFAULT '',
             services text NULL,
             challenges text NULL,
             monthly_claims varchar(30) NOT NULL DEFAULT '',

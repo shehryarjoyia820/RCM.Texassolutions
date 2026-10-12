@@ -16,10 +16,15 @@ defined('ABSPATH') || exit;
  */
 final class Importer
 {
-    public const BLOG_CATEGORIES = [
-        'Medical Billing', 'Dental Billing', 'Revenue Cycle Management', 'Medical Coding', 'Insurance Claims', 'Denial Management',
-        'Credentialing', 'Healthcare Technology', 'Healthcare AI', 'Practice Management', 'Compliance and Regulation',
-        'RCM Tools and Guides', 'Healthcare Industry News', 'Medicare and Medicaid Updates', 'Specialty Billing Guides',
+    /** Dental refocus: the only blog categories kept (others 301 to /blog/). */
+    public const BLOG_CATEGORIES = ['Dental Billing', 'Denial Management', 'Practice Management', 'Compliance and Regulation'];
+
+    /** SEO values written by earlier versions; replaced on sync because nobody chose them. */
+    private const LEGACY_META = [
+        'Medical Billing and RCM Services | Texas Solutions RCM',
+        'Medical and dental billing, coding, denial management, AR follow-up and credentialing for US practices. Book a free consultation with Texas Solutions RCM.',
+        'RCM Blog: Medical Billing and Revenue Cycle Guides',
+        'Practical guides on medical and dental billing, claim denials, AR, coding and credentialing for US practice owners and billing teams.',
     ];
 
     public static function init(): void
@@ -34,7 +39,7 @@ final class Importer
             return;
         }
         delete_option('rcm_pending_import');
-        $report = self::run(['services', 'specialties', 'tools', 'faqs', 'pages', 'blog', 'settings'], false);
+        $report = self::run(['services', 'specialties', 'tools', 'faqs', 'pages', 'blog', 'settings', 'redirects', 'retire'], false);
         update_option('rcm_content_imported', current_time('mysql'));
         update_option('rcm_last_import_report', $report, false);
         rcm_audit('content.import', 'content', 'first-run', $report);
@@ -46,7 +51,7 @@ final class Importer
             wp_die(esc_html__('You do not have permission to import content.', 'rcm'), 403);
         }
         check_admin_referer('rcm_import');
-        $types = array_values(array_intersect((array) ($_POST['types'] ?? []), ['services', 'specialties', 'tools', 'faqs', 'pages', 'blog', 'settings']));
+        $types = array_values(array_intersect((array) ($_POST['types'] ?? []), ['services', 'specialties', 'tools', 'faqs', 'pages', 'blog', 'settings', 'redirects', 'retire']));
         $force = !empty($_POST['force']);
         $report = self::run($types, $force);
         update_option('rcm_content_imported', current_time('mysql'));
@@ -76,6 +81,8 @@ final class Importer
                 'pages' => self::import_pages($force),
                 'blog' => self::import_blog($force),
                 'settings' => self::apply_settings(),
+                'redirects' => self::import_redirects(),
+                'retire' => self::retire(),
                 default => ['created' => 0, 'updated' => 0, 'skipped' => 0],
             };
         }
@@ -212,8 +219,8 @@ final class Importer
         // Home and blog pages are structural (content comes from templates).
         array_unshift(
             $pages,
-            ['key' => 'home', 'title' => __('Home', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Medical Billing and RCM Services | Texas Solutions RCM', 'metaDescription' => 'Medical and dental billing, coding, denial management, AR follow-up and credentialing for US practices. Book a free consultation with Texas Solutions RCM.'],
-            ['key' => 'blog', 'title' => __('Blog', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'RCM Blog: Medical Billing and Revenue Cycle Guides', 'metaDescription' => 'Practical guides on medical and dental billing, claim denials, AR, coding and credentialing for US practice owners and billing teams.']
+            ['key' => 'home', 'title' => __('Home', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Dental Billing Services & Dental RCM Company | Texas Solutions RCM', 'metaDescription' => 'Dental billing and revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Book a free consultation.'],
+            ['key' => 'blog', 'title' => __('Blog', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Dental Billing Blog | Texas Solutions RCM', 'metaDescription' => 'Practical dental billing guides for US practice owners and office managers: insurance verification, claims, denials, A/R, credentialing and CDT updates.']
         );
         foreach ($pages as $i => $p) {
             $key = (string) $p['key'];
@@ -231,7 +238,9 @@ final class Importer
                 $foreign_published = !$stored && $existing->post_status === 'publish';
                 if ($stored === $hash || (!$force && $stored && $stored !== $current) || (!$force && $foreign_published)) {
                     $map[$key] = $existing->ID;
-                    if (!empty($p['metaDescription']) && !get_post_meta($existing->ID, '_rcm_meta_description', true)) {
+                    $cur_desc = (string) get_post_meta($existing->ID, '_rcm_meta_description', true);
+                    $cur_title = (string) get_post_meta($existing->ID, '_rcm_seo_title', true);
+                    if (!empty($p['metaDescription']) && ($cur_desc === '' || in_array($cur_desc, self::LEGACY_META, true) || in_array($cur_title, self::LEGACY_META, true))) {
                         update_post_meta($existing->ID, '_rcm_meta_description', (string) $p['metaDescription']);
                         update_post_meta($existing->ID, '_rcm_seo_title', (string) ($p['seoTitle'] ?? ''));
                     }
@@ -241,7 +250,7 @@ final class Importer
             }
             $postarr = [
                 'post_type' => 'page',
-                'post_status' => 'publish',
+                'post_status' => ($p['status'] ?? 'publish') === 'draft' ? 'draft' : 'publish',
                 'post_title' => (string) $p['title'],
                 'post_content' => $body,
                 'post_parent' => !empty($p['parent']) && !empty($map[$p['parent']]) ? (int) $map[$p['parent']] : 0,
@@ -298,10 +307,10 @@ final class Importer
         }
         // Rename WordPress's default "Uncategorized" so new posts land somewhere sensible.
         $default = (int) get_option('default_category');
-        $rcm = $cats['Revenue Cycle Management'] ?? 0;
+        $rcm = $cats['Dental Billing'] ?? 0;
         if ($rcm && $default && $default !== $rcm) {
             $u = get_term($default, 'category');
-            if ($u && !is_wp_error($u) && $u->slug === 'uncategorized' && (int) $u->count === 0) {
+            if ($u && !is_wp_error($u) && !in_array($u->name, self::BLOG_CATEGORIES, true)) {
                 update_option('default_category', $rcm);
             }
         }
@@ -344,6 +353,58 @@ final class Importer
             update_post_meta($id, '_rcm_reading_minutes', (int) $p['readingMinutes']);
             update_post_meta($id, '_rcm_cta', 'consultation');
         }
+        return $n;
+    }
+
+    /** Writes the bundled 301 redirects (data/redirects.json) to the RCM redirect table. */
+    private static function import_redirects(): array
+    {
+        $n = ['created' => 0, 'updated' => 0, 'skipped' => 0];
+        if (!class_exists(Redirects::class)) {
+            return $n;
+        }
+        foreach (rcm_data('redirects') as $r) {
+            $res = Redirects::upsert((string) $r['from'], (string) $r['to'], 301, 0, true);
+            is_wp_error($res) ? $n['skipped']++ : $n['created']++;
+        }
+        return $n;
+    }
+
+    /**
+     * Sets to draft every imported item that is no longer in the bundle (dental-only refocus):
+     * services, specialties, tools, FAQs, pages and posts carrying an _rcm_key that the bundle
+     * does not contain. Nothing is deleted; drafts can be restored from the admin.
+     */
+    private static function retire(): array
+    {
+        $n = ['created' => 0, 'updated' => 0, 'skipped' => 0];
+        $keep = [
+            Content_Types::SERVICE => array_column(rcm_data('services'), 'slug'),
+            Content_Types::SPECIALTY => array_column(rcm_data('specialties'), 'slug'),
+            Content_Types::TOOL => array_column(rcm_data('tools'), 'slug'),
+            'page' => array_merge(['home', 'blog'], array_column(rcm_data('pages'), 'key')),
+            'post' => array_map(static fn($s) => 'post-' . $s, array_column(rcm_data('blog'), 'slug')),
+        ];
+        $faq_keys = [];
+        foreach ((array) (rcm_data('company')['GENERAL_FAQS'] ?? []) as $g) {
+            foreach ((array) $g['faqs'] as $f) {
+                $faq_keys[] = 'faq-' . substr(md5((string) $f['q']), 0, 12);
+            }
+        }
+        $keep[Content_Types::FAQ] = $faq_keys;
+        foreach ($keep as $type => $keys) {
+            $posts = get_posts(['post_type' => $type, 'post_status' => 'publish', 'numberposts' => -1, 'meta_key' => '_rcm_key', 'no_found_rows' => true]);
+            foreach ($posts as $p) {
+                $key = (string) get_post_meta($p->ID, '_rcm_key', true);
+                if ($key === '' || in_array($key, $keys, true)) {
+                    continue;
+                }
+                wp_update_post(['ID' => $p->ID, 'post_status' => 'draft']);
+                $n['updated']++;
+            }
+        }
+        // Blog categories that are no longer used by any live post are emptied of drafts' terms automatically;
+        // their URLs are redirected to /blog/ by the redirect table.
         return $n;
     }
 
@@ -413,8 +474,8 @@ final class Importer
             $n['skipped']++;
         }
         $tag = (string) get_option('blogdescription');
-        if ($tag === '' || $tag === 'Just another WordPress site') {
-            update_option('blogdescription', 'Revenue cycle management for US medical and dental practices');
+        if ($tag === '' || $tag === 'Just another WordPress site' || $tag === 'Revenue cycle management for US medical and dental practices') {
+            update_option('blogdescription', 'Dental billing and revenue cycle management for US dental practices');
             $n['updated']++;
         }
         if (get_option('permalink_structure') === '') {

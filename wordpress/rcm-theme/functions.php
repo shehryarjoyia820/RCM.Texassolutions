@@ -84,8 +84,33 @@ add_action('pre_get_posts', static function (WP_Query $q): void {
     if (!is_admin() && $q->is_main_query() && $q->is_search()) {
         $q->set('post_type', ['post', 'page', 'rcm_service', 'rcm_specialty', 'rcm_tool']);
         $q->set('posts_per_page', 20);
+        // Legal pages are not search results.
+        $legal = get_posts(['post_type' => 'page', 'post_status' => 'publish', 'fields' => 'ids', 'numberposts' => -1, 'meta_key' => '_wp_page_template', 'meta_value' => 'page-templates/legal.php']);
+        if ($legal) {
+            $q->set('post__not_in', array_map('intval', $legal));
+        }
+        // Dental-only site: non-dental billing searches return no results (search.php explains why).
+        if (rcm_t_non_dental_query((string) $q->get('s'))) {
+            $q->set('post__in', [0]);
+        }
     }
 });
+
+/** True when a search is for non-dental billing topics (medical code sets, medical software or specialties). */
+function rcm_t_non_dental_query(string $s): bool
+{
+    $s = strtolower(trim($s));
+    if ($s === '') {
+        return false;
+    }
+    $terms = ['cardiology', 'icd-10', 'icd10', 'icd 10', 'icd', 'cpt', 'hcpcs', '837p', 'cms-1500', 'kareo', 'tebra', 'athenahealth', 'eclinicalworks', 'advancedmd', 'medical billing', 'medical coding', 'physician', 'dermatology', 'orthopedic', 'radiology', 'oncology', 'urgent care', 'chiropractic', 'behavioral health', 'mental health', 'physical therapy', 'anesthesia billing', 'hospitalist', 'gastroenterology', 'neurology', 'pediatrics billing', 'telehealth'];
+    foreach ($terms as $t) {
+        if (preg_match('/(^|[^a-z0-9])' . preg_quote($t, '/') . '([^a-z0-9]|$)/', $s)) {
+            return true;
+        }
+    }
+    return false;
+}
 
 /** The home page shows the company FAQs, so they belong in its FAQPage structured data. */
 add_filter('rcm_visible_faqs', static function (array $faqs): array {

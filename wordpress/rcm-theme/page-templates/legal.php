@@ -19,7 +19,6 @@ while (have_posts()) :
         'cookie-policy' => __('Cookie Policy', 'rcm-theme'),
         'accessibility-statement' => __('Accessibility Statement', 'rcm-theme'),
         'disclaimer' => __('Disclaimer', 'rcm-theme'),
-        'data-handling-and-security' => __('Data Handling and Security', 'rcm-theme'),
     ];
     ?>
     <section class="py-12 sm:py-16">

@@ -7,7 +7,7 @@ get_header();
 $blog_url = (int) get_option('page_for_posts') ? get_permalink((int) get_option('page_for_posts')) : home_url('/blog/');
 $current = is_category() ? get_queried_object() : null;
 $title = __('RCM insights and guides', 'rcm-theme');
-$intro = __('Practical guides on medical and dental billing, denials, AR, coding and credentialing, written for practice owners and billing teams.', 'rcm-theme');
+$intro = __('Practical guides on dental billing, insurance verification, claims, denials, A/R and credentialing, written for dental practice owners and office managers.', 'rcm-theme');
 if (is_category()) {
     $title = single_cat_title('', false);
     $intro = category_description() ? wp_strip_all_tags(category_description()) : sprintf(__('Articles about %s.', 'rcm-theme'), strtolower($title));

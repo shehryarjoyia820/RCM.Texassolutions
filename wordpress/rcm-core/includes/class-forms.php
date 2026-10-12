@@ -35,6 +35,10 @@ namespace RCM {
         public const PROVIDER_COUNTS = ['1', '2-5', '6-10', '11-25', '26-50', '51+'];
         public const BILLING_ARRANGEMENTS = ['In-house billing team', 'Another billing company', 'Mix of in-house and outsourced', 'Starting a new practice', 'Other'];
         public const CLAIM_VOLUMES = ['Under 250', '250-1,000', '1,000-2,500', '2,500-5,000', '5,000+', 'Not sure'];
+        /** Dental practice software options (consultation and contact forms). */
+        public const PRACTICE_SOFTWARE = ['Dentrix', 'Open Dental', 'Eaglesoft', 'Curve Dental', 'Other', 'Not sure'];
+        public const LOCATION_COUNTS = ['1', '2-3', '4-10', '11-25', '26+'];
+
         public const PARTNERSHIP_TYPES = ['Referral partner', 'Software or technology partner', 'Consultant or practice advisor', 'Billing company (white label or overflow)', 'Other'];
 
         private const EMAIL_RE = '/^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,}$/';
@@ -220,6 +224,8 @@ namespace RCM {
                     'specialty' => rcm_clean($f['specialty'] ?? '', 80),
                     'providers' => $pick($f['providers'] ?? '', self::PROVIDER_COUNTS),
                     'current_billing' => $pick($f['current_billing'] ?? '', self::BILLING_ARRANGEMENTS),
+                    'software' => $pick($f['software'] ?? '', self::PRACTICE_SOFTWARE),
+                    'locations' => $pick($f['locations'] ?? '', self::LOCATION_COUNTS),
                     'services' => $services,
                     'challenges' => $challenges,
                     'monthly_claims' => $pick($f['monthly_claims'] ?? '', self::CLAIM_VOLUMES),
@@ -302,6 +308,8 @@ namespace RCM {
             }
             $overridden = $source !== $layout;
             $compact = !empty($args['compact']);
+            // Dental-only refocus: contact and consultation ask for practice name, state, software and locations.
+            $dental = in_array($layout, ['contact', 'consultation'], true) && !$overridden;
             $practice = $layout === 'consultation' || $layout === 'proposal';
             $uid = 'rcm-f' . (++self::$counter);
             $default_service = sanitize_key((string) ($args['default_service'] ?? ''));
@@ -328,16 +336,28 @@ namespace RCM {
             if ($context !== '') {
                 $h .= '<input type="hidden" name="context" value="' . esc_attr($context) . '">';
             }
+            // The service a visitor came from (?service=) is recorded as their interest.
+            if ($dental && $default_service !== '' && isset(Content_Types::all(Content_Types::SERVICE)[$default_service])) {
+                $h .= '<input type="hidden" name="services" value="' . esc_attr($default_service) . '">';
+            }
 
             $h .= '<div class="grid gap-5' . ($compact ? '' : ' sm:grid-cols-2') . '">';
             $h .= self::field($uid, 'name', __('Full name', 'rcm'), true, self::input($uid, 'name', 'text', true, ['autocomplete' => 'name', 'maxlength' => '120']));
+            if ($dental) {
+                $h .= self::field($uid, 'company', __('Practice name', 'rcm'), $practice, self::input($uid, 'company', 'text', $practice, ['autocomplete' => 'organization', 'maxlength' => '160']));
+            }
             $h .= self::field($uid, 'email', $layout === 'careers' ? __('Email', 'rcm') : __('Business email', 'rcm'), true, self::input($uid, 'email', 'email', true, ['autocomplete' => 'email', 'maxlength' => '160']));
             $h .= self::field($uid, 'phone', __('Phone', 'rcm'), $practice, self::input($uid, 'phone', 'tel', $practice, ['autocomplete' => 'tel', 'maxlength' => '40']));
-            if ($layout !== 'careers') {
+            if ($dental) {
+                $h .= self::field($uid, 'state', __('State', 'rcm'), false, self::select($uid, 'state', self::US_STATES, __('Select a state', 'rcm')));
+                $h .= self::field($uid, 'software', __('Practice software', 'rcm'), false, self::select($uid, 'software', self::PRACTICE_SOFTWARE, __('Select your software', 'rcm')));
+                $h .= self::field($uid, 'locations', __('Number of locations', 'rcm'), false, self::select($uid, 'locations', self::LOCATION_COUNTS, __('Select', 'rcm')));
+            }
+            if ($layout !== 'careers' && !$dental) {
                 $h .= self::field($uid, 'company', $layout === 'partner' ? __('Company', 'rcm') : __('Practice or company name', 'rcm'), $practice, self::input($uid, 'company', 'text', $practice, ['autocomplete' => 'organization', 'maxlength' => '160']));
             }
 
-            if ($practice) {
+            if ($practice && !$dental) {
                 $specialties = [];
                 foreach (Content_Types::all(Content_Types::SPECIALTY) as $post) {
                     $specialties[] = (string) $post->post_title;
@@ -363,7 +383,7 @@ namespace RCM {
             }
             $h .= '</div>';
 
-            if ($practice) {
+            if ($practice && !$dental) {
                 $services = Content_Types::all(Content_Types::SERVICE);
                 if ($services) {
                     $preselected = $default_service !== '' && isset($services[$default_service]);

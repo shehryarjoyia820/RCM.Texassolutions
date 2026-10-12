@@ -21,7 +21,7 @@ $total = (int) $GLOBALS['wp_query']->found_posts;
 
 rcm_t_part('page-hero', [
     'eyebrow' => __('Search', 'rcm-theme'),
-    'title' => $q ? sprintf(__('Results for "%s"', 'rcm-theme'), $q) : __('Search the knowledge center', 'rcm-theme'),
+    'title' => $q ? sprintf(__('Results for "%s"', 'rcm-theme'), $q) : __('Search the site', 'rcm-theme'),
     'intro' => $q ? sprintf(_n('%d result', '%d results', $total, 'rcm-theme'), $total) : '',
 ]);
 ?>
@@ -34,7 +34,7 @@ rcm_t_part('page-hero', [
         </form>
         <?php if (!$total) : ?>
             <div class="rounded-2xl border border-dashed border-line p-10 text-center">
-                <p class="text-ink-muted"><?php esc_html_e('Nothing matched. Try a broader term, or browse:', 'rcm-theme'); ?></p>
+                <p class="text-ink-muted"><?php echo rcm_t_non_dental_query($q) ? esc_html__('Texas Solutions RCM works with dental practices only, so we have no pages on that topic. Try a dental billing term, or browse:', 'rcm-theme') : esc_html__('Nothing matched. Try a broader term, or browse:', 'rcm-theme'); ?></p>
                 <p class="mt-4 flex flex-wrap justify-center gap-2">
                     <a class="chip" href="<?php echo esc_url(rcm_t_archive('rcm_service')); ?>"><?php esc_html_e('Services', 'rcm-theme'); ?></a>
                     <a class="chip" href="<?php echo esc_url(rcm_t_archive('rcm_tool')); ?>"><?php esc_html_e('Tools', 'rcm-theme'); ?></a>

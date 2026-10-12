@@ -26,7 +26,7 @@ while (have_posts()) :
             </div>
             <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
                 <?php rcm_t_part('side-cta'); ?>
-                <?php rcm_t_part('related-tools', ['keys' => ['rcm-roi-calculator', 'outsourcing-vs-in-house-billing-calculator', 'net-collection-rate-calculator']]); ?>
+                <?php rcm_t_part('related-tools', ['keys' => ['dental-billing-cost-calculator', 'dental-practice-roi-calculator', 'outsourcing-vs-in-house-billing-calculator']]); ?>
             </aside>
         </div>
     </section>

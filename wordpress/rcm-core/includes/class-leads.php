@@ -72,6 +72,7 @@ final class Leads
 
     private const SOURCE_POINTS = ['consultation' => 20, 'proposal' => 25, 'contact' => 10, 'chat' => 10, 'calculator' => 10, 'referral' => 20, 'resource' => 5, 'blog' => 5];
     private const PROVIDER_POINTS = ['1' => 5, '2-5' => 10, '6-10' => 15, '11-25' => 20, '26-50' => 25, '51+' => 25];
+    private const LOCATION_POINTS = ['1' => 5, '2-3' => 10, '4-10' => 20, '11-25' => 25, '26+' => 25];
     private const CLAIM_POINTS = ['250-1,000' => 5, '1,000-2,500' => 10, '2,500-5,000' => 15, '5,000+' => 20];
 
     public static function init(): void
@@ -194,6 +195,13 @@ final class Leads
         if (isset(self::SOURCE_POINTS[$source])) {
             $add(self::SOURCE_POINTS[$source], $source . ' request');
         }
+        $locations = (string) ($l['locations'] ?? '');
+        if ($locations !== '' && isset(self::LOCATION_POINTS[$locations])) {
+            $add(self::LOCATION_POINTS[$locations], $locations . ' location(s)');
+        }
+        if ((string) ($l['software'] ?? '') !== '') {
+            $add(5, 'practice software named');
+        }
         $providers = (string) ($l['providers'] ?? '');
         if ($providers !== '' && isset(self::PROVIDER_POINTS[$providers])) {
             $add(self::PROVIDER_POINTS[$providers], $providers . ' providers');
@@ -299,6 +307,8 @@ final class Leads
             'specialty' => self::line($input['specialty'] ?? '', 80),
             'providers' => self::line($input['providers'] ?? '', 20),
             'current_billing' => self::line($input['current_billing'] ?? '', 80),
+            'software' => self::line($input['software'] ?? '', 60),
+            'locations' => self::line($input['locations'] ?? '', 20),
             'services' => $services,
             'challenges' => self::line($input['challenges'] ?? '', 300),
             'monthly_claims' => self::line($input['monthly_claims'] ?? '', 30),
@@ -336,6 +346,8 @@ final class Leads
             'specialty' => $lead['specialty'],
             'providers' => $lead['providers'],
             'current_billing' => $lead['current_billing'],
+            'software' => $lead['software'],
+            'locations' => $lead['locations'],
             'services' => (string) wp_json_encode($services),
             'challenges' => $lead['challenges'],
             'monthly_claims' => $lead['monthly_claims'],
@@ -410,7 +422,7 @@ final class Leads
         $r['duplicate_of'] = !empty($r['duplicate_of']) ? (string) $r['duplicate_of'] : null;
         $r['follow_up_at'] = !empty($r['follow_up_at']) && !str_starts_with((string) $r['follow_up_at'], '0000') ? (string) $r['follow_up_at'] : null;
         $r['consent_at'] = !empty($r['consent_at']) ? (string) $r['consent_at'] : null;
-        foreach (['id', 'name', 'email', 'phone', 'company', 'state', 'specialty', 'providers', 'current_billing', 'challenges', 'monthly_claims', 'preferred_contact', 'preferred_date', 'message', 'source', 'source_page', 'status', 'consent_text', 'summary', 'created_at', 'updated_at'] as $k) {
+        foreach (['id', 'name', 'email', 'phone', 'company', 'state', 'specialty', 'providers', 'current_billing', 'software', 'locations', 'challenges', 'monthly_claims', 'preferred_contact', 'preferred_date', 'message', 'source', 'source_page', 'status', 'consent_text', 'summary', 'created_at', 'updated_at'] as $k) {
             $r[$k] = (string) ($r[$k] ?? '');
         }
         return $r;
@@ -837,7 +849,7 @@ final class Leads
             exit;
         }
         fwrite($out, "\xEF\xBB\xBF");
-        fputcsv($out, ['ID', 'Created', 'Status', 'Score', 'Band', 'Source', 'Name', 'Email', 'Phone', 'Practice/company', 'State', 'Specialty', 'Providers', 'Current billing', 'Monthly claims', 'Services', 'Challenges', 'Preferred date', 'Message', 'Page', 'Attribution', 'Assigned to', 'Follow-up', 'Consent at (UTC)', 'Marketing consent', 'Duplicate of']);
+        fputcsv($out, ['ID', 'Created', 'Status', 'Score', 'Band', 'Source', 'Name', 'Email', 'Phone', 'Practice/company', 'State', 'Specialty', 'Providers', 'Current billing', 'Practice software', 'Locations', 'Monthly claims', 'Services', 'Challenges', 'Preferred date', 'Message', 'Page', 'Attribution', 'Assigned to', 'Follow-up', 'Consent at (UTC)', 'Marketing consent', 'Duplicate of']);
 
         // Neutralize spreadsheet formulas.
         $cell = static function ($v): string {
@@ -872,6 +884,8 @@ final class Leads
                     $l['specialty'],
                     $l['providers'],
                     $l['current_billing'],
+                    $l['software'] ?? '',
+                    $l['locations'] ?? '',
                     $l['monthly_claims'],
                     implode('; ', array_map([self::class, 'service_name'], $l['services'])),
                     $l['challenges'],
@@ -929,6 +943,8 @@ final class Leads
             'specialty' => 'Specialty',
             'providers' => 'Providers',
             'current_billing' => 'Current billing',
+            'software' => 'Practice software',
+            'locations' => 'Locations',
             'monthly_claims' => 'Monthly claims',
         ];
         foreach ($optional as $k => $label) {

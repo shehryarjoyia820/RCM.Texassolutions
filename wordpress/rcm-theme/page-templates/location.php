@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Service area (location)
- * Used by /service-areas/ (hub, lists child pages) and /service-areas/<state>/.
+ * Used by /service-areas/ and /carriers/ (hubs list their child pages) and their state / carrier child pages.
  */
 defined('ABSPATH') || exit;
 get_header();
@@ -12,10 +12,12 @@ while (have_posts()) :
     $children = $is_hub ? get_pages(['parent' => $id, 'sort_column' => 'menu_order,post_title', 'post_status' => 'publish']) : [];
     $hub_id = $is_hub ? $id : (int) wp_get_post_parent_id($id);
     $siblings = $is_hub ? [] : get_pages(['parent' => $hub_id, 'exclude' => [$id], 'sort_column' => 'menu_order,post_title', 'post_status' => 'publish']);
-    $popular = rcm_t_by_keys('rcm_service', ['medical-billing', 'dental-billing', 'revenue-cycle-management', 'medical-credentialing', 'denial-management', 'insurance-eligibility-verification', 'dental-claims-processing', 'accounts-receivable-management']);
+    $is_carriers = get_post_field('post_name', $hub_id) === 'carriers';
+    $popular = rcm_t_by_keys('rcm_service', array_column(rcm_t_dental()['core'], 'slug'));
+    $core_names = array_column(rcm_t_dental()['core'], 'name', 'slug');
 
     rcm_t_part('page-hero', [
-        'eyebrow' => __('Service areas', 'rcm-theme'),
+        'eyebrow' => $is_carriers ? __('Dental carriers', 'rcm-theme') : __('Service areas', 'rcm-theme'),
         'title' => get_the_title(),
         'intro' => rcm_t_page_intro($id),
         'actions' => '<a href="' . esc_url(rcm_t_url('consultation')) . '" class="btn-primary" data-rcm-cta="location-hero">' . esc_html__('Get a Free Consultation', 'rcm-theme') . '</a>',
@@ -28,28 +30,28 @@ while (have_posts()) :
 
                 <?php if ($children) : ?>
                     <section class="mt-12" aria-labelledby="areas-h">
-                        <h2 id="areas-h" class="mb-6 text-2xl font-bold"><?php esc_html_e('State pages', 'rcm-theme'); ?></h2>
+                        <h2 id="areas-h" class="mb-6 text-2xl font-bold"><?php echo $is_carriers ? esc_html__('Carrier pages', 'rcm-theme') : esc_html__('State pages', 'rcm-theme'); ?></h2>
                         <div class="grid gap-4 sm:grid-cols-2">
-                            <?php foreach ($children as $c) : rcm_t_link_card(get_permalink($c), get_the_title($c), (string) get_post_meta($c->ID, '_rcm_intro', true), 'MapPin'); endforeach; ?>
+                            <?php foreach ($children as $c) : rcm_t_link_card(get_permalink($c), get_the_title($c), wp_trim_words((string) get_post_meta($c->ID, '_rcm_intro', true), 28), $is_carriers ? 'ShieldCheck' : 'MapPin'); endforeach; ?>
                         </div>
                     </section>
                 <?php endif; ?>
 
                 <?php if ($popular) : ?>
                     <section class="mt-12" aria-labelledby="svc-h">
-                        <h2 id="svc-h" class="mb-6 text-2xl font-bold"><?php esc_html_e('Services practices ask us about most', 'rcm-theme'); ?></h2>
+                        <h2 id="svc-h" class="mb-6 text-2xl font-bold"><?php esc_html_e('Our dental RCM services', 'rcm-theme'); ?></h2>
                         <div class="grid gap-4 sm:grid-cols-2">
-                            <?php foreach ($popular as $s) : $si = rcm_t_item($s); rcm_t_link_card($si['url'], $si['title'], $si['text'], $si['icon']); endforeach; ?>
+                            <?php foreach ($popular as $s) : $si = rcm_t_item($s); $sk = (string) get_post_meta($s->ID, '_rcm_key', true); rcm_t_link_card($si['url'], $core_names[$sk] ?? $si['title'], '', $si['icon']); endforeach; ?>
                         </div>
                     </section>
                 <?php endif; ?>
 
                 <?php if ($siblings) : ?>
                     <section class="mt-12">
-                        <h2 class="mb-4 text-xl font-bold"><?php esc_html_e('Other service areas', 'rcm-theme'); ?></h2>
+                        <h2 class="mb-4 text-xl font-bold"><?php echo $is_carriers ? esc_html__('Other carriers', 'rcm-theme') : esc_html__('Other service areas', 'rcm-theme'); ?></h2>
                         <ul class="flex flex-wrap gap-2">
                             <?php foreach ($siblings as $c) : ?><li><a class="chip hover:border-teal-300 hover:text-teal-800" href="<?php echo esc_url(get_permalink($c)); ?>"><?php echo esc_html(get_the_title($c)); ?></a></li><?php endforeach; ?>
-                            <li><a class="chip border-teal-200 bg-teal-50 font-semibold text-teal-800" href="<?php echo esc_url(get_permalink($hub_id)); ?>"><?php esc_html_e('All of the US', 'rcm-theme'); ?></a></li>
+                            <li><a class="chip border-teal-200 bg-teal-50 font-semibold text-teal-800" href="<?php echo esc_url(get_permalink($hub_id)); ?>"><?php echo $is_carriers ? esc_html__('All carriers', 'rcm-theme') : esc_html__('All 50 states', 'rcm-theme'); ?></a></li>
                         </ul>
                     </section>
                 <?php endif; ?>
@@ -72,8 +74,8 @@ while (have_posts()) :
         <div class="container grid gap-10 lg:grid-cols-[1fr_1.3fr]">
             <div>
                 <p class="eyebrow mb-3"><?php esc_html_e('Free consultation', 'rcm-theme'); ?></p>
-                <h2 class="text-3xl font-bold"><?php esc_html_e('Tell us about your practice', 'rcm-theme'); ?></h2>
-                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('We will reply by email to arrange a call about your billing, payers and goals. No cost and no obligation.', 'rcm-theme'); ?></p>
+                <h2 class="text-3xl font-bold"><?php esc_html_e('Tell us about your dental practice', 'rcm-theme'); ?></h2>
+                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('We will reply by email to arrange a call about your dental billing, carriers and goals. No cost and no obligation.', 'rcm-theme'); ?></p>
             </div>
             <div class="card p-6 sm:p-8"><?php rcm_t_form('consultation', ['compact' => true]); ?></div>
         </div>

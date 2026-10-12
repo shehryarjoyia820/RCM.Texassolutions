@@ -123,81 +123,75 @@ function rcm_t_breadcrumbs(): void
     }
 }
 
-/** Header navigation built from the RCM content, so it is always complete. */
+/** Dental refocus key lists (core services, overviews, software, specialties, tools, posts). */
+function rcm_t_dental(): array
+{
+    static $d = null;
+    if ($d === null) {
+        $d = function_exists('rcm_data') ? rcm_data('dental') : [];
+        $d += ['core' => [], 'overview' => [], 'software' => [], 'specialties' => [], 'dentalTools' => [], 'dentalPosts' => [], 'categories' => []];
+    }
+    return $d;
+}
+
+/** [label, url] links for RCM posts by key; the label is the menu name when given. */
+function rcm_t_key_links(string $type, array $keys, array $labels = []): array
+{
+    $out = [];
+    foreach (rcm_t_by_keys($type, $keys) as $p) {
+        $k = (string) get_post_meta($p->ID, '_rcm_key', true);
+        $out[] = [$labels[$k] ?? get_the_title($p), get_permalink($p)];
+    }
+    return $out;
+}
+
+/** The 8 core dental services as [label, url], in the brief's menu order. */
+function rcm_t_core_links(): array
+{
+    $core = rcm_t_dental()['core'];
+    $names = array_column($core, 'name', 'slug');
+    return rcm_t_key_links('rcm_service', array_column($core, 'slug'), $names);
+}
+
+function rcm_t_blog_url(): string
+{
+    return (int) get_option('page_for_posts') ? (string) get_permalink((int) get_option('page_for_posts')) : home_url('/blog/');
+}
+
+/** Header navigation (dental-only menu; desktop and mobile share it). */
 function rcm_t_nav(): array
 {
-    $company = [
-        ['About Texas Solutions RCM', rcm_t_url('about')],
-        ['Our approach', rcm_t_url('approach')],
-        ['How we work', rcm_t_url('how-we-work')],
-        ['Why choose us', rcm_t_url('why-choose-us')],
-        ['Technology and integrations', rcm_t_url('technology')],
-        ['Service areas (US)', rcm_t_url('service-areas')],
-        ['Security and privacy', rcm_t_url('security')],
-        ['Careers', rcm_t_url('careers')],
-        ['FAQs', rcm_t_url('faq')],
-    ];
-
-    $svc_groups = [];
-    if (rcm_t_has_plugin()) {
-        foreach (RCM\Content_Types::SERVICE_CATEGORIES as $cat => [$label]) {
-            $links = [];
-            foreach (rcm_t_all('rcm_service') as $p) {
-                if (RCM\Content_Types::service_category($p) === $cat) {
-                    $i = rcm_t_item($p);
-                    $links[] = [$i['short'], $i['url']];
-                }
-            }
-            if ($links) {
-                $svc_groups[] = ['title' => $label, 'url' => rcm_t_archive('rcm_service') . '#' . $cat, 'links' => $links];
-            }
-        }
-    }
-
-    $medical = $dental = [];
-    foreach (rcm_t_all('rcm_specialty') as $p) {
-        $row = [get_the_title($p), get_permalink($p)];
-        if (rcm_t_has_plugin() && RCM\Content_Types::specialty_kind($p) === 'dental') {
-            $dental[] = $row;
-        } else {
-            $medical[] = $row;
-        }
-    }
-    $half = (int) ceil(count($medical) / 2);
-
-    $tool_links = [];
-    if (rcm_t_has_plugin()) {
-        $counts = [];
-        foreach (rcm_t_all('rcm_tool') as $p) {
-            $c = RCM\Content_Types::tool_category($p);
-            $counts[$c] = ($counts[$c] ?? 0) + 1;
-        }
-        foreach (RCM\Content_Types::TOOL_CATEGORIES as $cat => [$label]) {
-            if (!empty($counts[$cat])) {
-                $tool_links[] = [$label, add_query_arg('category', $cat, rcm_t_archive('rcm_tool')), sprintf(_n('%d tool', '%d tools', $counts[$cat], 'rcm-theme'), $counts[$cat])];
-            }
-        }
-    }
-
-    $blog = (int) get_option('page_for_posts') ? get_permalink((int) get_option('page_for_posts')) : home_url('/blog/');
+    $d = rcm_t_dental();
+    $services = array_merge(
+        rcm_t_key_links('rcm_service', ['dental-billing', 'revenue-cycle-management'], ['dental-billing' => __('Dental Billing', 'rcm-theme'), 'revenue-cycle-management' => __('Dental RCM', 'rcm-theme')]),
+        rcm_t_core_links()
+    );
+    $software = rcm_t_key_links('rcm_service', $d['software'], [
+        'dentrix-billing-services' => 'Dentrix',
+        'open-dental-billing-services' => 'Open Dental',
+        'eaglesoft-billing-services' => 'Eaglesoft',
+        'curve-dental-billing-services' => 'Curve Dental',
+    ]);
 
     return [
-        ['label' => __('About', 'rcm-theme'), 'url' => rcm_t_url('about'), 'groups' => [['title' => __('Company', 'rcm-theme'), 'links' => $company]]],
-        ['label' => __('Services', 'rcm-theme'), 'url' => rcm_t_archive('rcm_service'), 'wide' => true, 'groups' => $svc_groups, 'footer' => [__('View all RCM services', 'rcm-theme'), rcm_t_archive('rcm_service')]],
-        ['label' => __('Specialties', 'rcm-theme'), 'url' => rcm_t_archive('rcm_specialty'), 'wide' => true, 'groups' => [
-            ['title' => __('Medical', 'rcm-theme'), 'url' => rcm_t_archive('rcm_specialty') . '#medical', 'links' => array_slice($medical, 0, $half)],
-            ['title' => __('Medical (continued)', 'rcm-theme'), 'url' => rcm_t_archive('rcm_specialty') . '#medical', 'links' => array_slice($medical, $half)],
-            ['title' => __('Dental', 'rcm-theme'), 'url' => rcm_t_archive('rcm_specialty') . '#dental', 'links' => $dental],
-        ], 'footer' => [__('All medical and dental specialties', 'rcm-theme'), rcm_t_archive('rcm_specialty')]],
-        ['label' => __('RCM Tools', 'rcm-theme'), 'url' => rcm_t_archive('rcm_tool'), 'groups' => [['title' => __('Tools', 'rcm-theme'), 'links' => $tool_links]], 'footer' => [__('Browse all free RCM tools', 'rcm-theme'), rcm_t_archive('rcm_tool')]],
-        ['label' => __('Resources', 'rcm-theme'), 'url' => rcm_t_url('resources'), 'groups' => [['title' => __('Resources', 'rcm-theme'), 'links' => [
-            [__('Blog and insights', 'rcm-theme'), $blog],
-            [__('Resources and knowledge center', 'rcm-theme'), rcm_t_url('resources')],
-            [__('Medical billing glossary', 'rcm-theme'), home_url('/tools/medical-billing-glossary/')],
-            [__('Denial reasons guide', 'rcm-theme'), home_url('/tools/denial-reasons-guide/')],
-            [__('Outsourcing vs in-house billing', 'rcm-theme'), rcm_t_url('outsourcing-vs-in-house-billing')],
+        ['label' => __('Services', 'rcm-theme'), 'url' => rcm_t_archive('rcm_service'), 'wide' => true, 'groups' => [
+            ['title' => __('Overview', 'rcm-theme'), 'links' => array_slice($services, 0, 2)],
+            ['title' => __('Dental RCM services', 'rcm-theme'), 'links' => array_slice($services, 2, 4)],
+            ['title' => __('Dental RCM services (continued)', 'rcm-theme'), 'links' => array_slice($services, 6)],
+        ]],
+        ['label' => __('Specialties', 'rcm-theme'), 'url' => rcm_t_archive('rcm_specialty'), 'groups' => [['title' => __('Dental specialties', 'rcm-theme'), 'links' => rcm_t_key_links('rcm_specialty', $d['specialties'])]]],
+        ['label' => __('Software', 'rcm-theme'), 'url' => rcm_t_url('technology'), 'groups' => [['title' => __('Dental software', 'rcm-theme'), 'links' => $software]]],
+        ['label' => __('Resources', 'rcm-theme'), 'url' => rcm_t_blog_url(), 'groups' => [['title' => __('Resources', 'rcm-theme'), 'links' => [
+            [__('Blog', 'rcm-theme'), rcm_t_blog_url()],
+            [__('Free Dental Billing Tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
+            [__('FAQs', 'rcm-theme'), rcm_t_url('faq')],
         ]]]],
-        ['label' => __('Blog', 'rcm-theme'), 'url' => $blog],
+        ['label' => __('About', 'rcm-theme'), 'url' => rcm_t_url('about'), 'groups' => [['title' => __('Company', 'rcm-theme'), 'links' => [
+            [__('About Us', 'rcm-theme'), rcm_t_url('about')],
+            [__('How We Work', 'rcm-theme'), rcm_t_url('how-we-work')],
+            [__('Security and Privacy', 'rcm-theme'), rcm_t_url('security')],
+            [__('Service Areas', 'rcm-theme'), rcm_t_url('service-areas')],
+        ]]]],
         ['label' => __('Contact', 'rcm-theme'), 'url' => rcm_t_url('contact')],
     ];
 }

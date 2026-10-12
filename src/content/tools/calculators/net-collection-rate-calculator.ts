@@ -7,18 +7,18 @@ const calc: Calculator = {
   name: 'Net Collection Rate Calculator',
   category: 'kpi',
   icon: 'Percent',
-  summary: 'Measure how much of the money you are contractually owed you actually collect.',
+  summary: 'Measure how much of the dental production you are entitled to collect after PPO write-offs your practice actually collects.',
   definition:
-    'Net collection rate (NCR) is the share of collectible revenue a practice actually receives. It divides payments by charges after contractual adjustments, so it shows money lost to denials, write-offs and unpaid balances rather than the gap between list prices and payer contracts.',
+    'Net collection rate (NCR) is the share of collectible dental production a practice actually receives. It divides payments by production after PPO write-offs and other contractual adjustments, so it shows money lost to denials, unworked claims and unpaid patient balances rather than the gap between your full fees and carrier fee schedules.',
   inputs: [
-    { id: 'payments', label: 'Total payments received', unit: 'usd', default: 285000, min: 0, help: 'Payer and patient payments for the period, net of refunds.' },
-    { id: 'charges', label: 'Total charges', unit: 'usd', default: 500000, min: 0, help: 'Gross charges for the same period at your fee schedule.' },
-    { id: 'adjustments', label: 'Contractual adjustments', unit: 'usd', default: 200000, min: 0, help: 'Contractual write-downs only. Do not include bad debt, small balance or denial write-offs.' },
+    { id: 'payments', label: 'Total payments received', unit: 'usd', default: 285000, min: 0, help: 'Dental carrier and patient payments for the period, net of refunds.' },
+    { id: 'charges', label: 'Gross production', unit: 'usd', default: 500000, min: 0, help: 'Completed procedures for the same period at your full office fees.' },
+    { id: 'adjustments', label: 'PPO and other contractual write-offs', unit: 'usd', default: 200000, min: 0, help: 'Contractual write-offs only, such as PPO fee schedule and DHMO adjustments. Do not include denial write-offs, courtesy discounts, small balances or bad debt.' },
   ],
   outputs: [
     { id: 'ncr', label: 'Net collection rate', unit: 'pct', primary: true },
-    { id: 'collectible', label: 'Collectible revenue (charges minus contractual adjustments)', unit: 'usd' },
-    { id: 'uncollected', label: 'Collectible revenue not yet collected', unit: 'usd' },
+    { id: 'collectible', label: 'Collectible production (gross production minus contractual write-offs)', unit: 'usd' },
+    { id: 'uncollected', label: 'Collectible production not yet collected', unit: 'usd' },
   ],
   compute: (v) => {
     const collectible = v.charges - v.adjustments;
@@ -32,44 +32,44 @@ const calc: Calculator = {
     };
   },
   formula: [
-    { expression: 'NCR = Payments / (Charges - Contractual adjustments) x 100', explanation: 'Only contractual adjustments are removed, because they are amounts you were never entitled to collect.' },
+    { expression: 'NCR = Payments / (Gross production - Contractual write-offs) x 100', explanation: 'Only PPO and other contractual write-offs are removed, because they are amounts you agreed as an in-network dentist never to collect.' },
   ],
   example: {
     inputs: { payments: 285000, charges: 500000, adjustments: 200000 },
     expected: { ncr: 95, collectible: 300000, uncollected: 15000 },
-    narrative: 'A practice billed $500,000, wrote down $200,000 to contracted rates and collected $285,000. Collectible revenue is $300,000, so NCR is 285,000 / 300,000 = 95%. The remaining $15,000 is still owed, denied or written off.',
+    narrative: 'A dental practice produced $500,000 at full fees, wrote off $200,000 to PPO fee schedules and collected $285,000 from carriers and patients. Collectible production is $300,000, so NCR is 285,000 / 300,000 = 95%. The remaining $15,000 is still owed, denied or written off.',
   },
   assumptions: [
-    'Payments, charges and adjustments cover the same period. Using a lagged period (for example payments 60 days after charges) gives a more stable figure.',
-    'Adjustments include contractual write-downs only.',
+    'Payments, production and write-offs cover the same period. Using a lagged period (for example payments 60 days after production) gives a more stable figure.',
+    'Write-offs include contractual PPO, DHMO and similar adjustments only, posted from a current fee schedule.',
   ],
   faqs: [
     {
-      q: 'What is the difference between net and gross collection rate?',
-      a: 'Net collection rate compares payments to what you were contractually allowed to collect, while gross collection rate compares payments to total billed charges. Gross rate mostly reflects how your fee schedule compares to payer contracts. Net rate removes contractual adjustments, so it shows how much collectible money is lost to denials, unworked balances and write-offs.',
+      q: 'What is the difference between net and gross collection rate in dentistry?',
+      a: 'Net collection rate compares payments to what you were contractually entitled to collect, while gross collection rate compares payments to production at full fees. Gross rate mostly reflects how far PPO fee schedules sit below your office fees. Net rate removes those write-offs, so it shows how much collectible money is lost to denials, unworked claims and unpaid patient balances.',
     },
     {
-      q: 'Which adjustments should I subtract when calculating net collection rate?',
-      a: 'Subtract only contractual adjustments, the amounts your payer contracts say you cannot collect. Do not subtract denial write-offs, bad debt, small balance write-offs or timely filing write-offs. Those are collectible dollars your practice lost, and removing them would hide exactly the leakage the metric is meant to reveal, making the rate look better than reality.',
+      q: 'Which write-offs should I subtract when calculating net collection rate?',
+      a: 'Subtract only contractual write-offs, the amounts your PPO, DHMO or other carrier agreements say you cannot collect. Do not subtract denial write-offs, courtesy discounts, small balance write-offs or bad debt. Those are collectible dollars your practice lost, and removing them would hide the leakage the metric is meant to reveal.',
     },
     {
       q: 'Why can net collection rate come out above 100%?',
-      a: 'A rate above 100% usually means the payments and charges come from different periods, or contractual adjustments are overstated. For example, payments received this month may relate to charges from earlier months. Comparing payments to charges from a lagged period, or using a rolling three to six month window, generally gives a steadier and more meaningful figure.',
+      a: 'A rate above 100% usually means payments and production come from different periods, or PPO write-offs are overstated, often because the fee schedule loaded in your software is out of date. Payments received this month may relate to production from earlier months. A lagged period or a rolling three to six month window gives a steadier figure.',
     },
     {
-      q: 'How often should a practice calculate net collection rate?',
-      a: 'Most practices review net collection rate monthly and track a rolling quarterly or six month figure alongside it. Monthly numbers can swing because payments lag behind charges, so the rolling view is better for spotting real trends. Reviewing it by payer and by provider can also show where collectible revenue is being lost.',
+      q: 'How often should a dental practice calculate net collection rate?',
+      a: 'Most dental practices review net collection rate monthly and track a rolling quarterly or six month figure alongside it. Monthly numbers swing because carrier payments lag behind production, so the rolling view is better for spotting real trends. Reviewing it by carrier, location and dentist can also show where collectible production is being lost.',
     },
     {
-      q: 'What can a practice do if its net collection rate is falling?',
-      a: 'Start by finding where collectible dollars are going: review denials by reason, aging balances over 90 days, write-offs by type and underpaid claims compared to contracted rates. A falling rate often points to eligibility errors, missed follow-up or unappealed denials. Fixing the root cause at the front end usually matters more than chasing individual balances.',
+      q: 'What can a dental office do if its net collection rate is falling?',
+      a: 'Find where collectible dollars are going: review denials by reason, insurance aging over 90 days, write-offs by type and EOB payments compared with your PPO fee schedules. A falling rate often points to frequency or eligibility errors, missing x-rays or narratives, or slow follow-up. Fixing the root cause at the front desk usually matters most.',
     },
   ],
-  relatedServices: ['accounts-receivable-management', 'denial-management', 'revenue-cycle-audit'],
-  relatedTools: ['gross-collection-rate-calculator', 'days-in-ar-calculator', 'revenue-leakage-estimator'],
-  seoTitle: 'Net Collection Rate Calculator for Medical Practices',
-  metaDescription: 'Calculate your net collection rate from payments, charges and contractual adjustments, with the formula, a worked example and what the result means.',
-  keywords: ['net collection rate calculator', 'how to calculate net collection rate', 'medical billing kpi'],
+  relatedServices: ['dental-accounts-receivable', 'payment-posting', 'denial-management', 'rcm-analytics-reporting'],
+  relatedTools: ['dental-insurance-collection-calculator', 'days-in-ar-calculator', 'dental-ar-aging-calculator'],
+  seoTitle: 'Net Collection Rate Calculator for Dental Practices',
+  metaDescription: 'Calculate your dental net collection rate from payments, gross production and PPO write-offs, with the formula, a worked example and what it means.',
+  keywords: ['dental net collection rate calculator', 'how to calculate net collection rate dental', 'dental practice kpi', 'ppo write-offs'],
 };
 
 export default calc;

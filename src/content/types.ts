@@ -55,6 +55,8 @@ export interface Service {
   intro: string[];
   /** What the service covers, 6 to 10 concrete tasks. */
   scope: string[];
+  /** Dental refocus: the 5 sub-services from the owner brief, each with a short paragraph (shown as "What is included"). */
+  included?: Step[];
   /** How the work runs, 4 to 7 steps in order. */
   workflow: Step[];
   /** Potential benefits, 3 to 5, phrased as what the work is designed to improve. */
