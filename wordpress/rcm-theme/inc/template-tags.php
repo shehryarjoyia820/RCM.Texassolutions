@@ -170,7 +170,6 @@ function rcm_t_nav(): array
         'dentrix-billing-services' => 'Dentrix',
         'open-dental-billing-services' => 'Open Dental',
         'eaglesoft-billing-services' => 'Eaglesoft',
-        'curve-dental-billing-services' => 'Curve Dental',
     ]);
 
     return [

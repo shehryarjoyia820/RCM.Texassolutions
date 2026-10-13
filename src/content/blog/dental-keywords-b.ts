@@ -99,7 +99,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 </ul>
 
 <h2>How are Dentrix, Open Dental, Eaglesoft and Curve Dental described?</h2>
-<p>These four products are common in U.S. dental offices, and our dental RCM team works in each of them. The notes below are limited to facts stated on each publisher's own website at the time of writing. They are not a ranking or a recommendation, and products change, so confirm current details with each vendor.</p>
+<p>These four products are common in U.S. dental offices. Our dental RCM team works in three of them: Open Dental, Dentrix and Eaglesoft. The notes below are limited to facts stated on each publisher's own website at the time of writing. They are not a ranking or a recommendation, and products change, so confirm current details with each vendor.</p>
 <ul>
 <li><strong>Dentrix</strong> is published by Henry Schein One. The company also offers Dentrix Ascend, and its website presents the two as a choice between on-premises control and cloud flexibility.</li>
 <li><strong>Open Dental</strong> is published by Open Dental Software. It was distributed under an open source license for many years. The company states that the license changed to proprietary in version 24.4, and that the change did not affect customers' price, support or database access.</li>
@@ -117,7 +117,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 <li>EOB and ERA posting that records contractual write-offs correctly and flags payments below the contracted fee.</li>
 <li>Regular follow-up on unpaid claims, sorted by age and carrier.</li>
 </ul>
-<p>Our team works inside each of the four systems above. See our <a href="/services/dentrix-billing-services/">Dentrix billing services</a>, <a href="/services/open-dental-billing-services/">Open Dental billing services</a>, <a href="/services/eaglesoft-billing-services/">Eaglesoft billing services</a> and <a href="/services/curve-dental-billing-services/">Curve Dental billing services</a>, or the overview of our <a href="/services/dental-billing/">dental billing services</a>.</p>
+<p>Our team works in three of the systems above: Open Dental, Dentrix and Eaglesoft. See our <a href="/services/open-dental-billing-services/">Open Dental billing services</a>, <a href="/services/dentrix-billing-services/">Dentrix billing services</a> and <a href="/services/eaglesoft-billing-services/">Eaglesoft billing services</a>, or the overview of our <a href="/services/dental-billing/">dental billing services</a>.</p>
 
 <h2>When does it make sense to switch dental practice software?</h2>
 <p>Changing dental practice management software makes sense when the current system blocks how the office needs to work, not just because a newer product looks appealing. Common triggers include opening a second location, a vendor ending support for your version, server hardware that is due for replacement, or reports that cannot answer basic questions about collections and aging.</p>
@@ -139,7 +139,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
       },
       {
         q: 'Does Texas Solutions RCM sell or recommend dental software?',
-        a: 'No. Texas Solutions RCM is a dental revenue cycle management company, not a software vendor, and is not affiliated with any software company. We do not sell, resell or rank products. Our team works inside the system a practice already uses, including Dentrix, Open Dental, Eaglesoft and Curve Dental, along with the practice\'s clearinghouse and carrier portals.',
+        a: 'No. Texas Solutions RCM is a dental revenue cycle management company, not a software vendor, and is not affiliated with any software company. We do not sell, resell or rank products. Our team works inside the system a practice already uses, whether that is Open Dental, Dentrix or Eaglesoft, along with the practice\'s clearinghouse and carrier portals. If a practice uses different software, we confirm during the consultation whether we can support it.',
       },
       {
         q: 'What billing questions should I ask a dental software vendor?',
@@ -239,7 +239,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 <p>A new tool only helps if someone works its output. A verification tool that nobody reads, or a denial list nobody opens, adds cost without changing collections.</p>
 
 <h2>Which software do we work in?</h2>
-<p>Our team bills inside the systems practices already run, including Dentrix, Open Dental, Eaglesoft and Curve Dental, along with each practice's clearinghouse and carrier portals. We do not ask a practice to change its dental billing software or buy a new product to work with us. Dentrix, Open Dental, Eaglesoft and Curve Dental are trademarks of their respective owners. Texas Solutions RCM is not affiliated with, endorsed by or sponsored by any of these companies.</p>
+<p>Our team bills inside three dental practice management systems, Open Dental, Dentrix and Eaglesoft, along with each practice's clearinghouse and carrier portals. We do not ask a practice to change its dental billing software or buy a new product to work with us. If your practice uses different software, we confirm during the consultation whether we can support it. Open Dental, Dentrix and Eaglesoft are trademarks of their respective owners. Texas Solutions RCM is not affiliated with, endorsed by or sponsored by any of these companies.</p>
 
 <p>Want to know whether your current setup is enough, or where a billing team would fit? <a href="/consultation/">Book a free consultation</a> and we will review your workflow inside the dental billing software you already use.</p>
 `,
@@ -262,7 +262,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
       },
       {
         q: 'Will a billing company make us change our software?',
-        a: 'Texas Solutions RCM does not. We are a dental RCM company, not a software vendor, and we are not affiliated with any software company. Our team works inside the practice management system, clearinghouse and carrier portals the practice already uses, including Dentrix, Open Dental, Eaglesoft and Curve Dental. A Business Associate Agreement is signed before we access patient data.',
+        a: 'Texas Solutions RCM does not. We are a dental RCM company, not a software vendor, and we are not affiliated with any software company. Our team works inside the practice management system, clearinghouse and carrier portals the practice already uses, whether that is Open Dental, Dentrix or Eaglesoft. A Business Associate Agreement is signed before we access patient data.',
       },
     ],
     sources: [S.cmsTransactions, S.adaClaimForm, S.adaInsurance, S.x12Carc],

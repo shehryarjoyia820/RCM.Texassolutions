@@ -31,7 +31,7 @@ foreach ($groups as $id => [$label, $blurb, $list]) :
                 <h2 class="text-2xl font-bold sm:text-3xl"><?php echo esc_html($label); ?></h2>
                 <p class="mt-2 text-lg text-ink-muted"><?php echo esc_html($blurb); ?></p>
             </div>
-            <div class="grid gap-5 sm:grid-cols-2 <?php echo $id === 'overview' ? '' : 'lg:grid-cols-4'; ?>">
+            <div class="grid gap-5 sm:grid-cols-2 <?php echo ['overview' => '', 'software' => 'lg:grid-cols-3'][$id] ?? 'lg:grid-cols-4'; ?>">
                 <?php foreach ($list as $p) :
                     $it = rcm_t_item($p);
                     $k = (string) get_post_meta($p->ID, '_rcm_key', true);

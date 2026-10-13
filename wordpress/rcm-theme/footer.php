@@ -78,7 +78,7 @@ $cols = [
             </ul>
         </div>
         <p class="mt-6 max-w-4xl text-xs leading-relaxed text-navy-300">
-            <?php esc_html_e('Information and calculators on this site are general and educational. They are not legal, tax, coding or financial advice, and estimates are not guarantees of results. Calculator inputs stay in your browser unless you choose to send them to us. Please do not send patient information through this website. CDT is a trademark of the American Dental Association. Dentrix, Open Dental, Eaglesoft, Curve Dental and carrier names belong to their owners; Texas Solutions is not affiliated with them.', 'rcm-theme'); ?>
+            <?php esc_html_e('Information and calculators on this site are general and educational. They are not legal, tax, coding or financial advice, and estimates are not guarantees of results. Calculator inputs stay in your browser unless you choose to send them to us. Please do not send patient information through this website. CDT is a trademark of the American Dental Association. Open Dental, Dentrix, Eaglesoft and carrier names belong to their owners; Texas Solutions is not affiliated with them.', 'rcm-theme'); ?>
         </p>
     </div>
 </footer>

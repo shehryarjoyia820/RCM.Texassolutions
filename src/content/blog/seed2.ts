@@ -324,7 +324,7 @@ export const seedPosts2: SeedPost[] = [
 <p>Ask who sends patient statements, who answers balance questions, and how estimates given at treatment planning are compared to what the plan actually paid.</p>
 
 <h3>Software fit</h3>
-<p>Most offices run on a dental practice management system such as Dentrix, Open Dental, Eaglesoft or Curve Dental. Ask whether the company works directly in your system and your clearinghouse, how remote access is secured, and how its work is documented in ledgers and claim notes so your team can see it.</p>
+<p>Most offices run on a dental practice management system such as Open Dental, Dentrix or Eaglesoft. Ask whether the company works directly in your system and your clearinghouse, how remote access is secured, and how its work is documented in ledgers and claim notes so your team can see it.</p>
 
 <h3>Reporting</h3>
 <p>Ask for a sample monthly report. Look for collections, adjustments and write-offs, insurance AR aging, outstanding claims by carrier, denial reasons, and pending pre-treatment estimates.</p>
@@ -383,7 +383,7 @@ export const seedPosts2: SeedPost[] = [
       },
       {
         q: 'Can a dental billing company work in Dentrix or Open Dental?',
-        a: 'Many dental billing teams work remotely inside common practice management systems such as Dentrix, Open Dental, Eaglesoft and Curve Dental. Ask each company how it accesses your system and documents its work.',
+        a: 'Many dental billing teams work remotely inside common practice management systems such as Open Dental, Dentrix and Eaglesoft. Ask each company how it accesses your system and documents its work.',
       },
       {
         q: 'Do dental billing companies bill medical insurance too?',

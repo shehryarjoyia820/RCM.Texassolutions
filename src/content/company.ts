@@ -43,8 +43,8 @@ export const HOME_FAQS: Faq[] = [
     a: 'Dental revenue cycle management (dental RCM) is the full process of getting a dental office paid for the care it delivers, from checking benefits before the visit to posting the final payment and resolving the patient balance. A dental RCM company runs that cycle for you inside your own software: keeping provider enrollment current, verifying benefits, sending dental insurance claims with the right attachments, posting EOBs and ERAs, working denials and appeals, following up on unpaid claims and patient balances, and reporting on the results. Dental billing, the claim and payment work in the middle, is one part of that cycle.',
   },
   {
-    q: 'Do we need to change Dentrix, Open Dental, Eaglesoft or Curve Dental?',
-    a: 'No. We work inside the dental software you already run, using named user accounts your administrator creates and can disable at any time. Your ledgers, claim history and notes stay in your system. We are not affiliated with any software vendor; we simply work in the product as a user, with the access you grant.',
+    q: 'Do we need to change Open Dental, Dentrix or Eaglesoft?',
+    a: 'No. We work inside the dental software you already run, using named user accounts your administrator creates and can disable at any time. Your ledgers, claim history and notes stay in your system. We are not affiliated with any software vendor; we simply work in the product as a user, with the access you grant. If your practice uses different software, we confirm during the consultation whether we can support it.',
   },
   {
     q: 'Can we outsource only dental insurance verification or A/R follow-up?',
@@ -112,7 +112,7 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
     faqs: [
       {
         q: 'Which dental practice management systems can your team use?',
-        a: 'We commonly work in Dentrix, Open Dental, Eaglesoft and Curve Dental, and we can review other systems during the consultation. We do not install anything or require a switch. Product names belong to their owners, and Texas Solutions is not a partner or reseller of any dental software company.',
+        a: 'Our team works in three systems: Open Dental, Dentrix and Eaglesoft. If your practice uses different software, we confirm during the consultation whether we can support it. We do not install anything or require a switch. Product names belong to their owners, and Texas Solutions is not a partner or reseller of any dental software company.',
       },
       {
         q: 'How do you handle x-rays, perio charts and narratives for claims?',
@@ -156,7 +156,7 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
 export const COMPANY_FACTS = `Texas Solutions RCM (rcm.texassolutions.co) is a dental revenue cycle management (RCM) company: the dental RCM division of Texas Solutions (texassolutions.co), a US company with an office at 401 W Kentucky Ave, Midland, TX 79701. Contact: info@texassolutions.co, +1 (838) 910-3147.
 It serves dental practices only (general dentistry, orthodontics, endodontics, periodontics, oral surgery, pediatric dentistry, prosthodontics, dental groups and DSOs) in all 50 US states. It does not offer revenue cycle or billing services for non-dental healthcare. Describe it as a dental revenue cycle management (dental RCM) company, not as a billing company; dental billing (claims and payment work) is one part of the dental revenue cycle it manages.
 Services: Insurance Verification & Eligibility; Dental Claims Management; Denial Management & Appeals; Payment Posting; Accounts Receivable (A/R) Management; Patient Billing & Collections Support; Dental Credentialing & Provider Enrollment; Dental RCM Reporting & Revenue Analysis. Claims for PPO, DHMO, indemnity and Medicaid/CHIP dental plans.
-The team works remotely inside the practice's own dental software (such as Dentrix, Open Dental, Eaglesoft and Curve Dental), clearinghouse and carrier portals using named accounts the practice controls. Texas Solutions is not affiliated with or a partner of any software vendor. A Business Associate Agreement is signed before any patient data is accessed.
+The team works remotely inside the practice's own dental software (Open Dental, Dentrix or Eaglesoft), clearinghouse and carrier portals using named accounts the practice controls. Texas Solutions is not affiliated with or a partner of any software vendor. A Business Associate Agreement is signed before any patient data is accessed.
 Patient billing: the team prepares and sends patient statements; it does not phone patients, and conversations about balances stay with the practice front desk.
 Consultations are free. Pricing is quoted in writing after a consultation because it depends on services, volume and locations; there is no published price list. The /pricing/ page explains how quotes work.
 Not yet published or approved: client results, case studies, testimonials, certifications, turnaround times or guarantees. Do not state any.`;

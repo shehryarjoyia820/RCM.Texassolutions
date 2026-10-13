@@ -155,6 +155,11 @@ export const CALCULATOR_SLUGS = [
   'dental-billing-cost-calculator',
   'dental-denial-rate-calculator',
   'dental-insurance-collection-calculator',
+  'dental-patient-estimate-calculator',
+  'dental-ppo-write-off-calculator',
+  'dental-annual-maximum-calculator',
+  'dental-denial-cost-calculator',
+  'dental-credentialing-revenue-calculator',
   'dental-ar-aging-calculator',
   'dental-practice-roi-calculator',
 ] as const;

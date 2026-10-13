@@ -141,7 +141,7 @@ $journey = [
             <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('We work in your dental software', 'rcm-theme'); ?></h2>
             <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('No new system to learn. Our team works inside the dental practice management software, clearinghouse and carrier portals you already use, with named accounts you control.', 'rcm-theme'); ?></p>
         </div>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <?php foreach ($software as $p) : $i = rcm_t_item($p); rcm_t_link_card($i['url'], $i['title'], $i['text'], $i['icon']); endforeach; ?>
         </div>
     </div>

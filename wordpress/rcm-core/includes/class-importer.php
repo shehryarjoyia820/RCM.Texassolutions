@@ -315,10 +315,17 @@ final class Importer
             if ($existing) {
                 $stored = (string) get_post_meta($existing->ID, '_rcm_import_hash', true);
                 $current = md5($existing->post_content . $existing->post_title . get_post_meta($existing->ID, '_rcm_intro', true));
+                // WordPress normalises content on save, so compare against what was actually saved at the last import.
+                // Pages imported before this check existed count as unedited if nobody changed them after that import.
+                $saved = (string) get_post_meta($existing->ID, '_rcm_saved_hash', true);
+                $last_import = (string) get_option('rcm_content_imported');
+                $edited = $saved !== ''
+                    ? $saved !== $current
+                    : ($last_import === '' || strtotime($existing->post_modified) > strtotime($last_import) + 60);
                 // A page we did not create (no hash) is only taken over when it is not published,
                 // e.g. WordPress's default draft "Privacy Policy" page.
                 $foreign_published = !$stored && $existing->post_status === 'publish';
-                if ($stored === $hash || (!$force && $stored && $stored !== $current) || (!$force && $foreign_published)) {
+                if ($stored === $hash || (!$force && $stored && $edited) || (!$force && $foreign_published)) {
                     $map[$key] = $existing->ID;
                     $cur_desc = (string) get_post_meta($existing->ID, '_rcm_meta_description', true);
                     $cur_title = (string) get_post_meta($existing->ID, '_rcm_seo_title', true);
@@ -355,6 +362,10 @@ final class Importer
             update_post_meta($id, '_rcm_key', $key);
             update_post_meta($id, '_rcm_intro', (string) ($p['intro'] ?? ''));
             update_post_meta($id, '_rcm_import_hash', md5($body . $p['title'] . ($p['intro'] ?? '')));
+            $saved_post = get_post($id);
+            if ($saved_post) {
+                update_post_meta($id, '_rcm_saved_hash', md5($saved_post->post_content . $saved_post->post_title . ($p['intro'] ?? '')));
+            }
             if (!empty($p['lastUpdated'])) {
                 update_post_meta($id, '_rcm_last_updated', (string) $p['lastUpdated']);
             }

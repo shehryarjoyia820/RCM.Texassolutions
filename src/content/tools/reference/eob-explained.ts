@@ -38,7 +38,7 @@ const tool: ReferenceTool = {
     },
     {
       q: 'What is the difference between a dental EOB and an ERA?',
-      a: 'An EOB is a readable document, usually paper or PDF, while an ERA is the electronic X12 835 remittance a dental carrier sends to the practice. Both report the same results, but the ERA uses standard adjustment codes and can be posted automatically into Dentrix, Open Dental, Eaglesoft or Curve Dental. Patients receive EOBs, not ERAs.',
+      a: 'An EOB is a readable document, usually paper or PDF, while an ERA is the electronic X12 835 remittance a dental carrier sends to the practice. Both report the same results, but the ERA uses standard adjustment codes and can be posted automatically into Open Dental, Dentrix or Eaglesoft. Patients receive EOBs, not ERAs.',
     },
     {
       q: 'Why is the patient\'s share different from the treatment estimate?',

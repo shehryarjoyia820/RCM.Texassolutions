@@ -51,7 +51,8 @@ export const CORE_SERVICES = [
 ] as const;
 
 export const OVERVIEW_SERVICES = ['dental-billing', 'revenue-cycle-management'] as const;
-export const SOFTWARE_SERVICES = ['dentrix-billing-services', 'open-dental-billing-services', 'eaglesoft-billing-services', 'curve-dental-billing-services'] as const;
+/** The team works in Open Dental, Dentrix and Eaglesoft (owner, 2026-10-13). Curve Dental is not supported. */
+export const SOFTWARE_SERVICES = ['open-dental-billing-services', 'dentrix-billing-services', 'eaglesoft-billing-services'] as const;
 
 export const KEPT_SERVICES: string[] = [...OVERVIEW_SERVICES, ...CORE_SERVICES.map((s) => s.slug), ...SOFTWARE_SERVICES];
 
@@ -65,6 +66,11 @@ export const DENTAL_TOOLS = [
   'dental-ar-aging-calculator',
   'dental-practice-roi-calculator',
   'dental-insurance-verification-checklist',
+  'dental-patient-estimate-calculator',
+  'dental-ppo-write-off-calculator',
+  'dental-annual-maximum-calculator',
+  'dental-denial-cost-calculator',
+  'dental-credentialing-revenue-calculator',
 ];
 /** Generic tools kept but rewritten with dental examples. */
 export const GENERIC_TOOLS = [
@@ -153,6 +159,8 @@ export const DRAFT_PAGES: string[] = [];
 const group = (prefix: string, slugs: string[], to: string) => Object.fromEntries(slugs.map((s) => [`${prefix}${s}/`, to]));
 
 export const REDIRECTS: Record<string, string> = {
+  // Owner, 2026-10-13: the team does not work in Curve Dental.
+  '/services/curve-dental-billing-services/': '/services/revenue-cycle-management/',
   // Services: 45 removed
   ...group('/services/', ['medical-billing', 'medical-billing-small-practices', 'dental-billing-small-practices', 'out-of-network-billing', 'dental-virtual-assistant', 'virtual-medical-assistant', 'practice-management-support', 'healthcare-data-entry', 'ehr-workflow-support', 'appointment-scheduling'], '/services/dental-billing/'),
   ...group('/services/', ['insurance-eligibility-verification', 'benefits-verification', 'prior-authorization', 'patient-registration'], '/services/dental-insurance-verification/'),

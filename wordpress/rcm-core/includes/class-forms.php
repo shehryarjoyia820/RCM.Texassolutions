@@ -36,7 +36,7 @@ namespace RCM {
         public const BILLING_ARRANGEMENTS = ['In-house billing team', 'Another billing company', 'Mix of in-house and outsourced', 'Starting a new practice', 'Other'];
         public const CLAIM_VOLUMES = ['Under 250', '250-1,000', '1,000-2,500', '2,500-5,000', '5,000+', 'Not sure'];
         /** Dental practice software options (consultation and contact forms). */
-        public const PRACTICE_SOFTWARE = ['Dentrix', 'Open Dental', 'Eaglesoft', 'Curve Dental', 'Other', 'Not sure'];
+        public const PRACTICE_SOFTWARE = ['Open Dental', 'Dentrix', 'Eaglesoft', 'Other', 'Not sure'];
         public const LOCATION_COUNTS = ['1', '2-3', '4-10', '11-25', '26+'];
 
         public const PARTNERSHIP_TYPES = ['Referral partner', 'Software or technology partner', 'Consultant or practice advisor', 'Billing company (white label or overflow)', 'Other'];

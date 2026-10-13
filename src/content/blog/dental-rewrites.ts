@@ -121,7 +121,7 @@ export const dentalRewrites: SeedPost[] = [
       },
       {
         q: 'Is dental RCM the same as dental practice management software?',
-        a: 'No, dental RCM is the work of getting paid, while practice management software is the tool where much of that work is recorded. Systems such as Dentrix, Open Dental, Eaglesoft and Curve Dental hold schedules, ledgers and claims, but people still have to verify benefits, check claims, post payments, work denials and follow up on unpaid balances.',
+        a: 'No, dental RCM is the work of getting paid, while practice management software is the tool where much of that work is recorded. Systems such as Open Dental, Dentrix and Eaglesoft hold schedules, ledgers and claims, but people still have to verify benefits, check claims, post payments, work denials and follow up on unpaid balances.',
       },
       {
         q: 'What is the difference between dental billing and dental revenue cycle management?',
@@ -478,7 +478,7 @@ export const dentalRewrites: SeedPost[] = [
 
 <h2>What does "minimum necessary" mean for dental billing?</h2>
 <p>The minimum necessary standard asks covered entities and business associates to limit the use and disclosure of PHI to what is reasonably needed for the task. Disclosures for payment are subject to it. In practice, a billing team needs patient demographics, insurance details, procedures, ledgers, clinical notes and the x-rays or perio charts that support claims. It usually does not need full access to every module of your software or unrelated records.</p>
-<p>Most dental systems, including Dentrix, Open Dental, Eaglesoft and Curve Dental, let you create user roles with specific permissions. Give each outside user a unique login, limit permissions to billing functions and turn off access promptly when someone leaves the vendor's team.</p>
+<p>Most dental systems, including Open Dental, Dentrix and Eaglesoft, let you create user roles with specific permissions. Give each outside user a unique login, limit permissions to billing functions and turn off access promptly when someone leaves the vendor's team.</p>
 
 <h2>What safeguards should an outsourced billing team use?</h2>
 <p>The HIPAA Security Rule requires administrative, physical and technical safeguards for electronic PHI, scaled to the size and risk of the organization. Questions worth asking any dental billing vendor:</p>

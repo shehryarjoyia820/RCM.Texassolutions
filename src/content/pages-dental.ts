@@ -84,7 +84,7 @@ const about: PageContent = {
       `We work with ${a('/specialties/general-dentistry/', 'general dentistry')} offices and with specialty practices in ${a('/specialties/orthodontics/', 'orthodontics')}, ${a('/specialties/endodontics/', 'endodontics')}, ${a('/specialties/periodontics/', 'periodontics')}, ${a('/specialties/oral-surgery/', 'oral surgery')}, ${a('/specialties/pediatric-dentistry/', 'pediatric dentistry')} and ${a('/specialties/prosthodontics/', 'prosthodontics')}, as well as ${a('/specialties/dental-group-practices/', 'dental group practices')} and DSOs. Our team works remotely, so we can support offices in ${a('/service-areas/', 'every US state')}.`
     ),
     p(
-      'We set up our checklists around the software you run, whether that is Dentrix, Open Dental, Eaglesoft or Curve Dental, and around your carrier mix. The same model can fit a single-doctor office that needs help with old claims and a multi-location group that wants a full dental RCM team.'
+      'We set up our checklists around the software you run, whether that is Open Dental, Dentrix or Eaglesoft, and around your carrier mix. The same model can fit a single-doctor office that needs help with old claims and a multi-location group that wants a full dental RCM team.'
     ),
     h2('How an engagement starts'),
     ul([
@@ -153,7 +153,7 @@ const howWeWork: PageContent = {
       [
         [
           'Will we need to change our dental software?',
-          'Switching from Dentrix, Open Dental, Eaglesoft or Curve Dental is disruptive and can tie you to the vendor.',
+          'Switching away from Open Dental, Dentrix or Eaglesoft is disruptive and can tie you to the vendor.',
           'No. We work inside the software you already use, with accounts you create and control.',
         ],
         [
@@ -257,7 +257,7 @@ const technology: PageContent = {
   title: 'Dental Software and Technology',
   seoTitle: 'Dental Software and Technology | Texas Solutions RCM',
   metaDescription:
-    'We work inside Dentrix, Open Dental, Eaglesoft, Curve Dental and your clearinghouse and carrier portals, using 837D claims, 835 ERAs and secure access.',
+    'We work inside Open Dental, Dentrix and Eaglesoft plus your clearinghouse and carrier portals, using 837D claims, 835 ERAs and access your office controls.',
   template: 'default',
   intro:
     'We do not ask your office to adopt new billing software. Our dental revenue cycle management team works inside the dental practice management system, clearinghouse and carrier portals you already use, with access you control.',
@@ -267,13 +267,12 @@ const technology: PageContent = {
       'Our team signs in to your practice management system with named accounts that your administrator creates. Claims, attachments, notes, postings and adjustments all happen there, so the patient ledger stays complete and your front desk sees the same history we do.'
     ),
     p(
-      'The dental systems we commonly see include Dentrix, Open Dental, Eaglesoft and Curve Dental. Each handles insurance plans, fee schedules, claim batches and ERA import in its own way, and we set up our checklists around how your office has configured it. If you run another system, ask us during the consultation.'
+      'Our team works in three dental practice management systems: Open Dental, Dentrix and Eaglesoft. Each handles insurance plans, fee schedules, claim batches and ERA import in its own way, and we set up our checklists around how your office has configured it. If your practice uses different software, we confirm during the consultation whether we can support it.'
     ),
     ul([
       `${a('/services/dentrix-billing-services/', 'Dentrix billing services')}`,
       `${a('/services/open-dental-billing-services/', 'Open Dental billing services')}`,
       `${a('/services/eaglesoft-billing-services/', 'Eaglesoft billing services')}`,
-      `${a('/services/curve-dental-billing-services/', 'Curve Dental billing services')}`,
     ]),
     p(
       'We are not a partner, reseller or integration vendor for any of these products. We work in them as a user, through the access you grant. There is no software to install and no data to migrate before we start.'
@@ -334,7 +333,7 @@ const technology: PageContent = {
     ),
     h2('Trademarks'),
     p(
-      'Dentrix, Open Dental, Eaglesoft, Curve Dental and other product and carrier names are trademarks of their respective owners. Texas Solutions is not affiliated with, endorsed by or sponsored by any of them.'
+      'Open Dental, Dentrix, Eaglesoft and other product and carrier names are trademarks of their respective owners. Texas Solutions is not affiliated with, endorsed by or sponsored by any of them.'
     ),
     p(
       `Have a question about your setup? ${a('/contact/', 'Contact us')} or ${a('/consultation/', 'book a free consultation')}.`

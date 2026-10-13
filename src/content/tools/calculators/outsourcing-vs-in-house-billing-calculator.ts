@@ -14,7 +14,7 @@ const calc: Calculator = {
     { id: 'inHouseCost', label: 'Total annual in-house dental billing cost', unit: 'usd', default: 175000, min: 0, step: 1000, help: 'Insurance coordinator and billing staff wages with benefits, software, clearinghouse and attachment fees, training and overhead. The dental billing cost calculator can help you build this figure.' },
     { id: 'annualCollections', label: 'Annual collections', unit: 'usd', default: 2400000, min: 0, step: 10000, help: 'Total payments received per year from dental carriers and patients.' },
     { id: 'outsourcedFeePct', label: 'Outsourced fee (% of collections)', unit: 'pct', default: 6, min: 0, max: 100, step: 0.25, help: 'Enter the rate from the proposal you are evaluating. The default is a placeholder for illustration, not a quote.' },
-    { id: 'retainedCosts', label: 'Annual costs you keep after outsourcing', unit: 'usd', default: 10000, min: 0, step: 500, optional: true, help: 'Optional. Costs that remain, such as your Dentrix, Open Dental, Eaglesoft or Curve Dental license, clearinghouse fees not covered by the vendor, or front desk time spent collecting at the visit.' },
+    { id: 'retainedCosts', label: 'Annual costs you keep after outsourcing', unit: 'usd', default: 10000, min: 0, step: 500, optional: true, help: 'Optional. Costs that remain, such as your Open Dental, Dentrix or Eaglesoft license, clearinghouse fees not covered by the vendor, or front desk time spent collecting at the visit.' },
   ],
   outputs: [
     { id: 'outsourcedFee', label: 'Annual outsourced fee', unit: 'usd' },

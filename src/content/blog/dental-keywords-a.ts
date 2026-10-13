@@ -297,7 +297,7 @@ export const dentalKeywordPostsA: SeedPost[] = [
 <li><strong>Dental plan knowledge.</strong> Frequency limits, waiting periods, annual maximums, downgrades and alternate benefits, missing tooth clauses, and the difference between PPO, DHMO, indemnity and Medicaid dental plans.</li>
 <li><strong>CDT coding fluency.</strong> Knowing which codes need tooth numbers, surfaces or quadrants, which commonly need attachments, and that the code set changes every January.</li>
 <li><strong>Coordination of benefits.</strong> Which plan is primary for a patient with two dental plans, and how to bill the secondary with the primary EOB.</li>
-<li><strong>Software skill.</strong> Working fluently in the practice's system, whether Dentrix, Open Dental, Eaglesoft or Curve Dental, plus the clearinghouse and carrier portals.</li>
+<li><strong>Software skill.</strong> Working fluently in the practice's system, whether Open Dental, Dentrix or Eaglesoft, plus the clearinghouse and carrier portals.</li>
 <li><strong>Reading remittances.</strong> Understanding EOB wording and the standard claim adjustment reason codes on ERAs well enough to tell a fixable error from a plan limit.</li>
 <li><strong>Persistence and organization.</strong> Following up on the same claim three or four times without losing track, and keeping notes another person could pick up.</li>
 <li><strong>Clear writing.</strong> Narratives and appeal letters that a carrier reviewer can understand in one read.</li>
@@ -305,7 +305,7 @@ export const dentalKeywordPostsA: SeedPost[] = [
 </ul>
 
 <h2>What dental billing training options are available?</h2>
-<p>Most dental insurance billers learn on the job, but structured dental billing training shortens that curve and fills gaps. Useful options include:</p>
+<p>Most dental insurance billers learn on the job, but structured dental billing training speeds that up and fills gaps. Useful options include:</p>
 <ul>
 <li><strong>The ADA's own references.</strong> The current CDT manual, the ADA dental claim form completion instructions and the ADA's dental insurance resources are the primary sources a biller should know how to use.</li>
 <li><strong>Software vendor training.</strong> Practice management vendors typically publish help articles, videos and classes on their billing, posting and claims modules. Training in the exact system your office uses pays off quickly.</li>

@@ -22,7 +22,7 @@ export const dentalCoreB: Service[] = [
     intro: [
       'Posting looks like routine data entry, yet it decides what happens to every claim after the carrier responds. If a PPO write-off is entered as a payment, insurance A/R looks smaller than it really is. If a downgrade or frequency denial is posted as a zero payment with no note, nobody follows up. If the patient portion is calculated from the wrong line, the patient receives a statement for the wrong amount.',
       'Dental remittances add their own wrinkles. One EOB can cover several patients and dozens of CDT codes, carriers apply alternate benefits on posterior fillings, annual maximums run out partway through treatment, and DHMO plans pay a capitation check that has nothing to do with individual claims. Each of these needs a consistent posting rule.',
-      'Our team posts insurance payments from ERAs and scanned EOBs, enters patient payments, applies contractual adjustments against your PPO fee schedules, moves balances to secondary carriers or to the patient, and reconciles totals to your bank deposits. We work inside your own software, such as Dentrix, Open Dental, Eaglesoft or Curve Dental, so the ledger your front desk sees is the ledger we update.',
+      'Our team posts insurance payments from ERAs and scanned EOBs, enters patient payments, applies contractual adjustments against your PPO fee schedules, moves balances to secondary carriers or to the patient, and reconciles totals to your bank deposits. We work inside your own software, whether that is Open Dental, Dentrix or Eaglesoft, so the ledger your front desk sees is the ledger we update.',
       'The goal is simple: ledgers your team can trust, and a posting process that surfaces denials, downgrades and short payments instead of quietly writing them off.',
     ],
     scope: [
@@ -125,7 +125,7 @@ export const dentalCoreB: Service[] = [
       },
       {
         q: 'Do you post payments inside our own dental software?',
-        a: 'Yes, we post directly in the practice management system you already use, such as Dentrix, Open Dental, Eaglesoft or Curve Dental. Working in your own system means your front desk sees updated ledgers right away, and your reports keep using the same adjustment types and payment codes your practice has always used. A Business Associate Agreement is signed before we access any patient data.',
+        a: 'Yes, we post directly in the practice management system you already use, whether that is Open Dental, Dentrix or Eaglesoft. Working in your own system means your front desk sees updated ledgers right away, and your reports keep using the same adjustment types and payment codes your practice has always used. A Business Associate Agreement is signed before we access any patient data.',
       },
       {
         q: 'How do you handle downgrades and alternate benefits?',
@@ -805,7 +805,7 @@ export const dentalCoreB: Service[] = [
       },
       {
         q: 'Do we need new software for these reports?',
-        a: 'No, reports are built from the data already in your dental practice software and clearinghouse, such as Dentrix, Open Dental, Eaglesoft or Curve Dental. We run standard and custom reports, combine them where needed and present the results in a readable package. You do not need to buy or install a separate analytics product.',
+        a: 'No, reports are built from the data already in your dental practice software and clearinghouse, whether that is Open Dental, Dentrix or Eaglesoft. We run standard and custom reports, combine them where needed and present the results in a readable package. You do not need to buy or install a separate analytics product.',
       },
       {
         q: 'Which measures matter most for a dental practice?',
