@@ -37,6 +37,7 @@ ${opt('src/content/pages-areas.ts', 'areaPages')}
 ${opt('src/content/blog/dental-rewrites.ts', 'dentalRewrites')}
 ${opt('src/content/blog/dental-keywords-a.ts', 'dentalKeywordPostsA')}
 ${opt('src/content/blog/dental-keywords-b.ts', 'dentalKeywordPostsB')}
+${opt('src/content/blog/dental-keywords-c.ts', 'dentalKeywordPostsC')}
 import * as dental from './src/content/dental';
 import * as company from './src/content/company';
 ${hasPages ? "import { pages } from './src/content/pages';" : 'const pages = [];'}
@@ -48,7 +49,7 @@ export const data = {
   specialties: [...medicalPart1, ...medicalPart2, ...moreSpecialties, ...dentalSpecialties],
   calculators: [${list(calcDir).map((_, i) => `c${i}`).join(', ')}],
   references: [${list(refDir).map((_, i) => `r${i}`).join(', ')}],
-  blog: [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB],
+  blog: [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC],
   blogOverrides: dentalRewrites,
   pages,
   pageOverrides: [...dentalPageOverrides, ...areaPages],

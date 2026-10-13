@@ -46,27 +46,27 @@ const CONSULT = (text = 'Book a free consultation'): string => a('/consultation/
 
 const TRADEMARK = (carrier: string): string =>
   p(
-    `${carrier} and the other carrier names on this site are trademarks of their respective owners. Texas Solutions RCM is an independent dental billing company. We are not affiliated with, sponsored by or endorsed by ${carrier} or any other carrier, and nothing on this page is official carrier guidance. Always confirm current rules in the carrier's own provider materials and your participation agreement.`
+    `${carrier} and the other carrier names on this site are trademarks of their respective owners. Texas Solutions RCM is an independent dental revenue cycle management company. We are not affiliated with, sponsored by or endorsed by ${carrier} or any other carrier, and nothing on this page is official carrier guidance. Always confirm current rules in the carrier's own provider materials and your participation agreement.`
   );
 
 /* ---------- service areas hub ---------- */
 
 const serviceAreas: PageContent = {
   key: 'service-areas',
-  title: 'Dental Billing Services Across the United States',
-  seoTitle: 'Dental Billing Services in All 50 States',
+  title: 'Dental Revenue Cycle Management Across the USA',
+  seoTitle: 'Dental Revenue Cycle Management in All 50 States',
   metaDescription:
-    'Remote dental billing services for practices in all 50 states, built around your state Medicaid dental program, carriers, dental board and prompt pay laws.',
+    'Remote dental revenue cycle management for practices in all 50 states, built around your Medicaid dental program, carriers, dental board and prompt pay laws.',
   template: 'location',
   intro:
-    'Texas Solutions RCM provides dental billing services to practices in all 50 states. Our remote team works inside your own dental software, clearinghouse and carrier portals, and adapts to the carriers, Medicaid dental program and state rules where your office is located.',
+    'Texas Solutions RCM is a dental revenue cycle management (dental RCM) company serving practices in all 50 states. Our remote team works inside your own dental software, clearinghouse and carrier portals, and adapts to the carriers, Medicaid dental program and state rules where your office is located.',
   body: blocks(
-    h2('Why location still matters for remote dental billing'),
+    h2('Why location still matters for remote dental RCM'),
     p(
-      'Dental billing happens in software: 837D claims, ERAs from the clearinghouse and follow-up in carrier portals or on the phone. None of that requires a billing team in your building. What it does require is a team that knows the carriers your patients actually carry, the Medicaid dental program in your state and the rules your state applies to dental plans.'
+      'Most of the dental revenue cycle happens in software: eligibility checks, 837D claims, ERAs from the clearinghouse and follow-up in carrier portals or on the phone. None of that requires a revenue cycle team in your building. What it does require is a team that knows the carriers your patients actually carry, the Medicaid dental program in your state and the rules your state applies to dental plans.'
     ),
     p(
-      'Our team works remotely for dental offices, group practices and DSOs across the country. You create named user accounts for us in your practice management system, such as Dentrix, Open Dental, Eaglesoft or Curve Dental, and in your clearinghouse and carrier portals. A Business Associate Agreement is signed before anyone on our team sees patient data, and your administrators can switch off our access at any time. Read more about ' +
+      'Our team works remotely for dental offices, group practices and DSOs across the country. You create named user accounts for us in your practice management system, such as Dentrix, Open Dental, Eaglesoft or Curve Dental, and in your clearinghouse and carrier portals. A Business Associate Agreement is signed before anyone on our team sees patient data, and your administrators can switch off our access at any time. If you searched for dental billing services near me or dental revenue cycle management near me, distance matters less than it seems: billing is one part of the dental revenue cycle we manage, and all of it is done remotely in your systems. Read more about ' +
         `${a('/how-we-work/', 'how we work')} and ${a('/security/', 'how we handle security')}.`
     ),
     h2('Dental carriers differ by state'),
@@ -104,10 +104,10 @@ const serviceAreas: PageContent = {
     h2('State guides'),
     p('We have written guides for four large state markets. Each covers the state Medicaid dental program, the carriers commonly seen there, the dental board and the prompt pay basics.'),
     ul([
-      a('/service-areas/texas/', 'Dental billing services in Texas'),
-      a('/service-areas/florida/', 'Dental billing services in Florida'),
-      a('/service-areas/california/', 'Dental billing services in California'),
-      a('/service-areas/new-york/', 'Dental billing services in New York'),
+      a('/service-areas/texas/', 'Dental revenue cycle management in Texas'),
+      a('/service-areas/florida/', 'Dental revenue cycle management in Florida'),
+      a('/service-areas/california/', 'Dental revenue cycle management in California'),
+      a('/service-areas/new-york/', 'Dental revenue cycle management in New York'),
     ]),
     p('If your state is not listed, we still support practices there and confirm your carriers, Medicaid participation and state rules during onboarding.'),
     h2('What we can take on for your practice'),
@@ -130,20 +130,20 @@ const serviceAreas: PageContent = {
 const texas: PageContent = {
   key: 'texas',
   parent: 'service-areas',
-  title: 'Dental Billing Services in Texas',
-  seoTitle: 'Dental Billing Services in Texas | Texas Solutions RCM',
+  title: 'Dental Revenue Cycle Management in Texas',
+  seoTitle: 'Dental RCM Services in Texas | Texas Solutions RCM',
   metaDescription:
-    'Dental billing services in Texas from a team based in Midland: Medicaid and CHIP dental DMOs, PPO carriers, credentialing and Texas prompt pay rules.',
+    'Dental revenue cycle management in Texas from a team based in Midland: Medicaid and CHIP dental DMOs, PPO carriers, credentialing and Texas prompt pay rules.',
   template: 'location',
   intro:
-    'Texas Solutions RCM provides dental billing services in Texas for general dentists, specialists and group practices. Our office is in Midland, and our remote team works inside your own dental software and carrier portals from El Paso to Beaumont.',
+    'Texas Solutions RCM provides dental revenue cycle management (dental RCM) in Texas for general dentists, specialists and group practices. Our office is in Midland, and our remote team works inside your own dental software and carrier portals from El Paso to Beaumont.',
   body: blocks(
-    h2('A Texas company billing for Texas dental offices'),
+    h2('A Texas dental RCM company for Texas dental offices'),
     p(
-      'Our office is at 401 W Kentucky Ave in Midland, Texas. The billing team works remotely in your practice management system, clearinghouse and carrier portals, so it makes no difference whether your office is in the Permian Basin, the Rio Grande Valley or the Dallas-Fort Worth area. Texas spans the Central and Mountain time zones, and we agree working hours that overlap with your office day.'
+      'Our office is at 401 W Kentucky Ave in Midland, Texas. Our revenue cycle team works remotely in your practice management system, clearinghouse and carrier portals, so it makes no difference whether your office is in the Permian Basin, the Rio Grande Valley or the Dallas-Fort Worth area. Texas spans the Central and Mountain time zones, and we agree working hours that overlap with your office day.'
     ),
     p(
-      'Texas dental billing has its own mix of programs and rules: dental maintenance organizations for children\'s Medicaid and CHIP, TMHP enrollment, a large PPO market and Texas Department of Insurance prompt pay rules. Here is how those pieces fit together.'
+      'Texas dental billing has its own mix of programs and rules: dental maintenance organizations for children\'s Medicaid and CHIP, TMHP enrollment, a large PPO market and Texas Department of Insurance prompt pay rules. Practices looking for a dental billing company in Texas often find that claims are only part of the problem, so our dental billing services in Texas are delivered as one part of dental revenue cycle management, alongside verification, credentialing and A/R follow-up. Here is how those pieces fit together.'
     ),
     h2('Texas Medicaid and CHIP dental'),
     p(
@@ -191,7 +191,7 @@ const texas: PageContent = {
       `${S.ar} across Medicaid DMOs and commercial carriers.`,
     ]),
     p(
-      `See our other ${a('/service-areas/', 'service areas')}, or ${CONSULT('book a free consultation')} to talk through your carrier mix and where your billing needs help.`
+      `See our other ${a('/service-areas/', 'service areas')}, or ${CONSULT('book a free consultation')} to talk through your carrier mix and where your revenue cycle needs help.`
     )
   ),
 };
@@ -201,20 +201,20 @@ const texas: PageContent = {
 const florida: PageContent = {
   key: 'florida',
   parent: 'service-areas',
-  title: 'Dental Billing Services in Florida',
-  seoTitle: 'Dental Billing Services in Florida | Texas Solutions RCM',
+  title: 'Dental Revenue Cycle Management in Florida',
+  seoTitle: 'Dental RCM Services in Florida | Texas Solutions RCM',
   metaDescription:
-    'Dental billing services in Florida for SMMC Medicaid dental plans and PPO carriers. Remote help with verification, claims, denials, A/R and credentialing.',
+    'Dental revenue cycle management in Florida for SMMC Medicaid dental plans and PPO carriers: remote verification, claims, denials, A/R and credentialing.',
   template: 'location',
   intro:
-    'Texas Solutions RCM provides dental billing services in Florida for general and specialty dental practices. Our team serves Florida offices remotely, working inside your dental software, clearinghouse and carrier portals.',
+    'Texas Solutions RCM provides dental revenue cycle management (dental RCM) in Florida for general and specialty dental practices. Our team serves Florida offices remotely, working inside your dental software, clearinghouse and carrier portals.',
   body: blocks(
-    h2('Remote dental billing for Florida practices'),
+    h2('Remote dental RCM for Florida practices'),
     p(
       'We serve Florida practices remotely. Our team logs into your practice management system, clearinghouse and carrier portals through accounts your office creates and controls, and all notes, postings and claim activity stay in your system. Florida spans the Eastern and Central time zones, and we set working hours that overlap with your front desk so questions get answered the same day.'
     ),
     p(
-      'Florida dental billing has a few features that set it apart: a Medicaid dental program run entirely through contracted dental plans, a large population of patients with retiree and individual dental coverage, and prompt pay statutes that apply to state-regulated insurers and HMOs.'
+      'Florida dental billing has a few features that set it apart: a Medicaid dental program run entirely through contracted dental plans, a large population of patients with retiree and individual dental coverage, and prompt pay statutes that apply to state-regulated insurers and HMOs. Offices comparing dental billing services in Florida can hand us billing alone or the full cycle, and as a dental billing company in Florida we still treat billing as one part of dental revenue cycle management.'
     ),
     h2('Florida Medicaid dental: the SMMC Dental program'),
     p(
@@ -268,20 +268,20 @@ const florida: PageContent = {
 const california: PageContent = {
   key: 'california',
   parent: 'service-areas',
-  title: 'Dental Billing Services in California',
-  seoTitle: 'Dental Billing Services in California | Texas Solutions RCM',
+  title: 'Dental Revenue Cycle Management in California',
+  seoTitle: 'Dental RCM Services in California | Texas Solutions RCM',
   metaDescription:
-    'Dental billing services in California for Medi-Cal Dental, dental managed care and PPO carriers. Remote help with verification, claims, A/R and credentialing.',
+    'Dental revenue cycle management in California for Medi-Cal Dental, dental managed care and PPO carriers: verification, claims, A/R and credentialing.',
   template: 'location',
   intro:
-    'Texas Solutions RCM provides dental billing services in California for general dentists, specialists and group practices. Our team serves California offices remotely, working inside your dental software, clearinghouse and carrier portals during your Pacific time office hours.',
+    'Texas Solutions RCM provides dental revenue cycle management (dental RCM) in California for general dentists, specialists and group practices. Our team serves California offices remotely, working inside your dental software, clearinghouse and carrier portals during your Pacific time office hours.',
   body: blocks(
-    h2('Remote dental billing for California practices'),
+    h2('Remote dental RCM for California practices'),
     p(
-      'We serve California practices remotely. Your office creates named accounts for our team in your practice management system, clearinghouse and carrier portals, and every claim, note and payment stays in your system. Because California is on Pacific time, we set working hours that overlap with your office day so your front desk can reach the billing team while patients are still in the chair.'
+      'We serve California practices remotely. Your office creates named accounts for our team in your practice management system, clearinghouse and carrier portals, and every claim, note and payment stays in your system. Because California is on Pacific time, we set working hours that overlap with your office day so your front desk can reach our revenue cycle team while patients are still in the chair.'
     ),
     p(
-      'California dental billing has its own structure: a statewide Medi-Cal Dental program with its own fiscal intermediary and treatment authorization rules, dental managed care in two counties, and two separate state regulators for dental plans.'
+      'California dental billing has its own structure: a statewide Medi-Cal Dental program with its own fiscal intermediary and treatment authorization rules, dental managed care in two counties, and two separate state regulators for dental plans. As a dental billing company in California, we treat billing as one part of dental revenue cycle management, so our dental billing services in California connect claims with verification, credentialing and A/R follow-up.'
     ),
     h2('Medi-Cal Dental'),
     p(
@@ -335,20 +335,20 @@ const california: PageContent = {
 const newYork: PageContent = {
   key: 'new-york',
   parent: 'service-areas',
-  title: 'Dental Billing Services in New York',
-  seoTitle: 'Dental Billing Services in New York | Texas Solutions RCM',
+  title: 'Dental Revenue Cycle Management in New York',
+  seoTitle: 'Dental RCM Services in New York | Texas Solutions RCM',
   metaDescription:
-    'Dental billing services in New York for eMedNY fee-for-service, Medicaid managed care dental and PPO carriers. Remote claims, A/R and credentialing help.',
+    'Dental revenue cycle management in New York for eMedNY fee-for-service, Medicaid managed care dental and PPO carriers, with claims, A/R and credentialing.',
   template: 'location',
   intro:
-    'Texas Solutions RCM provides dental billing services in New York for general and specialty dental practices, from New York City to upstate. Our team serves New York offices remotely, working inside your dental software, clearinghouse and carrier portals.',
+    'Texas Solutions RCM provides dental revenue cycle management (dental RCM) in New York for general and specialty dental practices, from New York City to upstate. Our team serves New York offices remotely, working inside your dental software, clearinghouse and carrier portals.',
   body: blocks(
-    h2('Remote dental billing for New York practices'),
+    h2('Remote dental RCM for New York practices'),
     p(
-      'We serve New York practices remotely. Your office creates named accounts for our team in your practice management system, clearinghouse and carrier portals, and every claim, note and posting stays in your system where your staff can see it. We set working hours on Eastern time so the billing team is available while your office is open.'
+      'We serve New York practices remotely. Your office creates named accounts for our team in your practice management system, clearinghouse and carrier portals, and every claim, note and posting stays in your system where your staff can see it. We set working hours on Eastern time so our revenue cycle team is available while your office is open.'
     ),
     p(
-      'New York dental billing combines a Medicaid dental benefit that can be billed two different ways, a busy commercial market with many union and employer plans, and a state prompt pay law with clear deadlines for state-regulated plans.'
+      'New York dental billing combines a Medicaid dental benefit that can be billed two different ways, a busy commercial market with many union and employer plans, and a state prompt pay law with clear deadlines for state-regulated plans. Practices looking for a dental billing company in New York or dental billing services in New York will find billing handled here as one part of dental revenue cycle management, from verification through A/R follow-up.'
     ),
     h2('New York Medicaid dental'),
     p(
@@ -445,7 +445,7 @@ const carriers: PageContent = {
       `Because we work in your own practice management system, every claim note and posting is recorded there. Through ${S.reports}, we can show aging, denial reasons and payment patterns by carrier, which helps you see which carriers are slow, which denials keep coming back and where a fee schedule may need review.`
     ),
     p(
-      'Carrier names on this site are trademarks of their respective owners. Texas Solutions RCM is an independent dental billing company and is not affiliated with, sponsored by or endorsed by any dental carrier.'
+      'Carrier names on this site are trademarks of their respective owners. Texas Solutions RCM is an independent dental revenue cycle management company and is not affiliated with, sponsored by or endorsed by any dental carrier.'
     ),
     p(`${CONSULT()} to talk through the carriers your practice bills and where claims tend to stall.`)
   ),

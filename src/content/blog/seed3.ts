@@ -431,7 +431,7 @@ export const seedPosts3: SeedPost[] = [
 <p>Over time, these records tell you which plans pay as agreed and which ones need attention.</p>
 
 <h2>Can you negotiate dental PPO fee schedules?</h2>
-<p>Often, yes, though results vary by plan, region and practice. Some plans review fee requests on a set schedule, while others rarely change fees. A reasonable approach looks like this:</p>
+<p>Often, yes, though results vary by plan, region and practice. Dental fee schedule negotiation is less a single conversation than a yearly review: the office checks what each plan actually pays, decides which fees matter most and asks the plan in writing to reconsider them. Some plans review fee requests on a set schedule, while others rarely change fees. A reasonable approach to dental PPO negotiation looks like this:</p>
 <ol>
 <li><strong>Know your numbers.</strong> Pull production and collections by plan and identify the procedures that make up most of your volume.</li>
 <li><strong>Compare fees.</strong> Look at how each plan's fees for those procedures compare with your office fees and with other plans you accept.</li>
@@ -439,7 +439,8 @@ export const seedPosts3: SeedPost[] = [
 <li><strong>Follow up in writing</strong> and keep a record of every response.</li>
 <li><strong>Decide your walk-away point.</strong> If a plan will not adjust, you may decide to stay in network, limit new patients from that plan, or leave the network after reviewing the contract's termination terms.</li>
 </ol>
-<p>Fee negotiation involves business decisions that only the practice owner can make. A partner can help gather data and manage the correspondence. Our <a href="/services/dental-ppo-negotiation/">dental PPO negotiation</a> service is designed to support that process without promising any particular outcome.</p>
+<p>Before sending a request, confirm a few housekeeping details: the fee schedule you have loaded matches the one the plan says is current, your contract's effective and renewal dates, and whether the plan accesses your fees through a leased network. A request built on an outdated schedule is easy for a plan to set aside.</p>
+<p>Fee negotiation involves business decisions that only the practice owner can make, and the conversation itself belongs between the practice and the plan. What helps most is clean data: production, collections, write-offs and downgrades by plan and procedure. Our <a href="/services/rcm-analytics-reporting/">Dental RCM Reporting &amp; Revenue Analysis</a> work produces collection and adjustment reports that an owner can bring into those reviews.</p>
 
 <h2>What should you track for each PPO plan?</h2>
 <table>
@@ -900,7 +901,7 @@ export const seedPosts3: SeedPost[] = [
         a: 'CDT stands for Current Dental Terminology, the name of the American Dental Association publication that contains the Code on Dental Procedures and Nomenclature. In everyday use, CDT codes, dental codes and ADA codes all refer to the same code set. HIPAA names it as the standard for reporting dental procedures on electronic claims, so dental plans expect it.',
       },
       {
-        q: 'Is there an official dental billing codes cheat sheet?',
+        q: 'Is there an official cheat sheet for CDT codes?',
         a: 'The official reference is the ADA\'s CDT manual or app, which is licensed. Unofficial one-page lists may be incomplete or outdated, so offices should rely on the current CDT Code and their licensed software.',
       },
       {

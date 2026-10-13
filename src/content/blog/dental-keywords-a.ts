@@ -304,6 +304,16 @@ export const dentalKeywordPostsA: SeedPost[] = [
 <li><strong>Privacy habits.</strong> Handling patient information carefully, using only the minimum needed, and following the office's security practices.</li>
 </ul>
 
+<h2>What dental billing training options are available?</h2>
+<p>Most dental insurance billers learn on the job, but structured dental billing training shortens that curve and fills gaps. Useful options include:</p>
+<ul>
+<li><strong>The ADA's own references.</strong> The current CDT manual, the ADA dental claim form completion instructions and the ADA's dental insurance resources are the primary sources a biller should know how to use.</li>
+<li><strong>Software vendor training.</strong> Practice management vendors typically publish help articles, videos and classes on their billing, posting and claims modules. Training in the exact system your office uses pays off quickly.</li>
+<li><strong>Clearinghouse and carrier materials.</strong> Clearinghouses and dental carriers usually post provider guides on rejection reports, attachments and portal tools.</li>
+<li><strong>Courses and continuing education.</strong> Dental associations, study clubs and private educators offer workshops and online classes on coding and insurance.</li>
+</ul>
+<p>Before paying for any dental billing training course, check that it teaches the current CDT version, covers dental plan rules such as frequency limits and coordination of benefits, and includes hands-on practice with real EOBs rather than only definitions.</p>
+
 <h2>Should you hire an in-house biller or outsource dental insurance billing?</h2>
 <p>Both models work, and plenty of practices use a mix. The right answer depends on your claim volume, how much your team already knows, and how much management time you can give the billing function.</p>
 <table>

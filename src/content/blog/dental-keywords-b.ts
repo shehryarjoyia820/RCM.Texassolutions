@@ -28,13 +28,13 @@ export const dentalKeywordPostsB: SeedPost[] = [
     excerpt:
       'A plain guide to choosing dental practice management software: what it handles, how cloud and server-based systems differ, the billing questions to ask a vendor, and short factual notes on Dentrix, Open Dental, Eaglesoft and Curve Dental.',
     category: 'Practice Management',
-    tags: ['dental practice management software', 'dental software', 'Dentrix', 'Open Dental', 'Eaglesoft', 'Curve Dental'],
+    tags: ['dental practice management software', 'dental software', 'dental clinic software', 'Dentrix', 'Open Dental', 'Eaglesoft', 'Curve Dental'],
     readingMinutes: 6,
     publishedAt: '2026-10-12',
     html: `
 <p><strong>Dental practice management software is the system a dental office uses to run its schedule, clinical charts, patient ledgers and insurance claims in one place.</strong> Picking one is a long-term decision, because the software shapes how your front desk checks benefits, how claims leave the office and how payments get posted for years afterward. This guide explains what the software does, how cloud and server-based systems differ, which questions to ask before you sign, and how four widely used products are described by their own publishers.</p>
 
-<p>A note on where we stand: Texas Solutions RCM is a dental billing service, not a software vendor. We do not sell, resell or rank any product, and our team works inside whatever system a practice already uses. That gives us a practical view of what matters once the software is live and claims start going out, and that is the angle of this article.</p>
+<p>A note on where we stand: Texas Solutions RCM is a dental revenue cycle management (dental RCM) company, not a software vendor. We do not sell, resell or rank any product, and our team works inside whatever system a practice already uses. That gives us a practical view of what matters once the software is live and claims start going out, and that is the angle of this article.</p>
 
 <h2>What does dental practice management software do?</h2>
 <p>At its core, dental software connects the clinical side of the office to the business side. When a hygienist completes a procedure, that entry becomes a charge on the patient's ledger, which becomes a line on an insurance claim, which becomes a payment and a write-off when the EOB comes back. Most software for dentists covers these areas:</p>
@@ -63,7 +63,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 <p>Neither model fits every office. Ask each vendor directly how backups, outages, updates and data ownership work under its agreement, and get the answers in writing.</p>
 
 <h2>What should you ask before buying practice management software for a dental office?</h2>
-<p>Most demos focus on the schedule and the chart. Those matter, but the revenue side is where a poor fit costs the most. Add these questions to your list.</p>
+<p>Whether a vendor calls its product dental practice management software or dental clinic software, the questions are the same. Most demos focus on the schedule and the chart. Those matter, but the revenue side is where a poor fit costs the most. Add these questions to your list.</p>
 
 <h3>Claims, ERAs and eligibility</h3>
 <ul>
@@ -99,7 +99,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 </ul>
 
 <h2>How are Dentrix, Open Dental, Eaglesoft and Curve Dental described?</h2>
-<p>These four products are common in U.S. dental offices, and our billing team works in each of them. The notes below are limited to facts stated on each publisher's own website at the time of writing. They are not a ranking or a recommendation, and products change, so confirm current details with each vendor.</p>
+<p>These four products are common in U.S. dental offices, and our dental RCM team works in each of them. The notes below are limited to facts stated on each publisher's own website at the time of writing. They are not a ranking or a recommendation, and products change, so confirm current details with each vendor.</p>
 <ul>
 <li><strong>Dentrix</strong> is published by Henry Schein One. The company also offers Dentrix Ascend, and its website presents the two as a choice between on-premises control and cloud flexibility.</li>
 <li><strong>Open Dental</strong> is published by Open Dental Software. It was distributed under an open source license for many years. The company states that the license changed to proprietary in version 24.4, and that the change did not affect customers' price, support or database access.</li>
@@ -139,7 +139,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
       },
       {
         q: 'Does Texas Solutions RCM sell or recommend dental software?',
-        a: 'No. Texas Solutions RCM is a dental billing service, not a software vendor, and is not affiliated with any software company. We do not sell, resell or rank products. Our team works inside the system a practice already uses, including Dentrix, Open Dental, Eaglesoft and Curve Dental, along with the practice\'s clearinghouse and carrier portals.',
+        a: 'No. Texas Solutions RCM is a dental revenue cycle management company, not a software vendor, and is not affiliated with any software company. We do not sell, resell or rank products. Our team works inside the system a practice already uses, including Dentrix, Open Dental, Eaglesoft and Curve Dental, along with the practice\'s clearinghouse and carrier portals.',
       },
       {
         q: 'What billing questions should I ask a dental software vendor?',
@@ -169,7 +169,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
     html: `
 <p><strong>Dental billing software is any tool a dental office uses to create insurance claims, track what carriers and patients owe, and post payments, and for most practices the core of it already lives inside their practice management system.</strong> So the real question is rarely which billing program to buy. It is whether your current system, plus a few add-on tools, covers the work, or whether the work needs more people. This guide walks through what is built in, what is usually added, how accounting software fits in, and how to tell when software alone is enough.</p>
 
-<p>We write from the billing side. Texas Solutions RCM is a dental billing service, not a software vendor, and we are not affiliated with any software company. Our team works inside the tools a practice already has.</p>
+<p>We write from the billing side. Texas Solutions RCM is a dental RCM company, not a software vendor, and we are not affiliated with any software company. Our team works inside the tools a practice already has.</p>
 
 <h2>What is dental billing software?</h2>
 <p>Dental billing software is the set of tools that turns completed dentistry into money in the bank. In most offices that set includes the billing module of the practice management system, a clearinghouse, an eligibility or verification tool, a claim attachment service and a patient payment tool. Some practices buy these as one package from their software vendor, and others pick separate products. Either way, the work they support is the same: verify coverage, send clean claims, post what comes back and collect the rest from the patient.</p>
@@ -212,7 +212,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 
 <h2>How is dental accounting software different from billing software?</h2>
 <p>Dental accounting software keeps the books for the business, while billing software tracks what each patient and carrier owes. Accounting covers the general ledger, bank reconciliation, accounts payable for lab and supply bills, payroll entries, and the financial statements your accountant uses for taxes. It usually works at the level of daily deposits, not individual patient balances.</p>
-<p>The two systems meet at the deposit. Payments posted in the practice management system on a given day should match what landed in the bank, and any difference needs to be explained before the books are closed. Bookkeeping is a separate job from insurance billing. Texas Solutions RCM focuses on billing and revenue cycle work, not bookkeeping or tax preparation.</p>
+<p>The two systems meet at the deposit. Payments posted in the practice management system on a given day should match what landed in the bank, and any difference needs to be explained before the books are closed. Bookkeeping is a separate job from insurance billing. Texas Solutions RCM focuses on dental revenue cycle management, not bookkeeping or tax preparation.</p>
 
 <h2>When is dental billing software enough on its own?</h2>
 <p>Software alone can be enough when the office has trained, steady staff with time set aside for billing every day. Software sends claims, but people decide what to do with a denial, a downgrade or a claim that has sat unpaid for 45 days.</p>
@@ -254,7 +254,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
       },
       {
         q: 'Is dental accounting software the same as billing software?',
-        a: 'No. Accounting software keeps the business books: general ledger, bank reconciliation, bills, payroll entries and financial statements. Billing software tracks charges, claims and balances for each patient and carrier. The two connect at the daily deposit, where posted payments should match the bank. Texas Solutions RCM handles billing, not bookkeeping or taxes.',
+        a: 'No. Accounting software keeps the business books: general ledger, bank reconciliation, bills, payroll entries and financial statements. Billing software tracks charges, claims and balances for each patient and carrier. The two connect at the daily deposit, where posted payments should match the bank. Texas Solutions RCM handles dental revenue cycle management, not bookkeeping or taxes.',
       },
       {
         q: 'When should a dental office outsource billing instead of buying more software?',
@@ -262,7 +262,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
       },
       {
         q: 'Will a billing company make us change our software?',
-        a: 'Texas Solutions RCM does not. We are a billing service, not a software vendor, and we are not affiliated with any software company. Our team works inside the practice management system, clearinghouse and carrier portals the practice already uses, including Dentrix, Open Dental, Eaglesoft and Curve Dental. A Business Associate Agreement is signed before we access patient data.',
+        a: 'Texas Solutions RCM does not. We are a dental RCM company, not a software vendor, and we are not affiliated with any software company. Our team works inside the practice management system, clearinghouse and carrier portals the practice already uses, including Dentrix, Open Dental, Eaglesoft and Curve Dental. A Business Associate Agreement is signed before we access patient data.',
       },
     ],
     sources: [S.cmsTransactions, S.adaClaimForm, S.adaInsurance, S.x12Carc],

@@ -11,7 +11,7 @@ $key = rcm_t_has_plugin() ? RCM\Content_Types::key($p) : $p->post_name;
 $dental = rcm_t_dental();
 $core_names = array_column($dental['core'], 'name', 'slug');
 $is_software = in_array($key, $dental['software'], true);
-$cat = $is_software ? __('Dental software', 'rcm-theme') : (in_array($key, $dental['overview'], true) ? __('Dental billing and RCM', 'rcm-theme') : __('Dental RCM services', 'rcm-theme'));
+$cat = $is_software ? __('Dental software', 'rcm-theme') : (in_array($key, $dental['overview'], true) ? __('Dental revenue cycle management', 'rcm-theme') : __('Dental RCM services', 'rcm-theme'));
 $short = $d['shortName'] ?? get_the_title();
 $consult = add_query_arg('service', $key, rcm_t_url('consultation'));
 $practices = rcm_t_by_keys('rcm_specialty', (array) ($d['practiceTypes'] ?? []));
@@ -108,7 +108,7 @@ rcm_t_part('page-hero', [
 <?php if ($related) : ?>
 <section class="bg-canvas py-14 sm:py-16">
     <div class="container">
-        <h2 class="mb-8 text-2xl font-bold sm:text-3xl"><?php esc_html_e('Other dental billing services', 'rcm-theme'); ?></h2>
+        <h2 class="mb-8 text-2xl font-bold sm:text-3xl"><?php esc_html_e('Other dental RCM services', 'rcm-theme'); ?></h2>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <?php foreach ($related as $r) : $ri = rcm_t_item($r); $rk = (string) get_post_meta($r->ID, '_rcm_key', true); rcm_t_link_card($ri['url'], $core_names[$rk] ?? $ri['title'], '', $ri['icon']); endforeach; ?>
         </div>

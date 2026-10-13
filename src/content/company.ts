@@ -39,8 +39,8 @@ export const CYCLE = [
 
 export const HOME_FAQS: Faq[] = [
   {
-    q: 'What is dental billing, and what does a dental billing company do?',
-    a: 'Dental billing is the work of getting a dental office paid by insurance carriers and patients. A dental billing company handles that work for you: verifying benefits, sending dental insurance claims with the right attachments, posting EOBs and ERAs, appealing denials and following up on unpaid claims and patient balances, inside your own software.',
+    q: 'What is dental revenue cycle management, and what does a dental RCM company do?',
+    a: 'Dental revenue cycle management (dental RCM) is the full process of getting a dental office paid for the care it delivers, from checking benefits before the visit to posting the final payment and resolving the patient balance. A dental RCM company runs that cycle for you inside your own software: keeping provider enrollment current, verifying benefits, sending dental insurance claims with the right attachments, posting EOBs and ERAs, working denials and appeals, following up on unpaid claims and patient balances, and reporting on the results. Dental billing, the claim and payment work in the middle, is one part of that cycle.',
   },
   {
     q: 'Do we need to change Dentrix, Open Dental, Eaglesoft or Curve Dental?',
@@ -51,7 +51,7 @@ export const HOME_FAQS: Faq[] = [
     a: 'Yes. Many offices start with one area, such as verifying dental insurance before appointments or clearing older insurance A/R, while their front desk keeps the rest. Each service can be scoped on its own, and the written proposal spells out which tasks are ours and which stay with your team.',
   },
   {
-    q: 'How much does dental billing with you cost?',
+    q: 'How much does dental revenue cycle management with you cost?',
     a: 'We do not publish prices; we quote in writing after a free consultation and a look at your workflow. The fee depends on which services you choose, your claim volume, number of locations and how much of the cycle we manage. Nothing starts until you have accepted the scope and price.',
   },
   {
@@ -69,8 +69,12 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
     topic: 'Working with us',
     faqs: [
       {
-        q: 'Which dental billing tasks can Texas Solutions RCM take over?',
-        a: 'Any of our eight services, alone or together: insurance verification, dental claims, denials and appeals, payment posting, A/R follow-up, patient billing support, credentialing and reporting. Some offices hand us the whole cycle, while others keep billing in-house and use us for one bottleneck. The split is written into the proposal so both teams know who owns each task.',
+        q: 'Which parts of the dental revenue cycle can Texas Solutions RCM take over?',
+        a: 'Any of our eight services, alone or together: insurance verification, dental claims, denials and appeals, payment posting, A/R follow-up, patient billing support, credentialing and reporting. Some offices hand us the whole revenue cycle, while others keep most of the work in-house and use us for one bottleneck. The split is written into the proposal so both teams know who owns each task.',
+      },
+      {
+        q: 'Is Texas Solutions RCM a dental RCM company or a billing company?',
+        a: 'We are a dental revenue cycle management (dental RCM) company. Dental billing, meaning claims, attachments and payment posting, is part of what we do, but we look after the whole cycle around it as well: credentialing and enrollment, insurance verification before the visit, denials and appeals, insurance and patient A/R, and reporting from your own data. You can use the full cycle or only the parts your office needs.',
       },
       {
         q: 'Will our front desk still see what is happening with claims?',
@@ -142,15 +146,15 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
       },
       {
         q: 'Can we rely on the calculator results?',
-        a: 'Treat them as estimates. Each tool uses the formula shown on its page and is checked against worked examples, but results depend on the numbers you enter and the stated assumptions. They are not guarantees or professional advice, so use them to spot trends and to prepare questions for your billing team.',
+        a: 'Treat them as estimates. Each tool uses the formula shown on its page and is checked against worked examples, but results depend on the numbers you enter and the stated assumptions. They are not guarantees or professional advice, so use them to spot trends and to prepare questions for your revenue cycle team.',
       },
     ],
   },
 ];
 
 /** Text the AI assistant may use about the company. Keep in sync with the pages above. */
-export const COMPANY_FACTS = `Texas Solutions RCM (rcm.texassolutions.co) is the dental billing and revenue cycle management division of Texas Solutions (texassolutions.co), a US company with an office at 401 W Kentucky Ave, Midland, TX 79701. Contact: info@texassolutions.co, +1 (838) 910-3147.
-It serves dental practices only (general dentistry, orthodontics, endodontics, periodontics, oral surgery, pediatric dentistry, prosthodontics, dental groups and DSOs) in all 50 US states. It does not offer billing for non-dental healthcare.
+export const COMPANY_FACTS = `Texas Solutions RCM (rcm.texassolutions.co) is a dental revenue cycle management (RCM) company: the dental RCM division of Texas Solutions (texassolutions.co), a US company with an office at 401 W Kentucky Ave, Midland, TX 79701. Contact: info@texassolutions.co, +1 (838) 910-3147.
+It serves dental practices only (general dentistry, orthodontics, endodontics, periodontics, oral surgery, pediatric dentistry, prosthodontics, dental groups and DSOs) in all 50 US states. It does not offer revenue cycle or billing services for non-dental healthcare. Describe it as a dental revenue cycle management (dental RCM) company, not as a billing company; dental billing (claims and payment work) is one part of the dental revenue cycle it manages.
 Services: Insurance Verification & Eligibility; Dental Claims Management; Denial Management & Appeals; Payment Posting; Accounts Receivable (A/R) Management; Patient Billing & Collections Support; Dental Credentialing & Provider Enrollment; Dental RCM Reporting & Revenue Analysis. Claims for PPO, DHMO, indemnity and Medicaid/CHIP dental plans.
 The team works remotely inside the practice's own dental software (such as Dentrix, Open Dental, Eaglesoft and Curve Dental), clearinghouse and carrier portals using named accounts the practice controls. Texas Solutions is not affiliated with or a partner of any software vendor. A Business Associate Agreement is signed before any patient data is accessed.
 Consultations are free. Pricing is quoted in writing after a consultation because it depends on services, volume and locations; there is no published price list.

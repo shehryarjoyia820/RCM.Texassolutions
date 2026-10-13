@@ -163,7 +163,7 @@ function rcm_t_nav(): array
 {
     $d = rcm_t_dental();
     $services = array_merge(
-        rcm_t_key_links('rcm_service', ['dental-billing', 'revenue-cycle-management'], ['dental-billing' => __('Dental Billing', 'rcm-theme'), 'revenue-cycle-management' => __('Dental RCM', 'rcm-theme')]),
+        rcm_t_key_links('rcm_service', ['revenue-cycle-management', 'dental-billing'], ['revenue-cycle-management' => __('Dental Revenue Cycle Management', 'rcm-theme'), 'dental-billing' => __('Dental Billing', 'rcm-theme')]),
         rcm_t_core_links()
     );
     $software = rcm_t_key_links('rcm_service', $d['software'], [
@@ -183,7 +183,7 @@ function rcm_t_nav(): array
         ['label' => __('Software', 'rcm-theme'), 'url' => rcm_t_url('technology'), 'groups' => [['title' => __('Dental software', 'rcm-theme'), 'links' => $software]]],
         ['label' => __('Resources', 'rcm-theme'), 'url' => rcm_t_blog_url(), 'groups' => [['title' => __('Resources', 'rcm-theme'), 'links' => [
             [__('Blog', 'rcm-theme'), rcm_t_blog_url()],
-            [__('Free Dental Billing Tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
+            [__('Free Dental RCM Tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
             [__('FAQs', 'rcm-theme'), rcm_t_url('faq')],
         ]]]],
         ['label' => __('About', 'rcm-theme'), 'url' => rcm_t_url('about'), 'groups' => [['title' => __('Company', 'rcm-theme'), 'links' => [

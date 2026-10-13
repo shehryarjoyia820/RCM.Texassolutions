@@ -4,10 +4,10 @@
  */
 defined('ABSPATH') || exit;
 $a = wp_parse_args($args, [
-    'title' => __('Talk to us about your dental billing', 'rcm-theme'),
+    'title' => __('Talk to us about your dental revenue cycle', 'rcm-theme'),
     'text' => __('Book a free consultation. We will look at how billing runs in your dental office today and tell you plainly where we can help, and where we cannot.', 'rcm-theme'),
     'primary' => [__('Get a Free Consultation', 'rcm-theme'), rcm_t_url('consultation')],
-    'secondary' => [__('Free dental billing tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
+    'secondary' => [__('Free dental RCM tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
 ]);
 ?>
 <section class="py-16 sm:py-20">

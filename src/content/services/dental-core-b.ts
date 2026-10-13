@@ -294,7 +294,7 @@ export const dentalCoreB: Service[] = [
       },
       {
         q: 'Do you call dental insurance carriers for us?',
-        a: 'Yes, we contact carriers on your behalf as part of your billing team. We use carrier portals first, since they are faster and leave a written record, and call provider service lines when a status is unclear, a claim has stalled or a processing error needs explanation. Each call is logged with a reference number in your claim notes.',
+        a: 'Yes, we contact carriers on your behalf as part of your revenue cycle team. We use carrier portals first, since they are faster and leave a written record, and call provider service lines when a status is unclear, a claim has stalled or a processing error needs explanation. Each call is logged with a reference number in your claim notes.',
       },
       {
         q: 'Can you clean up very old insurance A/R?',
@@ -511,7 +511,7 @@ export const dentalCoreB: Service[] = [
     intro: [
       'Dentist credentialing is often the first billing task for a new provider. A new associate cannot be billed in network until each carrier has approved the application and loaded the dentist under the right practice location and tax ID. A practice that opens a second office, changes its tax ID or moves to a group billing arrangement faces the same problem at a larger scale. When credentialing falls behind, claims are denied, paid out of network or sent to the wrong address.',
       'Dental credentialing has its own landscape. Many dental PPO networks are run by large carriers with their own applications, some networks are leased to other plans, some carriers use CAQH ProView for provider data while others do not, and Medicaid dental programs are run by each state, often through a dental benefit administrator or managed care plan with its own enrollment rules.',
-      'Our dentist credentialing service prepares and submits credentialing and enrollment applications, keeps CAQH profiles current where carriers rely on them, checks NPI records, follows up with carriers until each application is approved, and sets up EFT and ERA enrollment so payments arrive electronically. We track every application and re-credentialing date in one place.',
+      'Our dentist credentialing service prepares and submits credentialing and enrollment applications, keeps CAQH profiles current where carriers rely on them, checks NPI records, follows up with carriers until each application is approved, and sets up EFT and ERA enrollment so payments arrive electronically. We track every application and re-credentialing date in one place. Within dental revenue cycle management, dental insurance credentialing sits at the very start, because a claim for a dentist who is not yet approved and enrolled at your location cannot be paid at in-network rates.',
       'Credentialing does not include negotiating fees with carriers, and no one can promise a carrier will accept an application or open a network to a new provider. What we can do is make sure applications are complete, accurate and followed up.',
     ],
     scope: [
@@ -630,6 +630,10 @@ export const dentalCoreB: Service[] = [
         a: 'Dental credentialing is the carrier\'s review of a dentist\'s qualifications, while enrollment links that approved dentist to your practice location, tax ID and payment setup. A provider can be credentialed and still have claims deny if enrollment at a specific office is missing. We handle both steps and confirm the effective date before in-network billing starts.',
       },
       {
+        q: 'When should a new dentist start dental insurance credentialing?',
+        a: 'A new dentist should start dental insurance credentialing as soon as the start date and practice location are confirmed. Carriers set their own processing times, and claims cannot be billed in network until each approval and effective date is in place. Gathering the license, malpractice certificate, NPI and tax ID details early gives every application the most lead time.',
+      },
+      {
         q: 'Do dental carriers use CAQH?',
         a: 'Some dental carriers use CAQH ProView to collect provider data, and others use their own applications. Where a carrier relies on CAQH, the profile must be complete, include current documents and be re-attested regularly, commonly every 120 days. We maintain CAQH profiles for carriers that use them and complete carrier-specific applications for those that do not.',
       },
@@ -678,6 +682,7 @@ export const dentalCoreB: Service[] = [
       'dental re-credentialing',
       'dental EFT ERA enrollment',
       'CAQH dental',
+      'dental insurance credentialing',
     ],
   },
 

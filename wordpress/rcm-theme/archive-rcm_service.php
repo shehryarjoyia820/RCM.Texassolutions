@@ -6,7 +6,7 @@ defined('ABSPATH') || exit;
 get_header();
 $d = rcm_t_dental();
 $groups = [
-    'overview' => [__('Dental billing and RCM overviews', 'rcm-theme'), __('Start here for how the whole dental revenue cycle fits together.', 'rcm-theme'), rcm_t_by_keys('rcm_service', $d['overview'])],
+    'overview' => [__('Dental RCM overviews', 'rcm-theme'), __('Start here for how the whole dental revenue cycle fits together.', 'rcm-theme'), rcm_t_by_keys('rcm_service', $d['overview'])],
     'core' => [__('Dental RCM services', 'rcm-theme'), __('Eight services you can take as a full program or one at a time. Each is scoped in writing before work starts.', 'rcm-theme'), rcm_t_by_keys('rcm_service', array_column($d['core'], 'slug'))],
     'software' => [__('Billing in your dental software', 'rcm-theme'), __('Our team works inside the practice management system you already use.', 'rcm-theme'), rcm_t_by_keys('rcm_service', $d['software'])],
 ];
@@ -14,8 +14,8 @@ $names = array_column($d['core'], 'name', 'slug');
 
 rcm_t_part('page-hero', [
     'eyebrow' => __('Services', 'rcm-theme'),
-    'title' => __('Dental Billing & RCM Services', 'rcm-theme'),
-    'intro' => __('Dental billing and revenue cycle management for dental practices across the USA, delivered inside your own dental software, clearinghouse and carrier portals.', 'rcm-theme'),
+    'title' => __('Dental Revenue Cycle Management Services', 'rcm-theme'),
+    'intro' => __('Dental revenue cycle management for dental practices across the USA, delivered inside your own dental software, clearinghouse and carrier portals.', 'rcm-theme'),
     'actions' => '<a href="' . esc_url(rcm_t_url('consultation')) . '" class="btn-primary">' . esc_html__('Get a Free Consultation', 'rcm-theme') . '</a><a href="' . esc_url(rcm_t_url('how-we-work')) . '" class="btn-ghost-light">' . esc_html__('How we work', 'rcm-theme') . '</a>',
 ]);
 

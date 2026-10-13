@@ -45,7 +45,7 @@ while (have_posts()) :
                     }
                     ?>
                     <section class="mt-12" aria-labelledby="states-h">
-                        <h2 id="states-h" class="text-2xl font-bold"><?php esc_html_e('Dental billing in all 50 states', 'rcm-theme'); ?></h2>
+                        <h2 id="states-h" class="text-2xl font-bold"><?php esc_html_e('Dental revenue cycle management in all 50 states', 'rcm-theme'); ?></h2>
                         <p class="mb-6 mt-2 text-ink-muted"><?php esc_html_e('Our team works remotely, so we serve dental practices in every US state:', 'rcm-theme'); ?></p>
                         <ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] sm:grid-cols-3 lg:grid-cols-4">
                             <?php foreach ($states as $st) : $slug = sanitize_title($st); ?>
@@ -100,7 +100,7 @@ while (have_posts()) :
             <div>
                 <p class="eyebrow mb-3"><?php esc_html_e('Free consultation', 'rcm-theme'); ?></p>
                 <h2 class="text-3xl font-bold"><?php esc_html_e('Tell us about your dental practice', 'rcm-theme'); ?></h2>
-                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('We will reply by email to arrange a call about your dental billing, carriers and goals. No cost and no obligation.', 'rcm-theme'); ?></p>
+                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('We will reply by email to arrange a call about your dental revenue cycle, carriers and goals. No cost and no obligation.', 'rcm-theme'); ?></p>
             </div>
             <div class="card p-6 sm:p-8"><?php rcm_t_form('consultation', ['compact' => true]); ?></div>
         </div>

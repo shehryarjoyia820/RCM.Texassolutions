@@ -25,6 +25,10 @@ final class Importer
         'Medical and dental billing, coding, denial management, AR follow-up and credentialing for US practices. Book a free consultation with Texas Solutions RCM.',
         'RCM Blog: Medical Billing and Revenue Cycle Guides',
         'Practical guides on medical and dental billing, claim denials, AR, coding and credentialing for US practice owners and billing teams.',
+        'Dental Billing Services & Dental RCM Company | Texas Solutions RCM',
+        'Dental billing and revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Book a free consultation.',
+        'Dental Billing Blog | Texas Solutions RCM',
+        'Practical dental billing guides for US practice owners and office managers: insurance verification, claims, denials, A/R, credentialing and CDT updates.',
     ];
 
     public static function init(): void
@@ -297,8 +301,8 @@ final class Importer
         // Home and blog pages are structural (content comes from templates).
         array_unshift(
             $pages,
-            ['key' => 'home', 'title' => __('Home', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Dental Billing Services & Dental RCM Company | Texas Solutions RCM', 'metaDescription' => 'Dental billing and revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Book a free consultation.'],
-            ['key' => 'blog', 'title' => __('Blog', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Dental Billing Blog | Texas Solutions RCM', 'metaDescription' => 'Practical dental billing guides for US practice owners and office managers: insurance verification, claims, denials, A/R, credentialing and CDT updates.']
+            ['key' => 'home', 'title' => __('Home', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Dental Revenue Cycle Management (RCM) | Texas Solutions RCM', 'metaDescription' => 'Dental revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Free consultation.'],
+            ['key' => 'blog', 'title' => __('Blog', 'rcm'), 'template' => 'default', 'intro' => '', 'body' => '', 'seoTitle' => 'Dental RCM Blog | Texas Solutions RCM', 'metaDescription' => 'Practical dental revenue cycle management guides for US dental practices: insurance verification, claims, denials, A/R, credentialing and CDT updates.']
         );
         foreach ($pages as $i => $p) {
             $key = (string) $p['key'];
@@ -570,7 +574,7 @@ final class Importer
         }
         $tag = (string) get_option('blogdescription');
         if ($tag === '' || $tag === 'Just another WordPress site' || $tag === 'Revenue cycle management for US medical and dental practices') {
-            update_option('blogdescription', 'Dental billing and revenue cycle management for US dental practices');
+            update_option('blogdescription', 'Dental revenue cycle management for US dental practices');
             $n['updated']++;
         }
         if (get_option('permalink_structure') === '') {

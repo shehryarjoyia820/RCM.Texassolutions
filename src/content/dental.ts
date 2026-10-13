@@ -96,6 +96,8 @@ export const DENTAL_POSTS = [
   'dental-insurance-biller',
   'dental-practice-management-software',
   'dental-billing-software',
+  'dental-medical-cross-coding',
+  'ai-in-dental-revenue-cycle-management',
 ];
 /** Generic posts kept at the same URL but rewritten with dental examples. */
 export const GENERIC_POSTS = [
@@ -130,6 +132,8 @@ export const POST_CATEGORY: Record<string, string> = {
   'dental-insurance-biller': 'Practice Management',
   'dental-practice-management-software': 'Practice Management',
   'dental-billing-software': 'Practice Management',
+  'dental-medical-cross-coding': 'Dental Billing',
+  'ai-in-dental-revenue-cycle-management': 'Practice Management',
 };
 
 export const KEPT_PAGES = [
@@ -152,7 +156,8 @@ export const REDIRECTS: Record<string, string> = {
   // Services: 45 removed
   ...group('/services/', ['medical-billing', 'medical-billing-small-practices', 'dental-billing-small-practices', 'out-of-network-billing', 'dental-virtual-assistant', 'virtual-medical-assistant', 'practice-management-support', 'healthcare-data-entry', 'ehr-workflow-support', 'appointment-scheduling'], '/services/dental-billing/'),
   ...group('/services/', ['insurance-eligibility-verification', 'benefits-verification', 'prior-authorization', 'patient-registration'], '/services/dental-insurance-verification/'),
-  ...group('/services/', ['medical-coding', 'coding-audit', 'charge-entry', 'claims-submission', 'claims-scrubbing', 'electronic-claims-processing', 'clearinghouse-coordination', 'dental-medical-cross-coding'], '/services/dental-claims-processing/'),
+  ...group('/services/', ['medical-coding', 'coding-audit', 'charge-entry', 'claims-submission', 'claims-scrubbing', 'electronic-claims-processing', 'clearinghouse-coordination'], '/services/dental-claims-processing/'),
+  '/services/dental-medical-cross-coding/': '/blog/dental-medical-cross-coding/',
   ...group('/services/', ['denial-appeals'], '/services/denial-management/'),
   ...group('/services/', ['era-processing', 'payment-reconciliation', 'underpayment-identification'], '/services/payment-posting/'),
   ...group('/services/', ['accounts-receivable-management', 'aging-ar-follow-up', 'revenue-recovery'], '/services/dental-accounts-receivable/'),
@@ -185,14 +190,16 @@ export const REDIRECTS: Record<string, string> = {
   // Blog: 19 removed
   '/blog/how-to-choose-a-medical-billing-company/': '/blog/how-to-choose-a-dental-billing-company/',
   '/blog/common-medical-billing-denial-codes/': '/blog/how-to-appeal-a-denied-dental-claim/',
-  '/blog/medical-billing-for-dental-sleep-apnea/': '/blog/dental-billing-codes-guide/',
-  '/blog/billing-medical-insurance-for-dental-procedures/': '/blog/dental-billing-codes-guide/',
+  '/blog/medical-billing-for-dental-sleep-apnea/': '/blog/dental-medical-cross-coding/',
+  '/blog/billing-medical-insurance-for-dental-procedures/': '/blog/dental-medical-cross-coding/',
   '/blog/how-much-do-medical-billing-services-cost/': '/tools/dental-billing-cost-calculator/',
   ...group('/blog/', [
-    'how-medical-billing-works', 'what-is-ar-in-medical-billing', 'medical-billing-vs-revenue-cycle-management', 'medical-billing-kpis', 'ai-in-revenue-cycle-management',
-    'medical-billing-automation-and-rpa', 'ai-and-electronic-prior-authorization', 'telehealth-billing-codes-guide', 'no-surprises-act-good-faith-estimates',
-    'cpt-2026-code-changes', 'icd-10-cm-2026-updates', 'how-to-start-a-medical-billing-company', 'medical-billing-and-coding-certifications', 'dental-billing-training-guide',
+    'how-medical-billing-works', 'what-is-ar-in-medical-billing', 'medical-billing-vs-revenue-cycle-management', 'medical-billing-kpis',
+    'telehealth-billing-codes-guide', 'no-surprises-act-good-faith-estimates',
+    'cpt-2026-code-changes', 'icd-10-cm-2026-updates', 'how-to-start-a-medical-billing-company', 'medical-billing-and-coding-certifications',
   ], '/blog/'),
+  '/blog/dental-billing-training-guide/': '/blog/dental-insurance-biller/',
+  ...group('/blog/', ['ai-in-revenue-cycle-management', 'medical-billing-automation-and-rpa', 'ai-and-electronic-prior-authorization'], '/blog/ai-in-dental-revenue-cycle-management/'),
   // Blog categories: 7 removed
   ...group('/blog/category/', ['medical-billing', 'revenue-cycle-management', 'medical-coding', 'insurance-claims', 'credentialing', 'healthcare-technology', 'healthcare-ai', 'rcm-tools-and-guides', 'healthcare-industry-news', 'medicare-and-medicaid-updates', 'specialty-billing-guides', 'uncategorized'], '/blog/'),
 

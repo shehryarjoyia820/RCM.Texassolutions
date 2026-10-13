@@ -38,8 +38,8 @@ final class Install
     public static function dental_meta(): void
     {
         $set = [
-            (int) get_option('page_on_front') => ['Dental Billing Services & Dental RCM Company | Texas Solutions RCM', 'Dental billing and revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Book a free consultation.'],
-            (int) get_option('page_for_posts') => ['Dental Billing Blog | Texas Solutions RCM', 'Practical dental billing guides for US practice owners and office managers: insurance verification, claims, denials, A/R, credentialing and CDT updates.'],
+            (int) get_option('page_on_front') => ['Dental Revenue Cycle Management (RCM) | Texas Solutions RCM', 'Dental revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Free consultation.'],
+            (int) get_option('page_for_posts') => ['Dental RCM Blog | Texas Solutions RCM', 'Practical dental revenue cycle management guides for US dental practices: insurance verification, claims, denials, A/R, credentialing and CDT updates.'],
         ];
         foreach ($set as $id => [$title, $desc]) {
             if ($id <= 0) {
@@ -47,15 +47,16 @@ final class Install
             }
             $t = (string) get_post_meta($id, '_rcm_seo_title', true);
             $d = (string) get_post_meta($id, '_rcm_meta_description', true);
-            if ($t === '' || stripos($t, 'medical') !== false) {
+            if ($t === '' || stripos($t, 'medical') !== false || in_array($t, ['Dental Billing Services & Dental RCM Company | Texas Solutions RCM', 'Dental Billing Blog | Texas Solutions RCM'], true)) {
                 update_post_meta($id, '_rcm_seo_title', $title);
             }
-            if ($d === '' || stripos($d, 'medical') !== false) {
+            if ($d === '' || stripos($d, 'medical') !== false || in_array($d, ['Dental billing and revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing. Book a free consultation.', 'Practical dental billing guides for US practice owners and office managers: insurance verification, claims, denials, A/R, credentialing and CDT updates.'], true)) {
                 update_post_meta($id, '_rcm_meta_description', $desc);
             }
         }
-        if (stripos((string) get_option('blogdescription'), 'medical') !== false) {
-            update_option('blogdescription', 'Dental billing and revenue cycle management for US dental practices');
+        $tag = (string) get_option('blogdescription');
+        if (stripos($tag, 'medical') !== false || $tag === 'Dental billing and revenue cycle management for US dental practices') {
+            update_option('blogdescription', 'Dental revenue cycle management for US dental practices');
         }
     }
 

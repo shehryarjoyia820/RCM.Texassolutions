@@ -46,8 +46,8 @@ $journey = [
     <div class="absolute -right-40 top-10 h-[28rem] w-[28rem] rounded-full bg-teal-200/40 blur-3xl" aria-hidden="true"></div>
     <div class="container relative grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:py-24">
         <div>
-            <p class="chip mb-6"><span class="h-1.5 w-1.5 rounded-full bg-teal-500" aria-hidden="true"></span> <?php esc_html_e('For dental practices across the USA', 'rcm-theme'); ?></p>
-            <h1 class="text-[2.4rem] font-extrabold leading-[1.08] sm:text-[3.4rem]"><?php esc_html_e('Dental billing and revenue cycle management for', 'rcm-theme'); ?> <span class="text-teal-700"><?php esc_html_e('US dental practices', 'rcm-theme'); ?></span></h1>
+            <p class="chip mb-6"><span class="h-1.5 w-1.5 rounded-full bg-teal-500" aria-hidden="true"></span> <?php esc_html_e('Dental RCM for practices across the USA', 'rcm-theme'); ?></p>
+            <h1 class="text-[2.4rem] font-extrabold leading-[1.08] sm:text-[3.4rem]"><?php esc_html_e('Dental revenue cycle management for', 'rcm-theme'); ?> <span class="text-teal-700"><?php esc_html_e('US dental practices', 'rcm-theme'); ?></span></h1>
             <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"><?php esc_html_e('We provide comprehensive Dental Revenue Cycle Management (RCM) solutions to help dental practices streamline billing operations, reduce claim denials, improve collections, and maximize revenue.', 'rcm-theme'); ?></p>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a href="<?php echo esc_url(rcm_t_url('consultation')); ?>" class="btn-primary" data-rcm-cta="hero-consultation"><?php esc_html_e('Get a Free Consultation', 'rcm-theme'); ?> <?php rcm_t_icon('ArrowRight', 'h-4 w-4'); ?></a>
@@ -95,9 +95,9 @@ $journey = [
     <div class="container">
         <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div class="max-w-3xl">
-                <p class="eyebrow mb-3"><?php esc_html_e('Dental billing and RCM services', 'rcm-theme'); ?></p>
-                <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Dental billing services that cover the whole revenue cycle', 'rcm-theme'); ?></h2>
-                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('Use us as your dental billing company for the full cycle, or outsource only the pieces your office needs help with, from dental insurance verification to dental credentialing.', 'rcm-theme'); ?></p>
+                <p class="eyebrow mb-3"><?php esc_html_e('Dental RCM services', 'rcm-theme'); ?></p>
+                <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Dental revenue cycle management, from verification to final payment', 'rcm-theme'); ?></h2>
+                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('Use us as your dental RCM company for the full revenue cycle, or outsource only the pieces your office needs help with, from dental insurance verification and dental billing to dental credentialing.', 'rcm-theme'); ?></p>
             </div>
             <a href="<?php echo esc_url(rcm_t_archive('rcm_service')); ?>" class="btn-outline btn-sm shrink-0"><?php esc_html_e('All dental services', 'rcm-theme'); ?> <?php rcm_t_icon('ArrowRight', 'h-4 w-4'); ?></a>
         </div>
@@ -177,7 +177,7 @@ $journey = [
     <div class="container">
         <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div class="max-w-3xl">
-                <p class="eyebrow mb-3"><?php esc_html_e('Free dental billing tools', 'rcm-theme'); ?></p>
+                <p class="eyebrow mb-3"><?php esc_html_e('Free dental RCM tools', 'rcm-theme'); ?></p>
                 <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Calculators and checklists for dental offices', 'rcm-theme'); ?></h2>
                 <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('No sign-up. Every calculator shows its formula, a worked example and the assumptions behind it.', 'rcm-theme'); ?></p>
             </div>
@@ -238,8 +238,8 @@ $journey = [
     <div class="container">
         <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-                <p class="eyebrow mb-3"><?php esc_html_e('Dental billing blog', 'rcm-theme'); ?></p>
-                <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Latest dental billing guides', 'rcm-theme'); ?></h2>
+                <p class="eyebrow mb-3"><?php esc_html_e('Dental RCM blog', 'rcm-theme'); ?></p>
+                <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Latest dental revenue cycle guides', 'rcm-theme'); ?></h2>
             </div>
             <a href="<?php echo esc_url(rcm_t_blog_url()); ?>" class="btn-outline btn-sm shrink-0"><?php esc_html_e('All articles', 'rcm-theme'); ?> <?php rcm_t_icon('ArrowRight', 'h-4 w-4'); ?></a>
         </div>
@@ -255,8 +255,8 @@ $journey = [
     <div class="container">
         <div class="relative overflow-hidden rounded-3xl bg-navy-950 px-6 py-14 text-center text-white sm:px-12">
             <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-teal-500/20 blur-3xl" aria-hidden="true"></div>
-            <h2 class="relative text-3xl font-bold text-white sm:text-4xl"><?php esc_html_e('Let Us Simplify Your Dental Billing', 'rcm-theme'); ?></h2>
-            <p class="relative mx-auto mt-4 max-w-2xl text-lg text-navy-200"><?php esc_html_e('Focus on providing exceptional patient care while we help manage your dental billing and revenue cycle operations.', 'rcm-theme'); ?></p>
+            <h2 class="relative text-3xl font-bold text-white sm:text-4xl"><?php esc_html_e('Let Us Simplify Your Dental Revenue Cycle', 'rcm-theme'); ?></h2>
+            <p class="relative mx-auto mt-4 max-w-2xl text-lg text-navy-200"><?php esc_html_e('Focus on providing exceptional patient care while we manage your dental revenue cycle, from insurance verification to the final payment.', 'rcm-theme'); ?></p>
             <a href="<?php echo esc_url(rcm_t_url('consultation')); ?>" class="btn-primary relative mt-8" data-rcm-cta="home-closing"><?php esc_html_e('Partner With Us Today', 'rcm-theme'); ?> <?php rcm_t_icon('ArrowRight', 'h-4 w-4'); ?></a>
         </div>
     </div>

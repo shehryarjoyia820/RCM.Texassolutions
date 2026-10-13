@@ -76,7 +76,7 @@ for (const [path, want] of [['/robots.txt', 200], ['/llms.txt', 200], ['/this-pa
   const kb = Buffer.byteLength(body) / 1024;
   if (kb >= 150) failures.push(`homepage HTML is ${kb.toFixed(0)} KB (limit 150)`);
   const title = (body.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
-  if (!title.includes('Dental Billing Services &amp; Dental RCM Company')) failures.push(`homepage title: ${title}`);
+  if (!title.includes('Dental Revenue Cycle Management (RCM)')) failures.push(`homepage title: ${title}`);
   const h1 = (body.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '';
   if (!/dental/i.test(h1)) failures.push('homepage h1 lacks "dental"');
   const nav = (body.match(/<nav aria-label="Main"[\s\S]*?<\/nav>/) || [''])[0];

@@ -14,8 +14,8 @@ $services = rcm_t_by_keys('rcm_service', (array) ($d['services'] ?? []));
 $siblings = array_slice(array_values(array_filter(rcm_t_all('rcm_specialty'), static fn($x) => $x->ID !== $p->ID && (!rcm_t_has_plugin() || RCM\Content_Types::specialty_kind($x) === $kind))), 0, 10);
 
 rcm_t_part('page-hero', [
-    'eyebrow' => $kind === 'dental' ? __('Dental billing by specialty', 'rcm-theme') : __('Medical billing by specialty', 'rcm-theme'),
-    'title' => sprintf(__('%s billing and RCM', 'rcm-theme'), $name),
+    'eyebrow' => $kind === 'dental' ? __('Dental RCM by specialty', 'rcm-theme') : __('Medical billing by specialty', 'rcm-theme'),
+    'title' => sprintf(__('Dental revenue cycle management for %s', 'rcm-theme'), $name),
     'intro' => $p->post_excerpt,
     'icon' => $d['icon'] ?? '',
     'actions' => '<a href="' . esc_url(rcm_t_url('consultation')) . '" class="btn-primary" data-rcm-cta="specialty-hero">' . esc_html__('Get a Free Consultation', 'rcm-theme') . '</a>',

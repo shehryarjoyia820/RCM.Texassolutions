@@ -15,7 +15,7 @@ $cols = [
     ],
     __('Resources', 'rcm-theme') => [
         [__('Blog', 'rcm-theme'), rcm_t_blog_url()],
-        [__('Free Dental Billing Tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
+        [__('Free Dental RCM Tools', 'rcm-theme'), rcm_t_archive('rcm_tool')],
         [__('FAQs', 'rcm-theme'), rcm_t_url('faq')],
     ],
     __('Legal', 'rcm-theme') => [
@@ -35,7 +35,7 @@ $cols = [
             <div>
                 <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_attr_e('Texas Solutions RCM home', 'rcm-theme'); ?>"><?php rcm_t_part('logo', ['dark' => true]); ?></a>
                 <p class="mt-5 max-w-sm text-[15px] leading-relaxed">
-                    <?php esc_html_e('Dental billing and revenue cycle management for US dental practices. A division of', 'rcm-theme'); ?>
+                    <?php esc_html_e('Dental revenue cycle management (RCM) for US dental practices. A division of', 'rcm-theme'); ?>
                     <a href="https://texassolutions.co" class="text-white underline decoration-navy-500 underline-offset-2 hover:decoration-white">Texas Solutions</a>.
                 </p>
                 <p class="mt-3 text-[15px] font-medium text-white"><?php esc_html_e('Serving dental practices across the USA', 'rcm-theme'); ?></p>
@@ -62,8 +62,8 @@ $cols = [
 
         <div class="mt-12 grid gap-6 rounded-2xl border border-white/10 bg-white/[0.03] p-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <div>
-                <h2 class="text-lg font-semibold text-white"><?php esc_html_e('Dental billing insights by email', 'rcm-theme'); ?></h2>
-                <p class="mt-1 text-[15px]"><?php esc_html_e('New dental billing guides, calculator updates and carrier changes worth knowing. Unsubscribe any time.', 'rcm-theme'); ?></p>
+                <h2 class="text-lg font-semibold text-white"><?php esc_html_e('Dental RCM insights by email', 'rcm-theme'); ?></h2>
+                <p class="mt-1 text-[15px]"><?php esc_html_e('New dental revenue cycle guides, calculator updates and carrier changes worth knowing. Unsubscribe any time.', 'rcm-theme'); ?></p>
             </div>
             <?php rcm_t_form('newsletter'); ?>
         </div>

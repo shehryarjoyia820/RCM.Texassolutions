@@ -40,7 +40,7 @@ final class Content_Types
         'revenue' => ['Revenue and ROI', 'Project revenue, compare billing options and estimate what is being lost.'],
         'cost' => ['Billing cost', 'What billing really costs per claim, per FTE and per year.'],
         'kpi' => ['RCM KPIs', 'Collection rates, days in AR, denial and clean claim rates.'],
-        'dental' => ['Dental billing', 'Calculators and checklists for dental practices.'],
+        'dental' => ['Dental RCM', 'Calculators and checklists for dental practices.'],
         'lookup' => ['Provider lookups', 'Search the NPI Registry.'],
         'checklist' => ['Checklists', 'Printable checklists for authorizations, claims, appeals and credentialing.'],
         'reference' => ['Reference guides', 'Glossaries, denial reasons, EOB and ERA explained.'],

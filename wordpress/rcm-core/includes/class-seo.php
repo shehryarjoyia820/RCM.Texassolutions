@@ -85,7 +85,7 @@ final class SEO
         if (mb_strlen($d) >= 60) {
             return $d;
         }
-        return __('Texas Solutions RCM provides dental billing and revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing.', 'rcm');
+        return __('Texas Solutions RCM provides dental revenue cycle management for US dental practices: insurance verification, claims, denials, payment posting, A/R and credentialing.', 'rcm');
     }
 
     /** Plain single-line text: tags stripped, entities decoded, whitespace collapsed. */
@@ -259,16 +259,16 @@ final class SEO
     {
         $defaults = [
             'rcm_service' => [
-                __('Dental Billing & RCM Services', 'rcm'),
-                __('Dental billing and RCM services for US dental practices: insurance verification, claims, denials, payment posting, A/R, patient billing, credentialing and reporting.', 'rcm'),
+                __('All Dental RCM Services | Texas Solutions RCM', 'rcm'),
+                __('Dental revenue cycle management services for US dental practices: insurance verification, claims, denials, payment posting, A/R, patient billing, credentialing and reporting.', 'rcm'),
             ],
             'rcm_specialty' => [
                 __('Dental Specialties We Bill For', 'rcm'),
-                __('Dental billing support by specialty: how claims, carrier rules and common denials differ for general, pediatric, orthodontic, oral surgery and other dental practices.', 'rcm'),
+                __('Dental revenue cycle support by specialty: how claims, carrier rules and common denials differ for general, pediatric, orthodontic, oral surgery and other dental practices.', 'rcm'),
             ],
             'rcm_tool' => [
-                __('Free Dental Billing Calculators & Checklists', 'rcm'),
-                __('Free dental billing calculators, checklists and reference guides for US dental practices: collections, A/R, denials, verification and more.', 'rcm'),
+                __('Free Dental RCM Calculators & Checklists', 'rcm'),
+                __('Free dental revenue cycle calculators, checklists and reference guides for US dental practices: collections, A/R, denials, verification and more.', 'rcm'),
             ],
             'rcm_case_study' => [
                 __('Case Studies', 'rcm'),
@@ -335,7 +335,7 @@ final class SEO
                 $c['noindex'] = $m['noindex'];
             }
             if ($full === null) {
-                $full = __('Dental Billing Services & Dental RCM Company | Texas Solutions RCM', 'rcm');
+                $full = __('Dental Revenue Cycle Management (RCM) | Texas Solutions RCM', 'rcm');
             }
             $c['canonical'] = self::paged_url(home_url('/'), $paged);
             $c['image'] = self::image($front);
@@ -351,7 +351,7 @@ final class SEO
                 $c['title'] = __('Blog', 'rcm');
             }
             if ($c['description'] === '') {
-                $c['description'] = __('Practical articles on dental billing, insurance verification, claims, denials, credentialing and revenue cycle management for US dental practices from Texas Solutions RCM.', 'rcm');
+                $c['description'] = __('Practical articles on dental revenue cycle management, insurance verification, claims, denials and credentialing for US dental practices from Texas Solutions RCM.', 'rcm');
             }
             $c['canonical'] = self::paged_url(self::blog_url(), $paged);
             $c['image'] = self::image($bp);
@@ -392,7 +392,7 @@ final class SEO
                 $desc = self::plain((string) $term->description);
                 if ($desc === '' && is_category()) {
                     /* translators: %s: category name */
-                    $desc = sprintf(__('Articles about %s for US dental practices: practical guidance on dental billing, carrier rules and revenue cycle work from Texas Solutions RCM.', 'rcm'), self::plain($term->name));
+                    $desc = sprintf(__('Articles about %s for US dental practices: practical guidance on dental revenue cycle management and carrier rules from Texas Solutions RCM.', 'rcm'), self::plain($term->name));
                 }
                 $c['description'] = self::cut($desc, self::DESC_MAX);
                 $link = get_term_link($term);
@@ -642,7 +642,7 @@ final class SEO
             '@id' => self::org_id(),
             'name' => self::site_name(),
             'url' => home_url('/'),
-            'description' => 'Texas Solutions RCM provides dental billing and dental revenue cycle management for dental practices in all 50 US states: insurance verification, dental claims, denial management, payment posting, A/R follow-up, patient billing support, credentialing and reporting.',
+            'description' => 'Texas Solutions RCM provides dental revenue cycle management (RCM) for dental practices in all 50 US states: insurance verification, dental claims, denial management, payment posting, A/R follow-up, patient billing support, credentialing and reporting.',
         ];
         if (file_exists(get_theme_file_path('assets/img/ts-logo.png'))) {
             $node['logo'] = ['@type' => 'ImageObject', 'url' => get_theme_file_uri('assets/img/ts-logo.png')];
@@ -772,7 +772,7 @@ final class SEO
                         '@id' => $url . '#service',
                         'name' => self::plain($p->post_title),
                         'description' => $summary,
-                        'serviceType' => 'Dental billing',
+                        'serviceType' => 'Dental revenue cycle management',
                         'url' => $url,
                         'provider' => ['@id' => self::org_id()],
                         'areaServed' => ['@type' => 'Country', 'name' => 'United States'],
@@ -1656,7 +1656,7 @@ final class SEO
         foreach ($posts as $p) {
             $m = self::meta_for($p);
             if ((int) get_option('page_on_front') === $p->ID && $m['title_source'] !== 'custom') {
-                $m['title'] = __('Dental Billing Services & Dental RCM Company | Texas Solutions RCM', 'rcm');
+                $m['title'] = __('Dental Revenue Cycle Management (RCM) | Texas Solutions RCM', 'rcm');
             }
             $rows[] = ['post' => $p, 'm' => $m, 'issues' => []];
             if (!$m['noindex']) {

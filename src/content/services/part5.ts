@@ -514,7 +514,7 @@ export const servicesPart5: Service[] = [
       },
       {
         q: 'Is Texas Solutions a Dentrix partner?',
-        a: 'No, Texas Solutions is not a partner, reseller or affiliate of Henry Schein One, and Dentrix is a trademark of its owner. We are an independent billing team that works inside the Dentrix license your practice already holds. Software support, updates and licensing questions stay between your practice and the vendor or your IT provider.',
+        a: 'No, Texas Solutions is not a partner, reseller or affiliate of Henry Schein One, and Dentrix is a trademark of its owner. We are an independent dental RCM team that works inside the Dentrix license your practice already holds. Software support, updates and licensing questions stay between your practice and the vendor or your IT provider.',
       },
       {
         q: 'Do you also verify insurance before appointments?',
@@ -699,7 +699,7 @@ export const servicesPart5: Service[] = [
     intro: [
       'Eaglesoft, from Patterson Dental, is a long-standing server-based practice management system, and many offices have run it for a decade or more. Years of daily use leave a history behind: claims that were never closed, credits that were never applied, employers and insurance plans entered several different ways, and aging reports that include balances nobody is still working.',
       'Our Eaglesoft billing services handle the daily work and the backlog together. Day to day, we send claims through your existing electronic claims setup, post insurance payments and electronic remittances, enter patient payments and follow up on aging. Alongside that, we work through old open claims and ledger issues in batches, with your approval on any write-off or adjustment, so reports begin to reflect what is actually collectible.',
-      'Because Eaglesoft usually runs on an in-office server, access is set up through your IT provider’s secure remote connection. Eaglesoft is a trademark of its owner. Texas Solutions is not affiliated with or endorsed by Patterson Dental; we work inside your licensed system as your billing team and sign a Business Associate Agreement before accessing patient data.',
+      'Because Eaglesoft usually runs on an in-office server, access is set up through your IT provider’s secure remote connection. Eaglesoft is a trademark of its owner. Texas Solutions is not affiliated with or endorsed by Patterson Dental; we work inside your licensed system as your dental RCM team and sign a Business Associate Agreement before accessing patient data.',
     ],
     scope: [
       'Sending electronic claims and attachments and correcting rejections',
@@ -836,7 +836,7 @@ export const servicesPart5: Service[] = [
     intro: [
       'Curve Dental is a cloud-based practice management system, so the schedule, charts, ledgers and claims are reached through a web browser rather than a server in the office. That model appeals to new practices that do not want to buy and maintain servers, and to multi-location offices that want every site working in the same system.',
       'For billing, a cloud system changes how the work is organized more than what the work is. Our Curve Dental billing services cover the same core tasks as any dental billing arrangement (claims, attachments, payment posting, verification and aging follow-up), but access is simpler: your office adds named users for our team with the permissions you choose, and there is no VPN or remote desktop to maintain. For new offices, we also help confirm that fee schedules, insurance plans and provider details are entered correctly before the first claims go out.',
-      'Curve Dental is a trademark of its owner. Texas Solutions is not affiliated with or endorsed by Curve Dental; we work in your practice’s own Curve account as your billing team, and we sign a Business Associate Agreement before accessing patient data.',
+      'Curve Dental is a trademark of its owner. Texas Solutions is not affiliated with or endorsed by Curve Dental; we work in your practice’s own Curve account as your dental RCM team, and we sign a Business Associate Agreement before accessing patient data.',
     ],
     scope: [
       'Creating and sending claims and correcting rejections',
@@ -921,7 +921,7 @@ export const servicesPart5: Service[] = [
       },
       {
         q: 'Is Texas Solutions a Curve Dental partner?',
-        a: 'No, Texas Solutions is not a partner, reseller or affiliate of Curve Dental, and Curve Dental is a trademark of its owner. We are an independent billing team working in the Curve account your practice subscribes to. Questions about features, subscriptions or technical support stay between your practice and the vendor.',
+        a: 'No, Texas Solutions is not a partner, reseller or affiliate of Curve Dental, and Curve Dental is a trademark of its owner. We are an independent dental RCM team working in the Curve account your practice subscribes to. Questions about features, subscriptions or technical support stay between your practice and the vendor.',
       },
     ],
     relatedTools: [

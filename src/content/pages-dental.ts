@@ -44,16 +44,16 @@ const PHONE = '<a href="tel:+18389103147">+1 (838) 910-3147</a>';
 const about: PageContent = {
   key: 'about',
   title: 'About Texas Solutions RCM',
-  seoTitle: 'About Texas Solutions RCM | Dental Billing Company',
+  seoTitle: 'About Texas Solutions RCM | Dental RCM Company',
   metaDescription:
-    'Texas Solutions RCM is a dental billing company that works inside your practice software to handle insurance verification, claims, posting, denials and A/R.',
+    'Texas Solutions RCM is a dental revenue cycle management company. We work inside your practice software on verification, claims, posting, denials and A/R.',
   template: 'default',
   intro:
-    'Texas Solutions RCM is the dental billing and revenue cycle division of Texas Solutions. We help dental practices and groups in all 50 states with the insurance and billing work that sits between a completed procedure and a posted payment.',
+    'Texas Solutions RCM is a dental revenue cycle management (RCM) company and the dental division of Texas Solutions. We manage the revenue cycle for dental practices and groups in all 50 states, from enrollment and benefit checks before the visit to claims, posted payments and follow-up after it.',
   body: blocks(
     h2('Who we are'),
     p(
-      'Texas Solutions RCM is part of Texas Solutions, a US company with an office at 401 W Kentucky Ave in Midland, Texas. This division does one thing: dental billing and revenue cycle work for dentists, office managers and dental service organizations.'
+      'Texas Solutions RCM is part of Texas Solutions, a US company with an office at 401 W Kentucky Ave in Midland, Texas. This division does one thing: dental revenue cycle management for dentists, office managers and dental service organizations. Billing is one part of that work, alongside credentialing, insurance verification, denials, A/R and reporting.'
     ),
     p(
       'Our team works remotely, inside the dental practice management software, clearinghouse and carrier portals your office already uses. You create the user accounts, you decide what each one can do, and every note and posting stays in your system where your front desk and billing staff can see it.'
@@ -63,11 +63,11 @@ const about: PageContent = {
       'Dental insurance works differently from other kinds of health coverage. Plans carry annual maximums, frequency limits on cleanings and x-rays, waiting periods on major work, missing tooth clauses and alternate benefit downgrades. Claims go out on the ADA claim form or as an 837D, often with x-rays, perio charts or narratives attached. Many patients carry PPO, DHMO or Medicaid dental coverage, and some carry two plans at once.'
     ),
     p(
-      'A billing team that also handles other kinds of claims has to switch rules all day. We would rather know dental carriers, CDT coding conventions and dental remittances well than know a little about everything.'
+      'A revenue cycle team that also handles other kinds of claims has to switch rules all day. We would rather know dental carriers, CDT coding conventions and dental remittances well than know a little about everything.'
     ),
     h2('What we do'),
     p(
-      `You can hand us the whole cycle through our ${a('/services/dental-billing/', 'dental billing')} and ${a('/services/revenue-cycle-management/', 'dental revenue cycle management')} services, or pick the areas your team needs help with:`
+      `You can hand us the whole cycle through our ${a('/services/revenue-cycle-management/', 'dental revenue cycle management')} service, which includes ${a('/services/dental-billing/', 'dental billing')} as one of its parts, or pick the areas your team needs help with:`
     ),
     ul([
       `${a('/services/dental-insurance-verification/', 'Insurance Verification & Eligibility')}: benefits breakdowns, deductibles, remaining maximums, frequencies and waiting periods before the appointment.`,
@@ -84,7 +84,7 @@ const about: PageContent = {
       `We work with ${a('/specialties/general-dentistry/', 'general dentistry')} offices and with specialty practices in ${a('/specialties/orthodontics/', 'orthodontics')}, ${a('/specialties/endodontics/', 'endodontics')}, ${a('/specialties/periodontics/', 'periodontics')}, ${a('/specialties/oral-surgery/', 'oral surgery')}, ${a('/specialties/pediatric-dentistry/', 'pediatric dentistry')} and ${a('/specialties/prosthodontics/', 'prosthodontics')}, as well as ${a('/specialties/dental-group-practices/', 'dental group practices')} and DSOs. Our team works remotely, so we can support offices in ${a('/service-areas/', 'every US state')}.`
     ),
     p(
-      'We set up our checklists around the software you run, whether that is Dentrix, Open Dental, Eaglesoft or Curve Dental, and around your carrier mix. The same model can fit a single-doctor office that needs help with old claims and a multi-location group that wants a full billing team.'
+      'We set up our checklists around the software you run, whether that is Dentrix, Open Dental, Eaglesoft or Curve Dental, and around your carrier mix. The same model can fit a single-doctor office that needs help with old claims and a multi-location group that wants a full dental RCM team.'
     ),
     h2('How an engagement starts'),
     ul([
@@ -112,12 +112,12 @@ const about: PageContent = {
 const howWeWork: PageContent = {
   key: 'how-we-work',
   title: 'How We Work',
-  seoTitle: 'How We Work: Dental Billing Onboarding | Texas Solutions RCM',
+  seoTitle: 'How We Work: Dental RCM Onboarding | Texas Solutions RCM',
   metaDescription:
-    'How Texas Solutions RCM works with dental offices: our principles, questions to ask any dental billing company, and each step from consultation to daily work.',
+    'How Texas Solutions RCM works with dental offices: our principles, the questions to ask any dental RCM company, and each step from consultation to daily work.',
   template: 'default',
   intro:
-    'This page explains the principles behind our dental billing work, the questions we think you should ask any billing company, and each step from the first call to daily work in your system. Timelines are agreed in your proposal, because they depend on your office, your carriers and your software.',
+    'This page explains the principles behind our dental revenue cycle management work, the questions we think you should ask any dental RCM company, and each step from the first call to daily work in your system. Timelines are agreed in your proposal, because they depend on your office, your carriers and your software.',
   body: blocks(
     h2('The principles we work by'),
     h3('We work inside your dental software'),
@@ -144,7 +144,7 @@ const howWeWork: PageContent = {
     p(
       'If your team is doing well and only needs help with insurance verification or older A/R, we will scope just that. We quote in writing after we understand your workflow, and we do not promise results that depend on carriers, documentation and patients we do not control.'
     ),
-    h2('What to ask any dental billing company'),
+    h2('What to ask any dental RCM company'),
     p(
       'Use these questions when you compare vendors, including us. A good company should answer each one clearly and put the answer in writing.'
     ),
@@ -260,7 +260,7 @@ const technology: PageContent = {
     'We work inside Dentrix, Open Dental, Eaglesoft, Curve Dental and your clearinghouse and carrier portals, using 837D claims, 835 ERAs and secure access.',
   template: 'default',
   intro:
-    'We do not ask your office to adopt new billing software. Our team works inside the dental practice management system, clearinghouse and carrier portals you already use, with access you control.',
+    'We do not ask your office to adopt new billing software. Our dental revenue cycle management team works inside the dental practice management system, clearinghouse and carrier portals you already use, with access you control.',
   body: blocks(
     h2('We work inside your dental software'),
     p(
@@ -280,7 +280,7 @@ const technology: PageContent = {
     ),
     h2('Electronic dental transactions'),
     p(
-      'Dental carriers and clearinghouses exchange standard electronic transactions defined by X12. These are the ones that matter most for dental billing:'
+      'Dental carriers and clearinghouses exchange standard electronic transactions defined by X12. These are the ones that matter most across the dental revenue cycle:'
     ),
     table(
       ['Transaction', 'What it does', 'Where we use it'],
@@ -349,10 +349,10 @@ const security: PageContent = {
   title: 'Security and Privacy',
   seoTitle: 'Security and Privacy | Texas Solutions RCM',
   metaDescription:
-    'How our dental billing team protects patient data: a BAA before access, named least-privilege accounts, MFA where supported, and what this website collects.',
+    'How our dental RCM team protects patient data: a BAA before access, named least-privilege accounts, MFA where supported, and what this website collects.',
   template: 'default',
   intro:
-    'Dental billing means handling patient information every day. This page explains how we protect it during an engagement, what our obligations are, and what this website itself collects.',
+    'Dental revenue cycle management means handling patient information every day. This page explains how we protect it during an engagement, what our obligations are, and what this website itself collects.',
   body: blocks(
     h2('Our role under HIPAA'),
     p(
@@ -438,12 +438,12 @@ const security: PageContent = {
 const faq: PageContent = {
   key: 'faq',
   title: 'Frequently Asked Questions',
-  seoTitle: 'Dental Billing FAQs | Texas Solutions RCM',
+  seoTitle: 'Dental RCM FAQs | Texas Solutions RCM',
   metaDescription:
-    'Answers to common questions about outsourcing dental billing to Texas Solutions RCM: scope, onboarding, dental software, patient data and free tools.',
+    'Answers to common questions about outsourcing dental revenue cycle management to Texas Solutions RCM: scope, onboarding, software, patient data and tools.',
   template: 'faq',
   intro:
-    'Answers to the questions dentists, office managers and DSOs ask most about outsourcing dental billing to us, getting started, patient data and our free tools.',
+    'Answers to the questions dentists, office managers and DSOs ask most about outsourcing dental revenue cycle management (dental RCM) to us, getting started, patient data and our free tools.',
   body: blocks(
     p(
       `If your question is not answered here, ${a('/contact/', 'send us a message')} or ${a('/consultation/', 'book a free consultation')}. Please do not include patient information.`
@@ -454,12 +454,12 @@ const faq: PageContent = {
 const contact: PageContent = {
   key: 'contact',
   title: 'Contact Us',
-  seoTitle: 'Contact Texas Solutions RCM | Dental Billing',
+  seoTitle: 'Contact Texas Solutions RCM | Dental RCM Company',
   metaDescription:
     'Contact Texas Solutions RCM about dental insurance verification, claims, A/R or credentialing. Email info@texassolutions.co or call +1 (838) 910-3147.',
   template: 'contact',
   intro:
-    'Have a question about dental insurance verification, claims, A/R or credentialing, or want to talk about working together? Send us a message and our team will get back to you.',
+    'Have a question about dental revenue cycle management, from insurance verification and claims to A/R and credentialing, or want to talk about working together? Send us a message and our team will get back to you.',
   body: blocks(
     p(
       `Use the form to send a business enquiry, or reach us by email at ${EMAIL} or by phone at ${PHONE}. Our US office is at 401 W Kentucky Ave, Midland, TX 79701, and we support dental offices in every state.`
@@ -476,18 +476,18 @@ const contact: PageContent = {
 const consultation: PageContent = {
   key: 'consultation',
   title: 'Book a Free Consultation',
-  seoTitle: 'Free Dental Billing Consultation | Texas Solutions RCM',
+  seoTitle: 'Free Dental RCM Consultation | Texas Solutions RCM',
   metaDescription:
-    'Book a free consultation about your dental billing: insurance verification, claims, denials, A/R or credentialing. See what we cover and what to prepare.',
+    'Book a free dental RCM consultation about verification, claims, denials, posting, A/R or credentialing in your office. See what we cover and what to prepare.',
   template: 'consultation',
   intro:
-    'A free, no-obligation conversation about your dental office and its billing. Tell us when suits you, and we will confirm a time.',
+    'A free, no-obligation conversation about your dental office and its revenue cycle. Tell us when suits you, and we will confirm a time.',
   body: blocks(
     h2('What happens on the call'),
     ul([
       'We learn about your office: dentists, hygienists, locations, specialties, carriers and software.',
       'You tell us what is not working, such as aging claims, slow verifications, denials or staffing gaps.',
-      'We explain which services might fit and what we would need to review.',
+      'We explain which parts of our dental revenue cycle management services might fit and what we would need to review.',
       'We answer your questions about how we work, security and pricing.',
     ]),
     h2('What to prepare'),
