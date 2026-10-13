@@ -274,8 +274,15 @@ final class Importer
                 $key = 'faq-' . substr(md5((string) $faq['q']), 0, 12);
                 $existing = self::find_by_key(Content_Types::FAQ, $key);
                 if ($existing && !$force) {
-                    $n['skipped']++;
-                    continue;
+                    // Update an unchanged answer when the bundle changes; keep answers edited in WordPress.
+                    $current = md5($existing->post_content . $existing->post_title);
+                    $saved = (string) get_post_meta($existing->ID, '_rcm_saved_hash', true);
+                    $last_import = (string) get_option('rcm_content_imported');
+                    $edited = $saved !== '' ? $saved !== $current : ($last_import === '' || strtotime($existing->post_modified) > strtotime($last_import) + 60);
+                    if ($edited || $existing->post_content === (string) $faq['a']) {
+                        $n['skipped']++;
+                        continue;
+                    }
                 }
                 $postarr = ['post_type' => Content_Types::FAQ, 'post_status' => 'publish', 'post_title' => (string) $faq['q'], 'post_content' => (string) $faq['a'], 'menu_order' => $order++];
                 if ($existing) {
@@ -286,6 +293,10 @@ final class Importer
                     continue;
                 }
                 update_post_meta($id, '_rcm_key', $key);
+                $saved_post = get_post($id);
+                if ($saved_post) {
+                    update_post_meta($id, '_rcm_saved_hash', md5($saved_post->post_content . $saved_post->post_title));
+                }
                 wp_set_object_terms($id, [$term], 'rcm_faq_topic', true);
                 $existing ? $n['updated']++ : $n['created']++;
             }
