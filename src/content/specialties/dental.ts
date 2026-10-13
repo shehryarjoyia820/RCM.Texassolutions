@@ -18,7 +18,7 @@ export const dentalSpecialties: Specialty[] = [
     definition:
       "General dentistry billing covers verifying each patient's dental benefits, presenting accurate estimates, submitting ADA claims or 837D files for preventive, diagnostic and restorative care, and working the plan rules that shape payment: annual maximums, frequency limits, waiting periods, alternate benefits and coordination of benefits between primary and secondary dental plans.",
     intro: [
-      "A general dental office files a high volume of small claims. Cleanings, exams, bitewings, fillings and the occasional crown all move through the same front desk, and most of them are governed by plan rules rather than medical necessity. Whether a claim pays in full often depends on facts gathered before the patient sits down: how much of the annual maximum is left, when the last prophylaxis or bitewing series was paid, and whether the patient is still inside a waiting period for basic or major services.",
+      "A general dental office files a high volume of small claims. Cleanings, exams, bitewings, fillings and the occasional crown all move through the same front desk, and most of them are governed by plan rules rather than documented clinical need. Whether a claim pays in full often depends on facts gathered before the patient sits down: how much of the annual maximum is left, when the last prophylaxis or bitewing series was paid, and whether the patient is still inside a waiting period for basic or major services.",
       "When those facts are missed, the result is rarely a dramatic denial. It is a steady drip of small balances: a cleaning that exceeded the plan's frequency, a posterior composite paid at the amalgam rate, a crown that was estimated at 50 percent but paid nothing because the patient's maximum was already used. Each one becomes a patient balance the office has to explain.",
       "Our team works inside your practice management software and clearinghouse to verify benefits with full history, build estimates your front desk can stand behind, send complete claims with the right attachments and follow up on every open insurance balance until it is paid, appealed or correctly moved to the patient.",
     ],
@@ -119,7 +119,7 @@ export const dentalSpecialties: Specialty[] = [
     summary:
       'Orthodontic billing support for lifetime maximums, initial and periodic insurance billing, contract tracking and transfers mid-treatment.',
     definition:
-      "Orthodontic billing involves verifying the patient's orthodontic lifetime maximum and age limits, billing the plan for the initial banding or appliance placement, then sending periodic claims or relying on automatic payments across the treatment term. It also covers patient payment contracts, coordination of benefits, Medicaid medical necessity rules and balances when patients transfer or stop treatment.",
+      "Orthodontic billing involves verifying the patient's orthodontic lifetime maximum and age limits, billing the plan for the initial banding or appliance placement, then sending periodic claims or relying on automatic payments across the treatment term. It also covers patient payment contracts, coordination of benefits, Medicaid clinical necessity rules and balances when patients transfer or stop treatment.",
     intro: [
       "Orthodontic billing does not look like the rest of dentistry. Most commercial dental plans that cover orthodontics pay against a lifetime maximum rather than an annual one, and they rarely pay it in one lump sum. A common pattern is an initial payment when appliances are placed followed by monthly or quarterly installments for the length of treatment, and each plan has its own rule on whether those installments arrive automatically or need a claim each time.",
       "That structure turns every case into a multi-year receivable. The office has to track how much of the lifetime maximum has been paid, whether the patient is still eligible each period, whether the patient aged out of dependent coverage, and how the patient's own payment contract absorbs whatever insurance does not pay. A change of employer, a second plan or a mid-treatment transfer can rewrite the math halfway through.",
@@ -149,7 +149,7 @@ export const dentalSpecialties: Specialty[] = [
       {
         title: 'Transfers, early debanding and Medicaid criteria',
         detail:
-          'Patients who transfer in or out mid-treatment need prior payment history to calculate what the new plan or office can still collect. Medicaid and CHIP orthodontic coverage, where available, is typically limited to cases that meet state medical necessity scoring and requires prior authorization with records.',
+          'Patients who transfer in or out mid-treatment need prior payment history to calculate what the new plan or office can still collect. Medicaid and CHIP orthodontic coverage, where available, is typically limited to cases that meet state clinical necessity scoring and requires prior authorization with records.',
       },
     ],
     payerWorkflow: [
@@ -184,7 +184,7 @@ export const dentalSpecialties: Specialty[] = [
       },
       {
         q: 'Does Medicaid cover braces?',
-        a: 'Medicaid and CHIP programs may cover orthodontic treatment for children and teens, but usually only for severe cases that meet state medical necessity criteria. Most programs require prior authorization supported by records such as models or scans, photos and radiographs, often scored against a state index. Cosmetic or mild cases are typically not covered, and rules vary by state and managed care dental plan.',
+        a: 'Medicaid and CHIP programs may cover orthodontic treatment for children and teens, but usually only for severe cases that meet state clinical necessity criteria. Most programs require prior authorization supported by records such as models or scans, photos and radiographs, often scored against a state index. Cosmetic or mild cases are typically not covered, and rules vary by state and managed care dental plan.',
       },
       {
         q: 'How should a transfer patient be billed?',
@@ -413,39 +413,39 @@ export const dentalSpecialties: Specialty[] = [
     kind: 'dental',
     icon: 'Scissors',
     summary:
-      'Oral surgery billing across dental and medical plans: cross-coding, anesthesia time, authorizations, trauma claims and implant estimates.',
+      'Oral surgery billing on dental plans: extractions, bone grafts, implants, sedation time, predeterminations, trauma claims and patient estimates.',
     definition:
-      'Oral surgery billing, for oral and maxillofacial surgery practices, involves deciding whether each service belongs on a dental claim, a medical claim or both, cross-coding to CPT and ICD-10-CM when medical coverage applies, billing anesthesia by time, securing prior authorizations, and handling coordination of benefits for extractions, biopsies, trauma, pathology, TMJ, orthognathic and implant procedures.',
+      'Oral surgery billing, for oral and maxillofacial surgery practices, involves verifying dental benefits for surgical services, coding extractions, bone grafts, implants and biopsies with current CDT codes, billing sedation and general anesthesia by documented time, requesting predeterminations, supporting claims with radiographs and narratives, and handling coordination of benefits between dental plans.',
     intro: [
-      "Oral surgery sits on the line between dentistry and medicine, and so does its billing. Many procedures can be covered by a patient's dental plan, a medical plan or both, depending on the diagnosis, the plan language and where the care was delivered. Impacted third molars, biopsies, jaw fractures, cysts, infections and orthognathic surgery may all be candidates for medical coverage, while routine extractions and implants usually stay on the dental side.",
-      "Billing medical plans means a different form, a different code set and a different set of rules: the CMS-1500 or 837P, CPT and ICD-10-CM codes, medical necessity, prior authorization and often a separate credentialing relationship with each medical payer. The dental plan then becomes secondary, or the reverse, and coordination of benefits has to be handled carefully so the patient is not billed for what a second plan should pay.",
-      "Our team works inside your systems to verify both dental and medical coverage, request authorizations, cross-code appropriate services, bill anesthesia time accurately and follow up on claims with both payers until the account is resolved.",
+      "Oral surgery claims carry more documentation weight than most dental claims. Surgical extractions, impacted third molars, bone grafts, ridge preservation, implant placement and biopsies are often classified as major or surgical services, with their own coinsurance, waiting periods and frequency rules. Many dental carriers review these claims against radiographs and a narrative before paying, and a missing image or a vague note is one of the most common reasons a surgical claim stalls.",
+      "Sedation adds another layer. Deep sedation and general anesthesia are billed in time increments on the dental claim, and plans differ on which procedures qualify, how many increments they will pay and what record they want to see. Implant cases bring their own rules, including missing tooth clauses, alternate benefits and exclusions for related grafting, so a pre-treatment estimate is often the only way to give the patient an accurate number before surgery.",
+      "Our team works inside your practice management software to verify surgical benefits before the appointment, request predeterminations where they help, code and document each claim to match the operative note, bill sedation time accurately and follow up with each dental carrier until the account is resolved.",
     ],
     challenges: [
       {
-        title: 'Dental versus medical claim decisions',
+        title: 'Extractions and impacted teeth',
         detail:
-          'Whether a procedure is billed to the dental or medical plan depends on the diagnosis, the plan exclusions and sometimes the place of service. Pathology, trauma, infection and some impacted teeth may qualify for medical coverage, while routine extractions usually do not. Making this decision before surgery shapes the authorization, the estimate and the claim.',
+          'Simple, surgical and impacted extractions are coded differently, and carriers look at the radiograph and the operative note to confirm which one was performed. A claim for a surgical or impacted extraction without an image and a short narrative is a common candidate for a downgrade or a request for more information.',
       },
       {
-        title: 'Cross-coding to CPT and ICD-10-CM',
+        title: 'Bone grafts and ridge preservation',
         detail:
-          'Medical claims require CPT or HCPCS procedure codes and ICD-10-CM diagnosis codes rather than CDT codes, submitted on the CMS-1500 or 837P. Diagnoses must be specific and supported by the operative note, and the surgeon must be credentialed with the medical payer for the claim to process in network.',
+          'Grafting done at the time of an extraction or before an implant is covered by some dental plans and excluded by others. Some plans treat a graft as part of the implant case and apply the same limits. Verifying grafting coverage separately, and documenting why the graft was needed, keeps the estimate and the claim aligned.',
       },
       {
         title: 'Anesthesia and sedation billing',
         detail:
-          'Deep sedation and general anesthesia are commonly billed in time increments on dental claims, and plans may limit coverage to certain procedures or require documentation of medical need. Start and end times, the anesthesia record and the provider permit all need to line up with what is billed.',
+          'Deep sedation and general anesthesia are commonly billed in time increments on dental claims, and plans may limit coverage to certain procedures or require documentation of clinical need. Start and end times, the anesthesia record and the provider permit all need to line up with what is billed.',
       },
       {
-        title: 'Prior authorization and predetermination',
+        title: 'Predeterminations for surgical and implant cases',
         detail:
-          'Medical plans often require authorization for orthognathic surgery, TMJ procedures and hospital or surgery center cases. Dental plans may require or recommend predeterminations for implants, bone grafts and surgical extractions. Missing an authorization usually cannot be fixed after the fact.',
+          'Dental plans may require or recommend predeterminations for implants, bone grafts, sinus procedures and surgical extractions. A predetermination is not a guarantee of payment, but it shows how the plan reads the case and gives the patient a realistic estimate. Requesting it early leaves time for the carrier to ask for more records.',
       },
       {
-        title: 'Trauma, accidents and third-party liability',
+        title: 'Trauma and accident-related dental care',
         detail:
-          'Facial and dental trauma may involve the medical plan, the dental plan, auto insurance or another liability carrier. Accident details, dates and coordination questions need to be documented up front so claims go to the right payer in the right order.',
+          'Dental injuries from an accident may involve an accident benefit in the dental plan or another liability policy. Accident details, dates and coordination questions need to be documented up front so the dental claim goes to the right carrier in the right order with the information it asks for.',
       },
       {
         title: 'Implants, grafts and the missing tooth clause',
@@ -454,38 +454,37 @@ export const dentalSpecialties: Specialty[] = [
       },
     ],
     payerWorkflow: [
-      'Before surgery, both dental and medical coverage are verified, the likely primary payer is identified from the diagnosis and plan language, and authorizations or predeterminations are requested where required.',
-      'Dental-side services are billed on the ADA claim form or 837D with radiographs and narratives; medical-side services are cross-coded and billed on the CMS-1500 or 837P with the operative report available.',
+      'Before surgery, dental benefits are verified for surgical coinsurance, waiting periods, frequency limits, implant and grafting coverage and sedation rules, and predeterminations are requested where the plan requires them or the case is large.',
+      'Surgical services are billed on the ADA claim form or 837D with current CDT codes, tooth numbers, radiographs and a narrative drawn from the operative note.',
       'Anesthesia is billed by documented time and supported by the anesthesia record, with plan limits checked in advance.',
-      'Once the primary payer adjudicates, the secondary claim is sent with the primary EOB so coordination of benefits is applied correctly.',
-      'Denials are worked by payer type: medical necessity and authorization appeals on the medical side, frequency, exclusion and documentation issues on the dental side.',
+      'When a patient has two dental plans, the secondary claim is sent with the primary EOB so coordination of benefits is applied correctly.',
+      'Denials and downgrades are worked by reason: missing documentation, frequency or waiting period issues, exclusions and alternate benefits, with appeals that include the clinical rationale.',
     ],
     services: [
       'dental-billing',
-      'medical-billing',
-      'medical-coding',
+      'claims-submission',
       'prior-authorization',
       'benefits-verification',
       'denial-appeals',
-      'medical-credentialing',
+      'provider-enrollment',
       'aging-ar-follow-up',
     ],
     faqs: [
       {
-        q: 'When should oral surgery be billed to medical insurance?',
-        a: "Oral surgery is often a candidate for medical billing when it treats a medical condition rather than a routine dental problem, such as trauma, pathology, infection, cysts, certain impacted teeth or jaw deformities. The final answer depends on the diagnosis, the medical plan exclusions and the surgeon's network status. Verifying medical benefits and authorization rules before surgery is the safest starting point.",
+        q: 'What documentation do dental plans want for surgical extractions?',
+        a: 'Most carriers want a current radiograph that shows the tooth and a short narrative explaining why a surgical approach was needed, such as bone removal or sectioning the tooth. The operative note should support the code billed. Sending these with the first claim avoids a request for more information and the delay that comes with it.',
       },
       {
-        q: 'What is medical-dental cross-coding?',
-        a: 'Cross-coding is translating a dental service into the code sets a medical plan accepts: CPT or HCPCS for the procedure and ICD-10-CM for the diagnosis, billed on the CMS-1500 or 837P instead of the ADA form. The codes must reflect the documentation exactly. Cross-coding does not make a dental service medically covered; it only lets a covered medical service be billed correctly.',
+        q: 'Do dental plans cover bone grafts?',
+        a: 'Some do and many limit it. A plan may cover a graft placed at the time of an extraction, exclude grafts tied to implants or apply the same waiting period and maximum as the implant itself. Checking grafting coverage as its own line during verification, and sending a predetermination for larger cases, gives the patient a clearer estimate.',
       },
       {
         q: 'How is IV sedation billed for oral surgery?',
         a: "On dental claims, deep sedation and general anesthesia are usually billed in time increments based on documented start and end times. Plans often limit sedation coverage to certain surgical procedures or require a reason the patient needed it. The anesthesia record, the procedures performed and the provider's sedation permit should all support the time billed.",
       },
       {
-        q: 'Who pays first after a facial trauma accident?',
-        a: 'It depends on the coverage involved. Auto, workers compensation or another liability policy may be primary for accident-related care, followed by the medical plan and then the dental plan. Plan coordination rules decide the order. Collecting accident details and all insurance information at the first visit helps route claims correctly and avoids denials for missing coordination information.',
+        q: 'Should oral surgery offices send predeterminations?',
+        a: 'For implants, grafts, sinus procedures and multi-tooth surgical cases, a predetermination is often worth the wait. It shows how the dental plan applies its limits, alternate benefits and exclusions to the specific case. It does not guarantee payment, and benefits are still checked again on the date of service.',
       },
       {
         q: 'Do dental plans cover dental implants?',
@@ -495,17 +494,17 @@ export const dentalSpecialties: Specialty[] = [
     relatedTools: [
       'dental-insurance-verification-checklist',
       'prior-authorization-checklist',
-      'icd-10-code-search',
+      'dental-patient-estimate-calculator',
       'dental-denial-rate-calculator',
     ],
     seoTitle: 'Oral Surgery Billing Services | Texas Solutions RCM',
     metaDescription:
-      'Oral surgery billing services for medical-dental cross-coding, anesthesia time, prior authorizations, trauma claims and dental implant estimates.',
+      'Oral surgery billing services for extractions, bone grafts, implants, sedation time, predeterminations and dental claim follow-up with carriers.',
     keywords: [
       'oral surgery billing',
       'oral surgery billing services',
       'oral and maxillofacial surgery billing',
-      'oral surgery medical insurance',
+      'bone graft dental billing',
       'IV sedation dental billing',
       'dental implant insurance billing',
     ],
@@ -547,7 +546,7 @@ export const dentalSpecialties: Specialty[] = [
       {
         title: 'Sedation, general anesthesia and facility cases',
         detail:
-          'Young or anxious children sometimes need treatment under sedation or general anesthesia in a hospital or surgery center. These cases often require dental prior authorization, medical plan authorization for the facility and anesthesia, and close coordination with the facility billing office.',
+          'Young or anxious children sometimes need treatment under sedation or general anesthesia in a hospital or surgery center. These cases often require a dental prior authorization for the planned treatment and the anesthesia, documentation of why treatment in the chair is not possible, and close coordination with the facility billing office.',
       },
       {
         title: 'Family accounts and coordination of benefits',
@@ -586,7 +585,7 @@ export const dentalSpecialties: Specialty[] = [
       },
       {
         q: 'What authorizations are needed for dental treatment under general anesthesia?',
-        a: 'Requirements vary, but cases done under general anesthesia in a hospital or surgery center often need a dental prior authorization for the planned treatment and a medical plan authorization for the facility and anesthesia. Documentation of why the child cannot be treated in the chair is commonly requested. Starting authorizations early gives time to resolve requests for more information.',
+        a: 'Requirements vary, but cases done under general anesthesia in a hospital or surgery center often need a dental prior authorization that covers the planned treatment and the anesthesia, and the facility may have its own approval steps. Documentation of why the child cannot be treated in the chair is commonly requested. Starting authorizations early gives time to resolve requests for more information.',
       },
       {
         q: 'Why are sealant claims sometimes denied?',
@@ -623,7 +622,7 @@ export const dentalSpecialties: Specialty[] = [
     summary:
       'Prosthodontic billing support for crowns, bridges, dentures and implants: replacement rules, missing tooth clauses, seat dates and estimates.',
     definition:
-      'Prosthodontic billing involves estimating and billing crowns, bridges, dentures and implant restorations under plan rules for replacement intervals, missing tooth clauses and alternate benefits, submitting claims on the correct completion date with radiographs and narratives, and coordinating dental and medical coverage for cases such as sleep apnea appliances or reconstruction after trauma or cancer.',
+      'Prosthodontic billing involves estimating and billing crowns, bridges, dentures and implant restorations under plan rules for replacement intervals, missing tooth clauses and alternate benefits, submitting claims on the correct completion date with radiographs and narratives, and coordinating benefits when a patient has more than one dental plan.',
     intro: [
       "Prosthodontic treatment is expensive, multi-visit and heavily governed by plan limitations. Most dental plans classify crowns, bridges, dentures and implant restorations as major services, with lower coinsurance, waiting periods for new enrollees and a replacement rule that limits how often a prosthesis can be replaced. A single case can consume a patient's annual maximum, or more than one year of it.",
       "The rules that matter most are often buried in plan language: a missing tooth clause that excludes replacing teeth lost before coverage began, an alternate benefit that pays an implant crown at the rate of a partial denture, or a requirement that a crown be billed on the seat date rather than the preparation date. These are the details that separate an accurate estimate from a large surprise balance.",
@@ -651,23 +650,22 @@ export const dentalSpecialties: Specialty[] = [
           'Many dental plans expect crowns, bridges and dentures to be billed on the seat or delivery date rather than the preparation or impression date. If coverage ends between visits, billing on the wrong date can lead to recoupment or a denial for a patient who is no longer eligible.',
       },
       {
-        title: 'Medical coverage for prosthetic cases',
+        title: 'Dual dental coverage on large cases',
         detail:
-          'Some prosthodontic care may involve medical coverage, such as oral appliances for obstructive sleep apnea billed to medical plans as durable medical equipment, or maxillofacial prosthetics after cancer or trauma. These cases need medical documentation, physician involvement and the correct medical claim format.',
+          'When a patient has two dental plans, a large prosthetic case can draw on both annual maximums, but only if the primary and secondary are identified correctly and the secondary claim includes the primary EOB. Each plan may also apply its own replacement rule or alternate benefit, so both need to be checked before the estimate is presented.',
       },
     ],
     payerWorkflow: [
       'Benefits are verified for major-service coinsurance, waiting periods, missing tooth clauses, replacement intervals and alternate benefit rules, along with the placement date of any existing prosthesis.',
       'Pre-treatment estimates are submitted for larger cases with radiographs, periodontal status and a narrative describing the existing condition and the reason for treatment.',
       'Claims are billed on the ADA claim form or 837D on the plan-required date, typically the seat or delivery date, with tooth numbers, prior placement dates and attachments.',
-      'Medical-side cases, such as sleep apnea appliances, are verified and billed separately to medical plans with the required physician documentation.',
+      'For patients with two dental plans, the secondary claim is sent with the primary EOB so each plan applies its own limits and the remaining balance is accurate.',
       'Partial payments and downgrades are reviewed against the plan rule and estimate, and appeals include the clinical rationale for the treatment chosen.',
     ],
     services: [
       'dental-billing',
       'benefits-verification',
       'claims-submission',
-      'medical-billing',
       'denial-appeals',
       'patient-financial-communication',
       'patient-billing',
@@ -686,8 +684,8 @@ export const dentalSpecialties: Specialty[] = [
         a: 'Many plans allow replacement of crowns, bridges and dentures only after a set number of years from the original placement, commonly in the range of five years, though plans vary. Some make exceptions when the existing prosthesis cannot be repaired. Knowing the original placement date before treatment is the key piece of information for the estimate.',
       },
       {
-        q: 'Can an oral appliance for sleep apnea be billed to medical insurance?',
-        a: 'Often it can. Oral appliances for obstructive sleep apnea are commonly billed to medical plans as durable medical equipment rather than to dental plans, and they usually require a diagnosis from a sleep study and an order from a physician. Medicare and many medical plans have additional supplier and documentation requirements, so coverage should be verified before the appliance is made.',
+        q: 'Can a large prosthetic case use two dental plans?',
+        a: 'Yes, when the patient is covered by two dental plans. The primary plan pays first under its own limits, then the secondary claim is sent with the primary EOB and the secondary pays according to its coordination rules. Each plan may apply its own replacement interval, missing tooth clause or alternate benefit, so checking both before treatment keeps the estimate realistic.',
       },
       {
         q: 'Why did the plan pay an implant crown as a partial denture?',
@@ -709,7 +707,7 @@ export const dentalSpecialties: Specialty[] = [
       'dental implant billing',
       'missing tooth clause',
       'denture insurance billing',
-      'sleep apnea appliance billing',
+      'dental prosthetic coordination of benefits',
     ],
   },
 
@@ -766,7 +764,7 @@ export const dentalSpecialties: Specialty[] = [
     ],
     services: [
       'dental-billing',
-      'medical-credentialing',
+      'dental-credentialing',
       'provider-enrollment',
       'fee-schedule-analysis',
       'payer-contracting',

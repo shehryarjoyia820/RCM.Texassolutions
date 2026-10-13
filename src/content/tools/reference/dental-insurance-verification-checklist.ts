@@ -3,10 +3,10 @@ import type { ReferenceTool } from '../../types';
 const tool: ReferenceTool = {
   kind: 'checklist',
   slug: 'dental-insurance-verification-checklist',
-  name: 'Dental Insurance Verification Checklist',
+  name: 'Dental Insurance Verification Form and Checklist',
   category: 'checklist',
   icon: 'Smile',
-  summary: 'What to confirm with a dental plan before the appointment: eligibility, maximums, frequencies, waiting periods, downgrades and more.',
+  summary: 'A printable dental insurance verification form and checklist covering what to confirm with a dental plan before the appointment: eligibility, maximums, frequencies, waiting periods, downgrades and more.',
   definition:
     'A dental insurance verification checklist lists the plan details a dental office confirms before treatment, such as active coverage, annual maximum remaining, deductibles, coverage percentages by category, frequency limits, waiting periods and plan clauses that can reduce payment. Verifying these in advance helps the office give accurate estimates and avoid denied claims.',
   sections: [
@@ -16,7 +16,7 @@ const tool: ReferenceTool = {
         { text: 'Subscriber name, date of birth, member ID and relationship to the patient' },
         { text: 'Employer or group name and group number' },
         { text: 'Payer name, claims address or payer ID' },
-        { text: 'Plan type (PPO, HMO/DHMO, indemnity, Medicaid or a medical plan with dental benefits)' },
+        { text: 'Plan type (PPO, HMO/DHMO, indemnity, Medicaid dental, CHIP or a Medicare Advantage plan with dental benefits)' },
         { text: 'Effective date and confirmation that coverage is active for the appointment date' },
         { text: 'Whether the office is in network for this specific plan' },
         { text: 'Secondary dental coverage and which plan is primary' },
@@ -51,7 +51,7 @@ const tool: ReferenceTool = {
         { text: 'Documentation the plan requires, such as X-rays, periodontal charting, photos or narratives' },
         { text: 'Rules for periodontal maintenance versus prophylaxis after scaling and root planing' },
         { text: 'Coverage for implants, sedation and nightguards when planned' },
-        { text: 'Whether any treatment would be covered by the medical plan first (such as some oral surgery)' },
+        { text: 'Coverage, waiting periods and grafting rules for planned oral surgery such as surgical extractions' },
       ],
     },
     {
@@ -66,6 +66,10 @@ const tool: ReferenceTool = {
     },
   ],
   faqs: [
+    {
+      q: 'Can I print this as a dental insurance verification form?',
+      a: 'Yes, you can print this checklist and use it as a dental insurance verification form or breakdown sheet for each patient. Tick each item as the carrier or portal confirms it, write the answers beside it, and file the completed sheet in the patient record. Many offices also copy the same fields into their dental software so the breakdown is visible at checkout.',
+    },
     {
       q: 'How far ahead should dental insurance be verified?',
       a: 'Dental insurance is best verified a few business days before the appointment, which leaves time to resolve problems and contact the patient. Re-check on the day of service for new patients or when coverage may have changed, such as at a new benefit year, after a job change or before starting a major treatment plan.',
@@ -87,16 +91,20 @@ const tool: ReferenceTool = {
     { label: 'American Dental Association: Dental benefits and coding resources', url: 'https://www.ada.org/resources/practice/dental-insurance' },
   ],
   relatedServices: ['dental-billing', 'insurance-eligibility-verification', 'benefits-verification', 'patient-financial-communication'],
-  relatedTools: ['dental-insurance-collection-calculator', 'dental-denial-rate-calculator', 'medical-billing-glossary', 'patient-balance-calculator'],
-  seoTitle: 'Dental Insurance Verification Checklist',
+  relatedTools: ['dental-insurance-collection-calculator', 'dental-denial-rate-calculator', 'patient-balance-calculator'],
+  seoTitle: 'Dental Insurance Verification Form and Checklist',
   metaDescription:
-    'Dental insurance verification checklist: eligibility, annual maximum, deductibles, coverage tiers, frequency limits, waiting periods and downgrade rules.',
+    'Printable dental insurance verification form and checklist: eligibility, annual maximum, deductibles, coverage tiers, frequency limits and waiting periods.',
   keywords: [
     'dental insurance verification checklist',
     'dental eligibility verification',
     'dental benefits breakdown',
     'dental frequency limitations',
     'dental insurance verification form',
+    'dental insurance verification sheet',
+    'dental insurance verification forms',
+    'printable dental insurance verification form',
+    'dental insurance breakdown form',
     'dental pre-treatment estimate',
   ],
 };

@@ -1,7 +1,7 @@
 // Bundles front-end and admin scripts and one file per calculator.
 // Run: node build/build-js.mjs [--watch]
 import { build, context } from 'esbuild';
-import { readdirSync, existsSync, mkdirSync, rmSync } from 'node:fs';
+import { readdirSync, existsSync, mkdirSync, rmSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -18,7 +18,10 @@ const bundles = { ...common, entryPoints: entries.map((e) => join(root, `src/js/
 
 // 2. Calculators: window.RCM_CALC[key] = compute
 const calcDir = join(root, 'src/content/tools/calculators');
-const calcs = readdirSync(calcDir).filter((f) => f.endsWith('.ts')).map((f) => f.slice(0, -3));
+// Only calculators that are live on the site (data/tools.json, written by export-content) get a script.
+const toolsJson = join(root, 'wordpress/rcm-core/data/tools.json');
+const live = existsSync(toolsJson) ? new Set(JSON.parse(readFileSync(toolsJson, 'utf8')).map((t) => t.slug)) : null;
+const calcs = readdirSync(calcDir).filter((f) => f.endsWith('.ts')).map((f) => f.slice(0, -3)).filter((k) => !live || live.has(k));
 rmSync(join(outDir, 'calc'), { recursive: true, force: true });
 mkdirSync(join(outDir, 'calc'), { recursive: true });
 const calcBuilds = calcs.map((key) => ({

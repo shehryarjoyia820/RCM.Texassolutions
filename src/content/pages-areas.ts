@@ -147,7 +147,7 @@ const texas: PageContent = {
     ),
     h2('Texas Medicaid and CHIP dental'),
     p(
-      'Texas Medicaid and the Children\'s Health Insurance Program (CHIP) are overseen by the Texas Health and Human Services Commission (HHSC). For children, HHSC delivers Medicaid and CHIP dental benefits through dental maintenance organizations (DMOs) that it contracts with statewide, separate from the medical managed care plans. The state\'s current managed care service area materials list DentaQuest, MCNA Dental and UnitedHealthcare Dental as the statewide dental plans.'
+      'Texas Medicaid and the Children\'s Health Insurance Program (CHIP) are overseen by the Texas Health and Human Services Commission (HHSC). For children, HHSC delivers Medicaid and CHIP dental benefits through dental maintenance organizations (DMOs) that it contracts with statewide, separate from the plans that cover other health services. The state\'s current managed care service area materials list DentaQuest, MCNA Dental and UnitedHealthcare Dental as the statewide dental plans.'
     ),
     p(
       'Each DMO has its own provider manual, portal, prior authorization requirements and claims process, even though all of them work under HHSC contract rules. A pediatric or general practice that sees many Medicaid and CHIP children may submit claims to all three in the same week. That makes the first check at every visit simple but important: which DMO is this child assigned to today, and is your office in that DMO\'s network?'
@@ -218,14 +218,14 @@ const florida: PageContent = {
     ),
     h2('Florida Medicaid dental: the SMMC Dental program'),
     p(
-      'Florida Medicaid is administered by the Agency for Health Care Administration (AHCA). Most Medicaid recipients receive care through the Statewide Medicaid Managed Care (SMMC) program, and dental services are delivered through a separate SMMC Dental component rather than through the medical health plans. AHCA contracts with dental plans to provide Medicaid dental benefits to children and adults, and Medicaid enrollees are enrolled in a dental plan.'
+      'Florida Medicaid is administered by the Agency for Health Care Administration (AHCA). Most Medicaid recipients receive care through the Statewide Medicaid Managed Care (SMMC) program, and dental services are delivered through a separate SMMC Dental component rather than through the plans that cover other health services. AHCA contracts with dental plans to provide Medicaid dental benefits to children and adults, and Medicaid enrollees are enrolled in a dental plan.'
     ),
     p(
       'The current generation of SMMC contracts took effect on February 1, 2025. When contracts change, patients can move between dental plans, and the office sees new portals, new prior authorization rules and new claims addresses. Checking which dental plan a patient is assigned to at every visit, not only the first one, is the most reliable protection against billing the wrong plan.'
     ),
     h3('Dental anesthesia in hospitals and surgery centers'),
     p(
-      'Florida also moved payment responsibility for some anesthesia services. Effective October 1, 2025, AHCA shifted payment for non-emergency dental anesthesia and sedation performed in a hospital outpatient setting or ambulatory surgical center from the Medicaid dental plans to the Medicaid health plans. Anesthesia provided with dental treatment in the office remains with the dental plans when it is medically necessary. Practices that treat children or patients with special needs under general anesthesia need to know which plan to bill for each part of the case.'
+      'Florida also moved payment responsibility for some anesthesia services. Effective October 1, 2025, AHCA shifted payment for non-emergency dental anesthesia and sedation performed in a hospital outpatient setting or ambulatory surgical center from the Medicaid dental plans to the Medicaid health plans. Anesthesia provided with dental treatment in the office remains with the dental plans when it is clinically necessary. Practices that treat children or patients with special needs under general anesthesia need to know which plan to bill for each part of the case.'
     ),
     p(
       `Each SMMC dental plan runs its own credentialing, and providers generally need to be enrolled with Florida Medicaid before a plan can contract with them. Our ${S.cred} service covers Medicaid enrollment and dental plan credentialing, and our ${S.verify} work confirms the assigned plan before treatment.`
@@ -494,9 +494,12 @@ const deltaDental: PageContent = {
     p(
       'For larger treatment plans we submit pre-treatment estimates so the patient can see an expected share before treatment. An estimate is not a guarantee of payment: the final claim still depends on eligibility, remaining maximums and frequency limits on the date of service.'
     ),
-    h2('Posting EOBs and ERAs'),
+    h2('Posting EOBs and ERAs: reading a Delta Dental EOB'),
     p(
       `Delta Dental payments are posted line by line from the EOB or ERA, with contractual write-offs matched to your fee schedule for that network. We flag any line paid below the expected amount, any procedure downgraded to an alternate benefit and any patient portion that differs from the estimate, as part of ${S.posting}.`
+    ),
+    p(
+      'A Delta Dental explanation of benefits (EOB) shows, for each procedure line, the submitted fee, the amount Delta Dental allows under the network that applies, the plan payment, the patient portion and any adjustment or remark codes. Reading those columns side by side tells you whether a difference comes from the network fee schedule, a frequency limit, an alternate benefit or the annual maximum, which decides whether to post, correct or appeal the line.'
     ),
     h2('Why Delta Dental claims get pended or denied'),
     p('The reasons are usually familiar, though each member company words them differently:'),

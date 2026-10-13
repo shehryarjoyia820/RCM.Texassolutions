@@ -121,8 +121,20 @@ final class Importer
                 }
             }
         }
-        rcm_audit('content.trash_retired', 'content', '', ['trashed' => $n]);
-        wp_safe_redirect(add_query_arg(['page' => 'rcm-tools', 'trashed' => $n], admin_url('admin.php')));
+        // Old blog categories and tags (from the medical era) that no published post uses any more.
+        $terms = 0;
+        foreach (['category', 'post_tag'] as $tax) {
+            $unused = get_terms(['taxonomy' => $tax, 'hide_empty' => false, 'fields' => 'all']);
+            foreach (is_array($unused) ? $unused : [] as $t) {
+                $keep = $tax === 'category' && in_array($t->name, self::BLOG_CATEGORIES, true);
+                $published = get_posts(['post_type' => 'post', 'post_status' => 'publish', 'numberposts' => 1, 'fields' => 'ids', 'tax_query' => [['taxonomy' => $tax, 'terms' => $t->term_id]]]);
+                if (!$keep && !$published && (int) $t->term_id !== (int) get_option('default_category') && !is_wp_error(wp_delete_term($t->term_id, $tax))) {
+                    $terms++;
+                }
+            }
+        }
+        rcm_audit('content.trash_retired', 'content', '', ['trashed' => $n, 'terms_removed' => $terms]);
+        wp_safe_redirect(add_query_arg(['page' => 'rcm-tools', 'trashed' => $n, 'terms' => $terms], admin_url('admin.php')));
         exit;
     }
 

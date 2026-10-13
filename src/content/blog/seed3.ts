@@ -276,7 +276,7 @@ export const seedPosts3: SeedPost[] = [
     readingMinutes: 8,
     publishedAt: '2026-10-11',
     html: `
-<p><strong>Medicaid dental billing is run by each state, which must cover dental care for children through the EPSDT benefit but decides for itself what adult dental care to cover. Medicare dental billing is far narrower: Original Medicare generally excludes dental care, paying only in limited cases tied to covered medical treatment.</strong> Many Medicare Advantage plans add their own dental benefits.</p>
+<p><strong>Medicaid dental billing is run by each state, which must cover dental care for children through the EPSDT benefit but decides for itself what adult dental care to cover. Medicare dental billing is far narrower: Original Medicare generally excludes dental care, paying only in limited cases tied to other covered treatment.</strong> Many Medicare Advantage plans add their own dental benefits.</p>
 
 <p>Because the two programs work so differently, dental offices that see Medicaid or Medicare patients need separate rules, separate verification steps and often separate enrollment. This guide explains the basics. Program details change, so confirm current rules with your state Medicaid agency and with CMS at cms.gov before you rely on them.</p>
 
@@ -291,7 +291,7 @@ export const seedPosts3: SeedPost[] = [
 <p>Providers must enroll with the state Medicaid program, and often separately with each managed care plan, before they can be paid. If you are adding Medicaid plans, our <a href="/services/dental-credentialing/">dental credentialing</a> team can help organize those applications.</p>
 
 <h3>What is EPSDT dental coverage for children?</h3>
-<p>The Early and Periodic Screening, Diagnostic, and Treatment (EPSDT) benefit is Medicaid's comprehensive benefit for enrollees under age 21. Under federal rules, Medicaid must cover dental services for children, including at a minimum relief of pain and infections, restoration of teeth and maintenance of dental health. States set periodicity schedules for dental visits, and medically necessary treatment found during a screening must be covered even if it is not otherwise listed in the state plan.</p>
+<p>The Early and Periodic Screening, Diagnostic, and Treatment (EPSDT) benefit is Medicaid's comprehensive benefit for enrollees under age 21. Under federal rules, Medicaid must cover dental services for children, including at a minimum relief of pain and infections, restoration of teeth and maintenance of dental health. States set periodicity schedules for dental visits, and necessary treatment found during a screening must be covered even if it is not otherwise listed in the state plan.</p>
 <p>The Children's Health Insurance Program (CHIP) also includes dental coverage. States that run CHIP as part of Medicaid follow EPSDT rules, while separate CHIP programs must still cover dental services that prevent disease, promote oral health, restore oral structures and treat emergencies. For pediatric offices, verifying which program and which plan a child belongs to is the first step on every visit. Our page on <a href="/specialties/pediatric-dentistry/">pediatric dental billing</a> covers more of this workflow.</p>
 
 <h2>What makes Medicaid dental claims get denied?</h2>
@@ -306,11 +306,11 @@ export const seedPosts3: SeedPost[] = [
 <p>Checking eligibility on the day of service, not only when the appointment is booked, prevents many of these. Medicaid eligibility can change month to month.</p>
 
 <h2>Does Medicare cover dental care?</h2>
-<p>Generally no. The Medicare statute excludes most dental services, such as routine cleanings, fillings, extractions and dentures. CMS does pay for dental services in a limited number of situations where the dental care is inextricably linked to, and clinically necessary for, a Medicare-covered medical service. Examples CMS lists include dental exams and treatment needed before an organ transplant, cardiac valve replacement or valvuloplasty, certain cancer treatments, and dialysis for end-stage renal disease, as well as some services related to jaw fractures and reconstruction after tumor removal.</p>
-<p>CMS has added to this list through recent Physician Fee Schedule rules, so it is worth checking the CMS Medicare dental coverage page each year.</p>
+<p>Generally no. The Medicare statute excludes most dental services, such as routine cleanings, fillings, extractions and dentures. CMS does pay for dental services in a limited number of situations where the dental care is inextricably linked to, and clinically necessary for, another Medicare-covered service. Examples CMS lists include dental exams and treatment needed before an organ transplant, cardiac valve replacement or valvuloplasty, certain cancer treatments, and dialysis for end-stage renal disease, as well as some services related to jaw fractures and reconstruction after tumor removal.</p>
+<p>CMS has added to this list through its recent annual payment rules, so it is worth checking the CMS Medicare dental coverage page each year.</p>
 
 <h3>How are Medicare-covered dental services billed?</h3>
-<p>When a dental service qualifies, CMS expects the claim to show that link to the covered medical service. As of July 1, 2025, CMS requires the KX modifier on claims for dental services that the clinician believes are inextricably linked to covered medical services, and requires an ICD-10-CM diagnosis code on dental claims (the 837D or the ADA claim form) for these services. The practitioner must be enrolled in Medicare to bill, and documentation should clearly connect the dental work to the medical treatment, often through communication with the treating physician.</p>
+<p>When a dental service qualifies, CMS expects the dental claim to show that link to the other covered service. As of July 1, 2025, CMS requires the KX modifier on claims for dental services that the clinician believes are inextricably linked to other covered services, and requires a diagnosis code on the dental claim (the 837D or the ADA claim form) for these services. The dentist must be enrolled in Medicare to bill, and the dental record should clearly explain why the dental work was needed for the related treatment.</p>
 
 <h2>What about Medicare Advantage dental benefits?</h2>
 <p>Medicare Advantage (Part C) plans are offered by private insurers and many include supplemental dental benefits that go beyond Original Medicare. These benefits vary widely: some cover only preventive care, others cover basic and major services, and many have annual maximums. The benefit may be administered by a separate dental carrier with its own network, claim address and payer ID.</p>
@@ -346,11 +346,11 @@ export const seedPosts3: SeedPost[] = [
       },
       {
         q: 'Does Original Medicare pay for dental work?',
-        a: 'Generally no. Medicare pays for dental services only in limited situations where the dental care is inextricably linked to a covered medical service, such as certain care before an organ transplant or cardiac valve replacement.',
+        a: 'Generally no. Medicare pays for dental services only in limited situations where the dental care is inextricably linked to another covered service, such as certain care before an organ transplant or cardiac valve replacement.',
       },
       {
         q: 'What is the KX modifier for Medicare dental claims?',
-        a: 'CMS requires the KX modifier, as of July 1, 2025, on claims for dental services the clinician believes are inextricably linked to covered medical services. A diagnosis code is also required on the dental claim for these services.',
+        a: 'CMS requires the KX modifier, as of July 1, 2025, on claims for dental services the clinician believes are inextricably linked to other covered services. A diagnosis code is also required on the dental claim for these services.',
       },
       {
         q: 'Do Medicare Advantage plans cover dental?',
@@ -792,21 +792,21 @@ export const seedPosts3: SeedPost[] = [
   {
     slug: 'dental-billing-codes-guide',
     title: 'CDT Codes Explained: A Guide to Dental Codes, Tooth Numbers and Surfaces',
-    seoTitle: 'CDT Codes Explained: A Guide to Dental Codes',
+    seoTitle: 'CDT and ADA Dental Codes Explained: A Billing Guide',
     metaDescription:
-      'CDT codes are the American Dental Association codes on every dental claim. See how dental codes are grouped, paired with tooth numbers and billed correctly.',
+      'CDT codes, also called ADA codes, are the dental procedure codes on every claim. See how dental codes are grouped by category, paired with teeth and billed.',
     excerpt:
       'CDT codes are the dental codes on every claim. This guide explains how the CDT Code is organized by category, how codes pair with tooth numbers, surfaces and areas of the mouth, and which dental coding details trip up offices most.',
     category: 'Dental Billing',
-    tags: ['CDT codes', 'dental codes', 'dental coding', 'current dental terminology codes', 'American Dental Association code', 'dental CDT codes', 'dental billing codes', 'tooth numbering'],
+    tags: ['CDT codes', 'dental codes', 'dental coding', 'current dental terminology codes', 'American Dental Association code', 'dental CDT codes', 'dental billing codes', 'tooth numbering', 'ADA codes', 'ADA dental codes', 'dental procedure codes', 'dental treatment codes', 'dental insurance codes'],
     readingMinutes: 8,
     publishedAt: '2026-10-12',
     html: `
 <p><strong>CDT codes, short for Current Dental Terminology codes, are the dental codes used to report procedures on dental claims, and the American Dental Association organizes them into categories by code range, from diagnostic (D0100 to D0999) through adjunctive general services (D9000 to D9999).</strong> A correct claim pairs each code with the right tooth number, surface, quadrant or arch. Because the CDT Code is licensed by the ADA, the official manual is the only reliable cheat sheet.</p>
 
-<p>Dental coding is the step that turns the dentist's clinical notes into those codes. Searches for a dental billing codes cheat sheet usually turn up unofficial lists that are incomplete, outdated or copied without permission. A better approach is to understand how the code set is structured, so your team knows where to look and what each claim line needs. This guide covers the structure and the most common claim pitfalls. It does not list individual code descriptors, which you should take from the current CDT manual or your licensed software.</p>
+<p>Offices call the same code set by several names: ADA codes, ADA dental codes, dental procedure codes, dental treatment codes or simply dental insurance codes. They all mean the CDT Code. Dental coding is the step that turns the dentist's clinical notes into those codes. Searches for a dental billing codes cheat sheet usually turn up unofficial lists that are incomplete, outdated or copied without permission. A better approach is to understand how the code set is structured, so your team knows where to look and what each claim line needs. This guide covers the structure and the most common claim pitfalls. It does not list individual code descriptors, which you should take from the current CDT manual or your licensed software.</p>
 
-<h2>What are the CDT code categories?</h2>
+<h2>What are dental procedure codes by category?</h2>
 <p>Every CDT code, which is the American Dental Association code for a single dental procedure, starts with the letter D followed by four digits. The first digits place the code in a category of service. The categories and their ranges are:</p>
 <table>
 <thead><tr><th>Code range</th><th>Category</th></tr></thead>
@@ -826,6 +826,16 @@ export const seedPosts3: SeedPost[] = [
 </tbody>
 </table>
 <p>Within each category, codes are grouped into subcategories. For example, diagnostic codes include evaluations, imaging and tests; restorative codes are grouped by material and type of restoration. Knowing the category helps your team find the right section of the manual and recognize when a code looks out of place on a claim.</p>
+
+<h2>Where can you read more about the most-billed dental codes?</h2>
+<p>A handful of ADA dental codes make up most of the claims a general or specialty office sends, and each group has its own billing traps. Our code-by-code guides explain the documentation, frequency rules and claim details for each one, without reprinting ADA descriptors:</p>
+<ul>
+<li><strong>Diagnostic:</strong> <a href="/blog/dental-exam-codes-d0120-d0140-d0150/">dental exam codes D0120, D0140 and D0150</a> and <a href="/blog/dental-x-ray-codes/">dental x-ray codes</a> for bitewings, full-mouth series and panoramic images.</li>
+<li><strong>Preventive and periodontics:</strong> <a href="/blog/d4346-vs-d1110/">D4346 vs D1110</a> for deciding between a routine adult cleaning and the gingivitis cleaning code, and <a href="/blog/periodontal-codes-d4341-d4342-d4910-d4355/">periodontal codes D4341, D4342, D4910 and D4355</a>.</li>
+<li><strong>Restorative and fixed prosthodontics:</strong> <a href="/blog/dental-crown-codes/">dental crown codes</a>, including buildups and replacement rules.</li>
+<li><strong>Implant services:</strong> <a href="/blog/dental-implant-codes/">dental implant codes</a> for the surgical and restorative phases.</li>
+<li><strong>Oral surgery:</strong> <a href="/blog/dental-extraction-codes-d7140-d7210/">dental extraction codes D7140 and D7210</a> and the records that support a surgical extraction.</li>
+</ul>
 
 <h2>Why is the CDT Code licensed?</h2>
 <p>The ADA owns the copyright to the CDT Code and maintains it through its Code Maintenance Committee. HIPAA names CDT as the standard code set for dental procedures, so payers and providers must use it, but the descriptors and nomenclature remain the ADA's intellectual property. Practice management software vendors include the code set under license. When you see free lists online, they may be unlicensed, out of date, or missing revisions that change how a code is used.</p>
@@ -857,7 +867,7 @@ export const seedPosts3: SeedPost[] = [
 <h2>What else does each claim line need?</h2>
 <ul>
 <li><strong>Date of service</strong> for each procedure, which matters for frequency limits.</li>
-<li><strong>Diagnosis codes</strong> when the payer requires them. Dental claims often do not, but some plans and Medicare dental claims linked to medical care do.</li>
+<li><strong>Diagnosis codes</strong> when the payer requires them. Dental claims often do not, but some plans and some Medicare dental claims do.</li>
 <li><strong>Attachments</strong> such as radiographs, periodontal charts, photos and narratives for procedures that need them.</li>
 <li><strong>Prosthesis replacement information</strong>, including whether it is an initial placement or replacement and the prior placement date.</li>
 <li><strong>Orthodontic details</strong>, such as appliance placement date and months of treatment remaining.</li>
@@ -872,7 +882,7 @@ export const seedPosts3: SeedPost[] = [
 <li><strong>Missing attachments</strong> for crowns, periodontal treatment, implants and surgical extractions.</li>
 <li><strong>Frequency conflicts</strong>, such as billing a service before the plan's waiting window has passed.</li>
 <li><strong>Coding to the fee</strong> instead of the documentation. The code must reflect what was done and recorded.</li>
-<li><strong>Billing medical-type procedures to the dental plan only</strong>, when a medical plan might be the right payer. Verify coverage for these services before treatment.</li>
+<li><strong>Using a deleted or outdated code</strong> after the annual CDT update. Review code changes each year and update fee schedules and templates in your software.</li>
 </ol>
 
 <h2>How do category rules show up in daily billing?</h2>
@@ -901,6 +911,10 @@ export const seedPosts3: SeedPost[] = [
         a: 'CDT stands for Current Dental Terminology, the name of the American Dental Association publication that contains the Code on Dental Procedures and Nomenclature. In everyday use, CDT codes, dental codes and ADA codes all refer to the same code set. HIPAA names it as the standard for reporting dental procedures on electronic claims, so dental plans expect it.',
       },
       {
+        q: 'What are ADA codes in dentistry?',
+        a: 'ADA codes are the CDT procedure codes the American Dental Association publishes for reporting dental treatment on claims. Each one is a D plus four digits, grouped by category from diagnostic to adjunctive services. Offices also call them dental procedure codes, dental treatment codes or dental insurance codes. Carriers expect the current year\'s version, so update your software every January.',
+      },
+      {
         q: 'Is there an official cheat sheet for CDT codes?',
         a: 'The official reference is the ADA\'s CDT manual or app, which is licensed. Unofficial one-page lists may be incomplete or outdated, so offices should rely on the current CDT Code and their licensed software.',
       },
@@ -926,11 +940,11 @@ export const seedPosts3: SeedPost[] = [
     title: 'How to Appeal a Denied Dental Claim: A Step-by-Step Guide',
     seoTitle: 'How to Appeal a Denied Dental Claim, Step by Step',
     metaDescription:
-      'How to appeal a denied dental claim: read the EOB, choose a corrected claim or an appeal, gather records, write a clear letter, meet deadlines and follow up.',
+      'How to appeal a denied dental claim, with a sample appeal letter for a crown: read the EOB, gather records, write the letter, meet deadlines and follow up.',
     excerpt:
       'Not every dental denial is final. This guide explains how to read the denial, when to correct and resubmit instead of appealing, what to include in an appeal, and how to follow up.',
     category: 'Denial Management',
-    tags: ['dental claim appeal', 'denial management', 'dental billing', 'EOB', 'narratives'],
+    tags: ['dental claim appeal', 'denial management', 'dental billing', 'EOB', 'narratives', 'dental claim appeal letter sample', 'dental insurance appeal letter', 'appeal letter for crown'],
     readingMinutes: 8,
     publishedAt: '2026-10-12',
     html: `
@@ -982,6 +996,22 @@ export const seedPosts3: SeedPost[] = [
 </ol>
 <p>Avoid emotional language and long histories that do not relate to the denial. A reviewer is looking for a clear clinical reason. The dentist's own words carry weight, so a short narrative that the dentist writes or approves is usually more persuasive than a template.</p>
 
+<h2>Sample dental claim appeal letter for a crown denial</h2>
+<p>Use this sample dental claim appeal letter as a starting point, not a finished document. Replace every item in brackets, cut anything that does not apply, and have the treating dentist review the clinical paragraph so it describes this patient's tooth in their own words. The same layout works as a general dental insurance appeal letter for other denial types.</p>
+<blockquote>
+<p>[Practice name]<br>[Practice address] | [Phone] | [Billing NPI and tax ID]</p>
+<p>[Date]</p>
+<p>[Carrier name], Attn: Appeals / Claim Review<br>[Appeals address, fax number or portal reference]</p>
+<p>Re: Request for reconsideration of denied crown<br>Patient: [Patient name], DOB [date of birth]<br>Subscriber: [Subscriber name], Member ID [ID], Group [number]<br>Claim number: [claim number] | Date of service: [date]<br>Procedure: [CDT code] on tooth #[number]</p>
+<p>To the claim review team:</p>
+<p>We are asking you to reconsider the denial of the crown listed above. Your explanation of benefits dated [EOB date] gives the reason as "[denial reason exactly as printed on the EOB]." We believe the enclosed records show that a crown was the appropriate treatment for this tooth.</p>
+<p>On [exam date], Dr. [name] found [describe the condition in plain terms, for example a fractured cusp, recurrent decay under an existing restoration, or a large failing filling covering most of the tooth]. [State how much tooth structure was lost or compromised and why a direct filling would not have restored the tooth predictably.] [If the denial cites a replacement limit, give the prior placement date and explain why the earlier restoration failed.]</p>
+<p>We ask that you reprocess the claim and issue benefits under the patient's plan. Please contact [billing contact name] at [phone or email] if you need anything further.</p>
+<p>Enclosed: pre-operative radiograph dated [date]; intraoral photo(s) dated [date]; clinical notes for [dates]; copy of the EOB dated [date]; [any other record].</p>
+<p>Sincerely,<br>[Treating dentist name, credentials]<br>[Signature]</p>
+</blockquote>
+<p>A few tips for an appeal letter for a crown: send radiographs and photos that clearly show the problem the letter describes, quote the denial reason word for word so the reviewer can match your answer to it, and keep the clinical paragraph to what the records support. If the carrier offers an online appeal form, paste the same content into it and upload the attachments there.</p>
+
 <h2>Step 6: How should you send and track the appeal?</h2>
 <p>Use the method the plan specifies, whether that is a portal, fax or mail. Keep proof of submission. Then set a follow-up date and check status if you have not heard back within the plan's stated review time. Log every call with the date, representative name and reference number.</p>
 <p>If the appeal is denied, read the decision letter. Many plans offer a second-level review, and some patients have additional rights, such as external review for certain plan types or complaints to the state insurance regulator. Patients can sometimes file appeals on their own behalf, which can carry different rights than a provider appeal, so tell the patient about the decision and their options.</p>
@@ -1007,7 +1037,7 @@ export const seedPosts3: SeedPost[] = [
 <li>Review denials monthly by reason and fix the process that caused them.</li>
 <li>Keep narratives specific and documentation complete at the time of service.</li>
 </ul>
-<p>For a broader framework, our guide on <a href="/blog/how-to-reduce-claim-denials/">how to reduce claim denials</a> applies to dental and medical practices alike, and our <a href="/tools/denial-appeal-checklist/">denial appeal checklist</a> can help your team organize each appeal.</p>
+<p>For a broader framework, our guide on <a href="/blog/how-to-reduce-claim-denials/">how to reduce claim denials</a> applies to every dental practice, and our <a href="/tools/denial-appeal-checklist/">denial appeal checklist</a> can help your team organize each appeal.</p>
 
 <h2>When does it make sense to get help with dental appeals?</h2>
 <p>If appeals pile up, deadlines slip or the same denials keep returning, an outside team can help manage the workload. Our <a href="/services/denial-appeals/">denial appeals</a> and <a href="/services/dental-claims-processing/">dental claims processing</a> services work inside your practice software and clearinghouse, so every action stays visible to your office.</p>
@@ -1026,6 +1056,10 @@ export const seedPosts3: SeedPost[] = [
       {
         q: 'What should a dental appeal letter include?',
         a: 'Include patient and claim identifiers, the denial reason, a clear clinical explanation linked to attached records, a list of enclosures and the dentist\'s signature.',
+      },
+      {
+        q: 'How do you write an appeal letter for a denied crown?',
+        a: 'Write a short letter that quotes the carrier\'s denial reason, then explains in the dentist\'s words why a filling would not have restored the tooth. Name the tooth, date of service and claim number, and enclose a pre-operative radiograph, intraoral photos and clinical notes. For a replacement denial, add the prior placement date and why the old crown failed.',
       },
       {
         q: 'Can a patient appeal a dental claim denial?',
@@ -1469,7 +1503,7 @@ export const seedPosts3: SeedPost[] = [
 <p><strong>Fix:</strong> usually none, but compare the allowed amount with your contract. If it is lower than agreed, follow up as an underpayment.</p>
 
 <h3>Medical necessity: CARC 50</h3>
-<p><strong>What it signals:</strong> the payer does not consider the service medically necessary based on what it received.</p>
+<p><strong>What it signals:</strong> the carrier does not consider the service clinically necessary based on what it received.</p>
 <p><strong>Fix:</strong> check that diagnosis codes support the service and match coverage policies, then appeal with documentation if the record supports necessity. For Medicare patients, a properly issued Advance Beneficiary Notice before the service affects whether the patient can be billed.</p>
 
 <h3>Non-covered services: CARC 96</h3>

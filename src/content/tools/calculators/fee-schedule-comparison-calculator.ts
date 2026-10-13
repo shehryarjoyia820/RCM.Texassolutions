@@ -28,7 +28,7 @@ const inputs: CalcInput[] = LINES.flatMap((i) => {
 const calc: Calculator = {
   kind: 'calculator',
   slug: 'fee-schedule-comparison-calculator',
-  name: 'Fee Schedule Comparison Calculator',
+  name: 'Dental Fee Schedule Comparison Calculator',
   category: 'revenue',
   icon: 'GitCompare',
   summary: 'Compare annual dental revenue under two carriers or PPO fee schedules for the same procedure mix, with an optional reference schedule.',
@@ -127,6 +127,10 @@ const calc: Calculator = {
   ],
   faqs: [
     {
+      q: 'What is a dental fee schedule?',
+      a: 'A dental fee schedule is a list of fees by CDT code. Your office keeps its own full fee schedule, and each PPO carrier you join sets a contracted fee schedule with the most it will allow for each code. The gap between the two becomes your write-off, so comparing carrier schedules against your real procedure mix shows what each contract is worth.',
+    },
+    {
       q: 'How do you compare two dental PPO fee schedules?',
       a: 'Apply both fee schedules to the same list of CDT codes and annual volumes, then total each. Comparing fee by fee can mislead because a carrier may pay more for codes you rarely bill and less for the hygiene and diagnostic codes you bill most. Weighting by your real volume shows which schedule is worth more to your practice.',
     },
@@ -149,9 +153,9 @@ const calc: Calculator = {
   ],
   relatedServices: ['dental-credentialing', 'rcm-analytics-reporting', 'payment-posting', 'dental-billing'],
   relatedTools: ['dental-insurance-collection-calculator', 'dental-practice-revenue-calculator', 'net-collection-rate-calculator'],
-  seoTitle: 'Dental PPO Fee Schedule Comparison Calculator',
+  seoTitle: 'Dental Fee Schedule Comparison Calculator for PPOs',
   metaDescription: 'Compare annual dental revenue under two PPO fee schedules for the same CDT code mix, see the dollar and percent difference and each versus a reference.',
-  keywords: ['dental fee schedule comparison calculator', 'compare dental ppo fee schedules', 'dental ppo fee analysis', 'cdt fee schedule comparison'],
+  keywords: ['dental fee schedule comparison calculator', 'dental fee schedule', 'dental fees schedule', 'compare dental ppo fee schedules', 'dental ppo fee analysis', 'cdt fee schedule comparison'],
 };
 
 export default calc;

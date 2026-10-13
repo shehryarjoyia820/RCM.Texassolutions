@@ -11,12 +11,21 @@ import { medicalPart1 } from '../src/content/specialties/medical1';
 import { medicalPart2 } from '../src/content/specialties/medical2';
 import { dentalSpecialties } from '../src/content/specialties/dental';
 import { pages } from '../src/content/pages';
+import { areaPages } from '../src/content/pages-areas';
+import { pricingPageList } from '../src/content/pages-pricing';
 import { seedPosts } from '../src/content/blog/seed';
+import { dentalKeywordPostsA } from '../src/content/blog/dental-keywords-a';
+import { dentalKeywordPostsB } from '../src/content/blog/dental-keywords-b';
+import { dentalKeywordPostsC } from '../src/content/blog/dental-keywords-c';
+import { dentalCodesA } from '../src/content/blog/dental-codes-a';
+import { dentalCodesB } from '../src/content/blog/dental-codes-b';
+import { dentalTopicsA } from '../src/content/blog/dental-topics-a';
+import { dentalTopicsB } from '../src/content/blog/dental-topics-b';
 import { SERVICE_SLUGS, SPECIALTY_SLUGS, TOOL_SLUGS } from '../src/content/slugs';
 
 const services = [...servicesPart1, ...servicesPart2, ...servicesPart3, ...servicesPart4, ...servicesPart5];
 const specialties = [...medicalPart1, ...medicalPart2, ...moreSpecialties, ...dentalSpecialties];
-const allPosts = [...seedPosts, ...seedPosts2, ...seedPosts3];
+const allPosts = [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC, ...dentalCodesA, ...dentalCodesB, ...dentalTopicsA, ...dentalTopicsB];
 
 /** Claims the owner has not approved (docs/CONTENT-GUIDE.md). */
 const BANNED = [/hipaa[- ]compliant/i, /hipaa[- ]certified/i, /\bwe guarantee\b|guaranteed (results|increase|savings|approval)/i, /\b\d{2,3}% (increase|reduction|faster)/i, /world-class|cutting-edge|game-changer|revolutionary/i, /—/];
@@ -66,7 +75,7 @@ describe('internal links', () => {
     ...SERVICE_SLUGS.map((s) => `/services/${s}/`),
     ...SPECIALTY_SLUGS.map((s) => `/specialties/${s}/`),
     ...TOOL_SLUGS.map((s) => `/tools/${s}/`),
-    ...pages.map((p) => (p.parent ? `/${p.parent}/${p.key}/` : `/${p.key}/`)),
+    ...[...pages, ...areaPages, ...pricingPageList].map((p) => (p.parent ? `/${p.parent}/${p.key}/` : `/${p.key}/`)),
     ...allPosts.map((p) => `/blog/${p.slug}/`),
     '/services/', '/specialties/', '/tools/', '/blog/', '/contact/', '/',
   ]);

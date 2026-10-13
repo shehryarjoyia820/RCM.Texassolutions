@@ -6,7 +6,7 @@ const tool: ReferenceTool = {
   name: 'Dental Explanation of Benefits (EOB) Explained',
   category: 'reference',
   icon: 'FileText',
-  summary: 'A field-by-field guide to reading a dental EOB, from submitted and allowed fees to PPO write-offs, annual maximums and patient responsibility.',
+  summary: 'A field-by-field guide to reading a dental EOB, from submitted and allowed fees to PPO write-offs, annual maximums and patient responsibility, with a sample dental EOB walked through line by line.',
   definition:
     'A dental Explanation of Benefits (EOB) is the statement a dental carrier issues after processing a claim. It shows what the dentist submitted, what the plan allowed, the PPO write-off, any downgrade or limitation, how much the carrier paid and what the patient owes, along with codes that explain each adjustment. An EOB is not a bill.',
   entries: [
@@ -29,9 +29,17 @@ const tool: ReferenceTool = {
     { term: 'Adjustment reason and remark codes', meaning: 'Codes or notes that explain each adjustment or denial, such as a frequency limit, a missing x-ray or an annual maximum reached. They tell you whether to bill the patient, send records, correct the claim or appeal.', tag: 'Codes' },
     { term: 'Payment details', meaning: 'The check or EFT number, payment date and total paid. Use them to match the EOB to the bank deposit when posting.', tag: 'Payment' },
     { term: 'Annual maximum and deductible used', meaning: 'Year-to-date totals for the deductible and the annual maximum, and sometimes the orthodontic lifetime maximum. They help predict the patient\'s share on the next treatment plan.', tag: 'Plan totals' },
+    { term: 'Sample dental EOB: submitted fee and allowed amount', meaning: 'In this made-up example, an in-network office bills a crown on tooth #30 at its full office fee of $1,200. The carrier\'s PPO fee schedule allows $900 for that code, so the EOB shows a $300 PPO write-off that the patient does not owe.', tag: 'Sample EOB' },
+    { term: 'Sample dental EOB: deductible and coinsurance', meaning: 'Of the $900 allowed, $50 goes to the patient\'s remaining annual deductible. The plan covers crowns as a major service at 50 percent, so it pays half of the remaining $850, which is $425.', tag: 'Sample EOB' },
+    { term: 'Sample dental EOB: patient responsibility', meaning: 'The patient owes the $50 deductible plus the other half of $850, or $425, for a total of $475. Carrier payment ($425) plus patient share ($475) equals the $900 allowed amount, a quick check that the line was processed as expected.', tag: 'Sample EOB' },
+    { term: 'Sample dental EOB: annual maximum check', meaning: 'The plan totals show the $425 counted against the annual maximum. If only $300 of the maximum had been left, the carrier would pay $300 and the other $125 would shift to the patient, raising the patient share to $600.', tag: 'Sample EOB' },
     { term: 'Appeal rights', meaning: 'Instructions and deadlines for asking the carrier to reconsider its decision. Note the deadline as soon as a denial is posted.', tag: 'Appeals' },
   ],
   faqs: [
+    {
+      q: 'What does a dental EOB example look like?',
+      a: 'A typical dental EOB example shows one line per procedure with the submitted fee, allowed amount, write-off, deductible, plan payment and patient share. In our sample, a $1,200 crown is allowed at $900, leaving a $300 write-off. After a $50 deductible and 50 percent coverage, the plan pays $425 and the patient owes $475, which adds back to the allowed amount.',
+    },
     {
       q: 'Is a dental Explanation of Benefits a bill?',
       a: 'No, a dental EOB is not a bill; it explains how the carrier processed a claim and what the patient may owe. The bill comes from the dental office as a statement. Patients often call holding an EOB, so the front desk should be able to explain the allowed amount, write-off and patient share clearly.',
@@ -56,11 +64,14 @@ const tool: ReferenceTool = {
   ],
   relatedServices: ['payment-posting', 'patient-billing', 'denial-management', 'dental-accounts-receivable'],
   relatedTools: ['denial-appeal-checklist', 'dental-insurance-collection-calculator', 'net-collection-rate-calculator', 'dental-insurance-verification-checklist'],
-  seoTitle: 'Dental EOB Explained: How to Read It Line by Line',
+  seoTitle: 'Dental EOB Explained, With a Sample EOB Line by Line',
   metaDescription:
-    'Learn how to read a dental EOB: submitted vs allowed fee, PPO write-off, downgrades, deductible, coinsurance, annual maximum, carrier payment and patient share.',
+    'Learn how to read a dental EOB with a sample walk-through: submitted vs allowed fee, PPO write-off, deductible, coinsurance, annual maximum and patient share.',
   keywords: [
     'dental eob explained',
+    'dental eob',
+    'dental eob example',
+    'sample dental eob',
     'how to read a dental eob',
     'dental eob allowed amount',
     'dental eob patient responsibility',

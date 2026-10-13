@@ -1307,7 +1307,7 @@ const privacyPolicy: PageContent = {
       'This policy covers information collected through this website, including its forms, AI assistant, calculators, lookups and analytics. It does not cover protected health information we may handle for client practices under a Business Associate Agreement. That information is governed by the client\'s agreement with us and is never collected through this website.'
     ),
     p(
-      'This website is intended for businesses in the United States, such as medical and dental practices, partners and job applicants. It is not intended for patients or for children.'
+      'This website is intended for businesses in the United States, such as dental practices and partners. It is not intended for patients or for children.'
     ),
     h2('Do not send patient information'),
     p(
@@ -1443,7 +1443,7 @@ const termsOfService: PageContent = {
     ),
     h2('Informational content'),
     p(
-      'Articles, guides, glossaries, checklists, FAQs and other content on this site are general information about medical and dental billing. They are not legal, coding, tax, financial or medical advice, and they may not reflect the latest payer policy or regulation. Always check current payer rules and official guidance, and consult a qualified professional before making decisions.'
+      'Articles, guides, glossaries, checklists, FAQs and other content on this site are general information about dental billing and dental revenue cycle management. They are not legal, coding, tax, financial or medical advice, and they may not reflect the latest payer policy or regulation. Always check current payer rules and official guidance, and consult a qualified professional before making decisions.'
     ),
     h2('Calculators and lookups'),
     ul([
@@ -1469,7 +1469,7 @@ const termsOfService: PageContent = {
     p('We may block access or remove submissions that break these terms.'),
     h2('Code sets and trademarks'),
     p(
-      'CPT is a registered trademark of the American Medical Association (AMA). CDT is a registered trademark of the American Dental Association (ADA). This website does not reproduce CPT or CDT code descriptors. Code numbers may be mentioned for reference only. Other names and trademarks belong to their owners, and their mention does not imply endorsement or partnership.'
+      'CDT is a registered trademark of the American Dental Association (ADA). This website does not reproduce CDT code descriptors. Code numbers may be mentioned for reference only. Other names and trademarks belong to their owners, and their mention does not imply endorsement or partnership.'
     ),
     h2('Intellectual property'),
     p(
@@ -1614,7 +1614,7 @@ const disclaimer: PageContent = {
   template: 'legal',
   lastUpdated: LEGAL_DATE,
   intro:
-    'The information on this website is provided to help medical and dental practices understand revenue cycle topics. Please read this disclaimer before relying on it.',
+    'The information on this website is provided to help dental practices understand revenue cycle topics. Please read this disclaimer before relying on it.',
   body: blocks(
     h2('Educational content only'),
     p(
@@ -1649,7 +1649,7 @@ const disclaimer: PageContent = {
     ),
     h2('Trademarks'),
     p(
-      'CPT is a registered trademark of the American Medical Association. CDT is a registered trademark of the American Dental Association. Code descriptors are not reproduced on this site. Other trademarks belong to their owners.'
+      'CDT is a registered trademark of the American Dental Association. Code descriptors are not reproduced on this site. Other trademarks belong to their owners.'
     ),
     p(`Questions about this disclaimer: ${EMAIL}. See also our ${a('/terms-of-service/', 'Terms of Service')}.`)
   ),

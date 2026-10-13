@@ -124,6 +124,10 @@ export const dentalCoreB: Service[] = [
         a: 'An EOB is the explanation of benefits a dental carrier sends on paper or through its portal, while an ERA is the electronic 835 remittance file that carries the same payment details. ERAs can often be auto-posted into your dental software, but they still need review, because bundled payments, downgrades and unrecognized lines can post incorrectly without a person checking them.',
       },
       {
+        q: 'What is remittance advice in dental billing?',
+        a: 'Remittance advice is the statement from the carrier showing how each claim was paid, adjusted or denied. In dental billing it arrives either as a paper or portal EOB or as an electronic remittance advice (ERA), the X12 835 file. It lists the allowed amount, the patient portion and adjustment reason codes for every line, which is exactly what a payment posting team needs to post each payment accurately.',
+      },
+      {
         q: 'Do you post payments inside our own dental software?',
         a: 'Yes, we post directly in the practice management system you already use, whether that is Open Dental, Dentrix or Eaglesoft. Working in your own system means your front desk sees updated ledgers right away, and your reports keep using the same adjustment types and payment codes your practice has always used. A Business Associate Agreement is signed before we access any patient data.',
       },
@@ -362,7 +366,7 @@ export const dentalCoreB: Service[] = [
       'Sending courteous balance reminders by the channels your practice uses',
       'Setting up payment plans within the terms your practice approves',
       'Identifying credit balances and preparing refund lists for approval',
-      'Answering or routing patient billing questions to your front desk',
+      'Routing patient billing questions to your front desk',
       'Flagging accounts that need a practice decision under your policy',
     ],
     included: [
@@ -462,7 +466,7 @@ export const dentalCoreB: Service[] = [
       },
       {
         q: 'How do you handle patients who dispute a balance?',
-        a: 'A disputed balance is paused from further reminders while we research it. We review the EOB, the estimate given at the visit and the payment history, then explain the findings to your staff or to the patient as your practice prefers. If the dispute reveals an insurance issue, such as a missed secondary claim, we fix it before billing resumes.',
+        a: 'A disputed balance is paused from further reminders while we research it. We review the EOB, the estimate given at the visit and the payment history, then explain the findings to your staff, who speak with the patient as your practice prefers. If the dispute reveals an insurance issue, such as a missed secondary claim, we fix it before billing resumes.',
       },
       {
         q: 'Do you handle patient credit balances and refunds?',
@@ -492,6 +496,7 @@ export const dentalCoreB: Service[] = [
       'dental payment plans',
       'dental patient balance follow-up',
       'dental credit balance refunds',
+      'dental collections',
     ],
   },
 
@@ -808,8 +813,12 @@ export const dentalCoreB: Service[] = [
         a: 'No, reports are built from the data already in your dental practice software and clearinghouse, whether that is Open Dental, Dentrix or Eaglesoft. We run standard and custom reports, combine them where needed and present the results in a readable package. You do not need to buy or install a separate analytics product.',
       },
       {
-        q: 'Which measures matter most for a dental practice?',
-        a: 'For most dental practices, the most useful measures are net collection rate, days in A/R, insurance aging over 90 days, denial rate by carrier and adjustments as a share of production. Together they show whether production is turning into collected revenue. We agree on the list with you and calculate each measure the same way every month.',
+        q: 'Which dental KPIs should a practice track monthly?',
+        a: 'For most dental practices, the most useful monthly KPIs are net collection rate, days in A/R, insurance aging over 90 days, denial rate by carrier and adjustments as a share of production. Together they show whether production is turning into collected revenue. We agree on the list with you and calculate each measure the same way every month.',
+      },
+      {
+        q: 'What are dental key performance indicators?',
+        a: 'Dental key performance indicators are a short list of numbers that show how well production turns into collected revenue. Dental practice KPIs for the revenue cycle include collection rates, days in A/R, aging by bucket, denial rates and write-offs. Tracking the same dental KPIs on the same definitions each month makes trends visible before they become cash flow problems.',
       },
       {
         q: 'Can reports be split by location or provider?',
@@ -843,6 +852,9 @@ export const dentalCoreB: Service[] = [
       'dental denial trend analysis',
       'dental collection reports',
       'dental revenue cycle analytics',
+      'dental KPIs',
+      'dental practice KPIs',
+      'dental key performance indicators',
     ],
   },
 ];

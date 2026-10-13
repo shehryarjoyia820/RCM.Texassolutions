@@ -885,15 +885,15 @@ export const seedPosts: SeedPost[] = [
     html: `
 <p><strong>The dental insurance billing process works by verifying a patient's dental benefits, coding treatment with CDT codes, submitting a claim to the dental plan with any required attachments, and then posting the payment and billing the patient for the remainder.</strong> Along the way, practices manage plan rules such as annual maximums, frequency limits, waiting periods and coordination of benefits.</p>
 
-<p>Billing dental insurance shares the same basic shape as medical billing, but the details are different enough that medical billing habits do not always transfer. Dental plans are often built around a yearly benefit cap, they limit how often services are covered, and they frequently require radiographs or narratives to support a claim. This guide walks through the process step by step.</p>
+<p>Dental plans have their own logic. They are often built around a yearly benefit cap, they limit how often services are covered, and they frequently require radiographs or narratives to support a claim. Knowing those rules before the patient is seated is what keeps estimates accurate and claims moving. This guide walks through the process step by step.</p>
 
-<h2>How is dental billing different from medical billing?</h2>
+<h2>What shapes a dental insurance claim?</h2>
 <ul>
 <li><strong>Code set.</strong> Dental procedures are reported with CDT codes, maintained by the American Dental Association (ADA). Diagnosis codes are usually not required on dental claims, though some plans and some situations call for them.</li>
 <li><strong>Claim form.</strong> Dental claims use the ADA Dental Claim Form on paper or the 837D electronic transaction.</li>
 <li><strong>Benefit design.</strong> Many dental plans have an annual maximum, a percentage-based coverage structure by service category, frequency limits and waiting periods.</li>
 <li><strong>Attachments.</strong> Radiographs, periodontal charts, intraoral images and narratives are commonly needed for major services.</li>
-<li><strong>Medical crossover.</strong> Some procedures, such as certain oral surgery or treatment related to trauma or medical conditions, may need to be billed to the patient's medical plan first.</li>
+<li><strong>Tooth-level detail.</strong> Many procedures need a tooth number, surface, quadrant or arch, and carriers check those details against the patient's history.</li>
 </ul>
 
 <h2>Step 1: How do you verify dental insurance benefits?</h2>
@@ -949,9 +949,9 @@ export const seedPosts: SeedPost[] = [
 <p>Dental denials often relate to frequency limits, waiting periods, missing attachments, maximums reached or eligibility. Some can be resolved by sending missing documentation or correcting tooth and surface information. Others require a written appeal with clinical support.</p>
 <p>Once insurance has processed the claim, bill the patient for their share with a clear statement that shows what the plan paid and why. Patients are more likely to pay promptly when the balance matches the estimate they were given.</p>
 
-<h2>When should a dental procedure be billed to medical insurance?</h2>
-<p>Some services performed in a dental office may be covered by the patient's medical plan rather than, or before, the dental plan. Examples can include certain oral surgery, treatment of injuries from an accident, biopsies, and some sleep apnea appliances. In those cases the medical plan generally expects a medical claim with diagnosis codes and medical procedure codes, along with documentation of medical necessity.</p>
-<p>Medical crossover rules vary widely by plan, so verify coverage for the specific service before treatment. When the medical plan denies or pays only part of the claim, the dental plan may then consider the remainder under its own coordination rules.</p>
+<h2>What should you do when a carrier asks for more information?</h2>
+<p>A request for more information is not a denial, but it stops the claim until the carrier gets what it asked for. Read the request closely, since it usually names the missing item: a radiograph, a periodontal chart, a narrative, the date of a prior placement or details of other coverage. Send exactly that item, referenced to the original claim, rather than submitting a new claim.</p>
+<p>Track every open request with a follow-up date. If the carrier does not acknowledge the documents within its normal processing time, call or check the portal to confirm they were attached to the right claim. Patterns in these requests are worth noting, because they show which attachments to send with the first claim next time.</p>
 
 <h2>What are common dental billing mistakes?</h2>
 <ul>
@@ -974,7 +974,7 @@ export const seedPosts: SeedPost[] = [
       },
       {
         q: 'What codes are used for dental insurance billing?',
-        a: 'Dental procedures are billed with CDT codes, which are maintained by the American Dental Association and updated each year. Diagnosis codes are generally not required on dental claims, though some plans or medical crossover situations may require them.',
+        a: 'Dental procedures are billed with CDT codes, which are maintained by the American Dental Association and updated each year. Diagnosis codes are generally not required on dental claims, though some plans or specific situations may require them.',
       },
       {
         q: 'Is a dental pre-treatment estimate a guarantee of payment?',

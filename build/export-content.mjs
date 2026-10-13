@@ -39,6 +39,10 @@ ${opt('src/content/blog/dental-rewrites.ts', 'dentalRewrites')}
 ${opt('src/content/blog/dental-keywords-a.ts', 'dentalKeywordPostsA')}
 ${opt('src/content/blog/dental-keywords-b.ts', 'dentalKeywordPostsB')}
 ${opt('src/content/blog/dental-keywords-c.ts', 'dentalKeywordPostsC')}
+${opt('src/content/blog/dental-codes-a.ts', 'dentalCodesA')}
+${opt('src/content/blog/dental-codes-b.ts', 'dentalCodesB')}
+${opt('src/content/blog/dental-topics-a.ts', 'dentalTopicsA')}
+${opt('src/content/blog/dental-topics-b.ts', 'dentalTopicsB')}
 import * as dental from './src/content/dental';
 import * as company from './src/content/company';
 ${hasPages ? "import { pages } from './src/content/pages';" : 'const pages = [];'}
@@ -50,7 +54,7 @@ export const data = {
   specialties: [...medicalPart1, ...medicalPart2, ...moreSpecialties, ...dentalSpecialties],
   calculators: [${list(calcDir).map((_, i) => `c${i}`).join(', ')}],
   references: [${list(refDir).map((_, i) => `r${i}`).join(', ')}],
-  blog: [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC],
+  blog: [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC, ...dentalCodesA, ...dentalCodesB, ...dentalTopicsA, ...dentalTopicsB],
   blogOverrides: dentalRewrites,
   pages,
   pageOverrides: [...dentalPageOverrides, ...areaPages, ...pricingPageList],
@@ -104,6 +108,7 @@ const tools = keepOrder(allTools, D.KEPT_TOOLS, 'slug').map((t) => ({
 const blog = keepOrder(override(data.blog, data.blogOverrides, 'slug'), D.KEPT_POSTS, 'slug').map((p) => ({
   ...p,
   category: D.POST_CATEGORY[p.slug] ?? p.category,
+  slug: D.SLUG_RENAMES[p.slug] ?? p.slug,
   html: fixLinks(p.html),
 }));
 const pagesAll = override(data.pages, data.pageOverrides, 'key');

@@ -76,7 +76,7 @@ export const dentalKeywordPostsA: SeedPost[] = [
 <ul>
 <li><strong>Header.</strong> Tells the carrier what kind of submission this is: a claim for completed services, a predetermination request, or a Medicaid EPSDT claim. It also holds any predetermination number the carrier already issued.</li>
 <li><strong>Dental plan information.</strong> The name, address and payer ID of the plan receiving the claim. For a secondary claim, this is the secondary carrier.</li>
-<li><strong>Other coverage.</strong> Details of any additional dental or medical plan. When you bill the primary plan, this block describes the secondary; when you bill the secondary, it describes the primary.</li>
+<li><strong>Other coverage.</strong> Details of any additional dental plan. When you bill the primary plan, this block describes the secondary; when you bill the secondary, it describes the primary.</li>
 <li><strong>Policyholder or subscriber.</strong> The insured person's name, date of birth, subscriber ID and group number, which may not be the patient.</li>
 <li><strong>Patient.</strong> The patient's name, date of birth, relationship to the subscriber and the office's own patient account number.</li>
 <li><strong>Record of services.</strong> Up to ten service lines, each with a date, area of the oral cavity, tooth system, tooth number or letter, surfaces, CDT code, quantity, fee and description. Missing teeth, remarks and the total fee also live here.</li>
@@ -265,7 +265,7 @@ export const dentalKeywordPostsA: SeedPost[] = [
     excerpt:
       'A clear look at the dental insurance biller role: the daily work, the skills that matter, how an in-house biller compares with a dental billing company, and the questions to ask either one.',
     category: 'Practice Management',
-    tags: ['dental insurance biller', 'dental insurance billing', 'dental billing company', 'dental billing outsourcing', 'hiring'],
+    tags: ['dental insurance biller', 'dental insurance billing', 'dental billing company', 'dental billing outsourcing', 'hiring', 'dental insurance coordinator', 'dental billing course', 'dental billing program'],
     readingMinutes: 6,
     publishedAt: '2026-10-12',
     html: `
@@ -292,6 +292,20 @@ export const dentalKeywordPostsA: SeedPost[] = [
 <p>Billing depends on information other people create. The front desk enters subscriber details and verifies benefits. The dentist and hygienists chart procedures, take the x-rays and write the clinical notes that become narratives. The treatment coordinator presents estimates that set the patient's expectations. When any of those steps is rushed, the biller inherits the problem as a rejection, a request for records or a balance the patient disputes.</p>
 <p>Strong billers close that loop. They tell the front desk which carriers keep returning eligibility errors, ask clinicians for the specific records a carrier wants, and share a short list of repeat denial reasons at team meetings. Our <a href="/services/payment-posting/">Payment Posting</a> and <a href="/services/dental-accounts-receivable/">Accounts Receivable (A/R) Management</a> services are built to support that same feedback loop.</p>
 
+<h2>Is a dental insurance coordinator the same as a dental insurance biller?</h2>
+<p>Not quite, although many offices use the titles loosely and one person often does both jobs. A dental insurance coordinator usually works the front end of the process: verifying eligibility and benefits, building the breakdown, preparing pre-treatment estimates, explaining coverage to patients and making sure the right plan is on file before the visit. A dental insurance biller usually owns the back end: sending claims, attachments, posting EOBs and ERAs, working the aging report and handling denials.</p>
+<table>
+<thead><tr><th>Task</th><th>Dental insurance coordinator</th><th>Dental insurance biller</th></tr></thead>
+<tbody>
+<tr><td>Eligibility and benefits breakdown</td><td>Main owner</td><td>Uses the breakdown when claims or payments do not match</td></tr>
+<tr><td>Pre-treatment estimates and patient coverage questions</td><td>Main owner</td><td>Explains balances after the carrier pays</td></tr>
+<tr><td>Claims, attachments and narratives</td><td>Sometimes, in small offices</td><td>Main owner</td></tr>
+<tr><td>Payment posting and A/R follow-up</td><td>Rarely</td><td>Main owner</td></tr>
+<tr><td>Denials and appeals</td><td>Supplies verification notes</td><td>Main owner</td></tr>
+</tbody>
+</table>
+<p>When the two roles are separate, the handoff matters. Denials for frequency limits, waiting periods or the wrong primary plan usually trace back to verification, so the coordinator and biller should review those together each month.</p>
+
 <h2>What skills does a good dental insurance biller need?</h2>
 <ul>
 <li><strong>Dental plan knowledge.</strong> Frequency limits, waiting periods, annual maximums, downgrades and alternate benefits, missing tooth clauses, and the difference between PPO, DHMO, indemnity and Medicaid dental plans.</li>
@@ -311,8 +325,9 @@ export const dentalKeywordPostsA: SeedPost[] = [
 <li><strong>Software vendor training.</strong> Practice management vendors typically publish help articles, videos and classes on their billing, posting and claims modules. Training in the exact system your office uses pays off quickly.</li>
 <li><strong>Clearinghouse and carrier materials.</strong> Clearinghouses and dental carriers usually post provider guides on rejection reports, attachments and portal tools.</li>
 <li><strong>Courses and continuing education.</strong> Dental associations, study clubs and private educators offer workshops and online classes on coding and insurance.</li>
+<li><strong>Dental billing programs.</strong> Some community colleges and career schools run a longer dental billing program, or fold a dental billing course into a dental office administration track. These suit people new to the field more than experienced front office staff.</li>
 </ul>
-<p>Before paying for any dental billing training course, check that it teaches the current CDT version, covers dental plan rules such as frequency limits and coordination of benefits, and includes hands-on practice with real EOBs rather than only definitions.</p>
+<p>Before paying for any dental billing course or program, check that it teaches the current CDT version, covers dental plan rules such as frequency limits and coordination of benefits, and includes hands-on practice with real EOBs rather than only definitions.</p>
 
 <h2>Should you hire an in-house biller or outsource dental insurance billing?</h2>
 <p>Both models work, and plenty of practices use a mix. The right answer depends on your claim volume, how much your team already knows, and how much management time you can give the billing function.</p>

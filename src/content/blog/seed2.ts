@@ -290,19 +290,19 @@ export const seedPosts2: SeedPost[] = [
     readingMinutes: 7,
     publishedAt: '2026-10-11',
     html: `
-<p><strong>Choose a dental billing company by checking how well it handles the parts of dental billing that are different from medical billing: insurance verification and benefit breakdowns, CDT coding, attachments and narratives, frequency and maximum limits, PPO fee schedules, and follow-up on unpaid claims.</strong> Then compare reporting, software fit, communication and contract terms.</p>
+<p><strong>Choose a dental billing company by checking how well it handles the parts of dental billing that most affect collections: insurance verification and benefit breakdowns, CDT coding, attachments and narratives, frequency and maximum limits, PPO fee schedules, and follow-up on unpaid claims.</strong> Then compare reporting, software fit, communication and contract terms.</p>
 
-<p>Lists of the "best dental billing companies" or "top dental RCM companies" cannot account for your office's procedure mix, plans or practice software. A general practice with heavy PPO volume, an oral surgery office that bills medical plans, and a pediatric office with many Medicaid patients need different strengths. This guide helps you judge any dental billing partner against the work your office actually does.</p>
+<p>Lists of the "best dental billing companies" or "top dental RCM companies" cannot account for your office's procedure mix, plans or practice software. A general practice with heavy PPO volume, an oral surgery office with sedation and implant cases, and a pediatric office with many Medicaid patients need different strengths. This guide helps you judge any dental billing partner against the work your office actually does.</p>
 
-<h2>Why is dental billing different from medical billing?</h2>
-<p>Dental insurance works differently from medical insurance in ways that shape how billing should be done:</p>
+<h2>What makes dental billing its own specialty?</h2>
+<p>Dental insurance has its own rules, and they shape how billing should be done:</p>
 <ul>
 <li><strong>Annual maximums and frequency limits.</strong> Many plans cap yearly benefits and limit how often certain services are covered, so verification has to go beyond "is the patient active."</li>
 <li><strong>Downgrades and alternate benefits.</strong> A plan may pay for a less costly alternative, leaving the patient responsible for the difference.</li>
 <li><strong>Attachments.</strong> Radiographs, periodontal charting, photos and narratives are often needed for major services.</li>
 <li><strong>Pre-treatment estimates.</strong> Common for larger treatment plans, though they are not a promise of payment.</li>
 <li><strong>Code set.</strong> Procedures are reported with CDT codes maintained by the American Dental Association and updated every year.</li>
-<li><strong>Medical crossover.</strong> Some procedures, such as certain oral surgery, trauma or sleep apnea appliances, may be billed to medical plans with medical code sets.</li>
+<li><strong>Coordination of benefits.</strong> Patients with two dental plans need the primary identified correctly and the secondary claim sent with the primary EOB.</li>
 </ul>
 <p>Our walkthrough of the <a href="/blog/dental-insurance-billing-process/">dental insurance billing process</a> covers each of these steps in more detail.</p>
 
@@ -339,7 +339,7 @@ export const seedPosts2: SeedPost[] = [
 <li>How do you decide which claims need attachments or narratives?</li>
 <li>How often do you follow up on outstanding claims, and how?</li>
 <li>How do you check payments against our PPO fee schedules?</li>
-<li>Do you handle medical crossover claims, or only dental?</li>
+<li>How do you handle secondary dental claims and coordination of benefits?</li>
 <li>Who answers patient balance questions?</li>
 <li>What will our monthly report include?</li>
 <li>What do you need from our front desk and clinical team?</li>
@@ -386,8 +386,8 @@ export const seedPosts2: SeedPost[] = [
         a: 'Many dental billing teams work remotely inside common practice management systems such as Open Dental, Dentrix and Eaglesoft. Ask each company how it accesses your system and documents its work.',
       },
       {
-        q: 'Do dental billing companies bill medical insurance too?',
-        a: 'Some do. Procedures such as certain oral surgery, trauma care and oral appliances for sleep apnea may be billed to medical plans, so ask whether the company handles medical crossover claims if your office performs them.',
+        q: 'Should a dental billing company handle secondary dental claims?',
+        a: 'Yes. Patients with two dental plans are common, and the secondary claim needs the primary EOB and the right coordination rules to pay correctly. Ask how the company identifies the primary plan, when it sends the secondary claim and how it follows up when the secondary carrier does not respond.',
       },
       {
         q: 'What is the biggest difference between good and weak dental billing?',
@@ -455,7 +455,7 @@ export const seedPosts2: SeedPost[] = [
 <li>Your front desk is too busy to verify benefits in detail or follow up on claims.</li>
 <li>You recently lost, or expect to lose, your billing coordinator.</li>
 <li>You are opening a new location or adding a provider and need capacity quickly.</li>
-<li>Your office performs procedures that need more specialized handling, such as medical crossover claims.</li>
+<li>Your office performs procedures that need more specialized handling, such as sedation, implant and bone graft cases that need detailed narratives.</li>
 </ul>
 
 <h2>What are the hybrid options?</h2>

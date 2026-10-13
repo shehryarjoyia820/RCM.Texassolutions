@@ -205,8 +205,8 @@ export const dentalCoreA: Service[] = [
         a: "We sign a Business Associate Agreement before anyone on our team accesses patient data. We work inside your systems instead of exporting records to ours, each team member uses an individual login so activity can be audited, and access is limited to what each task requires. You can remove access at any time.",
       },
       {
-        q: "How is dental billing different from medical billing?",
-        a: "Dental billing uses CDT codes from the ADA, the ADA Dental Claim Form or the 837D electronic claim, and benefit rules built around annual maximums, frequency limits, waiting periods and downgrades. Medical billing uses different code sets, a different claim format and different coverage rules. Dental claims also carry tooth numbers, surfaces and quadrants and often need radiographs or periodontal charts as attachments.",
+        q: "What makes a dental claim complete?",
+        a: "A complete dental claim uses the current CDT code for each procedure, the correct tooth numbers, surfaces or quadrants, and the treating and billing provider details the carrier has on file. It goes out on the ADA Dental Claim Form or as an 837D electronic claim, with any radiographs, periodontal charts or narratives the carrier expects for that service. Checking benefits first for annual maximums, frequency limits, waiting periods and downgrades helps the claim match what the plan will actually pay.",
       },
       {
         q: "When is it time to outsource dental billing?",

@@ -102,8 +102,26 @@ export const DENTAL_POSTS = [
   'dental-insurance-biller',
   'dental-practice-management-software',
   'dental-billing-software',
-  'dental-medical-cross-coding',
   'ai-in-dental-revenue-cycle-management',
+  // Keyword gap plan (2026-10-13).
+  'dental-implant-codes',
+  'd4346-vs-d1110',
+  'periodontal-codes-d4341-d4342-d4910-d4355',
+  'dental-crown-codes',
+  'dental-exam-codes-d0120-d0140-d0150',
+  'dental-x-ray-codes',
+  'dental-extraction-codes-d7140-d7210',
+  'dental-insurance-narratives',
+  'missing-tooth-clause',
+  'in-house-dental-membership-plans',
+  'ucr-fees-dental',
+  'dental-coordination-of-benefits',
+  'dental-predetermination-vs-preauthorization',
+  'dental-carc-rarc-denial-codes',
+  'dhmo-vs-ppo-for-dental-practices',
+  'dental-office-manager-billing-duties',
+  'dental-front-desk-insurance-checklist',
+  'dental-practice-kpis',
 ];
 /** Generic posts kept at the same URL but rewritten with dental examples. */
 export const GENERIC_POSTS = [
@@ -138,8 +156,25 @@ export const POST_CATEGORY: Record<string, string> = {
   'dental-insurance-biller': 'Practice Management',
   'dental-practice-management-software': 'Practice Management',
   'dental-billing-software': 'Practice Management',
-  'dental-medical-cross-coding': 'Dental Billing',
   'ai-in-dental-revenue-cycle-management': 'Practice Management',
+  'dental-implant-codes': 'Dental Billing',
+  'd4346-vs-d1110': 'Dental Billing',
+  'periodontal-codes-d4341-d4342-d4910-d4355': 'Dental Billing',
+  'dental-crown-codes': 'Dental Billing',
+  'dental-exam-codes-d0120-d0140-d0150': 'Dental Billing',
+  'dental-x-ray-codes': 'Dental Billing',
+  'dental-extraction-codes-d7140-d7210': 'Dental Billing',
+  'dental-insurance-narratives': 'Dental Billing',
+  'missing-tooth-clause': 'Dental Billing',
+  'in-house-dental-membership-plans': 'Practice Management',
+  'ucr-fees-dental': 'Dental Billing',
+  'dental-coordination-of-benefits': 'Dental Billing',
+  'dental-predetermination-vs-preauthorization': 'Dental Billing',
+  'dental-carc-rarc-denial-codes': 'Denial Management',
+  'dhmo-vs-ppo-for-dental-practices': 'Practice Management',
+  'dental-office-manager-billing-duties': 'Practice Management',
+  'dental-front-desk-insurance-checklist': 'Practice Management',
+  'dental-practice-kpis': 'Practice Management',
 };
 
 export const KEPT_PAGES = [
@@ -158,14 +193,22 @@ export const DRAFT_PAGES: string[] = [];
 
 const group = (prefix: string, slugs: string[], to: string) => Object.fromEntries(slugs.map((s) => [`${prefix}${s}/`, to]));
 
+/** Kept posts published under a new slug (old slug 301s via REDIRECTS). */
+export const SLUG_RENAMES: Record<string, string> = {
+  'hipaa-and-outsourced-medical-billing': 'hipaa-and-outsourced-dental-billing',
+};
+
 export const REDIRECTS: Record<string, string> = {
+  // Owner, 2026-10-13: dental RCM only, nothing medical.
+  '/blog/dental-medical-cross-coding/': '/blog/dental-billing-codes-guide/',
+  '/blog/hipaa-and-outsourced-medical-billing/': '/blog/hipaa-and-outsourced-dental-billing/',
   // Owner, 2026-10-13: the team does not work in Curve Dental.
   '/services/curve-dental-billing-services/': '/services/revenue-cycle-management/',
   // Services: 45 removed
   ...group('/services/', ['medical-billing', 'medical-billing-small-practices', 'dental-billing-small-practices', 'out-of-network-billing', 'dental-virtual-assistant', 'virtual-medical-assistant', 'practice-management-support', 'healthcare-data-entry', 'ehr-workflow-support', 'appointment-scheduling'], '/services/dental-billing/'),
   ...group('/services/', ['insurance-eligibility-verification', 'benefits-verification', 'prior-authorization', 'patient-registration'], '/services/dental-insurance-verification/'),
   ...group('/services/', ['medical-coding', 'coding-audit', 'charge-entry', 'claims-submission', 'claims-scrubbing', 'electronic-claims-processing', 'clearinghouse-coordination'], '/services/dental-claims-processing/'),
-  '/services/dental-medical-cross-coding/': '/blog/dental-medical-cross-coding/',
+  '/services/dental-medical-cross-coding/': '/blog/dental-billing-codes-guide/',
   ...group('/services/', ['denial-appeals'], '/services/denial-management/'),
   ...group('/services/', ['era-processing', 'payment-reconciliation', 'underpayment-identification'], '/services/payment-posting/'),
   ...group('/services/', ['accounts-receivable-management', 'aging-ar-follow-up', 'revenue-recovery'], '/services/dental-accounts-receivable/'),
@@ -198,8 +241,8 @@ export const REDIRECTS: Record<string, string> = {
   // Blog: 19 removed
   '/blog/how-to-choose-a-medical-billing-company/': '/blog/how-to-choose-a-dental-billing-company/',
   '/blog/common-medical-billing-denial-codes/': '/blog/how-to-appeal-a-denied-dental-claim/',
-  '/blog/medical-billing-for-dental-sleep-apnea/': '/blog/dental-medical-cross-coding/',
-  '/blog/billing-medical-insurance-for-dental-procedures/': '/blog/dental-medical-cross-coding/',
+  '/blog/medical-billing-for-dental-sleep-apnea/': '/blog/dental-billing-codes-guide/',
+  '/blog/billing-medical-insurance-for-dental-procedures/': '/blog/dental-billing-codes-guide/',
   '/blog/how-much-do-medical-billing-services-cost/': '/tools/dental-billing-cost-calculator/',
   ...group('/blog/', [
     'how-medical-billing-works', 'what-is-ar-in-medical-billing', 'medical-billing-vs-revenue-cycle-management', 'medical-billing-kpis',

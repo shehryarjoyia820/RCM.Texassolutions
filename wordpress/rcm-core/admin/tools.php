@@ -31,7 +31,7 @@ $types = [
     <div class="rcm-panel">
         <h2><?php esc_html_e('Content sync', 'rcm'); ?></h2>
         <?php if (isset($_GET['trashed'])) : // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only ?>
-            <div class="notice notice-success inline"><p><?php printf(esc_html__('%d retired drafts moved to the Trash. WordPress empties the Trash automatically after 30 days, or you can empty it now from the Trash view of each list.', 'rcm'), (int) $_GET['trashed']); // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?></p></div>
+            <div class="notice notice-success inline"><p><?php printf(esc_html__('%d retired drafts moved to the Trash, and %d unused old blog categories and tags removed. WordPress empties the Trash automatically after 30 days, or you can empty it now from the Trash view of each list.', 'rcm'), (int) $_GET['trashed'], (int) ($_GET['terms'] ?? 0)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?></p></div>
         <?php endif; ?>
         <p><?php esc_html_e('Imports the content bundled with this plugin version. Items you have edited in WordPress are kept unless you tick "overwrite".', 'rcm'); ?></p>
         <p class="description"><?php esc_html_e('Automatic: when a new plugin version is uploaded, this sync runs by itself in the background (without overwrite) and clears the page cache. Publishing or updating a post or page also clears the cache. Run it by hand only when you want to overwrite edits.', 'rcm'); ?></p>
@@ -62,7 +62,7 @@ $types = [
         <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-top:12px">
             <input type="hidden" name="action" value="rcm_trash_retired">
             <?php wp_nonce_field('rcm_trash_retired'); ?>
-            <?php submit_button(__('Move retired drafts to Trash', 'rcm'), 'secondary', 'submit', false, ['data-rcm-confirm' => esc_attr__('Move all retired content drafts (services, specialties, tools, posts, pages and FAQs no longer on the site) to the Trash? Their old URLs keep redirecting.', 'rcm')]); ?>
+            <?php submit_button(__('Move retired drafts to Trash', 'rcm'), 'secondary', 'submit', false, ['data-rcm-confirm' => esc_attr__('Move all retired content drafts (services, specialties, tools, posts, pages and FAQs no longer on the site) to the Trash, and remove old blog categories and tags no published post uses? Their old URLs keep redirecting.', 'rcm')]); ?>
             <span class="description"><?php esc_html_e('Pages kept as drafts on purpose (such as Pricing) are not touched.', 'rcm'); ?></span>
         </form>
         <?php if ($report) : ?>
