@@ -424,7 +424,7 @@ export const servicesPart5: Service[] = [
     intro: [
       'Dentrix, from Henry Schein One, is one of the most widely used practice management systems in general dentistry, and in many offices it runs on a server inside the practice. The schedule, treatment plans, insurance plan records, fee schedules and family ledgers all live in one local database that the front desk, hygienists and billing staff share throughout the day.',
       'Our Dentrix billing services work within that database rather than around it. Claims are created from completed procedures, checked against the patient’s insurance plan setup, sent through the electronic claims connection your office already uses, and supported with radiographs, perio charting or narratives when a payer asks for them. Insurance payments are entered against the original claims so ledgers, estimates and aging reports stay accurate. For an installed system, access is usually arranged through a secure remote connection your IT provider manages.',
-      'If your office uses Dentrix Ascend, the cloud-based product, the same billing work applies through a browser login. Dentrix and Dentrix Ascend are trademarks of their owner. Texas Solutions is not affiliated with or endorsed by Henry Schein One; we work in your licensed system as an extension of your team, and we sign a Business Associate Agreement before accessing patient data.',
+      'If your office uses Dentrix Ascend, the cloud-based product, tell us during the consultation and we will confirm whether we can support your setup. Dentrix and Dentrix Ascend are trademarks of their owner. Texas Solutions is not affiliated with or endorsed by Henry Schein One; we work in your licensed system as an extension of your team, and we sign a Business Associate Agreement before accessing patient data.',
     ],
     scope: [
       'Creating claims from completed procedures and reviewing them before sending',
@@ -497,8 +497,8 @@ export const servicesPart5: Service[] = [
         a: 'Dentrix billing services include the daily insurance billing work done inside your Dentrix database. That covers creating and sending claims, adding attachments, posting insurance and patient payments, keeping plan and fee schedule records accurate and working the insurance aging report. Verification, denials and patient balance review can be added. Your office chooses the scope, and every action is recorded under named Dentrix users.',
       },
       {
-        q: 'Do you also work in Dentrix Ascend?',
-        a: 'Yes, our team can work in Dentrix Ascend, the cloud-based version, as well as in installed Dentrix systems. With Ascend, access is through browser logins your office creates, so no remote server connection is needed. The billing routine is the same: claims, attachments, payment posting, aging follow-up and notes your front desk can read.',
+        q: 'Can you work in Dentrix Ascend?',
+        a: 'Our core work is in installed Dentrix systems. Dentrix Ascend is the cloud-based version, where access would be through browser logins your office creates. If your office uses Ascend, tell us during the free consultation and we will confirm whether we can support your setup before any proposal.',
       },
       {
         q: 'Do you need access to our Dentrix server?',

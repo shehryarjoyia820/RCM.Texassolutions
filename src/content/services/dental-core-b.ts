@@ -384,7 +384,7 @@ export const dentalCoreB: Service[] = [
       {
         title: 'Outstanding patient balance follow-up',
         detail:
-          'For balances that remain unpaid after a statement, we send polite reminders using the methods your practice already supports, such as follow-up statements, text messages or email, and phone calls when your policy allows. The tone stays respectful and factual: what the balance is for, what insurance paid and how to pay. Patients who ask about a payment plan are offered the options your practice has approved. Accounts that remain unpaid after your reminder sequence are listed for your review, and any next step, including referral to an outside agency, is a decision your practice makes.',
+          'For balances that remain unpaid after a statement, we send polite reminders using the methods your practice already supports, such as follow-up statements by mail or the electronic statements your software already sends. We do not phone patients; conversations about balances stay with your front desk. The tone stays respectful and factual: what the balance is for, what insurance paid and how to pay. Patients who ask about a payment plan are offered the options your practice has approved. Accounts that remain unpaid after your reminder sequence are listed for your review, and any next step, including referral to an outside agency, is a decision your practice makes.',
       },
       {
         title: 'Patient billing coordination',

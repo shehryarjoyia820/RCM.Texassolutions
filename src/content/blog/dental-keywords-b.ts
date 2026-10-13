@@ -212,7 +212,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
 
 <h2>How is dental accounting software different from billing software?</h2>
 <p>Dental accounting software keeps the books for the business, while billing software tracks what each patient and carrier owes. Accounting covers the general ledger, bank reconciliation, accounts payable for lab and supply bills, payroll entries, and the financial statements your accountant uses for taxes. It usually works at the level of daily deposits, not individual patient balances.</p>
-<p>The two systems meet at the deposit. Payments posted in the practice management system on a given day should match what landed in the bank, and any difference needs to be explained before the books are closed. Bookkeeping is a separate job from insurance billing. Texas Solutions RCM focuses on dental revenue cycle management, not bookkeeping or tax preparation.</p>
+<p>The two systems meet at the deposit. Payments posted in the practice management system on a given day should match what landed in the bank, and any difference needs to be explained before the books are closed. Bookkeeping is a separate job from insurance billing and is usually handled by an accountant or bookkeeper.</p>
 
 <h2>When is dental billing software enough on its own?</h2>
 <p>Software alone can be enough when the office has trained, steady staff with time set aside for billing every day. Software sends claims, but people decide what to do with a denial, a downgrade or a claim that has sat unpaid for 45 days.</p>
@@ -254,7 +254,7 @@ export const dentalKeywordPostsB: SeedPost[] = [
       },
       {
         q: 'Is dental accounting software the same as billing software?',
-        a: 'No. Accounting software keeps the business books: general ledger, bank reconciliation, bills, payroll entries and financial statements. Billing software tracks charges, claims and balances for each patient and carrier. The two connect at the daily deposit, where posted payments should match the bank. Texas Solutions RCM handles dental revenue cycle management, not bookkeeping or taxes.',
+        a: 'No. Accounting software keeps the business books: general ledger, bank reconciliation, bills, payroll entries and financial statements. Billing software tracks charges, claims and balances for each patient and carrier. The two connect at the daily deposit, where posted payments should match the bank.',
       },
       {
         q: 'When should a dental office outsource billing instead of buying more software?',

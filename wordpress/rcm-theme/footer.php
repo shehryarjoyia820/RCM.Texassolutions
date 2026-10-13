@@ -9,6 +9,7 @@ $cols = [
     __('Company', 'rcm-theme') => [
         [__('About Us', 'rcm-theme'), rcm_t_url('about')],
         [__('How We Work', 'rcm-theme'), rcm_t_url('how-we-work')],
+        [__('Pricing', 'rcm-theme'), rcm_t_url('pricing')],
         [__('Security and Privacy', 'rcm-theme'), rcm_t_url('security')],
         [__('Service Areas', 'rcm-theme'), rcm_t_url('service-areas')],
         [__('Contact', 'rcm-theme'), rcm_t_url('contact')],

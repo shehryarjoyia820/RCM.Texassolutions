@@ -144,7 +144,7 @@ export const KEPT_PAGES = [
   'pricing',
 ];
 /** Pages built but kept unpublished until the owner supplies copy. */
-export const DRAFT_PAGES = ['pricing'];
+export const DRAFT_PAGES: string[] = [];
 
 /* ------------------------------------------------------------------ */
 /*  301 redirects (from path -> target path), one hop each             */

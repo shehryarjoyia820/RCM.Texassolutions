@@ -34,6 +34,7 @@ ${opt('src/content/services/dental-core-a.ts', 'dentalCoreA')}
 ${opt('src/content/services/dental-core-b.ts', 'dentalCoreB')}
 ${opt('src/content/pages-dental.ts', 'dentalPageOverrides')}
 ${opt('src/content/pages-areas.ts', 'areaPages')}
+${opt('src/content/pages-pricing.ts', 'pricingPageList')}
 ${opt('src/content/blog/dental-rewrites.ts', 'dentalRewrites')}
 ${opt('src/content/blog/dental-keywords-a.ts', 'dentalKeywordPostsA')}
 ${opt('src/content/blog/dental-keywords-b.ts', 'dentalKeywordPostsB')}
@@ -52,7 +53,7 @@ export const data = {
   blog: [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC],
   blogOverrides: dentalRewrites,
   pages,
-  pageOverrides: [...dentalPageOverrides, ...areaPages],
+  pageOverrides: [...dentalPageOverrides, ...areaPages, ...pricingPageList],
   dental: { ...dental },
   company: { CYCLE: company.CYCLE, HOME_FAQS: company.HOME_FAQS, GENERAL_FAQS: company.GENERAL_FAQS, COMPANY_FACTS: company.COMPANY_FACTS },
 };

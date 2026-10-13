@@ -189,6 +189,7 @@ function rcm_t_nav(): array
         ['label' => __('About', 'rcm-theme'), 'url' => rcm_t_url('about'), 'groups' => [['title' => __('Company', 'rcm-theme'), 'links' => [
             [__('About Us', 'rcm-theme'), rcm_t_url('about')],
             [__('How We Work', 'rcm-theme'), rcm_t_url('how-we-work')],
+            [__('Pricing', 'rcm-theme'), rcm_t_url('pricing')],
             [__('Security and Privacy', 'rcm-theme'), rcm_t_url('security')],
             [__('Service Areas', 'rcm-theme'), rcm_t_url('service-areas')],
         ]]]],

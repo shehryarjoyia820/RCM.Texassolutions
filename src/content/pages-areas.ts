@@ -214,7 +214,7 @@ const florida: PageContent = {
       'We serve Florida practices remotely. Our team logs into your practice management system, clearinghouse and carrier portals through accounts your office creates and controls, and all notes, postings and claim activity stay in your system. Florida spans the Eastern and Central time zones, and we set working hours that overlap with your front desk so questions get answered the same day.'
     ),
     p(
-      'Florida dental billing has a few features that set it apart: a Medicaid dental program run entirely through contracted dental plans, a large population of patients with retiree and individual dental coverage, and prompt pay statutes that apply to state-regulated insurers and HMOs. Offices comparing dental billing services in Florida can hand us billing alone or the full cycle, and as a dental billing company in Florida we still treat billing as one part of dental revenue cycle management.'
+      'Florida dental billing has a few features that set it apart: a Medicaid dental program run entirely through contracted dental plans, a large population of patients with retiree and individual dental coverage, and prompt pay statutes that apply to state-regulated insurers and HMOs. Offices comparing dental billing services in Florida can start with one part of the revenue cycle or the full cycle, with the scope agreed in writing, and as a dental billing company in Florida we still treat billing as one part of dental revenue cycle management.'
     ),
     h2('Florida Medicaid dental: the SMMC Dental program'),
     p(
