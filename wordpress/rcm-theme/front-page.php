@@ -46,7 +46,7 @@ $journey = [
     <div class="absolute -right-40 top-10 h-[28rem] w-[28rem] rounded-full bg-teal-200/40 blur-3xl" aria-hidden="true"></div>
     <div class="container relative grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:py-24">
         <div>
-            <p class="chip mb-6"><span class="h-1.5 w-1.5 rounded-full bg-teal-500" aria-hidden="true"></span> <?php esc_html_e('For dental practices in all 50 states', 'rcm-theme'); ?></p>
+            <p class="chip mb-6"><span class="h-1.5 w-1.5 rounded-full bg-teal-500" aria-hidden="true"></span> <?php esc_html_e('For dental practices across the USA', 'rcm-theme'); ?></p>
             <h1 class="text-[2.4rem] font-extrabold leading-[1.08] sm:text-[3.4rem]"><?php esc_html_e('Dental billing and revenue cycle management for', 'rcm-theme'); ?> <span class="text-teal-700"><?php esc_html_e('US dental practices', 'rcm-theme'); ?></span></h1>
             <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"><?php esc_html_e('We provide comprehensive Dental Revenue Cycle Management (RCM) solutions to help dental practices streamline billing operations, reduce claim denials, improve collections, and maximize revenue.', 'rcm-theme'); ?></p>
             <div class="mt-8 flex flex-wrap gap-3">
@@ -95,9 +95,9 @@ $journey = [
     <div class="container">
         <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div class="max-w-3xl">
-                <p class="eyebrow mb-3"><?php esc_html_e('Dental RCM services', 'rcm-theme'); ?></p>
-                <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Eight services that cover the dental revenue cycle', 'rcm-theme'); ?></h2>
-                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('Take the full set or only the pieces your office needs help with.', 'rcm-theme'); ?></p>
+                <p class="eyebrow mb-3"><?php esc_html_e('Dental billing and RCM services', 'rcm-theme'); ?></p>
+                <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('Dental billing services that cover the whole revenue cycle', 'rcm-theme'); ?></h2>
+                <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('Use us as your dental billing company for the full cycle, or outsource only the pieces your office needs help with, from dental insurance verification to dental credentialing.', 'rcm-theme'); ?></p>
             </div>
             <a href="<?php echo esc_url(rcm_t_archive('rcm_service')); ?>" class="btn-outline btn-sm shrink-0"><?php esc_html_e('All dental services', 'rcm-theme'); ?> <?php rcm_t_icon('ArrowRight', 'h-4 w-4'); ?></a>
         </div>
@@ -139,7 +139,7 @@ $journey = [
         <div class="mb-10 max-w-3xl">
             <p class="eyebrow mb-3"><?php esc_html_e('Dental software', 'rcm-theme'); ?></p>
             <h2 class="text-3xl font-bold sm:text-4xl"><?php esc_html_e('We work in your dental software', 'rcm-theme'); ?></h2>
-            <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('No new system to learn. Our team logs in to the software, clearinghouse and carrier portals you already use, with named accounts you control.', 'rcm-theme'); ?></p>
+            <p class="mt-4 text-lg text-ink-muted"><?php esc_html_e('No new system to learn. Our team works inside the dental practice management software, clearinghouse and carrier portals you already use, with named accounts you control.', 'rcm-theme'); ?></p>
         </div>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <?php foreach ($software as $p) : $i = rcm_t_item($p); rcm_t_link_card($i['url'], $i['title'], $i['text'], $i['icon']); endforeach; ?>

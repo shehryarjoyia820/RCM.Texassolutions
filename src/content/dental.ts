@@ -90,6 +90,12 @@ export const DENTAL_POSTS = [
   'cdt-2026-code-changes',
   'dental-billing-codes-guide',
   'how-to-appeal-a-denied-dental-claim',
+  // Keyword plan (docs/dental-billing-keywords-usa.xlsx).
+  'ada-dental-claim-form',
+  'caqh-proview-for-dentists',
+  'dental-insurance-biller',
+  'dental-practice-management-software',
+  'dental-billing-software',
 ];
 /** Generic posts kept at the same URL but rewritten with dental examples. */
 export const GENERIC_POSTS = [
@@ -119,6 +125,11 @@ export const POST_CATEGORY: Record<string, string> = {
   'what-is-a-clean-claim-rate': 'Practice Management',
   'hipaa-and-outsourced-medical-billing': 'Compliance and Regulation',
   'patient-payment-options-text-to-pay': 'Practice Management',
+  'ada-dental-claim-form': 'Dental Billing',
+  'caqh-proview-for-dentists': 'Practice Management',
+  'dental-insurance-biller': 'Practice Management',
+  'dental-practice-management-software': 'Practice Management',
+  'dental-billing-software': 'Practice Management',
 };
 
 export const KEPT_PAGES = [

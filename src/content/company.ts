@@ -39,16 +39,16 @@ export const CYCLE = [
 
 export const HOME_FAQS: Faq[] = [
   {
-    q: 'What does a dental billing company do?',
-    a: 'A dental billing company handles the insurance and billing work that gets a dental office paid: verifying benefits, sending claims with the right attachments, posting EOBs and ERAs, appealing denials and following up on unpaid claims and patient balances. Your dentists keep every clinical decision, and our team works in your own software with notes your staff can read.',
+    q: 'What is dental billing, and what does a dental billing company do?',
+    a: 'Dental billing is the work of getting a dental office paid by insurance carriers and patients. A dental billing company handles that work for you: verifying benefits, sending dental insurance claims with the right attachments, posting EOBs and ERAs, appealing denials and following up on unpaid claims and patient balances, inside your own software.',
   },
   {
     q: 'Do we need to change Dentrix, Open Dental, Eaglesoft or Curve Dental?',
     a: 'No. We work inside the dental software you already run, using named user accounts your administrator creates and can disable at any time. Your ledgers, claim history and notes stay in your system. We are not affiliated with any software vendor; we simply work in the product as a user, with the access you grant.',
   },
   {
-    q: 'Can we outsource only insurance verification or A/R follow-up?',
-    a: 'Yes. Many offices start with one area, such as verifying benefits before appointments or clearing older insurance A/R, while their front desk keeps the rest. Each service can be scoped on its own, and the written proposal spells out which tasks are ours and which stay with your team.',
+    q: 'Can we outsource only dental insurance verification or A/R follow-up?',
+    a: 'Yes. Many offices start with one area, such as verifying dental insurance before appointments or clearing older insurance A/R, while their front desk keeps the rest. Each service can be scoped on its own, and the written proposal spells out which tasks are ours and which stay with your team.',
   },
   {
     q: 'How much does dental billing with you cost?',
@@ -59,8 +59,8 @@ export const HOME_FAQS: Faq[] = [
     a: 'We sign a Business Associate Agreement before accessing any patient data, and we work only inside your systems through named accounts with the least access each task needs. Patient details are not sent by ordinary email or chat. This website, its forms and its AI assistant are for business enquiries only.',
   },
   {
-    q: 'Do you work with PPO, DHMO and Medicaid dental plans in every state?',
-    a: 'Yes. Our team works remotely with dental offices in all 50 states and handles claims for PPO, DHMO, indemnity and state Medicaid or CHIP dental plans. Rules differ by carrier and state, so during onboarding we document the carriers and programs your office accepts and how each one handles claims and attachments.',
+    q: 'Do you work with PPO, DHMO and Medicaid dental plans across the USA?',
+    a: 'Yes. Our team works remotely with dental offices across the USA and handles claims for PPO, DHMO, indemnity and state Medicaid or CHIP dental plans. Rules differ by carrier and state, so during onboarding we document the carriers and programs your office accepts and how each one handles claims and attachments.',
   },
 ];
 

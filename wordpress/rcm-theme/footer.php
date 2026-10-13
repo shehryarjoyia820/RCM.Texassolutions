@@ -38,7 +38,7 @@ $cols = [
                     <?php esc_html_e('Dental billing and revenue cycle management for US dental practices. A division of', 'rcm-theme'); ?>
                     <a href="https://texassolutions.co" class="text-white underline decoration-navy-500 underline-offset-2 hover:decoration-white">Texas Solutions</a>.
                 </p>
-                <p class="mt-3 text-[15px] font-medium text-white"><?php esc_html_e('Serving dental practices in all 50 states', 'rcm-theme'); ?></p>
+                <p class="mt-3 text-[15px] font-medium text-white"><?php esc_html_e('Serving dental practices across the USA', 'rcm-theme'); ?></p>
                 <ul class="mt-6 space-y-3 text-[15px]">
                     <li class="flex gap-3"><?php rcm_t_icon('Mail', 'mt-0.5 h-4 w-4 shrink-0 text-teal-300'); ?><a href="mailto:<?php echo esc_attr($c['email']); ?>" class="hover:text-white"><?php echo esc_html($c['email']); ?></a></li>
                     <li class="flex gap-3"><?php rcm_t_icon('Phone', 'mt-0.5 h-4 w-4 shrink-0 text-teal-300'); ?><a href="<?php echo esc_url($c['phone_href'], ['tel']); ?>" class="hover:text-white" data-rcm-cta="phone"><?php echo esc_html($c['phone']); ?></a></li>

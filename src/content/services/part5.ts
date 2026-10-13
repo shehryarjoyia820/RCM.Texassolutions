@@ -493,6 +493,14 @@ export const servicesPart5: Service[] = [
     ],
     faqs: [
       {
+        q: 'What do Dentrix billing services include?',
+        a: 'Dentrix billing services include the daily insurance billing work done inside your Dentrix database. That covers creating and sending claims, adding attachments, posting insurance and patient payments, keeping plan and fee schedule records accurate and working the insurance aging report. Verification, denials and patient balance review can be added. Your office chooses the scope, and every action is recorded under named Dentrix users.',
+      },
+      {
+        q: 'Do you also work in Dentrix Ascend?',
+        a: 'Yes, our team can work in Dentrix Ascend, the cloud-based version, as well as in installed Dentrix systems. With Ascend, access is through browser logins your office creates, so no remote server connection is needed. The billing routine is the same: claims, attachments, payment posting, aging follow-up and notes your front desk can read.',
+      },
+      {
         q: 'Do you need access to our Dentrix server?',
         a: 'We need user access to Dentrix, not control of your server. For an installed system, your IT provider typically gives our team secure remote access, and your practice creates a separate Dentrix login for each team member with rights limited to billing work. You can review activity and remove access at any time, and we sign a Business Associate Agreement before access is granted.',
       },
@@ -530,6 +538,9 @@ export const servicesPart5: Service[] = [
     keywords: [
       'dentrix billing services',
       'dentrix billing',
+      'dentrix dental billing',
+      'dentrix ascend billing',
+      'dental billing company for dentrix',
       'dentrix insurance claims',
       'dentrix insurance aging',
       'outsourced dental billing for dentrix',
@@ -620,6 +631,14 @@ export const servicesPart5: Service[] = [
     ],
     faqs: [
       {
+        q: 'What do Open Dental billing services include?',
+        a: 'Open Dental billing services include sending claims, adding attachments, posting payments and working the outstanding insurance report. They also cover a review of the plan and fee schedule setup that drives estimates. Verification and patient balance review can be added. All work happens inside your Open Dental database under named users in a security group your office controls.',
+      },
+      {
+        q: 'How do you handle claim attachments in Open Dental?',
+        a: 'We send claim attachments through the method your office already has set up, such as your clearinghouse attachment service or a carrier portal. Radiographs, perio charts, photos and narratives are taken from the patient record, linked to the claim and noted in the claim history. If attachments are not yet set up, we can list the options for your office to review.',
+      },
+      {
         q: 'Why does configuration matter so much in Open Dental?',
         a: 'Configuration matters because Open Dental calculates estimates, write-offs and claim amounts from the insurance plans, benefits and fee schedules your office has entered. If a plan points to the wrong fee schedule or benefits are entered incorrectly, every claim and estimate for those patients inherits the error. Reviewing setup early lets billing work fix causes instead of repeating the same corrections.',
       },
@@ -657,6 +676,7 @@ export const servicesPart5: Service[] = [
     keywords: [
       'open dental billing services',
       'open dental billing',
+      'dental billing company for open dental',
       'open dental insurance claims',
       'open dental outstanding insurance',
       'outsourced billing for open dental',
@@ -746,6 +766,14 @@ export const servicesPart5: Service[] = [
     ],
     faqs: [
       {
+        q: 'What do Eaglesoft billing services include?',
+        a: 'Eaglesoft billing services include sending electronic claims and attachments, posting insurance payments and ERAs, entering patient payments, working insurance aging and preparing secondary claims inside your Eaglesoft system. For long-established offices, they often add an approved clean-up of old open claims, unapplied credits and duplicate insurance records, so aging reports reflect balances that can still be collected.',
+      },
+      {
+        q: 'How do you work the insurance aging report in Eaglesoft?',
+        a: 'We work the Eaglesoft insurance aging report by carrier, age and amount, starting with claims closest to timely filing limits and the largest balances. Each claim is checked through the carrier portal or a call, then resent, corrected, appealed or recommended for closing. Every step is noted on the claim so your team can see its status.',
+      },
+      {
         q: 'Can you clean up old claims in Eaglesoft?',
         a: 'Yes, clean-up of old open claims is a common part of Eaglesoft billing work for long-established offices. We sort old claims by whether they can still be collected, check payer timely filing limits, resubmit or appeal where possible, and recommend closing the rest. Nothing is written off or adjusted without your office’s approval, and every action is noted on the account.',
       },
@@ -763,7 +791,7 @@ export const servicesPart5: Service[] = [
       },
       {
         q: 'What if we plan to move away from Eaglesoft?',
-        a: 'If a move to another system is planned, cleaning up claims and ledgers first can make the conversion easier, since open balances and insurance records carry over to the new system. We can help reconcile balances before and after the move as a separate billing software migration project, working alongside the vendor that performs the data conversion.',
+        a: 'If a move to another system is planned, cleaning up claims and ledgers first can make the conversion easier, since open balances and insurance records carry over to the new system. We can help reconcile balances before and after the move as a separate project, working alongside the vendor that performs the data conversion.',
       },
     ],
     relatedTools: [
@@ -784,6 +812,8 @@ export const servicesPart5: Service[] = [
     keywords: [
       'eaglesoft billing services',
       'eaglesoft billing',
+      'eaglesoft dental billing',
+      'dental billing company for eaglesoft',
       'eaglesoft insurance claims',
       'eaglesoft ledger clean-up',
       'outsourced billing for eaglesoft',
@@ -870,6 +900,14 @@ export const servicesPart5: Service[] = [
     ],
     faqs: [
       {
+        q: 'What do Curve Dental billing services include?',
+        a: 'Curve Dental billing services include claims, attachments, payment posting, insurance verification and unpaid claim follow-up, all inside your cloud Curve account. Claims are created and sent daily, insurance and patient payments are posted, and coverage is checked before appointments. For new or recently converted offices, they also include a check of fee schedules, insurance plans and provider details before claim volume builds.',
+      },
+      {
+        q: 'Can you verify dental insurance for our Curve Dental patients?',
+        a: 'Yes, we can verify dental insurance for scheduled Curve Dental patients when verification is part of the scope. We confirm coverage, record deductibles, remaining maximums, frequencies and waiting periods, and update the plan details in Curve before the visit. Problems such as inactive coverage are flagged to your front desk so the patient can be contacted in time.',
+      },
+      {
         q: 'Do you need special access to work in Curve Dental?',
         a: 'No special connection is needed beyond named user accounts. Because Curve Dental is cloud-based, our team signs in through a web browser using logins your office creates and controls. You decide each user’s permissions and can deactivate access at any time. We sign a Business Associate Agreement before any login is issued to our team.',
       },
@@ -903,6 +941,8 @@ export const servicesPart5: Service[] = [
     keywords: [
       'curve dental billing services',
       'curve dental billing',
+      'curve dental insurance verification',
+      'dental billing company for curve dental',
       'cloud dental billing',
       'curve dental insurance claims',
       'outsourced billing for curve dental',

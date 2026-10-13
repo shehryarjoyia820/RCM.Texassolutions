@@ -15,7 +15,7 @@ $names = array_column($d['core'], 'name', 'slug');
 rcm_t_part('page-hero', [
     'eyebrow' => __('Services', 'rcm-theme'),
     'title' => __('Dental Billing & RCM Services', 'rcm-theme'),
-    'intro' => __('Dental billing and revenue cycle management for US dental practices in all 50 states, delivered inside your own dental software, clearinghouse and carrier portals.', 'rcm-theme'),
+    'intro' => __('Dental billing and revenue cycle management for dental practices across the USA, delivered inside your own dental software, clearinghouse and carrier portals.', 'rcm-theme'),
     'actions' => '<a href="' . esc_url(rcm_t_url('consultation')) . '" class="btn-primary">' . esc_html__('Get a Free Consultation', 'rcm-theme') . '</a><a href="' . esc_url(rcm_t_url('how-we-work')) . '" class="btn-ghost-light">' . esc_html__('How we work', 'rcm-theme') . '</a>',
 ]);
 

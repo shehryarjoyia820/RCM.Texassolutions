@@ -484,17 +484,17 @@ export const seedPosts3: SeedPost[] = [
     title: 'CDT 2026 Code Changes: What Changed and How to Prepare for the Next Update',
     seoTitle: 'CDT Codes 2026: Changes and How to Prepare',
     metaDescription:
-      'CDT codes 2026 took effect January 1, 2026 with 60 changes, led by an anesthesia and sedation overhaul. How the ADA updates CDT and how to prepare for 2027.',
+      'CDT codes for 2026 took effect January 1 with 60 changes, led by sedation coding. How the ADA updates dental codes each year and how to prepare for CDT 2027.',
     excerpt:
       'The ADA updates the CDT Code every year, effective January 1. Here is what changed in CDT 2026, how the update process works, what is coming in CDT 2027, and how to prepare your office.',
     category: 'Dental Billing',
-    tags: ['CDT codes 2026', 'CDT 2027', 'dental coding', 'ADA', 'code updates'],
+    tags: ['CDT codes 2026', 'CDT codes', 'CDT code', 'dental codes', 'dental coding', 'current dental terminology codes', 'CDT 2027', 'ADA', 'code updates'],
     readingMinutes: 7,
     publishedAt: '2026-10-11',
     html: `
 <p><strong>CDT 2026 took effect on January 1, 2026, with 60 changes to the dental code set: 31 additions, 14 revisions, 6 deletions and 9 editorial changes, according to ADA News.</strong> The biggest area of change was anesthesia and sedation coding. Dental offices should use the official CDT 2026 manual or ADA resources for exact codes and descriptors, and start preparing now for CDT 2027.</p>
 
-<p>The Code on Dental Procedures and Nomenclature, known as the CDT Code, is the HIPAA standard code set for dental procedures. It is owned and maintained by the American Dental Association (ADA) and changes every year. This article explains how the update process works, summarizes what changed for 2026 at a high level, and gives a practical checklist for keeping your office current. We do not reproduce code descriptors here, because the CDT Code is licensed by the ADA.</p>
+<p>The Code on Dental Procedures and Nomenclature, known as the CDT Code and published in the ADA's Current Dental Terminology manual, is the HIPAA standard code set for dental procedures. It is owned and maintained by the American Dental Association (ADA) and changes every year. This article explains how the update process works, summarizes what changed for 2026 at a high level, and gives a practical checklist for keeping your office current. We do not reproduce code descriptors here, because the CDT Code is licensed by the ADA.</p>
 
 <h2>How does the ADA update CDT codes each year?</h2>
 <p>The ADA's Code Maintenance Committee (CMC) reviews requests to add, revise or delete codes. Anyone can submit a request, including dentists, dental organizations and payers. The committee includes representatives from dental organizations and from the payer community, and it votes on each request at an annual meeting. Approved changes are published in the next CDT manual and take effect on January 1.</p>
@@ -558,6 +558,14 @@ export const seedPosts3: SeedPost[] = [
 <h2>Getting ready for January 1?</h2><p>If you want a second set of eyes on your code update plan before CDT 2027 takes effect, <a href="/consultation/">book a free consultation</a>. We can go through your fee schedule, templates and the procedures you perform most and flag the spots that usually cause January rejections.</p>
 `,
     faqs: [
+      {
+        q: 'How often do CDT codes change?',
+        a: 'CDT codes change once a year, and each new version takes effect on January 1. The ADA\'s Code Maintenance Committee reviews requests to add, revise or delete dental codes, and the approved changes are published in the next CDT manual. Offices should install their software vendor\'s annual code update and review fees and templates before the new year starts.',
+      },
+      {
+        q: 'What happens if a dental claim uses an outdated CDT code?',
+        a: 'A dental claim with a deleted or outdated CDT code is usually rejected or denied, because carriers expect the code valid on the date of service. The fix is to correct the code to match what the dentist documented and resend the claim. Treatment planned in one year and delivered in the next must use the code in effect on the delivery date.',
+      },
       {
         q: 'When did CDT 2026 take effect?',
         a: 'CDT 2026 took effect on January 1, 2026. Claims with dates of service on or after that date should use CDT 2026 codes.',
@@ -782,23 +790,23 @@ export const seedPosts3: SeedPost[] = [
   // 8 ------------------------------------------------------------------
   {
     slug: 'dental-billing-codes-guide',
-    title: 'Dental Billing Codes Guide: How CDT Categories, Tooth Numbers and Surfaces Fit Together',
-    seoTitle: 'Dental Billing Codes Cheat Sheet Alternative: CDT Guide',
+    title: 'CDT Codes Explained: A Guide to Dental Codes, Tooth Numbers and Surfaces',
+    seoTitle: 'CDT Codes Explained: A Guide to Dental Codes',
     metaDescription:
-      'A dental billing codes guide in place of a cheat sheet: CDT category ranges, tooth numbers, surfaces and quadrants, and the claim mistakes that cause denials.',
+      'CDT codes are the American Dental Association codes on every dental claim. See how dental codes are grouped, paired with tooth numbers and billed correctly.',
     excerpt:
-      'Instead of a one-page cheat sheet, this guide explains how the CDT Code is organized by category, how codes pair with tooth numbers, surfaces and areas of the mouth, and which claim details trip up offices most.',
+      'CDT codes are the dental codes on every claim. This guide explains how the CDT Code is organized by category, how codes pair with tooth numbers, surfaces and areas of the mouth, and which dental coding details trip up offices most.',
     category: 'Dental Billing',
-    tags: ['dental billing codes', 'CDT categories', 'tooth numbering', 'dental claims', 'dental coding'],
+    tags: ['CDT codes', 'dental codes', 'dental coding', 'current dental terminology codes', 'American Dental Association code', 'dental CDT codes', 'dental billing codes', 'tooth numbering'],
     readingMinutes: 8,
     publishedAt: '2026-10-12',
     html: `
-<p><strong>Dental billing codes come from the CDT Code, which the American Dental Association organizes into categories by code range, from diagnostic (D0100 to D0999) through adjunctive general services (D9000 to D9999).</strong> A correct claim pairs each code with the right tooth number, surface, quadrant or arch. Because the CDT Code is licensed by the ADA, the official manual is the only reliable cheat sheet.</p>
+<p><strong>CDT codes, short for Current Dental Terminology codes, are the dental codes used to report procedures on dental claims, and the American Dental Association organizes them into categories by code range, from diagnostic (D0100 to D0999) through adjunctive general services (D9000 to D9999).</strong> A correct claim pairs each code with the right tooth number, surface, quadrant or arch. Because the CDT Code is licensed by the ADA, the official manual is the only reliable cheat sheet.</p>
 
-<p>Searches for a dental billing codes cheat sheet usually turn up unofficial lists that are incomplete, outdated or copied without permission. A better approach is to understand how the code set is structured, so your team knows where to look and what each claim line needs. This guide covers the structure and the most common claim pitfalls. It does not list individual code descriptors, which you should take from the current CDT manual or your licensed software.</p>
+<p>Dental coding is the step that turns the dentist's clinical notes into those codes. Searches for a dental billing codes cheat sheet usually turn up unofficial lists that are incomplete, outdated or copied without permission. A better approach is to understand how the code set is structured, so your team knows where to look and what each claim line needs. This guide covers the structure and the most common claim pitfalls. It does not list individual code descriptors, which you should take from the current CDT manual or your licensed software.</p>
 
 <h2>What are the CDT code categories?</h2>
-<p>Every CDT code starts with the letter D followed by four digits. The first digits place the code in a category of service. The categories and their ranges are:</p>
+<p>Every CDT code, which is the American Dental Association code for a single dental procedure, starts with the letter D followed by four digits. The first digits place the code in a category of service. The categories and their ranges are:</p>
 <table>
 <thead><tr><th>Code range</th><th>Category</th></tr></thead>
 <tbody>
@@ -863,7 +871,7 @@ export const seedPosts3: SeedPost[] = [
 <li><strong>Missing attachments</strong> for crowns, periodontal treatment, implants and surgical extractions.</li>
 <li><strong>Frequency conflicts</strong>, such as billing a service before the plan's waiting window has passed.</li>
 <li><strong>Coding to the fee</strong> instead of the documentation. The code must reflect what was done and recorded.</li>
-<li><strong>Billing medical-type procedures to the dental plan only</strong>, when a medical plan might be the right payer. See our guide on <a href="/blog/billing-medical-insurance-for-dental-procedures/">billing medical insurance for dental procedures</a>.</li>
+<li><strong>Billing medical-type procedures to the dental plan only</strong>, when a medical plan might be the right payer. Verify coverage for these services before treatment.</li>
 </ol>
 
 <h2>How do category rules show up in daily billing?</h2>
@@ -883,6 +891,14 @@ export const seedPosts3: SeedPost[] = [
 <h2>Want your team's coding habits reviewed?</h2><p>If denials for tooth numbers, surfaces or missing attachments keep coming back, <a href="/consultation/">book a free consultation</a>. We can review a handful of recent claims with you, point out the patterns behind them and suggest simple internal checks your team can use.</p>
 `,
     faqs: [
+      {
+        q: 'What are CDT codes?',
+        a: 'CDT codes are the standard dental codes used to report dental procedures on insurance claims in the United States. Each code is a D followed by four digits. The American Dental Association maintains the code set, updates it every year and licenses it, so offices should take codes and descriptors from the current CDT manual, app or licensed practice software.',
+      },
+      {
+        q: 'What does CDT stand for in dental coding?',
+        a: 'CDT stands for Current Dental Terminology, the name of the American Dental Association publication that contains the Code on Dental Procedures and Nomenclature. In everyday use, CDT codes, dental codes and ADA codes all refer to the same code set. HIPAA names it as the standard for reporting dental procedures on electronic claims, so dental plans expect it.',
+      },
       {
         q: 'Is there an official dental billing codes cheat sheet?',
         a: 'The official reference is the ADA\'s CDT manual or app, which is licensed. Unofficial one-page lists may be incomplete or outdated, so offices should rely on the current CDT Code and their licensed software.',

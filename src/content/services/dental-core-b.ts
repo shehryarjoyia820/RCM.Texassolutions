@@ -509,9 +509,9 @@ export const dentalCoreB: Service[] = [
     definition:
       'Dental credentialing is the process of verifying a dentist\'s qualifications with dental carriers and enrolling the provider and practice in their networks. It covers applications, CAQH profiles where carriers use them, NPI and tax ID details, state Medicaid dental enrollment, re-credentialing and EFT/ERA setup, so claims are accepted and paid at in-network rates.',
     intro: [
-      'A new associate cannot be billed in network until each carrier has approved the application and loaded the dentist under the right practice location and tax ID. A practice that opens a second office, changes its tax ID or moves to a group billing arrangement faces the same problem at a larger scale. When credentialing falls behind, claims are denied, paid out of network or sent to the wrong address.',
+      'Dentist credentialing is often the first billing task for a new provider. A new associate cannot be billed in network until each carrier has approved the application and loaded the dentist under the right practice location and tax ID. A practice that opens a second office, changes its tax ID or moves to a group billing arrangement faces the same problem at a larger scale. When credentialing falls behind, claims are denied, paid out of network or sent to the wrong address.',
       'Dental credentialing has its own landscape. Many dental PPO networks are run by large carriers with their own applications, some networks are leased to other plans, some carriers use CAQH ProView for provider data while others do not, and Medicaid dental programs are run by each state, often through a dental benefit administrator or managed care plan with its own enrollment rules.',
-      'Our team prepares and submits credentialing and enrollment applications, keeps CAQH profiles current where carriers rely on them, checks NPI records, follows up with carriers until each application is approved, and sets up EFT and ERA enrollment so payments arrive electronically. We track every application and re-credentialing date in one place.',
+      'Our dentist credentialing service prepares and submits credentialing and enrollment applications, keeps CAQH profiles current where carriers rely on them, checks NPI records, follows up with carriers until each application is approved, and sets up EFT and ERA enrollment so payments arrive electronically. We track every application and re-credentialing date in one place.',
       'Credentialing does not include negotiating fees with carriers, and no one can promise a carrier will accept an application or open a network to a new provider. What we can do is make sure applications are complete, accurate and followed up.',
     ],
     scope: [
@@ -614,6 +614,18 @@ export const dentalCoreB: Service[] = [
     practiceTypes: ['general-dentistry', 'orthodontics', 'endodontics', 'periodontics', 'oral-surgery', 'pediatric-dentistry', 'prosthodontics', 'dental-group-practices'],
     faqs: [
       {
+        q: 'What is dentist credentialing?',
+        a: 'Dentist credentialing is the process dental carriers use to review a dentist\'s license, training, malpractice coverage and history before accepting the dentist into their network. Once approved and enrolled at your location, the dentist can be billed at in-network rates. Credentialing is repeated on each carrier\'s schedule, and provider details must stay current between cycles.',
+      },
+      {
+        q: 'What does a dentist credentialing service do?',
+        a: 'A dentist credentialing service prepares, submits and tracks network applications for a practice\'s dentists so the office does not have to manage each carrier\'s paperwork. It gathers documents, keeps CAQH ProView profiles current where carriers use them, follows up with enrollment teams, records effective dates and sets up EFT and ERA. Carriers make the approval decisions and set their own processing times.',
+      },
+      {
+        q: 'What documents are needed for dental credentialing?',
+        a: 'Dental credentialing usually requires a current state dental license, NPI, tax ID details, malpractice insurance certificate, education and work history, and DEA or state controlled substance registrations where applicable. Specialists may add board certification. Each carrier sets its own list, and names and addresses should match across every document, because a mismatch is a common reason applications stall.',
+      },
+      {
         q: 'What is the difference between dental credentialing and enrollment?',
         a: 'Dental credentialing is the carrier\'s review of a dentist\'s qualifications, while enrollment links that approved dentist to your practice location, tax ID and payment setup. A provider can be credentialed and still have claims deny if enrollment at a specific office is missing. We handle both steps and confirm the effective date before in-network billing starts.',
       },
@@ -650,11 +662,14 @@ export const dentalCoreB: Service[] = [
       'dental-billing',
       'revenue-cycle-management',
     ],
-    seoTitle: 'Dental Credentialing & Provider Enrollment Services',
+    seoTitle: 'Dental Credentialing Services for Dentists and DSOs',
     metaDescription:
-      'Dental credentialing and provider enrollment with PPO carriers and Medicaid dental programs, plus CAQH upkeep, NPI checks, re-credentialing and EFT/ERA setup.',
+      'Dental credentialing services for dentists: PPO and Medicaid dental enrollment, CAQH ProView upkeep, re-credentialing and EFT/ERA setup, tracked at every step.',
     keywords: [
       'dental credentialing',
+      'dentist credentialing',
+      'dentist credentialing service',
+      'dental credentialing service',
       'dental credentialing services',
       'dental provider enrollment',
       'dentist insurance credentialing',

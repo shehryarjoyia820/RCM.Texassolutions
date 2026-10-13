@@ -875,17 +875,17 @@ export const seedPosts: SeedPost[] = [
     title: 'How the Dental Insurance Billing Process Works',
     seoTitle: 'Dental Insurance Billing Process: Step-by-Step Guide',
     metaDescription:
-      'A step-by-step guide to the dental insurance billing process: verification, treatment planning, CDT coding, claims and attachments, coordination of benefits, payments and patient balances.',
+      'Dental insurance billing, step by step: verifying benefits, CDT coding, claims and attachments, coordination of benefits, payment posting and patient balances.',
     excerpt:
       'Dental billing follows its own rules: annual maximums, frequency limits, waiting periods and attachments. Here is how the dental insurance billing process works from verification to final payment.',
     category: 'Dental Billing',
-    tags: ['dental billing', 'dental insurance', 'CDT', 'insurance verification'],
+    tags: ['dental insurance billing', 'billing dental insurance', 'dental billing', 'dental insurance', 'CDT', 'insurance verification'],
     readingMinutes: 8,
     publishedAt: '2026-10-08',
     html: `
 <p><strong>The dental insurance billing process works by verifying a patient's dental benefits, coding treatment with CDT codes, submitting a claim to the dental plan with any required attachments, and then posting the payment and billing the patient for the remainder.</strong> Along the way, practices manage plan rules such as annual maximums, frequency limits, waiting periods and coordination of benefits.</p>
 
-<p>Dental billing shares the same basic shape as medical billing, but the details are different enough that medical billing habits do not always transfer. Dental plans are often built around a yearly benefit cap, they limit how often services are covered, and they frequently require radiographs or narratives to support a claim. This guide walks through the process step by step.</p>
+<p>Billing dental insurance shares the same basic shape as medical billing, but the details are different enough that medical billing habits do not always transfer. Dental plans are often built around a yearly benefit cap, they limit how often services are covered, and they frequently require radiographs or narratives to support a claim. This guide walks through the process step by step.</p>
 
 <h2>How is dental billing different from medical billing?</h2>
 <ul>
@@ -908,7 +908,7 @@ export const seedPosts: SeedPost[] = [
 <li>Missing tooth clauses, replacement rules and age limits</li>
 <li>Whether the patient has a second dental plan</li>
 </ul>
-<p>A consistent checklist keeps verification complete across the team. Our <a href="/tools/dental-insurance-verification-checklist">dental insurance verification checklist</a> covers the details most often missed. Thorough <a href="/services/benefits-verification">benefits verification</a> also makes patient cost estimates far more reliable.</p>
+<p>A consistent checklist keeps verification complete across the team. Our <a href="/tools/dental-insurance-verification-checklist/">dental insurance verification checklist</a> covers the details most often missed. Thorough <a href="/services/dental-insurance-verification/">dental insurance verification</a> also makes patient cost estimates more realistic.</p>
 
 <h2>Step 2: Treatment planning and pre-treatment estimates</h2>
 <p>For larger treatment, many practices send a pre-treatment estimate (sometimes called a predetermination) to the dental plan before beginning work. The plan responds with what it expects to pay based on current benefits. A pre-treatment estimate is generally not a guarantee of payment, since benefits, eligibility and remaining maximums can change, but it gives the patient and the practice a clearer picture.</p>
@@ -943,7 +943,7 @@ export const seedPosts: SeedPost[] = [
 <li>Requests for additional information</li>
 <li>Payments that do not match the expected fee</li>
 </ul>
-<p>Our <a href="/tools/dental-insurance-collection-calculator">dental insurance collection calculator</a> can help you compare what was billed, allowed and collected over time.</p>
+<p>Our <a href="/tools/dental-insurance-collection-calculator/">dental insurance collection calculator</a> can help you compare what was billed, allowed and collected over time.</p>
 
 <h2>Step 8: Denials, appeals and patient billing</h2>
 <p>Dental denials often relate to frequency limits, waiting periods, missing attachments, maximums reached or eligibility. Some can be resolved by sending missing documentation or correcting tooth and surface information. Others require a written appeal with clinical support.</p>
@@ -961,9 +961,17 @@ export const seedPosts: SeedPost[] = [
 <li>Billing the secondary plan without the primary EOB</li>
 <li>Letting small unpaid balances accumulate without follow-up</li>
 </ul>
-<p>Whether you run a single <a href="/specialties/general-dentistry">general dentistry</a> office or several locations, a repeatable process for each of these steps keeps claims moving. Learn more about how our <a href="/services/dental-billing">dental billing</a> support works inside your existing practice software.</p>
-` + '<h2>Have questions about your dental claims?</h2><p>If insurance claims at your dental office keep coming back for frequency limits, missing attachments or downgrades, <a href="/consultation">request a free consultation</a>. We will review a few recent examples with you and explain where the process can be tightened.</p>',
+<p>Whether you run a single <a href="/specialties/general-dentistry/">general dentistry</a> office or several locations, a repeatable process for each of these steps keeps claims moving. Learn more about how our <a href="/services/dental-billing/">dental insurance billing</a> support works inside your existing practice software.</p>
+` + '<h2>Have questions about your dental claims?</h2><p>If insurance claims at your dental office keep coming back for frequency limits, missing attachments or downgrades, <a href="/consultation/">request a free consultation</a>. We will review a few recent examples with you and explain where the process can be tightened.</p>',
     faqs: [
+      {
+        q: 'How does billing dental insurance work?',
+        a: 'Billing dental insurance works by sending the patient\'s dental plan a claim for each completed procedure, then billing the patient for whatever the plan does not pay. The office verifies benefits first, codes treatment with CDT codes, submits the claim with any attachments, posts the EOB or ERA, works denials and sends the patient a statement for the remaining balance.',
+      },
+      {
+        q: 'Does the dental office or the patient file the insurance claim?',
+        a: 'In most cases the dental office files the insurance claim for the patient, and many network agreements expect in-network dentists to do so. The patient still owns the balance the plan does not cover. Some out-of-network offices ask patients to pay at the visit and submit the claim themselves, so confirm your office policy and explain it before treatment.',
+      },
       {
         q: 'What codes are used for dental insurance billing?',
         a: 'Dental procedures are billed with CDT codes, which are maintained by the American Dental Association and updated each year. Diagnosis codes are generally not required on dental claims, though some plans or medical crossover situations may require them.',
