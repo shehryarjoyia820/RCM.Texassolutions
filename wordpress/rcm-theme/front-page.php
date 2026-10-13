@@ -15,7 +15,7 @@ $testimonials = $show_testimonials && rcm_t_has_plugin() ? RCM\Content_Types::ap
 $specialties = rcm_t_by_keys('rcm_specialty', $d['specialties']);
 $software = rcm_t_by_keys('rcm_service', $d['software']);
 $tools = array_slice(rcm_t_by_keys('rcm_tool', $d['dentalTools']), 0, 6);
-$posts = $d['dentalPosts'] ? get_posts(['numberposts' => 3, 'post_status' => 'publish', 'post_name__in' => $d['dentalPosts']]) : [];
+$posts = get_posts(['numberposts' => 3, 'post_status' => 'publish']); // newest articles, including ones written in WordPress
 $core = [];
 foreach ($d['core'] as $c) {
     $p = rcm_t_has_plugin() ? RCM\Content_Types::by_key('rcm_service', $c['slug']) : null;

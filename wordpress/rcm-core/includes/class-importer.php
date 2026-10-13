@@ -31,6 +31,12 @@ final class Importer
     {
         add_action('admin_init', [self::class, 'maybe_first_import']);
         add_action('admin_post_rcm_import', [self::class, 'handle']);
+        add_action('admin_post_rcm_trash_retired', [self::class, 'handle_trash_retired']);
+        // A new plugin bundle (deploy) syncs itself in the background; edits made in WordPress are kept.
+        add_action('init', [self::class, 'maybe_schedule_auto_sync'], 20);
+        add_action('rcm_auto_sync', [self::class, 'auto_sync']);
+        // Publishing or updating content refreshes the page cache so changes show at once.
+        add_action('transition_post_status', [self::class, 'clear_cache_on_publish'], 10, 3);
     }
 
     public static function maybe_first_import(): void
@@ -45,6 +51,77 @@ final class Importer
         rcm_audit('content.import', 'content', 'first-run', $report);
     }
 
+    /** Fingerprint of the bundled data files; it changes whenever a new version is uploaded. */
+    public static function bundle_fingerprint(): string
+    {
+        $parts = [RCM_VERSION];
+        foreach (['services', 'specialties', 'tools', 'blog', 'pages', 'company', 'redirects'] as $f) {
+            $file = RCM_DIR . 'data/' . $f . '.json';
+            $parts[] = is_file($file) ? filemtime($file) . ':' . filesize($file) : '-';
+        }
+        return md5(implode('|', $parts));
+    }
+
+    public static function maybe_schedule_auto_sync(): void
+    {
+        if (!get_option('rcm_content_imported') || get_option('rcm_bundle_fingerprint') === self::bundle_fingerprint()) {
+            return;
+        }
+        if (!wp_next_scheduled('rcm_auto_sync')) {
+            wp_schedule_single_event(time(), 'rcm_auto_sync');
+        }
+    }
+
+    public static function auto_sync(): void
+    {
+        $fp = self::bundle_fingerprint();
+        if (get_option('rcm_bundle_fingerprint') === $fp) {
+            return;
+        }
+        update_option('rcm_bundle_fingerprint', $fp, false);
+        $report = self::run(['services', 'specialties', 'tools', 'faqs', 'pages', 'blog', 'redirects', 'retire'], false);
+        update_option('rcm_content_imported', current_time('mysql'));
+        update_option('rcm_last_import_report', $report, false);
+        rcm_audit('content.import', 'content', 'auto', $report);
+        self::clear_page_cache();
+    }
+
+    public static function clear_page_cache(): void
+    {
+        if (function_exists('wp_cache_clear_cache')) {
+            wp_cache_clear_cache();
+        }
+    }
+
+    public static function clear_cache_on_publish(string $new, string $old, \WP_Post $post): void
+    {
+        if (($new === 'publish' || $old === 'publish') && in_array($post->post_type, ['post', 'page', Content_Types::SERVICE, Content_Types::SPECIALTY, Content_Types::TOOL], true) && !(defined('WP_IMPORTING') && WP_IMPORTING)) {
+            self::clear_page_cache();
+        }
+    }
+
+    /** Moves drafts of retired content (no longer in the bundle) to the Trash. WordPress empties the Trash after 30 days. */
+    public static function handle_trash_retired(): void
+    {
+        if (!current_user_can('manage_options')) {
+            wp_die(esc_html__('You do not have permission to do this.', 'rcm'), 403);
+        }
+        check_admin_referer('rcm_trash_retired');
+        $n = 0;
+        foreach (self::retired_keys() as $type => $keys) {
+            $posts = get_posts(['post_type' => $type, 'post_status' => 'draft', 'numberposts' => -1, 'meta_key' => '_rcm_key', 'no_found_rows' => true]);
+            foreach ($posts as $p) {
+                $key = (string) get_post_meta($p->ID, '_rcm_key', true);
+                if ($key !== '' && !in_array($key, $keys, true) && wp_trash_post($p->ID)) {
+                    $n++;
+                }
+            }
+        }
+        rcm_audit('content.trash_retired', 'content', '', ['trashed' => $n]);
+        wp_safe_redirect(add_query_arg(['page' => 'rcm-tools', 'trashed' => $n], admin_url('admin.php')));
+        exit;
+    }
+
     public static function handle(): void
     {
         if (!current_user_can('manage_options')) {
@@ -54,6 +131,7 @@ final class Importer
         $types = array_values(array_intersect((array) ($_POST['types'] ?? []), ['services', 'specialties', 'tools', 'faqs', 'pages', 'blog', 'settings', 'redirects', 'retire']));
         $force = !empty($_POST['force']);
         $report = self::run($types, $force);
+        update_option('rcm_bundle_fingerprint', self::bundle_fingerprint(), false);
         update_option('rcm_content_imported', current_time('mysql'));
         update_option('rcm_last_import_report', $report, false);
         rcm_audit('content.import', 'content', $force ? 'force' : 'sync', $report);
@@ -318,9 +396,15 @@ final class Importer
         foreach (rcm_data('blog') as $p) {
             $key = 'post-' . $p['slug'];
             $existing = self::find_by_key('post', $key) ?: get_page_by_path((string) $p['slug'], OBJECT, 'post');
+            $bundle_hash = md5((string) wp_json_encode($p));
             if ($existing && !$force) {
-                $n['skipped']++;
-                continue;
+                // Update only when the bundle changed and nobody edited the post in WordPress since the last import.
+                $stored = (string) get_post_meta($existing->ID, '_rcm_import_hash', true);
+                $unedited = $stored !== '' && $stored === md5($existing->post_content . $existing->post_title);
+                if (!$unedited || get_post_meta($existing->ID, '_rcm_bundle_hash', true) === $bundle_hash) {
+                    $n['skipped']++;
+                    continue;
+                }
             }
             $date = (string) $p['publishedAt'];
             $postarr = [
@@ -352,6 +436,11 @@ final class Importer
             update_post_meta($id, '_rcm_sources', wp_slash((string) wp_json_encode($p['sources'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)));
             update_post_meta($id, '_rcm_reading_minutes', (int) $p['readingMinutes']);
             update_post_meta($id, '_rcm_cta', 'consultation');
+            $saved = get_post($id);
+            if ($saved) {
+                update_post_meta($id, '_rcm_import_hash', md5($saved->post_content . $saved->post_title));
+                update_post_meta($id, '_rcm_bundle_hash', $bundle_hash);
+            }
         }
         return $n;
     }
@@ -375,9 +464,9 @@ final class Importer
      * services, specialties, tools, FAQs, pages and posts carrying an _rcm_key that the bundle
      * does not contain. Nothing is deleted; drafts can be restored from the admin.
      */
-    private static function retire(): array
+    /** Content keys that belong to the current bundle, per post type. */
+    private static function retired_keys(): array
     {
-        $n = ['created' => 0, 'updated' => 0, 'skipped' => 0];
         $keep = [
             Content_Types::SERVICE => array_column(rcm_data('services'), 'slug'),
             Content_Types::SPECIALTY => array_column(rcm_data('specialties'), 'slug'),
@@ -392,7 +481,13 @@ final class Importer
             }
         }
         $keep[Content_Types::FAQ] = $faq_keys;
-        foreach ($keep as $type => $keys) {
+        return $keep;
+    }
+
+    private static function retire(): array
+    {
+        $n = ['created' => 0, 'updated' => 0, 'skipped' => 0];
+        foreach (self::retired_keys() as $type => $keys) {
             $posts = get_posts(['post_type' => $type, 'post_status' => 'publish', 'numberposts' => -1, 'meta_key' => '_rcm_key', 'no_found_rows' => true]);
             foreach ($posts as $p) {
                 $key = (string) get_post_meta($p->ID, '_rcm_key', true);
