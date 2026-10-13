@@ -52,7 +52,7 @@ export const HOME_FAQS: Faq[] = [
   },
   {
     q: 'How much does dental revenue cycle management with you cost?',
-    a: 'We do not publish prices; we quote in writing after a free consultation and a look at your workflow. The fee depends on which services you choose, your claim volume, number of locations and how much of the cycle we manage. Nothing starts until you have accepted the scope and price.',
+    a: 'Our pricing is published. The monthly fee for each location is based on the insurance collections we post that month: a flat $1,200 under $40,000, then 3.5% from $40,000 to $99,999, 3% from $100,000 to $149,999 and 2.5% at $150,000 and above. Patient payments are not part of the fee base, there is no setup fee, and multi-location groups and DSOs get a custom quote. Credentialing and cleanup of older A/R are quoted separately. The free consultation and written proposal confirm your tier and scope, and our Pricing page has the details.',
   },
   {
     q: 'How do you protect patient information?',
@@ -82,7 +82,7 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
       },
       {
         q: 'Do you work with single-dentist offices as well as DSOs?',
-        a: 'Yes, there is no minimum size. A solo general dentist, a specialty office and a multi-location group each need different staffing, so scope and price are sized to your claim volume and the services you pick. If keeping a task in-house would suit your office better, we will tell you during the consultation.',
+        a: 'Yes, there is no minimum size. A solo general dentist, a specialty office and a multi-location group each need different staffing, so scope is sized to your claim volume and the services you pick. Each single location follows the same published tiers based on monthly insurance collections, starting at a flat $1,200 a month, while multi-location groups and DSOs receive a custom quote. If keeping a task in-house would suit your office better, we will tell you during the consultation.',
       },
       {
         q: 'Do you support dental specialists such as orthodontists and oral surgeons?',
@@ -95,7 +95,7 @@ export const GENERAL_FAQS: { topic: string; faqs: Faq[] }[] = [
     faqs: [
       {
         q: 'What happens after our free consultation?',
-        a: 'If we seem like a good fit, we ask for read-only access or a few standard reports, such as insurance aging and outstanding claims, so we can understand the workload. Then you receive a written proposal with scope, responsibilities and price. Work begins only after you accept it and a Business Associate Agreement is signed.',
+        a: 'If we seem like a good fit, we ask for read-only access or a few standard reports, such as insurance aging and outstanding claims, so we can understand the workload. Then you receive a written proposal with scope, responsibilities and your pricing tier. Work begins only after you accept it and a Business Associate Agreement is signed.',
       },
       {
         q: 'What do you need from our office to start?',
@@ -158,5 +158,5 @@ It serves dental practices only (general dentistry, orthodontics, endodontics, p
 Services: Insurance Verification & Eligibility; Dental Claims Management; Denial Management & Appeals; Payment Posting; Accounts Receivable (A/R) Management; Patient Billing & Collections Support; Dental Credentialing & Provider Enrollment; Dental RCM Reporting & Revenue Analysis. Claims for PPO, DHMO, indemnity and Medicaid/CHIP dental plans.
 The team works remotely inside the practice's own dental software (Open Dental, Dentrix or Eaglesoft), clearinghouse and carrier portals using named accounts the practice controls. Texas Solutions is not affiliated with or a partner of any software vendor. A Business Associate Agreement is signed before any patient data is accessed.
 Patient billing: the team prepares and sends patient statements; it does not phone patients, and conversations about balances stay with the practice front desk.
-Consultations are free. Pricing is quoted in writing after a consultation because it depends on services, volume and locations; there is no published price list. The /pricing/ page explains how quotes work.
+Consultations are free. Pricing is published on the /pricing/ page. The fee is per location, per month, based on the insurance collections the team posts that month (payments received from dental carriers; patient payments are not part of the fee base): under $40,000 a flat $1,200 per month; $40,000 to $99,999 3.5% of insurance collections; $100,000 to $149,999 3%; $150,000 and above 2.5%. Multi-location groups and DSOs get a custom quote. Included: Insurance Verification & Eligibility, Dental Claims Management, Denial Management & Appeals, Payment Posting, A/R management of claims from the start date, Patient Billing & Collections Support (statements only) and Dental RCM Reporting & Revenue Analysis. Charged separately and quoted after a review: Dental Credentialing & Provider Enrollment, and cleanup of older A/R that existed before the start date (quoted as a project). No setup fee. The practice's own clearinghouse and software subscriptions stay with the practice. The free consultation and written proposal confirm the tier and scope. Contract length, minimum term, cancellation terms and discounts are not published; do not state any, and do not state any other prices.
 Not yet published or approved: client results, case studies, testimonials, certifications, turnaround times or guarantees. Do not state any.`;

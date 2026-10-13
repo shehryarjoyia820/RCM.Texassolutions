@@ -230,7 +230,7 @@ export const dentalCoreA: Service[] = [
       },
       {
         q: "How do we get started?",
-        a: "You start by booking a free consultation. We review your current reports and billing setup, agree on scope and routines, sign a Business Associate Agreement and set up access to your systems. The first weeks focus on clearing any backlog of unsent claims, unposted payments and open denials before the regular daily routine takes over.",
+        a: "You start by booking a free consultation. We review your current reports and billing setup, agree on scope and routines, sign a Business Associate Agreement and set up access to your systems. From the start date we take over new claims, payments and denials as part of the monthly fee. If older A/R needs cleaning up, that backlog project is quoted separately and agreed before the regular daily routine takes over.",
       },
     ],
     relatedTools: [
@@ -459,7 +459,7 @@ export const dentalCoreA: Service[] = [
       },
       {
         q: "How long does it take to get started?",
-        a: "Getting started usually involves a free consultation, a review of your current reports, a signed Business Associate Agreement and user access to your systems. The timeline depends mostly on how quickly access can be set up and how large your current backlog is. The first weeks focus on unsent claims, unposted payments and open denials before regular routines take over.",
+        a: "Getting started usually involves a free consultation, a review of your current reports, a signed Business Associate Agreement and user access to your systems. The timeline depends mostly on how quickly access can be set up and how large your current backlog is. The first weeks focus on unsent claims, unposted payments and open denials before regular routines take over. Cleanup of A/R that existed before the start date is a separate project with its own quote.",
       },
       {
         q: "How do you protect patient data?",

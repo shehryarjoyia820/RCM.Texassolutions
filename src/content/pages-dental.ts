@@ -3,7 +3,7 @@
  *
  * Each entry fully replaces the page with the same key in ./pages.ts. Follow
  * docs/DENTAL-WRITING.md and docs/CONTENT-GUIDE.md: no invented results,
- * prices, certifications, "HIPAA compliant" claims, client names or partner
+ * prices beyond the published /pricing/ tiers, certifications, "HIPAA compliant" claims, client names or partner
  * claims, and links only to URLs that stay live (see ./dental.ts).
  */
 
@@ -90,7 +90,7 @@ const about: PageContent = {
     ul([
       'A free consultation about your office, your software, your carriers and what is not working today.',
       'With your permission, a review of aging, denials and workflow, under a Business Associate Agreement if patient data is involved.',
-      'A written proposal with scope, responsibilities and price.',
+      `A written proposal that confirms scope, responsibilities and your tier from our published ${a('/pricing/', 'dental RCM pricing')}.`,
       'Daily work in your system and regular reports built from your own data.',
     ]),
     p(
@@ -142,7 +142,7 @@ const howWeWork: PageContent = {
     ),
     h3('Honest scoping'),
     p(
-      'If your team is doing well and only needs help with insurance verification or older A/R, we will scope just that. We quote in writing after we understand your workflow, and we do not promise results that depend on carriers, documentation and patients we do not control.'
+      'If your team is doing well and only needs help with insurance verification or older A/R, we will scope just that. Our pricing is published, the written proposal confirms your tier and scope once we understand your workflow, and we do not promise results that depend on carriers, documentation and patients we do not control.'
     ),
     h2('What to ask any dental RCM company'),
     p(
@@ -184,7 +184,7 @@ const howWeWork: PageContent = {
         [
           'How is the price set?',
           'Vague pricing leads to surprise invoices.',
-          'We quote in writing after a free consultation and workflow review.',
+          `Our ${a('/pricing/', 'pricing')} is published: a monthly fee per location based on insurance collections, with no setup fee. The written proposal confirms your tier.`,
         ],
         [
           'What happens if we end the contract?',
@@ -208,11 +208,11 @@ const howWeWork: PageContent = {
     ),
     h3('2. Workflow review'),
     p(
-      'If it looks like a good fit, we ask for read-only access or a set of standard reports, such as insurance aging by carrier, outstanding claims and recent adjustments. A Business Associate Agreement is signed before we look at anything containing patient data. The review shapes the scope and price.'
+      'If it looks like a good fit, we ask for read-only access or a set of standard reports, such as insurance aging by carrier, outstanding claims and recent adjustments. A Business Associate Agreement is signed before we look at anything containing patient data. The review shapes the scope and any separate quote, such as credentialing or cleanup of older A/R.'
     ),
     h3('3. Proposal and BAA'),
     p(
-      'You receive a written proposal covering the services in scope, what stays with your team, who approves write-offs and patient statements, the price, the reports you will get and the onboarding plan. Work starts only after you accept it and the BAA is in place.'
+      'You receive a written proposal covering the services in scope, what stays with your team, who approves write-offs and patient statements, your pricing tier and any separately quoted work, the reports you will get and the onboarding plan. Work starts only after you accept it and the BAA is in place.'
     ),
     h3('4. Access setup'),
     p(
@@ -487,7 +487,7 @@ const consultation: PageContent = {
       'We learn about your office: dentists, hygienists, locations, specialties, carriers and software.',
       'You tell us what is not working, such as aging claims, slow verifications, denials or staffing gaps.',
       'We explain which parts of our dental revenue cycle management services might fit and what we would need to review.',
-      'We answer your questions about how we work, security and pricing.',
+      `We answer your questions about how we work, security and our published ${a('/pricing/', 'pricing')}, and confirm which tier fits your office.`,
     ]),
     h2('What to prepare'),
     ul([

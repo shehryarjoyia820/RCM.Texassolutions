@@ -438,7 +438,7 @@ export const seedPosts2: SeedPost[] = [
 
 <h2>How do you compare the cost of each option?</h2>
 <p>Comparing cost means looking past the coordinator's hourly wage. A realistic in-house figure includes payroll taxes, benefits, paid time off, training on annual CDT changes, clearinghouse and software fees, and the time an office manager spends supervising billing. It should also reflect what happens during turnover: recruiting, training, and the weeks when claims slow down.</p>
-<p>The cost of uncollected revenue belongs in the comparison too. Claims that are never followed up, secondary claims that are never sent, and underpayments that are never questioned are real losses even if no invoice shows them. Our <a href="/tools/dental-billing-cost-calculator/">dental billing cost calculator</a> can help you build an in-house estimate to set against any outside quote.</p>
+<p>The cost of uncollected revenue belongs in the comparison too. Claims that are never followed up, secondary claims that are never sent, and underpayments that are never questioned are real losses even if no invoice shows them. Our <a href="/tools/dental-billing-cost-calculator/">dental billing cost calculator</a> can help you build an in-house estimate to set against any outside quote. If you are weighing our service, our fees are published on our <a href="/pricing/">dental RCM pricing</a> page: a monthly fee per location based on the insurance collections we post, with no setup fee.</p>
 
 <h2>When does in-house dental billing make the most sense?</h2>
 <ul>
