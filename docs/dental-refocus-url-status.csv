@@ -1,0 +1,232 @@
+URL,In old sitemap,Final status,Redirects to,Type,Name (kept or target),Live HTTP check,Result
+https://rcm.texassolutions.co/,Yes,Kept (same URL),,Home,Home,200,OK
+https://rcm.texassolutions.co/about/,Yes,Kept (same URL),,Page,About Texas Solutions RCM,200,OK
+https://rcm.texassolutions.co/accessibility-statement/,Yes,Kept (same URL),,Page,Accessibility Statement,200,OK
+https://rcm.texassolutions.co/approach/,Yes,301 redirect,https://rcm.texassolutions.co/how-we-work/,Page,How We Work,301 -> 200,OK
+https://rcm.texassolutions.co/blog/,Yes,Kept (same URL),,,,200,OK
+https://rcm.texassolutions.co/blog/ai-and-electronic-prior-authorization/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/ai-in-revenue-cycle-management/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/billing-medical-insurance-for-dental-procedures/,Yes,301 redirect,https://rcm.texassolutions.co/blog/dental-billing-codes-guide/,Blog post,"Dental Billing Codes Guide: How CDT Categories, Tooth Numbers and Surfaces Fit Together",301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/compliance-and-regulation/,Yes,Kept (same URL),,Blog category,Compliance And Regulation,200,OK
+https://rcm.texassolutions.co/blog/category/denial-management/,Yes,Kept (same URL),,Blog category,Denial Management,200,OK
+https://rcm.texassolutions.co/blog/category/dental-billing/,Yes,Kept (same URL),,Blog category,Dental Billing,200,OK
+https://rcm.texassolutions.co/blog/category/healthcare-ai/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/healthcare-technology/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/medical-billing/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/medical-coding/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/medicare-and-medicaid-updates/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/practice-management/,Yes,Kept (same URL),,Blog category,Practice Management,200,OK
+https://rcm.texassolutions.co/blog/category/rcm-tools-and-guides/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/category/revenue-cycle-management/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/cdt-2026-code-changes/,Yes,Kept (same URL),,Blog post,CDT 2026 Code Changes: What Changed and How to Prepare for the Next Update,200,OK
+https://rcm.texassolutions.co/blog/common-medical-billing-denial-codes/,Yes,301 redirect,https://rcm.texassolutions.co/blog/how-to-appeal-a-denied-dental-claim/,Blog post,How to Appeal a Denied Dental Claim: A Step-by-Step Guide,301 -> 200,OK
+https://rcm.texassolutions.co/blog/cpt-2026-code-changes/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/dental-billing-codes-guide/,Yes,Kept (same URL),,Blog post,"Dental Billing Codes Guide: How CDT Categories, Tooth Numbers and Surfaces Fit Together",200,OK
+https://rcm.texassolutions.co/blog/dental-billing-training-guide/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/dental-insurance-billing-process/,Yes,Kept (same URL),,Blog post,How the Dental Insurance Billing Process Works,200,OK
+https://rcm.texassolutions.co/blog/hipaa-and-outsourced-medical-billing/,Yes,Kept (same URL),,Blog post,HIPAA and Outsourced Dental Billing: What Practices Should Know,200,OK
+https://rcm.texassolutions.co/blog/how-medical-billing-works/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/how-much-do-medical-billing-services-cost/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-billing-cost-calculator/,Tool,Dental Billing Cost Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/blog/how-to-appeal-a-denied-dental-claim/,Yes,Kept (same URL),,Blog post,How to Appeal a Denied Dental Claim: A Step-by-Step Guide,200,OK
+https://rcm.texassolutions.co/blog/how-to-calculate-net-collection-rate/,Yes,Kept (same URL),,Blog post,How to Calculate Net Collection Rate for a Dental Practice,200,OK
+https://rcm.texassolutions.co/blog/how-to-choose-a-dental-billing-company/,Yes,Kept (same URL),,Blog post,How to Choose a Dental Billing Company: What to Look For,200,OK
+https://rcm.texassolutions.co/blog/how-to-choose-a-medical-billing-company/,Yes,301 redirect,https://rcm.texassolutions.co/blog/how-to-choose-a-dental-billing-company/,Blog post,How to Choose a Dental Billing Company: What to Look For,301 -> 200,OK
+https://rcm.texassolutions.co/blog/how-to-reduce-claim-denials/,Yes,Kept (same URL),,Blog post,How to Reduce Dental Claim Denials: A Practical Guide for Dental Offices,200,OK
+https://rcm.texassolutions.co/blog/how-to-start-a-medical-billing-company/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/icd-10-cm-2026-updates/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/in-house-vs-outsourced-dental-billing/,Yes,Kept (same URL),,Blog post,In-House vs Outsourced Dental Billing: How to Decide,200,OK
+https://rcm.texassolutions.co/blog/medicaid-and-medicare-dental-billing/,Yes,Kept (same URL),,Blog post,Medicaid and Medicare Dental Billing: What Dental Offices Need to Know,200,OK
+https://rcm.texassolutions.co/blog/medical-billing-and-coding-certifications/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/medical-billing-automation-and-rpa/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/medical-billing-for-dental-sleep-apnea/,Yes,301 redirect,https://rcm.texassolutions.co/blog/dental-billing-codes-guide/,Blog post,"Dental Billing Codes Guide: How CDT Categories, Tooth Numbers and Surfaces Fit Together",301 -> 200,OK
+https://rcm.texassolutions.co/blog/medical-billing-kpis/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/medical-billing-vs-revenue-cycle-management/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/no-surprises-act-good-faith-estimates/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/patient-payment-options-text-to-pay/,Yes,Kept (same URL),,Blog post,"Patient Payment Options for Dental Offices: Treatment Plans, Financing and Text-to-Pay",200,OK
+https://rcm.texassolutions.co/blog/ppo-dental-billing-guide/,Yes,Kept (same URL),,Blog post,"PPO Dental Billing: Fee Schedules, Write-Offs and Downgrades Explained",200,OK
+https://rcm.texassolutions.co/blog/telehealth-billing-codes-guide/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/what-is-a-clean-claim-rate/,Yes,Kept (same URL),,Blog post,What Is a Clean Claim Rate for Dental Claims?,200,OK
+https://rcm.texassolutions.co/blog/what-is-ar-in-medical-billing/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/blog/what-is-revenue-cycle-management/,Yes,Kept (same URL),,Blog post,What Is Revenue Cycle Management for a Dental Practice?,200,OK
+https://rcm.texassolutions.co/careers/,Yes,301 redirect,https://rcm.texassolutions.co/about/,Page,About Texas Solutions RCM,301 -> 200,OK
+https://rcm.texassolutions.co/consultation/,Yes,Kept (same URL),,Page,Book a Free Consultation,200,OK
+https://rcm.texassolutions.co/contact/,Yes,Kept (same URL),,Page,Contact Us,200,OK
+https://rcm.texassolutions.co/cookie-policy/,Yes,Kept (same URL),,Page,Cookie Policy,200,OK
+https://rcm.texassolutions.co/data-handling-and-security/,Yes,301 redirect,https://rcm.texassolutions.co/security/,Page,Security and Privacy,301 -> 200,OK
+https://rcm.texassolutions.co/disclaimer/,Yes,Kept (same URL),,Page,Disclaimer,200,OK
+https://rcm.texassolutions.co/faq/,Yes,Kept (same URL),,Page,Frequently Asked Questions,200,OK
+https://rcm.texassolutions.co/how-we-work/,Yes,Kept (same URL),,Page,How We Work,200,OK
+https://rcm.texassolutions.co/outsourcing-vs-in-house-billing/,Yes,301 redirect,https://rcm.texassolutions.co/blog/in-house-vs-outsourced-dental-billing/,Blog post,In-House vs Outsourced Dental Billing: How to Decide,301 -> 200,OK
+https://rcm.texassolutions.co/partners/,Yes,301 redirect,https://rcm.texassolutions.co/about/,Page,About Texas Solutions RCM,301 -> 200,OK
+https://rcm.texassolutions.co/privacy-policy/,Yes,Kept (same URL),,Page,Privacy Policy,200,OK
+https://rcm.texassolutions.co/proposal/,Yes,301 redirect,https://rcm.texassolutions.co/consultation/,Page,Book a Free Consultation,301 -> 200,OK
+https://rcm.texassolutions.co/resources/,Yes,301 redirect,https://rcm.texassolutions.co/blog/,,,301 -> 200,OK
+https://rcm.texassolutions.co/security/,Yes,Kept (same URL),,Page,Security and Privacy,200,OK
+https://rcm.texassolutions.co/service-areas/,Yes,Kept (same URL),,Page,Dental Billing Services Across the United States,200,OK
+https://rcm.texassolutions.co/service-areas/california/,Yes,Kept (same URL),,Page,Dental Billing Services in California,200,OK
+https://rcm.texassolutions.co/service-areas/florida/,Yes,Kept (same URL),,Page,Dental Billing Services in Florida,200,OK
+https://rcm.texassolutions.co/service-areas/new-york/,Yes,Kept (same URL),,Page,Dental Billing Services in New York,200,OK
+https://rcm.texassolutions.co/service-areas/texas/,Yes,Kept (same URL),,Page,Dental Billing Services in Texas,200,OK
+https://rcm.texassolutions.co/services/accounts-receivable-management/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-accounts-receivable/,Service,Dental A/R Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/advancedmd-billing-services/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/aging-ar-follow-up/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-accounts-receivable/,Service,Dental A/R Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/appointment-scheduling/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/athenahealth-billing-services/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/benefits-verification/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-insurance-verification/,Service,Dental Insurance Verification & Eligibility,301 -> 200,OK
+https://rcm.texassolutions.co/services/billing-software-migration/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/charge-entry/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/chronic-care-management-billing/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/claims-scrubbing/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/claims-submission/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/clearinghouse-coordination/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/coding-audit/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/curve-dental-billing-services/,Yes,Kept (same URL),,Service,Curve Dental Billing Services,200,OK
+https://rcm.texassolutions.co/services/denial-appeals/,Yes,301 redirect,https://rcm.texassolutions.co/services/denial-management/,Service,Dental Denial Management & Appeals,301 -> 200,OK
+https://rcm.texassolutions.co/services/denial-management/,Yes,Kept (same URL),,Service,Dental Denial Management & Appeals,200,OK
+https://rcm.texassolutions.co/services/dental-accounts-receivable/,Yes,Kept (same URL),,Service,Dental A/R Management,200,OK
+https://rcm.texassolutions.co/services/dental-billing-small-practices/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/dental-billing/,Yes,Kept (same URL),,Service,Outsourced Dental Billing Services,200,OK
+https://rcm.texassolutions.co/services/dental-claims-processing/,Yes,Kept (same URL),,Service,Dental Claims Management,200,OK
+https://rcm.texassolutions.co/services/dental-credentialing/,Yes,Kept (same URL),,Service,Dental Credentialing & Provider Enrollment,200,OK
+https://rcm.texassolutions.co/services/dental-insurance-verification/,Yes,Kept (same URL),,Service,Dental Insurance Verification & Eligibility,200,OK
+https://rcm.texassolutions.co/services/dental-medical-cross-coding/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/dental-ppo-negotiation/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-credentialing/,Service,Dental Credentialing & Provider Enrollment,301 -> 200,OK
+https://rcm.texassolutions.co/services/dental-virtual-assistant/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/dentrix-billing-services/,Yes,Kept (same URL),,Service,Dentrix Billing Services,200,OK
+https://rcm.texassolutions.co/services/eaglesoft-billing-services/,Yes,Kept (same URL),,Service,Eaglesoft Billing Services,200,OK
+https://rcm.texassolutions.co/services/eclinicalworks-billing-services/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/ehr-workflow-support/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/electronic-claims-processing/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/era-processing/,Yes,301 redirect,https://rcm.texassolutions.co/services/payment-posting/,Service,Dental Payment Posting,301 -> 200,OK
+https://rcm.texassolutions.co/services/fee-schedule-analysis/,Yes,301 redirect,https://rcm.texassolutions.co/services/rcm-analytics-reporting/,Service,Dental RCM Reporting & Revenue Analysis,301 -> 200,OK
+https://rcm.texassolutions.co/services/healthcare-data-entry/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/insurance-eligibility-verification/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-insurance-verification/,Service,Dental Insurance Verification & Eligibility,301 -> 200,OK
+https://rcm.texassolutions.co/services/kareo-tebra-billing-services/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/medical-billing-small-practices/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/medical-billing/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/medical-coding/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-claims-processing/,Service,Dental Claims Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/medical-credentialing/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-credentialing/,Service,Dental Credentialing & Provider Enrollment,301 -> 200,OK
+https://rcm.texassolutions.co/services/open-dental-billing-services/,Yes,Kept (same URL),,Service,Open Dental Billing Services,200,OK
+https://rcm.texassolutions.co/services/out-of-network-billing/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/patient-billing/,Yes,Kept (same URL),,Service,Patient Billing & Collections Support for Dental Practices,200,OK
+https://rcm.texassolutions.co/services/patient-collections/,Yes,301 redirect,https://rcm.texassolutions.co/services/patient-billing/,Service,Patient Billing & Collections Support for Dental Practices,301 -> 200,OK
+https://rcm.texassolutions.co/services/patient-financial-communication/,Yes,301 redirect,https://rcm.texassolutions.co/services/patient-billing/,Service,Patient Billing & Collections Support for Dental Practices,301 -> 200,OK
+https://rcm.texassolutions.co/services/patient-registration/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-insurance-verification/,Service,Dental Insurance Verification & Eligibility,301 -> 200,OK
+https://rcm.texassolutions.co/services/payer-contracting/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-credentialing/,Service,Dental Credentialing & Provider Enrollment,301 -> 200,OK
+https://rcm.texassolutions.co/services/payment-posting/,Yes,Kept (same URL),,Service,Dental Payment Posting,200,OK
+https://rcm.texassolutions.co/services/payment-reconciliation/,Yes,301 redirect,https://rcm.texassolutions.co/services/payment-posting/,Service,Dental Payment Posting,301 -> 200,OK
+https://rcm.texassolutions.co/services/practice-management-support/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/services/prior-authorization/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-insurance-verification/,Service,Dental Insurance Verification & Eligibility,301 -> 200,OK
+https://rcm.texassolutions.co/services/provider-enrollment/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-credentialing/,Service,Dental Credentialing & Provider Enrollment,301 -> 200,OK
+https://rcm.texassolutions.co/services/rcm-analytics-reporting/,Yes,Kept (same URL),,Service,Dental RCM Reporting & Revenue Analysis,200,OK
+https://rcm.texassolutions.co/services/rcm-workflow-optimization/,Yes,301 redirect,https://rcm.texassolutions.co/services/rcm-analytics-reporting/,Service,Dental RCM Reporting & Revenue Analysis,301 -> 200,OK
+https://rcm.texassolutions.co/services/remote-patient-monitoring-billing/,Yes,301 redirect,https://rcm.texassolutions.co/services/,,,301 -> 200,OK
+https://rcm.texassolutions.co/services/revenue-cycle-audit/,Yes,301 redirect,https://rcm.texassolutions.co/services/rcm-analytics-reporting/,Service,Dental RCM Reporting & Revenue Analysis,301 -> 200,OK
+https://rcm.texassolutions.co/services/revenue-cycle-management/,Yes,Kept (same URL),,Service,Dental Revenue Cycle Management Services,200,OK
+https://rcm.texassolutions.co/services/revenue-recovery/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-accounts-receivable/,Service,Dental A/R Management,301 -> 200,OK
+https://rcm.texassolutions.co/services/underpayment-identification/,Yes,301 redirect,https://rcm.texassolutions.co/services/payment-posting/,Service,Dental Payment Posting,301 -> 200,OK
+https://rcm.texassolutions.co/services/virtual-medical-assistant/,Yes,301 redirect,https://rcm.texassolutions.co/services/dental-billing/,Service,Outsourced Dental Billing Services,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/aba-therapy/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/ambulatory-surgery-centers/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/behavioral-health/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/cardiology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/chiropractic/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/dental-group-practices/,Yes,Kept (same URL),,Specialty,Dental Group Practices and DSOs,200,OK
+https://rcm.texassolutions.co/specialties/dermatology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/dme-suppliers/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/endocrinology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/endodontics/,Yes,Kept (same URL),,Specialty,Endodontics,200,OK
+https://rcm.texassolutions.co/specialties/ent/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/family-medicine/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/gastroenterology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/general-dentistry/,Yes,Kept (same URL),,Specialty,General Dentistry,200,OK
+https://rcm.texassolutions.co/specialties/home-health/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/internal-medicine/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/laboratory/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/mental-health-clinics/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/multi-specialty/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/nephrology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/neurology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/obgyn/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/occupational-therapy/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/oncology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/ophthalmology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/optometry/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/oral-surgery/,Yes,Kept (same URL),,Specialty,Oral and Maxillofacial Surgery,200,OK
+https://rcm.texassolutions.co/specialties/orthodontics/,Yes,Kept (same URL),,Specialty,Orthodontics,200,OK
+https://rcm.texassolutions.co/specialties/orthopedics/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/pain-management/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/pediatric-dentistry/,Yes,Kept (same URL),,Specialty,Pediatric Dentistry,200,OK
+https://rcm.texassolutions.co/specialties/pediatrics/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/periodontics/,Yes,Kept (same URL),,Specialty,Periodontics,200,OK
+https://rcm.texassolutions.co/specialties/physical-therapy/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/podiatry/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/primary-care/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/prosthodontics/,Yes,Kept (same URL),,Specialty,Prosthodontics,200,OK
+https://rcm.texassolutions.co/specialties/pulmonology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/radiology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/telehealth/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/urgent-care/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/specialties/urology/,Yes,301 redirect,https://rcm.texassolutions.co/specialties/,,,301 -> 200,OK
+https://rcm.texassolutions.co/technology/,Yes,Kept (same URL),,Page,Dental Software and Technology,200,OK
+https://rcm.texassolutions.co/terms-of-service/,Yes,Kept (same URL),,Page,Terms of Service,200,OK
+https://rcm.texassolutions.co/tools/annual-revenue-projection-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-revenue-calculator/,Tool,Dental Practice Revenue Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/ar-aging-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-ar-aging-calculator/,Tool,Dental AR Aging Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/billing-outsourcing-savings-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-billing-cost-calculator/,Tool,Dental Billing Cost Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/billing-staffing-cost-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-billing-cost-calculator/,Tool,Dental Billing Cost Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/break-even-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-roi-calculator/,Tool,Dental Billing Outsourcing ROI Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/claim-rejection-rate-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-denial-rate-calculator/,Tool,Dental Denial Rate Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/claim-status-categories/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/claim-submission-checklist/,Yes,Kept (same URL),,Tool,Dental Claim Submission Checklist,200,OK
+https://rcm.texassolutions.co/tools/claim-turnaround-time-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/clean-claim-rate-calculator/,Yes,Kept (same URL),,Tool,Clean Claim Rate Calculator,200,OK
+https://rcm.texassolutions.co/tools/collection-efficiency-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-insurance-collection-calculator/,Tool,Dental Insurance Collection Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/cost-per-claim-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-billing-cost-calculator/,Tool,Dental Billing Cost Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/credentialing-checklist/,Yes,Kept (same URL),,Tool,Dental Provider Credentialing Checklist,200,OK
+https://rcm.texassolutions.co/tools/days-in-ar-calculator/,Yes,Kept (same URL),,Tool,Days in AR Calculator,200,OK
+https://rcm.texassolutions.co/tools/denial-appeal-checklist/,Yes,Kept (same URL),,Tool,Dental Denial Appeal Checklist,200,OK
+https://rcm.texassolutions.co/tools/denial-rate-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-denial-rate-calculator/,Tool,Dental Denial Rate Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/denial-reasons-guide/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/dental-ar-aging-calculator/,Yes,Kept (same URL),,Tool,Dental AR Aging Calculator,200,OK
+https://rcm.texassolutions.co/tools/dental-billing-cost-calculator/,Yes,Kept (same URL),,Tool,Dental Billing Cost Calculator,200,OK
+https://rcm.texassolutions.co/tools/dental-denial-rate-calculator/,Yes,Kept (same URL),,Tool,Dental Denial Rate Calculator,200,OK
+https://rcm.texassolutions.co/tools/dental-insurance-collection-calculator/,Yes,Kept (same URL),,Tool,Dental Insurance Collection Calculator,200,OK
+https://rcm.texassolutions.co/tools/dental-insurance-verification-checklist/,Yes,Kept (same URL),,Tool,Dental Insurance Verification Checklist,200,OK
+https://rcm.texassolutions.co/tools/dental-practice-revenue-calculator/,Yes,Kept (same URL),,Tool,Dental Practice Revenue Calculator,200,OK
+https://rcm.texassolutions.co/tools/dental-practice-roi-calculator/,Yes,Kept (same URL),,Tool,Dental Billing Outsourcing ROI Calculator,200,OK
+https://rcm.texassolutions.co/tools/eob-explained/,Yes,Kept (same URL),,Tool,Dental Explanation of Benefits (EOB) Explained,200,OK
+https://rcm.texassolutions.co/tools/era-explained/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/fee-schedule-comparison-calculator/,Yes,Kept (same URL),,Tool,Fee Schedule Comparison Calculator,200,OK
+https://rcm.texassolutions.co/tools/first-pass-acceptance-rate-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-denial-rate-calculator/,Tool,Dental Denial Rate Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/gross-collection-rate-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-insurance-collection-calculator/,Tool,Dental Insurance Collection Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/hcpcs-code-lookup/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/icd-10-code-search/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/medical-billing-acronyms/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/medical-billing-cost-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-billing-cost-calculator/,Tool,Dental Billing Cost Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/medical-billing-glossary/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/monthly-revenue-forecast-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-revenue-calculator/,Tool,Dental Practice Revenue Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/net-collection-rate-calculator/,Yes,Kept (same URL),,Tool,Net Collection Rate Calculator,200,OK
+https://rcm.texassolutions.co/tools/npi-lookup/,Yes,Kept (same URL),,Tool,NPI Number Lookup,200,OK
+https://rcm.texassolutions.co/tools/outsourcing-vs-in-house-billing-calculator/,Yes,Kept (same URL),,Tool,Outsourcing vs In-House Billing Calculator,200,OK
+https://rcm.texassolutions.co/tools/patient-balance-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/payer-mix-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/payment-variance-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/practice-profit-margin-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-roi-calculator/,Tool,Dental Billing Outsourcing ROI Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/practice-revenue-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-revenue-calculator/,Tool,Dental Practice Revenue Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/prior-authorization-checklist/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/provider-productivity-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-revenue-calculator/,Tool,Dental Practice Revenue Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/rcm-performance-scorecard/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/rcm-roi-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-roi-calculator/,Tool,Dental Billing Outsourcing ROI Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/revenue-leakage-estimator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/revenue-per-provider-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/dental-practice-revenue-calculator/,Tool,Dental Practice Revenue Calculator,301 -> 200,OK
+https://rcm.texassolutions.co/tools/revenue-recovery-calculator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/tools/underpayment-estimator/,Yes,301 redirect,https://rcm.texassolutions.co/tools/,,,301 -> 200,OK
+https://rcm.texassolutions.co/why-choose-us/,Yes,301 redirect,https://rcm.texassolutions.co/how-we-work/,Page,How We Work,301 -> 200,OK
+https://rcm.texassolutions.co/carriers/,No,New page,,Page,Dental Carrier Billing and Claims Follow-Up,200,OK
+https://rcm.texassolutions.co/carriers/aetna/,No,New page,,Page,Aetna Dental Claims Billing & Follow-Up,200,OK
+https://rcm.texassolutions.co/carriers/cigna/,No,New page,,Page,Cigna Dental Claims Billing & Follow-Up,200,OK
+https://rcm.texassolutions.co/carriers/delta-dental/,No,New page,,Page,Delta Dental Claims Billing & Follow-Up,200,OK
+https://rcm.texassolutions.co/carriers/guardian/,No,New page,,Page,Guardian Dental Claims Billing & Follow-Up,200,OK
+https://rcm.texassolutions.co/carriers/metlife/,No,New page,,Page,MetLife Dental Claims Billing & Follow-Up,200,OK
+https://rcm.texassolutions.co/carriers/unitedhealthcare-dental/,No,New page,,Page,UnitedHealthcare Dental Claims Billing & Follow-Up,200,OK
+https://rcm.texassolutions.co/pricing/,No,Draft (not published),,Page,Pricing,404,OK

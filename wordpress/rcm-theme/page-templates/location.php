@@ -37,6 +37,31 @@ while (have_posts()) :
                     </section>
                 <?php endif; ?>
 
+                <?php if ($is_hub && !$is_carriers) :
+                    $states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+                    $state_pages = [];
+                    foreach ($children as $c) {
+                        $state_pages[$c->post_name] = get_permalink($c);
+                    }
+                    ?>
+                    <section class="mt-12" aria-labelledby="states-h">
+                        <h2 id="states-h" class="text-2xl font-bold"><?php esc_html_e('Dental billing in all 50 states', 'rcm-theme'); ?></h2>
+                        <p class="mb-6 mt-2 text-ink-muted"><?php esc_html_e('Our team works remotely, so we serve dental practices in every US state:', 'rcm-theme'); ?></p>
+                        <ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] sm:grid-cols-3 lg:grid-cols-4">
+                            <?php foreach ($states as $st) : $slug = sanitize_title($st); ?>
+                                <li class="flex items-center gap-2">
+                                    <?php rcm_t_icon('MapPin', 'h-3.5 w-3.5 shrink-0 text-teal-600'); ?>
+                                    <?php if (isset($state_pages[$slug])) : ?>
+                                        <a href="<?php echo esc_url($state_pages[$slug]); ?>" class="font-semibold text-teal-700 hover:underline"><?php echo esc_html($st); ?></a>
+                                    <?php else : ?>
+                                        <span class="text-navy-800"><?php echo esc_html($st); ?></span>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </section>
+                <?php endif; ?>
+
                 <?php if ($popular) : ?>
                     <section class="mt-12" aria-labelledby="svc-h">
                         <h2 id="svc-h" class="mb-6 text-2xl font-bold"><?php esc_html_e('Our dental RCM services', 'rcm-theme'); ?></h2>

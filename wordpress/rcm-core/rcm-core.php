@@ -15,7 +15,7 @@
 defined('ABSPATH') || exit;
 
 define('RCM_VERSION', '1.0.0');
-define('RCM_DB_VERSION', '2');
+define('RCM_DB_VERSION', '3');
 define('RCM_FILE', __FILE__);
 define('RCM_DIR', plugin_dir_path(__FILE__));
 define('RCM_URL', plugin_dir_url(__FILE__));

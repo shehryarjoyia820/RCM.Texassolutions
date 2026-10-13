@@ -87,8 +87,10 @@ $is_active = static function (string $url) use ($req): bool {
             </button>
         </div>
     </div>
+</header>
 
-    <div id="rcm-mobile-nav" hidden class="fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto border-t border-line bg-white lg:hidden">
+<?php /* Outside <header>: its backdrop-filter would make this fixed panel position against the header instead of the screen. */ ?>
+<div id="rcm-mobile-nav" hidden class="fixed inset-x-0 bottom-0 top-[72px] z-50 overflow-y-auto border-t border-line bg-white lg:hidden [.admin-bar_&]:top-[118px] min-[783px]:[.admin-bar_&]:top-[104px]">
         <nav aria-label="<?php esc_attr_e('Mobile', 'rcm-theme'); ?>" class="container py-4">
             <ul class="divide-y divide-line">
                 <?php foreach ($nav as $i => $item) : ?>
@@ -122,6 +124,5 @@ $is_active = static function (string $url) use ($req): bool {
                 <?php rcm_t_part('whatsapp', ['variant' => 'button']); ?>
             </div>
         </nav>
-    </div>
-</header>
+</div>
 <main id="main">
