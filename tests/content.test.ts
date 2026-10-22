@@ -21,11 +21,17 @@ import { dentalCodesA } from '../src/content/blog/dental-codes-a';
 import { dentalCodesB } from '../src/content/blog/dental-codes-b';
 import { dentalTopicsA } from '../src/content/blog/dental-topics-a';
 import { dentalTopicsB } from '../src/content/blog/dental-topics-b';
+import { dentalGuidesA } from '../src/content/blog/dental-guides-a';
+import { dentalGuidesB } from '../src/content/blog/dental-guides-b';
+import { dentalGuidesC } from '../src/content/blog/dental-guides-c';
+import { dentalGuidesD } from '../src/content/blog/dental-guides-d';
+import { dentalGuidesE } from '../src/content/blog/dental-guides-e';
+import { dentalGuidesF } from '../src/content/blog/dental-guides-f';
 import { SERVICE_SLUGS, SPECIALTY_SLUGS, TOOL_SLUGS } from '../src/content/slugs';
 
 const services = [...servicesPart1, ...servicesPart2, ...servicesPart3, ...servicesPart4, ...servicesPart5];
 const specialties = [...medicalPart1, ...medicalPart2, ...moreSpecialties, ...dentalSpecialties];
-const allPosts = [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC, ...dentalCodesA, ...dentalCodesB, ...dentalTopicsA, ...dentalTopicsB];
+const allPosts = [...seedPosts, ...seedPosts2, ...seedPosts3, ...dentalKeywordPostsA, ...dentalKeywordPostsB, ...dentalKeywordPostsC, ...dentalCodesA, ...dentalCodesB, ...dentalTopicsA, ...dentalTopicsB, ...dentalGuidesA, ...dentalGuidesB, ...dentalGuidesC, ...dentalGuidesD, ...dentalGuidesE, ...dentalGuidesF];
 
 /** Claims the owner has not approved (docs/CONTENT-GUIDE.md). */
 const BANNED = [/hipaa[- ]compliant/i, /hipaa[- ]certified/i, /\bwe guarantee\b|guaranteed (results|increase|savings|approval)/i, /\b\d{2,3}% (increase|reduction|faster)/i, /world-class|cutting-edge|game-changer|revolutionary/i, /—/];

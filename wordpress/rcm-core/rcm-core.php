@@ -3,7 +3,7 @@
  * Plugin Name:       RCM Core
  * Plugin URI:        https://rcm.texassolutions.co
  * Description:       Texas Solutions RCM platform: services, specialties and tools content, RCM calculators and lookups, lead CRM, AI assistant, SEO, security and analytics.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.6
  * Requires PHP:      8.1
  * Author:            Texas Solutions
@@ -14,7 +14,7 @@
 
 defined('ABSPATH') || exit;
 
-define('RCM_VERSION', '1.0.0');
+define('RCM_VERSION', '1.0.1');
 define('RCM_DB_VERSION', '4');
 define('RCM_FILE', __FILE__);
 define('RCM_DIR', plugin_dir_path(__FILE__));
